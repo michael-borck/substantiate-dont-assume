@@ -30,6 +30,7 @@ book:
         - chapters/11-report.qmd
         - chapters/12-conclude.qmd
   appendices:
+    - appendices/a-drafter-to-evaluator-loop.qmd
     - acknowledgments.qmd
     - about-author.qmd
   other-links:

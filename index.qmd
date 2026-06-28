@@ -66,6 +66,10 @@ As AI moves from chatbots to agentic systems that can run procedures on their ow
 
 The stance is proactive. Use these tools for **augmentation and personalised learning**, not passive automation that quietly atrophies the critical thinking the profession depends on. Efficiency is never the goal; *defensible judgement* is. If you use AI to skip the thinking, you have done the work wrong, no matter how good the output looks. The companion book, *Conversation, Not Delegation*, teaches the craft of working with AI well; this book teaches what you must verify once the drafting is done.
 
+:::: {.callout-warning title="Watch out: your own AI hygiene"}
+The AI you use is a third party. Do not paste Tessera's evidence, configurations, logs, or customer data into a consumer AI tool. That is a disclosure you cannot take back, and it may breach the engagement's confidentiality clauses and the Privacy Act. Use the approved or enterprise tooling your firm provides, or a locally hosted model. Treat every prompt as if it could become someone else's training data, because it might. The same scepticism you apply to Tessera's AI applies to your own: the tool is a thinking partner, not a safe drop box for client secrets.
+::::
+
 This premise is the thread that runs through every chapter.
 
 ## Who this book is for

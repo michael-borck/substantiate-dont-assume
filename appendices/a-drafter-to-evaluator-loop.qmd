@@ -1,0 +1,34 @@
+# The Drafter-to-Evaluator Loop
+
+This is the one-page reference for the habit the AI Field Notes build, chapter by chapter. It is not a prompting manual. For the craft of conversing with AI in general, read the companion, *Conversation, Not Delegation*. This is the audit-specific loop: how you use AI to draft the technical work, and then supply the judgement the machine cannot.
+
+## The loop, in five moves
+
+1. **Set the specific context.** Give the model Tessera's reality, not a generic one: a multi-tenant SaaS on AWS, the customer contract, the regulatory regime, the population. A generic prompt earns a generic answer, and a generic answer has no edge.
+2. **Take the draft, not the answer.** Expect a first cut that is confident, well-structured, plausible, and probably wrong in the places that matter. It is the start of the work, not the end of it.
+3. **Probe the silent failure and the unattributed number.** Ask: *how would this control fail quietly? where did this rating, sample size, or RTO come from?* The model reaches for defaults that read well. Make it show its working, then check that working.
+4. **Hunt the confabulation.** Test every control number, legal clause, framework mapping, and compliance claim against the actual standard, the actual law, and the actual population. The model is fluent, not careful.
+5. **Supply the judgement.** The rating, the root cause, the consequence, and the opinion are yours. The machine drafts; you decide, you evidence, and you sign.
+
+Run this every chapter and AI stops being a shortcut and becomes a force multiplier. That is the whole argument of the book, in working form.
+
+## Failure modes to hunt for
+
+The same handful of errors recur across the engagement. When the AI drafts, read specifically for these.
+
+| Failure mode | What it looks like | First seen |
+|---|---|---|
+| Generic examples | Controls and risks that describe every company | Ch 1 |
+| Stale standards | 2013 Annex A control numbers cited as 2022 | Ch 3 |
+| Invented entries | A mapping or control that exists in neither framework | Ch 3 |
+| Round-number samples | "Test 25 leavers" with no derivation | Ch 7 |
+| Compliance from design | "Reviews appear to be conducted," inferred from policy quality | Ch 6 |
+| Wrong-jurisdiction law | EU Standard Contractual Clauses offered for an Australian context | Ch 9 |
+| Symptom as cause | "Insufficient process adherence" reported as the root cause | Ch 11 |
+| Unattributed defaults | RTO and RPO copied from training data as if universal | Ch 10 |
+
+None of these announce themselves. They look like good work, and that is exactly why the evaluator, not the drafter, signs the opinion.
+
+:::: {.callout-tip title="Try this: run the loop on your own draft"}
+Take any AI-generated item in your Evidence Locker and put it through the five moves. Anywhere you cannot defend a line, that line is not yet yours. Fix it before it reaches the opinion.
+::::
