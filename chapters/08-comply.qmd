@@ -1,0 +1,101 @@
+# Comply? Policy Evaluation: From Published to Proven {#sec-comply}
+
+> *A policy that nobody follows is not a control. It is a PDF.*
+
+::: {.tessera-case}
+**🗂️ Tessera Case: The library, reopened**
+
+Tessera's document library looked finished in Act I. Now you have the keys to the building. Full access means the policy set is no longer something you read; it is something you can test. The information security policy and its supporting standards are still comprehensive on paper. This week's discipline is to find out whether any of that paper survives contact with the people, the systems, and the logs it is supposed to govern.
+:::
+
+## What full access changes
+
+Act I closed with calibrated suspicion. Act II opens with the thing that converts suspicion into evidence: access. You can now interview the people named in the policies, log into the systems the policies describe, pull the logs the policies say are kept, and read the meeting minutes where the controls are supposed to be reviewed. Each is a different kind of evidence, and Chapter 7 taught you how to weigh it. This chapter teaches you what to point that evidence at: the policy set itself.
+
+Policies are the soft tissue of an information security management system. They are also the part an organisation finds easiest to produce and hardest to live by, because writing a policy is a writing problem and following one is a behaviour problem. A fast-growing company like Tessera can write an excellent policy library in a quarter with a good consultant and a long weekend. It cannot build the habits that make those policies operate in anything like the same timeframe. The gap between the two is where this chapter lives.
+
+## Compliance is not effectiveness
+
+Here is the distinction the chapter title is built on, and it is the one auditors get wrong when they are tired. **Compliance** asks whether a control exists and matches the words of a standard. **Effectiveness** asks whether the control actually achieves its objective when it runs. The first is a paperwork question. The second is the only question that matters.
+
+A policy that satisfies every clause of ISO/IEC 27001:2022 A.5.18, that quotes the standard's own language back at it, that carries a version number and an approval signature, is *compliant*. It may also be unenforceable, unowned, or unknown to the people it binds, in which case it is compliant and worthless. Compliance is the floor. Effectiveness is the opinion.
+
+The standard makes this explicit in its own architecture. Clause 9.1 requires the organisation to evaluate the *effectiveness* of its information security management system, not merely confirm it exists. A.5.35 (independent review of information security) and A.5.36 (compliance with policies, rules and standards) exist specifically to make sure the organisation checks whether its own policies are followed, not merely filed. The standard itself separates design from operation. The auditor's job is to make the same separation, with evidence.
+
+So the question for Act II is never "does Tessera have a policy on X?" That was an Act I question, and the answer was almost always yes. The Act II question is sharper: *does the policy on X actually operate, and does the evidence show it?*
+
+## The A.5 backbone
+
+ISO/IEC 27001:2022 clusters its ninety-three controls into four themes, and Theme A.5, the organizational family, is the largest: thirty-seven controls, A.5.1 through A.5.37. Where the people controls (A.6) govern the human lifecycle, the physical controls (A.7) govern offices and devices, and the technological controls (A.8) govern systems, A.5 governs the organisation itself: its policies, its roles, its assets, its suppliers, its information, its incidents, and its compliance.
+
+Think of A.5 as the governance backbone. It opens with the policies themselves (A.5.1, policies for information security) and the roles accountable for them (A.5.2, A.5.3, A.5.4). It sweeps up asset management (A.5.9 through A.5.13), access governance (A.5.15 through A.5.18), supplier and cloud relationships (A.5.19 through A.5.23), incident management (A.5.24 through A.5.28), continuity (A.5.29, A.5.30), legal and privacy obligations (A.5.31 through A.5.34), and the review and compliance machinery meant to hold it all together (A.5.35, A.5.36, A.5.37). Strip out A.5 and the other three themes have nothing to attach to, because A.5 is where the organisation says what it will do. The other themes are where it does it.
+
+That makes A.5 the natural home for the policy-effectiveness question, and it makes the Statement of Applicability's status column the first place an auditor looks for the gap. In Act I you read that column and noted, with discipline, that "implemented" is an assertion. In Act II you can test it. Pick a control, take the policy at its word, and find out whether the word is true.
+
+## From published to operating: how to test a policy
+
+Testing whether a policy operates is a four-step move, and it works on any A.5 control. Learn it once and reuse it.
+
+**Read the policy for its operational claims.** Most policies mix aspiration with obligation. Your job is to extract the obligations: the things the policy says *will* happen, on a cadence, by a named owner, to a defined standard. "Access rights are reviewed quarterly" is an operational claim. "Security is a core value" is not. Underline the claims. Each one is a test waiting to be designed.
+
+**Identify the evidence the claim would produce if it were true.** A quarterly access review leaves a footprint: a signed review record, a ticket, a change log, a meeting minute. A 24-hour leaver-revocation control leaves a footprint: a revocation timestamp in the identity provider, correlated against the HR termination date. If the control operates, the world looks a particular way. Decide what that way is before you go looking, so you test the claim rather than your own surprise.
+
+**Gather the evidence, then compare it to the claim.** This is where full access earns its keep. Pull the population (every leaver, every privileged account, every supplier), not the sample the client offers you. Trace the operational claim through the population. Count the exceptions.
+
+**Form a judgement on effectiveness, not existence.** The output of a policy test is not "compliant / non-compliant." It is a statement about how reliably the control achieves its objective, on the evidence, across the population you tested. A control that operates for 95 per cent of the population and fails for 5 per cent is not "mostly compliant." It is a control with a measured exception rate, and the consequence of that rate depends entirely on which 5 per cent.
+
+The tests themselves come in four flavours, and ISO/IEC 19011 and the wider assurance canon all recognise them. **Inquiry** is asking; treat the answer as a lead, never as evidence on its own. **Inspection** is reading the record the control should have produced. **Observation** is watching the control run. **Re-performance** is doing the control's check yourself, on the client's data, and seeing whether you reach the same answer. Inquiry is the weakest; re-performance is the strongest. A policy that survives only inquiry has not really been tested.
+
+::: {.tessera-case}
+**🗂️ Tessera Case: A.5.18 access rights, tested**
+
+Tessera's access management standard is two pages and reads cleanly. The operational claims are explicit: access is granted on least privilege (A.5.15); access rights are reviewed at least quarterly (A.5.18); privileged accounts are reviewed monthly; and access is revoked within 24 hours of an employee's last working day. Four claims. You design four tests.
+
+**The leaver test.** HR gives you nine terminations in the last twelve months. You pull the identity provider's revocation log and the AWS IAM credential last-used data, and you correlate. Three of the nine were revoked inside the 24-hour window. The median was six days. One contractor's static AWS keys stayed active for forty-seven days after the contract ended, and they held production read access to the customer database. The policy says 24 hours. The evidence says six days, sometimes seven weeks.
+
+**The quarterly review test.** The policy says every system owner runs a quarterly access review. You ask for the review records. One exists: a spreadsheet, signed off once, covering fourteen of the forty-odd systems in the asset register. The other systems have no review record, because nobody asked for one. "Quarterly" is operating for a third of the estate and not at all for the rest.
+
+**The privileged review test.** No evidence. In interview, the CTO is candid: "We check privileged access when someone joins or changes role. We don't have a standing monthly review." The policy was written aspirationally and never built into a calendar.
+
+**The least-privilege test.** You re-perform it. You take the ten most privileged IAM principals in the AWS estate and compare their attached policies to their stated job function. Three have broader access than their role requires, including one that can delete production databases.
+
+The policy is comprehensive and largely accurate. The control is partially operating, with a measured exception rate that is unacceptable for a company about to handle regulated customer data. You map each gap to A.5.18 and A.5.15, and you note the deeper failure: A.5.36 (compliance with policies) and A.5.35 (independent review) are the two controls meant to catch exactly this drift, and neither has caught it. The library was compliant on paper. The estate was not.
+:::
+
+This is what Act II looks like when it lands. A document that read as assurance in Act I now reads as a finding, and the only thing that changed is that you have the access to test it. Notice the shape of the judgement. You are not calling Tessera dishonest; the policy was written in good faith. You are reporting that a control's design and its operation have diverged, by how much, and for which people and systems. That precision is the difference between an opinion and an impression.
+
+:::: {.callout-warning title="Watch out: the compliant-on-paper trap"}
+The most expensive mistake in policy evaluation is grading the document instead of the behaviour. A policy can satisfy every clause of the standard and still fail three ways that no document review will ever catch. It can be **unenforceable**, with no mechanism behind it: a policy that says "review quarterly" but wires no review into any system or calendar. It can be **unowned**, where the name in the policy's approval block left the company eighteen months ago and nobody inherited the obligation. Or it can be **unknown**, where the people the policy binds have never read it, never acknowledged it, and could not describe what it asks of them.
+
+All three read as fully compliant to anyone who only opens the file. None of them is a control. Treat "we have a policy" and "the control operates" as different sentences, and refuse to let the first stand in for the second until the evidence says it can.
+::::
+
+I will tell you the confession that goes with this chapter, because it took me an embarrassing number of engagements to learn it. I used to be quietly pleased when a client handed me a thick, well-organised policy library. It felt like half the work was done. Then I started testing the policies against the estate, and I noticed a pattern I should have predicted: the organisations with the most impressive policy libraries were often the ones whose controls operated worst, because the library was where the effort went, and the operation was where it didn't. A thin policy that someone actually follows beats a beautiful one that nobody does. I stopped being impressed by policy libraries. I started being impressed by review records.
+
+:::: {.callout-note title="🤖 AI Field Note: The policy-gap analyst"}
+This is one of the tasks where an AI genuinely earns its place, and it is worth being precise about where it helps and where it lies. Hand the model Tessera's access management standard, the information security policy, and the Statement of Applicability, and ask it to flag where the policy text is thin, ambiguous, or inconsistent with A.5. It is good at this. It will catch that the policy never defines what counts as a "privileged" account, that the contractor clause contradicts the leaver-revocation window, and that no retention period is specified for access logs. Those are real findings, surfaced in minutes, and they save you an afternoon.
+
+Then ask the question that matters: "Is Tessera compliant with this policy?" Watch what happens. The model has read the same documents you have, and documents contain no operational evidence. Pressed for an answer, it will do what these models do: it will infer compliance from design quality. It will tell you, with the confidence of a system that has never met a human, that "quarterly reviews appear to be conducted, as required by the policy." That sentence is a confabulation. The policy *requires* the reviews; the model has mistaken the requirement for the performance. It has slid from "the policy says this happens" into "this happens."
+
+Your override is the whole job. Mark every such claim "unverified, pending operational evidence." The AI drafted the gap analysis; you supplied the one judgement it cannot, which is the difference between a promise on paper and a footprint in a log. That is the drafter-to-evaluator shift, demonstrated on a single page.
+::::
+
+:::: {.callout-important title="🔍 Auditing AI: The policy that forgot the AI"}
+There is a policy-effectiveness gap that is specific to this moment, and Tessera has it. The acceptable use policy (A.5.10) was written before the product's summarisation feature shipped and before staff began pasting customer data into consumer AI tools to draft replies. It says nothing about either. So an organisation that is "compliant" with its acceptable use policy is, in the same breath, silently permitting exactly the data movement the policy was written to control, because the policy predates the behaviour.
+
+Auditing this means asking not whether the policy exists but whether it covers the AI usage the estate actually contains. Look for a clause on approved AI services, on what data may and may not be entered, on retention by the AI vendor, and on disclosure to customers. If those clauses are absent, the control is designed for last year's company. Policy effectiveness is a moving target, and AI moved it faster than most policy libraries update.
+::::
+
+:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 8)"}
+This week's artefact is the policy-effectiveness test, and it is the one most directly analogous to real working papers. For each A.5 control you tested, record: the **operational claim** you extracted from the policy (the sentence, quoted), the **test** you designed (type: inquiry, inspection, observation, re-performance), the **population** you drew, the **evidence** you gathered, and the **result**: the exception rate, the specific failures, and your effectiveness judgement.
+
+End with a **gap map**: every control where design and operation diverged, listed by A.5 clause, with the consequence of each gap named in one sentence. By Week 11 this gap map becomes your findings, and by Week 12 it becomes the evidence behind your opinion. A finding that says "A.5.18 partially operates, 9 leavers tested, 3 within window, median 6 days, 1 at 47 days" is defensible in any room. A finding that says "access control needs improvement" is not. Lock in the first kind.
+::::
+
+## The question, answered
+
+Do the policies hold up, and do they match reality? The policies hold up. Tessera has built a policy library that is comprehensive, coherent, and well-mapped to the standard; that is a real achievement, and an organisation that cannot produce it is not ready. But the policies do not, not yet, match the reality of the estate they govern. Tested against access, the control operates inconsistently, with exception rates a certification body will not accept and a meta-control (A.5.36) that should have caught the drift and did not. The library is compliant on paper. The operation is the work that remains.
+
+That is the Act II posture, stated for policy. Documents asserted; evidence now decides. The polished standard that read as assurance in Act I has met its logs, its meeting minutes, and its missing review records, and the meeting has been honest in a way the desk review could never be.
+
+Next week the question turns to the thing those policies are ultimately written to protect. The policies are the promise; the data is the asset. *Whose data is Tessera holding, what does the law require of it, and does the estate actually protect it?* The question is **Protect?**

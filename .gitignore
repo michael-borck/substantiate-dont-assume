@@ -1,0 +1,53 @@
+# Quarto
+/.quarto/
+/_book/
+/_freeze/
+*_files/
+
+# OS
+.DS_Store
+._*
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Secrets
+.env
+.env.local
+*.key
+
+# Build artifacts
+*.log
+*.aux
+*.out
+*.toc
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Quarto ipynb
+**/*.quarto_ipynb
+substantiate-dont-assume.txt
+llm.txt
+rag-documents/
+
+# AnythingLLM workspace config
+.anythingllm.yml
+_print_source/

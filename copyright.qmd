@@ -1,0 +1,22 @@
+:::: {.content-visible unless-format="pdf"}
+
+# Copyright {.unnumbered .unlisted}
+
+**Substantiate, Don't Assume**\
+Why the Auditor's Opinion Matters More Than Ever in the Age of AI
+
+Copyright © 2025 Michael Borck.
+
+Published by Michael Borck\
+Perth, Western Australia
+
+**ISBN:** (to be assigned)
+
+This work is licensed under a **Creative Commons Attribution (CC BY)** licence. You are free to share and adapt the material for any purpose, provided you give appropriate credit. The open-access edition is always the most current.
+
+**AI disclosure:** This book was written using the methodology it describes. AI tools were used as thinking partners throughout the drafting, iterating, and refining process. The author reviewed, challenged, and took responsibility for every sentence. Full details of the tools used are in the Introduction.
+
+**Companion website:** [https://michael-borck.github.io/substantiate-dont-assume](https://michael-borck.github.io/substantiate-dont-assume)\
+**Source:** [https://github.com/michael-borck/substantiate-dont-assume](https://github.com/michael-borck/substantiate-dont-assume)
+
+::::

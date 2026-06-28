@@ -1,0 +1,40 @@
+/* Substantiate, Don't Assume — book styles */
+
+/* Tessera Case — the running engagement "dossier" used in every chapter.
+   A neutral slate to read as a case file and to stay distinct from the
+   blue AI-Field-Note callout, the red Auditing-AI callout, the green
+   Evidence-Locker callout, and the yellow Watch-out callout. */
+.tessera-case {
+  background: #f1f5f9;
+  border-left: 4px solid #475569;
+  border-radius: 6px;
+  padding: 1em 1.25em;
+  margin: 1.5em 0;
+}
+
+.tessera-case > :first-child {
+  margin-top: 0;
+}
+
+.tessera-case > :last-child {
+  margin-bottom: 0;
+}
+
+/* Case-box header line ("🗂️ Tessera Case — …") */
+.tessera-case h3,
+.tessera-case h4 {
+  margin-top: 0;
+  border-bottom: none;
+  color: #334155;
+}
+
+/* Dark-mode variant */
+.quarto-dark .tessera-case {
+  background: #1e293b;
+  border-left-color: #94a3b8;
+}
+
+.quarto-dark .tessera-case h3,
+.quarto-dark .tessera-case h4 {
+  color: #cbd5e1;
+}

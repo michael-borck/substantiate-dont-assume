@@ -1,0 +1,134 @@
+# Risk? Foundations of Risk Management {#sec-risk}
+
+> *What could go wrong, and how do we measure it?*
+
+::: {.tessera-case}
+**🗂️ Tessera Case: "We've covered the big risks"**
+
+Day three of the engagement, an email lands from Tessera's CTO. Attached is a polished spreadsheet: the draft risk register, thirty-odd rows, colour-coded green and amber, not a red cell in sight. "We've covered the big risks," he writes. "Let me know if you need anything else for the risk assessment." That attachment is your first real artefact of the engagement, and the claim stapled to it is, as always, the thing to test. A register that rates everything medium is not evidence of low risk. It is evidence of optimism, or of a process that has never had to defend its ratings in front of a board. Your job this chapter is to find out which.
+:::
+
+## What risk actually is
+
+Risk is the effect of uncertainty on objectives. That is the ISO definition, stripped to its bones, and it is better than it sounds. Two words do the work. **Uncertainty** means you do not know whether something will happen, only that it might. **Objectives** means risk is always measured against something an organisation cares about: revenue, reputation, customer trust, compliance, availability. A threat that cannot touch any objective is not a risk worth managing. A threat that can is, no matter how unlikely it feels on a calm day.
+
+Notice what risk is *not*. It is not a threat, and it is not a vulnerability, though both create it. A threat is an actor or event that could cause harm: a ransomware crew, a flood, a careless insider. A vulnerability is a weakness that a threat could exploit: an unpatched server, a shared admin password, an offboarding step that never runs. Risk is what you get when a threat meets a vulnerability and the result could damage an objective. Tessera's unpatched server is not a risk by itself. The ransomware crew that could reach it, and the revenue loss and certification delay that would follow, is the risk.
+
+This three-part model, threat plus vulnerability plus impact on an objective, is the engine under every risk register you will ever read. Hold it in mind. Most of the optimism you will spend this chapter correcting comes from someone quietly dropping one of the three: naming a threat with no vulnerability, a vulnerability with no credible threat, or an impact with no objective attached.
+
+## The risk lifecycle
+
+Risk management is not a document you produce once. It is a cycle you run, repeatedly, for as long as the organisation exists. ISO/IEC 27005 lays the loop out, and NIST SP 800-30 walks the same path in slightly different language. The shape is the same.
+
+You **establish context**: what is in scope, which objectives matter, what appetite for risk the organisation has set. You **identify** risks: the threats, the vulnerabilities, the scenarios where the two meet. You **analyse** each one, estimating likelihood and impact. You **evaluate** them, ranking the analysed risks against your criteria to decide which deserve treatment. You **treat** them, choosing from the four options we will come to. And you **monitor and review**, because risks change, controls drift, and a register that was right in January is stale by July.
+
+The cycle matters more than the artefact. A risk register is a snapshot of one trip around the loop. The organisation that updates it annually, to satisfy an auditor, has a document. The organisation that runs the loop continuously has risk management. When you audit, part of what you are testing is which of those Tessera is.
+
+## Likelihood × impact
+
+Every quantitative or semi-quantitative risk rating comes down to the same arithmetic: **risk is a function of likelihood and impact**. How likely is this to happen, and how bad would it be if it did? Score each on a scale, combine them, and you have a rating you can rank, plot on a matrix, and defend.
+
+Likelihood is usually a blend of two things the register rarely separates: how often the threat *tries*, and how likely it is to *succeed* given the controls in place. A phishing campaign hits Tessera's staff hundreds of times a week; that is high threat activity. Whether it becomes an incident depends on whether the training, the mail filter, and the MFA hold. Conflating the two is how registers end up with every externally-facing risk marked "high likelihood." It is also how they end up low: rating the attempt frequency and then quietly assuming the controls work, without ever testing them.
+
+Impact is where the optimism lives. Organisations under-rate impact because they measure the obvious cost and miss the cascading one. A lost laptop is a replacement cost. A lost laptop holding an unencrypted customer list is a breach notification, a regulator's interest, a churned enterprise account, and a line item on next quarter's board report. The first number is small. The second is the one that ends careers. Your job, when you read an impact rating, is to ask which of those two numbers the author actually wrote down.
+
+The matrix is seductive because it produces a tidy colour. Green, amber, red. Treat the colour as a hypothesis, not a conclusion. Two risks sitting in the same amber cell can be wildly different in what they demand of you, because the matrix has flattened a judgement into a square. We will come back to why, in the Watch out at the end.
+
+## The risk register and the risk owner
+
+The risk register is where the lifecycle leaves a paper trail. Every identified risk gets a row: a description, the assets and objectives it threatens, a likelihood and impact rating, the treatment chosen, the controls that implement the treatment, and a residual rating once those controls are in place. Done well, it is the most honest document in the organisation. Done poorly, it is theatre.
+
+There is one column that gets neglected more than any other, and it is the one that determines whether the register functions: **the risk owner**. Every risk needs a named individual, not a team, not "the business," accountable for keeping it managed. Ownership is not the same as blame. It is the answer to the question "who will notice when this risk changes, and who will act?" A risk without an owner is an orphan. It will drift until it becomes an incident, and then someone will discover that nobody owned it, which is exactly when ownership would have mattered.
+
+ISO/IEC 27001:2022 makes this explicit in its organisational controls: roles and responsibilities for information security must be defined and assigned. The risk owner is the sharpest test of whether that control is real. When you audit Tessera's register, look at the owner column first. If it is full of "IT," "Engineering," and "Management," you have found your first finding before you have rated a single risk.
+
+::: {.tessera-case}
+**🗂️ Tessera Case: The preliminary Tessera risk matrix**
+
+Here is the register as it arrives, trimmed to the rows that matter. Looks complete. Looks disciplined. Read it as the auditor, not the recipient.
+
+| Risk | Likelihood | Impact | Rating | Owner |
+|---|---|---|---|---|
+| Tenant data leakage between customers in multi-tenant platform | Low | Medium | **Medium** | Engineering |
+| Ransomware via phishing of staff | Medium | Medium | **Medium** | IT |
+| Insider misuse of production DB access | Low | Medium | **Medium** | Management |
+| AWS region outage, platform unavailable | Low | High | **Medium** | Engineering |
+| Loss of certification due to failed audit | Low | High | **Medium** | CTO |
+
+The pattern gives the game away before you read a single rationale. Five risks, five different scenarios, one universal verdict: medium. The register is not measuring risk. It is averaging anxiety. Each rating is defensible in isolation and indefensible in aggregate, because nobody has asked whether the controls that justify those "Low" likelihoods have ever been tested, or whether the "Medium" impacts account for the enterprise contracts and the Privacy Act obligations that make a single breach a board-level event. This matrix needs re-rating, and the rationale needs to be written down in a form another auditor could follow. That is this chapter's Evidence Locker.
+:::
+
+## Treatment: avoid, mitigate, transfer, accept
+
+Once a risk is evaluated, you treat it. The vocabulary is small and worth memorising, because every control you audit for the rest of this book is implementing one of these four decisions.
+
+- **Avoid.** Eliminate the risk by removing the source. Decommission the system, switch off the feature, exit the market. Decisive, often expensive, sometimes the only honest answer.
+- **Mitigate.** Reduce likelihood or impact by putting controls in place. Most of information security is mitigation: patching, MFA, encryption, access reviews, logging, training. Mitigation rarely removes a risk; it lowers it to a level the organisation can live with.
+- **Transfer.** Move the risk, or its cost, to another party. Cyber-insurance is the obvious example. A managed-service contract that carries an SLA is another. Transfer is never total: insurance covers the money, not the reputational damage, and a contract does not return your customers' data. You have transferred the financial consequence, not the underlying exposure.
+- **Accept.** Acknowledge the risk and choose to live with it, explicitly, with a reason, signed by someone with the authority to accept it. Acceptance is legitimate. *Implicit* acceptance, where a risk is simply never treated and never owned, is the most common failure mode in the registers you will read.
+
+The choice is rarely pure. A real treatment plan combines them: mitigate hard, transfer what remains through insurance, and accept the residual, with the owner's name on the acceptance. The discipline is to make the choice deliberately and record it. A control with no treatment rationale attached is a control someone installed on instinct and never justified.
+
+## Residual risk
+
+Here is the distinction that separates people who have read a standard from people who understand one. **Inherent risk** is the risk before controls: the raw exposure, threat meeting vulnerability with nothing in the way. **Residual risk** is what remains *after* treatment. The whole point of mitigation is to move a risk from its inherent level down to a residual level the organisation has decided is acceptable.
+
+Residual risk is where auditors live. Inherent risk tells you about the world. Residual risk tells you whether the controls are doing their job. A risk that sits at "High inherent, High residual" has controls that are not working, or do not exist, or exist only on paper. A risk at "High inherent, Low residual" has controls you now need to test, because the entire justification for that comfortable residual rating rests on them. Every residual rating in a register is a claim about a control. Your job, for the rest of the engagement, is to substantiate those claims one by one.
+
+:::: {.callout-warning title="Watch out: residual is not eliminated, and one rating can hide a swarm"}
+Two traps, both common, both dangerous.
+
+First, treating *residual* as if it meant *eliminated*. It does not. Residual risk is the risk that remains after treatment, and it remains because no control is perfect, because controls fail, and because the threat landscape moves. A register full of "residual: low" is not a register of solved problems. It is a register of bets on controls, and bets can lose. If the organisation talks as though treatment closed the risk, the treatment is probably aspirational.
+
+Second, the single-point likelihood × impact rating hiding aggregation and velocity. One phishing email rated "medium" tells you almost nothing, because phishing is not a one-off; it is a continuous stream, and the relevant question is the likelihood that *at least one* succeeds over a year, not the likelihood of any single attempt. Likewise, a risk whose impact compounds fast (a tenant-data leak that spreads as customers discover it, a ransomware payload that moves laterally in minutes) cannot be captured by a static impact score. A matrix cell is a still photograph. Real risk has a frame rate. When you re-rate, ask not just "how likely, how bad" but "how often, and how fast does it get worse."
+::::
+
+## Two standards, one loop: ISO/IEC 27005 and NIST SP 800-30
+
+You will meet two risk standards repeatedly, and it helps to know how they differ and why it rarely matters which one you reach for.
+
+**ISO/IEC 27005** is the information security risk management standard that sits beside ISO/IEC 27001. If 27001 tells you to *do* risk management (it is mandatory: Clause 6.1.2 requires a risk assessment and Clause 6.1.3 requires a risk treatment plan, and the Statement of Applicability is built directly from the treatment decisions), then 27005 tells you *how*, in process terms: context, assessment, treatment, acceptance, communication, monitoring. It is the method document for the ISMS. For Tessera, chasing 27001 certification, 27005 is the natural home for the methodology their register should follow.
+
+**NIST SP 800-30** is the US federal equivalent, "Guide for Conducting Risk Assessments." It is more granular on the assessment step itself: it breaks the analysis into identifying threat sources and events, vulnerabilities, and predisposing conditions, then determining likelihood, then impact, then risk. It is the document to reach for when you want a rigorous, repeatable walk through a single assessment.
+
+Both describe the same loop. Both use likelihood and impact. Both feed treatment. The honest difference is tone and lineage, not substance. An auditor who can read a Tessera register and map its columns to either standard, fluently, has the skill; the partisan who insists one is correct and the other is not has missed the point. The risk-based audit approach does not care which standard produced the register. It cares whether the register survives scrutiny.
+
+## The risk-based audit approach
+
+Everything in this chapter converges on a method. The **risk-based audit approach** uses risk to decide where the audit looks hardest. You do not test every control with equal effort, because no engagement has the time or the budget for that, and because uniform effort is wasted effort: it spends the same care on a low-impact nicety as on a load-bearing control that protects the crown jewels.
+
+Instead you let the risk register guide the programme. High residual risks get deep testing: you trace the controls that justify the low rating back to evidence, and you test that they actually work. Medium risks get proportionate testing. Low risks may be confirmed-present and moved on. The audit effort follows the risk, not the alphabet.
+
+There is a second, subtler dimension. You are not only using risk to plan the audit; you are auditing risk management itself. Is the register complete? Are the owners real? Do the ratings survive a challenge? Is the cycle actually running, or was it last touched the week before you arrived? For an organisation certifying to ISO/IEC 27001, a sound risk management process is not optional; it is the spine of the whole management system. An opinion on Tessera's readiness is, in large part, an opinion on whether their risk management is real. You cannot certify an organisation that manages controls but not risk.
+
+This is also where risk connects to everything that follows. The frameworks you will meet next chapter exist to give you a structured way to treat the risks this chapter identifies. The audit plan in Chapter 4 is built on the risk-based priorities you set here. Risk is the load-bearing concept of the entire engagement.
+
+:::: {.callout-note title="🤖 AI Field Note: Drafting the matrix, then fixing it"}
+Ask an AI to "draft an information security risk register for a multi-tenant B2B SaaS company on AWS seeking ISO 27001 certification." It returns a clean, well-structured register in seconds, with sensible columns and plausible risks. That is the trap the Introduction warned you about: it is correct, and it is generic.
+
+Look at the row every AI writes the same way: *cross-tenant data leakage*. The AI rates it **Medium**: medium likelihood, medium impact. Its reasoning, if you push it, is that multi-tenant platforms use logical isolation, encryption, and IAM, so a leak is possible but contained, and the impact is a single customer's data. That reasoning is sound for a *generic* SaaS. It is wrong for Tessera, and here is the judgement the machine cannot supply.
+
+Tessera's enterprise contracts carry data-isolation clauses: a cross-tenant leak is not a breach of one customer's data, it is a breach of a contractual guarantee, with liquidated damages in several of them. Tessera is also subject to the Australian Privacy Principles and the Notifiable Data Breaches scheme, so the same leak is a mandatory notification and, depending on the data, a reportable incident affecting multiple parties. The impact is not "one customer." It is contracts, regulators, and reputation, simultaneously. Re-rate it **High**, and write the rationale down: *impact elevated from Medium to High on the basis of multi-party contractual exposure and mandatory notification obligations under the APPs, which the generic rating did not consider.*
+
+That is the move, repeated across the register. The AI drafted in thirty seconds. You supplied, in an hour, the customer-contract context, the regulatory context, and the operational reality that turn a generic register into Tessera's register. The drafter-to-evaluator shift, on a single artefact. Lock the re-rated version, with rationale, in your Evidence Locker.
+::::
+
+:::: {.callout-important title="🔍 Auditing AI: Rating the risk of the model itself"}
+The likelihood × impact framework was built for threats that steal data or break systems. It applies, with a twist, to AI systems themselves, because an AI deployment is a new source of risk that an organisation can own, treat, and rate like any other.
+
+Treat the model as an asset with its own threats and vulnerabilities. A threat source might be a prompt-injection attack, a training-data extraction attempt, or simply drift as the model is retrained. The vulnerabilities are familiar to anyone who has worked with these systems: they confabulate, they leak training data under the right queries, and they fail in ways that look confident rather than loud. The impact? A Tessera support chatbot that hallucinates a refund policy it just invented is a customer-trust risk. An AI assistant that summarises customer tickets and leaks one tenant's details into another tenant's summary is the cross-tenant leak from the Field Note, delivered through a new channel.
+
+When you audit an organisation that has deployed AI, the risk register should contain rows for the model: who owns it, how it was assessed before deployment, what monitoring catches drift or misuse, what the residual risk is. If those rows are missing, the organisation has not managed the risk; it has assumed it. That is the very failure this chapter is about, wearing a new face.
+::::
+
+:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 2)"}
+Lock in your **re-rated Tessera risk matrix**. For every rating you changed, document the rationale in a sentence another auditor could follow: *what context the original rating missed* (contractual, regulatory, operational, or aggregation), *what you re-rated it to*, and *on what evidence*. Note the **owner** you would assign where the register has none, and flag any risk you believe is **missing entirely**. By the end, your matrix should read less like the CTO's "we've covered the big risks" and more like a defensible argument about what could actually go wrong at Tessera. This is the artefact the rest of the engagement will keep returning to.
+::::
+
+## The question, answered
+
+What could go wrong at Tessera? Quite a lot: a cross-tenant leak that breaches contracts and triggers a regulator, a phishing payload that reaches an admin account, a region outage that takes the platform down for the customers whose deals depend on it, an insider with DB access and a grievance, a certification failure that stalls the next funding round. The risk register's job is to name these, rate them, own them, and treat them honestly. Your job is to test whether it does.
+
+How do we measure it? With the same two questions, asked sceptically, over and over: *how likely, and how bad*, accounting for aggregation and velocity, and always measured against the objectives and obligations that make the impact real. Risk is likelihood times impact, scored against context the spreadsheet cannot supply on its own. The discipline is to supply that context, write the rationale down, and let the evidence set the rating rather than the optimism.
+
+Tessera's CTO sent a register with no red cells. By the time you have re-rated it, there will be red, and every red will be defensible. That is what risk management looks like when it is real, and it is the foundation the next ten chapters build on. Because once you know what could go wrong, the next question is the one Tessera's CTO has not yet thought to ask: *which rules do we measure ourselves against, and why those ones?*

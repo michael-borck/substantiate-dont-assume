@@ -1,0 +1,118 @@
+# Scope? Audit Planning and Methodology {#sec-scope}
+
+> *An audit that tries to verify everything verifies nothing.*
+
+::: {.tessera-case}
+**🗂️ Tessera Case: "Just a quick health check"**
+
+Tessera's CTO opens the second conversation with a request that sounds modest. "Before we go deep, can you just do a quick health check? A general sense of where we stand." Reasonable, and dangerous. A "quick health check" has no boundary, no criteria, and no definition of done. It is the kind of engagement that swells until it is neither quick nor a check, and that ends with an opinion so vague no one can rely on it. Your job here is to resist the open-ended ask and replace it with something defensible: an engagement with a stated objective, a drawn boundary, and a moment when you can say, on the evidence, that the work is finished.
+:::
+
+## Scope before substance
+
+You cannot audit everything, and you should not try. An information security management system touches every server, every account, every supplier, every line of policy, and every corridor with a lock on it. A certification-readiness audit has weeks, not years, and limited access. The gap between what exists and what you can examine is enormous, and the auditor's first job is to close it intelligently rather than pretend it is not there.
+
+That act of choosing, what you will examine and what you will deliberately leave, is called scope, and it is the first place your judgement becomes visible. Anyone can say "we'll look at everything, to be safe." That sentence is not diligence. It is the absence of a point of view, dressed up as thoroughness. A scope that contains everything contains no priority, and an engagement with no priority will spend its hours evenly across the trivial and the critical, which is how audits run out of time before they reach the part that matters.
+
+I have inherited engagements whose scope read "all security controls." The first week was not spent auditing. It was spent drawing the boundary that should have existed on day one. Scope is the cheapest mistake to make and the most expensive to fix, because every later stage is built on it.
+
+The discipline is to choose. Some choices will turn out wrong; that is the nature of planning under uncertainty, and it is why scope is revisited, not carved in stone. But a scope that names what is in and what is out is a scope an auditor can defend, and a scope that can be defended is the only kind worth having. The rest of this chapter is the machinery for making those choices well.
+
+## The four things you must fix before you start
+
+Before a single document is reviewed or a single interview booked, four things must be fixed in writing. They are the legs the engagement stands on, and a wobble in any one of them propagates through everything that follows.
+
+The **audit objective** is the question the engagement exists to answer. For Tessera, that question is specific: *is Tessera's information security management system ready for ISO/IEC 27001:2022 certification?* Not "is Tessera secure," which is unanswerable, and not "what is wrong with Tessera," which has no end. A good objective is a question with a finite, opinion-shaped answer.
+
+The **criteria** are the benchmark the subject matter is measured against. You cannot say whether something conforms without first saying what it should conform to. Tessera's criteria are ISO/IEC 27001:2022, supported by the controls of Annex A and the 93 controls across the four themes you met in Chapter 3. The criteria decide what counts as evidence and what counts as a finding.
+
+The **scope** is the boundary: which parts of the subject matter the objective applies to. Which systems, which locations, which business units, which period of time, which controls. Scope turns the objective from an idea into a finite piece of work.
+
+And **materiality** is the threshold that decides what matters. Not everything that is imperfect is a finding; only what is material is. Materiality is what stops the report from being an exhaustive catalogue of minor nicks and makes it a judgement about the things that affect the opinion.
+
+Notice the relationship. The objective is the question; the criteria define "good"; the scope draws the fence; materiality decides what inside the fence is worth reporting. Fix all four, and the engagement has a spine. Leave any vague, and you are back to the health check.
+
+## Materiality is not completeness
+
+Here is the distinction students trip over most, and it is worth slowing down for. Completeness asks: *did we look at everything?* Materiality asks: *did we look at what matters?* These are not the same question, and an auditor who answers the first has not answered the second.
+
+In financial audit, materiality has a number: a percentage of revenue or profit below which an error is too small to affect a reader's decision. Information security is fuzzier. There is no tidy formula that says a control gap of severity 3.2 crosses the line. But the principle transfers exactly. A missing offboarding step that leaves orphaned administrator accounts is material, because it breaks a core control and the evidence of the breakage is exactly what a certification body will probe. A policy typo is not material, because it changes nothing about whether the controls work. The job is to tell them apart.
+
+The temptation is to chase completeness because it feels safe. If you catalogue every imperfection, the reasoning goes, you cannot be accused of missing anything. You can, and you will be, because a report that lists everything lists nothing in priority order, and the reader who relies on it cannot tell the catastrophic from the cosmetic. Materiality is the auditor's permission to be selective, and selectivity, backed by judgement, is what makes the opinion useful.
+
+:::: {.callout-warning title="Watch out: completeness masquerading as rigour"}
+A scope or a report that tries to cover everything is not more thorough. It is less useful. The trap is to treat "we examined all 93 controls" as the deliverable. It is not. The deliverable is an opinion on the controls that matter, supported by evidence you can defend. If your materiality instinct is missing, your engagement will drown in detail and still miss the thing that sinks the certification. Completeness is a checklist. Materiality is a judgement.
+::::
+
+## The engagement letter
+
+Scope decisions are only worth something if they are agreed, and agreement that is not written down is an argument waiting to happen. The **engagement letter** is where the four planning primitives, the objective, the criteria, the scope, the materiality threshold, become binding between you and Tessera. It is part contract, part charter. It says what you will do, what you will not do, what you need from Tessera to do it, and what you will deliver at the end.
+
+A good engagement letter is boring on purpose. It names the parties, the criteria, the objective, and the scope boundary in language a board and a certification body would both recognise. It sets out responsibilities: Tessera provides access and accurate information; you provide competence, independence, and an evidence-based opinion. It records the deliverables, the timeline, and the fees. And it is honest about limits: what the audit will not catch, what "snapshot, not guarantee" means, and how findings will be raised if the picture changes.
+
+The letter is also where the hard conversations happen early. If Tessera wants the acquired subsidiary included, that is a scope and a fee decision, made now, not in week three. If the CTO expects a clean opinion regardless of evidence, the letter is where you restate, in writing, that the opinion follows the evidence and not the deadline. A scope that everyone has read and signed is a scope that survives pressure. One that lives in a hallway conversation does not.
+
+:::: {.callout-warning title="Watch out: scope creep and vanity scope"}
+Scope has two enemies that look like virtues. **Vanity scope** is the impulse to put everything in, because a big scope looks ambitious and "thorough." It is the health check in a suit. **Scope creep** is the slow drift that happens mid-engagement, when a curious finding tempts you to follow it past the boundary, or a stakeholder asks you to "just take a quick look" at something out of scope. Each ask sounds small. Together they turn a finished engagement into one that never ends. The defence is the same for both: every change to scope is a written decision, with a reason, a cost, and a signature. "While we're here" is not a scope.
+::::
+
+## The six-stage audit lifecycle
+
+Once the engagement is agreed, the work itself follows a lifecycle that ISO/IEC 19011 sets out and that every competent audit function recognises. ISO/IEC 19011 is the standard for *auditing management systems*: not what to audit, but how to run an audit. It is the methodology volume of the standards library, and its six stages are the backbone of how an engagement actually unfolds. Learn them, because they are how you will structure your time from here to the opinion.
+
+The six stages, in order:
+
+1. **Initiating.** You establish contact, confirm the engagement is feasible, agree the objective, scope, and criteria, and form the audit team with the competence the engagement needs. The engagement letter is signed here, and the audit programme is begun.
+2. **Preparation.** You review the documents Tessera has given you, build the audit plan, and prepare the working papers, checklists, and test procedures that fieldwork will use. This is where the desk audit happens, and where most of an Act I engagement is lived.
+3. **Conducting.** The audit itself. The opening meeting, the gathering of evidence through interviews, configuration review, and testing, and the closing meeting where preliminary findings are shared. Evidence is gathered on terms you set, not on terms Tessera chooses.
+4. **Reporting.** You prepare the audit report: the findings in a defensible format, the conclusion, and the opinion. The report is drafted, reviewed, and distributed to the agreed recipients.
+5. **Completion.** The engagement is formally closed. Working papers are finalised and retained, lessons are captured, and the records that someone may need to reconstruct this audit in three years are put away properly.
+6. **Follow-up.** You verify that the corrective actions raised in the report have actually been taken and are working. An audit that reports a finding and never checks the fix is an audit that stops at diagnosis.
+
+Notice where the judgement sits. The stages are linear, but the decisions inside them are not. Initiation fixes scope, but preparation often forces a scope correction when the documents reveal something unexpected, and follow-up can reopen an engagement that completion thought was closed. The lifecycle is a spine, not a script. You move through it with your professional scepticism switched on at every stage.
+
+## The audit programme and risk-based scoping
+
+The engagement letter says *what* you will do and *where the boundary is*. The **audit programme** says *how*, in operational detail: which controls you will test, which evidence you will gather for each, which sample sizes, which interviews, and in what order. If the engagement letter is the charter, the audit programme is the work order. (ISO/IEC 19011 is precise about terms: it reserves "audit plan" for one audit's schedule and "audit programme" for a coordinated set of audits. In practice, auditors say "audit programme" for the engagement's procedure list, and so will this book.)
+
+You do not write the programme by listing all 93 controls and assigning each a test. That is the completeness trap in a different costume. You write it by ranking. **Risk-based scoping** is the principle that audit effort follows risk: the controls and areas where a failure would most threaten the objective get the most hours, the deepest sampling, and the most experienced eyes. The areas where a failure is unlikely or low-impact get a lighter touch, sometimes just a documented review.
+
+This is where Chapter 2 does real work. The Tessera risk register you helped build, the likelihood-times-impact ratings, the residual risks after treatment, all of it now becomes the input to where this engagement spends its time. A risk that is rated high and is the only treatment for a critical asset is where you dig. A control that backs a risk already accepted at a low residual level gets enough attention to confirm it exists, and no more. The audit programme is the risk register translated into hours.
+
+Risk-based scoping has a courage requirement. It asks you to *not* test something, on purpose, because the risk does not justify it, and to write down why. That "why" is your defence when a reviewer asks why a control was lightly examined. The answer "because the risk was low, and here is the analysis" is a complete answer. The answer "we ran out of time" is not.
+
+::: {.tessera-case}
+**🗂️ Tessera Case: Drawing the Tessera boundary**
+
+The artefact for this chapter is a pair: the engagement letter and the audit programme, and the most useful part of both is what they exclude. Tessera's scope, agreed in writing, runs like this.
+
+*In scope:* the AWS-hosted Tessera SaaS platform, its production and staging environments, the customer data flows, and the information security management system that governs them, audited against ISO/IEC 27001:2022. The ISMS documentation, the risk register, the policies, and the controls that back them are all inside the fence.
+
+*Out of scope, with reasons recorded:* a recently acquired subsidiary, brought in three months ago, whose systems are not yet integrated into Tessera's ISMS and whose inclusion would require a separate assessment. And the third-party payment processor Tessera routes transactions through, which is covered by its own current SOC 2 Type II report, a form of assurance you will accept and verify rather than duplicate.
+
+Two exclusions, two different logics, both written down. The subsidiary is out because it is not yet part of the system of record; including it would mean auditing an ISMS boundary Tessera has not finished drawing. The processor is out because its assurance already exists; re-auditing it would waste hours Tessera needs elsewhere. These are not evasions. They are documented scope decisions an auditor can defend, and they are exactly the kind of decision the generic "health check" would never have forced. You can run this same exercise against the live Tessera site at tessera.locoensayo.org and see whether your own boundary holds up.
+:::
+
+:::: {.callout-note title="🤖 AI Field Note: Drafting the audit programme"}
+A programme is a fine thing to draft with an AI, because its structure is regular and its content is largely standard. Prompt an AI: "Draft a Stage 2 certification-readiness audit programme for a multi-tenant B2B SaaS company hosted on AWS, against ISO/IEC 27001:2022, with controls grouped by the four Annex A themes." In a minute you have a structured programme: objectives, the control families to test, sample procedures, and a schedule. That draft is genuinely useful, and it is where the work begins, not where it ends.
+
+Because the AI scopes generically, it scopes wrongly for Tessera, and that is the lesson. Read the draft as an evaluator and the gaps are obvious. The draft assumes a single-tenant system and never tests the **multi-tenant boundary**, the control that stops one customer reaching another's data, which is the single highest-risk area in the platform. It schedules a full access-control test of the **payment processor**, duplicating assurance a SOC report already provides and burning hours you do not have. And it silently sweeps the **acquired subsidiary** into scope as if integration were finished, when the subsidiary is not yet on Tessera's ISMS at all. Three Tessera-specific boundaries, three misses, because the AI has no knowledge of the engagement letter and no judgement about where this company's risk actually lives.
+
+The correction is yours. You add a tenant-isolation test procedure that pulls configuration evidence on the separation logic. You remove the processor from the test plan and replace it with a procedure to review and rely on the SOC report. You add a scope-exclusion note for the subsidiary and a flag to revisit it at the next review. The AI wrote the skeleton. You supplied the judgement that turned a generic programme into Tessera's programme. That is the drafter-to-evaluator shift, on a real artefact, this week.
+::::
+
+:::: {.callout-important title="🔍 Auditing AI: Scoping the AI surface"}
+Tessera runs an AI assistant inside its support portal and an AI-driven anomaly detector in its logging stack. Neither is on the security page, and both are inside the boundary you just drew, so the scoping question lands now, not later. An AI system has a scope of its own: the model, the training and inference data, the prompts and outputs, the human-in-the-loop checks, and the integrations that feed it. Decide which of those the engagement covers, because "we tested the model" is not the same as "we tested the control the model is part of."
+
+The sharper point is that AI changes what "in scope" means over time. A model that behaves one way today can drift after a retrain, so a control that passed in week 2 may not pass in week 8. Scope has to say *when* the AI surface was examined, and the opinion has to honour that snapshot. We will test AI-generated evidence properly in Chapter 7. Here, the lesson is simpler: an AI you cannot see on the security page is still part of the ISMS, and a scope that ignores it is a scope with a hole in it.
+::::
+
+:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 4)"}
+This week's artefact is the planning pair, and the part that earns its place in the locker is the documentation of *why*. Lock in: the **engagement letter** with objective, criteria, scope, and materiality stated; the **audit programme** with the controls and procedures prioritised by risk; and, most importantly, the **recorded scope decisions**, the subsidiary excluded pending integration, the processor covered by its SOC report, the AI surface included with its snapshot date. Explicit exclusions are not footnotes. They are the proof that the scope was a decision, not a default. By Week 12 this pair is the front matter of your working papers, and anyone reading them will see an engagement that knew what it was doing before it began.
+::::
+
+## The question, answered
+
+What is in, what is out, and how do we know we are done? *In* is the AWS-hosted Tessera platform and its ISMS, measured against ISO/IEC 27001:2022. *Out*, deliberately and on the record, is the unintegrated subsidiary and the SOC-covered processor. We know we are done when the six-stage lifecycle has run its course, the audit programme's procedures have been executed to the depth the risk justified, the findings that cross the materiality line are raised, and the opinion follows the evidence rather than the deadline. Scope is not the paperwork before the audit. Scope is the first opinion the auditor forms, and the one every later opinion depends on.
+
+The boundary is drawn and the programme is written. Next week the work turns to what "good" looks like inside that boundary: *what should the technical controls actually do, and how do we recognise it when they do?*

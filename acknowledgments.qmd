@@ -1,0 +1,11 @@
+# Acknowledgments {.unnumbered}
+
+This book grew out of a frustration and an opportunity. The frustration: information security auditing is taught from standards — ISO/IEC 27001, NIST CSF, the Privacy Act — which are authoritative but not a story a student can read end to end. The opportunity: AI is commoditising the technical craft of auditing, which forces the question of what the human auditor is actually *for*. This book is an attempt to answer both at once — to give ISYS6018 a readable spine and to take a clear stance on judgement in a world where machines can draft.
+
+The students of ISYS6018 — Information Security Audit and Control at Curtin University — are the reason this book exists. Their questions, their confusion, and their moments of "oh, *that's* what an auditor does" shaped every chapter. The Tessera engagement is written for them, and the discipline it teaches — substantiate, don't assume — is the one they carry into the profession.
+
+Colleagues who reviewed early drafts and pushed back on arguments that were not yet strong enough made the book sharper. You know who you are, and I am grateful.
+
+The open-source community behind Quarto, Pandoc, and GitHub made it possible to write, build, and publish this book with tools that are free and transparent.
+
+This book was written using the methodology its companion, *Conversation, Not Delegation*, describes. AI was involved at every stage — as a drafting partner, a sounding board, and a source of plausible-sounding mistakes that needed catching. That last role is the point. An auditor's relationship to AI-generated work is exactly what this book teaches: the machine produces the draft; the human supplies the judgement, the evidence, and the defensible opinion. Every sentence here reflects the author's judgement. The AI made the work faster. It did not do the thinking.

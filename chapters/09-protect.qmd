@@ -1,0 +1,169 @@
+# Protect? Data Protection and Privacy {#sec-protect}
+
+> *Security asks whether the wrong hands reached the data. Privacy asks whether you had the right to hold it at all.*
+
+::: {.tessera-case}
+**🗂️ Tessera Case: the crown jewel**
+
+Full access landed on Monday, and the first thing you traced was the data itself. Tessera's crown jewel is not its source code or its brand. It is its customers' data: contract terms, account configuration, usage telemetry, and the operational reports its customers' own staff upload for Tessera's new AI feature to summarise. In Act I you could read the privacy policy and the data classification scheme and nothing more. Now you can follow the bytes. The question that opened the engagement, *is it actually defended?*, stops being rhetorical this week. It becomes a thing you can answer with a data-flow diagram, a contract clause, and a deletion log, or fail to.
+:::
+
+## The crown jewel, and why privacy is not security
+
+Every audit has a thing it is really about, and for Tessera that thing is personal information. Customer contact records. The named individuals inside customer organisations who log in. The contents of the reports those individuals upload. Protect that, and the certification means something. Fail to, and the rest of the control set is decoration.
+
+Here is the distinction this chapter turns on, and it is the one people get wrong first. Security and privacy are related but they are not the same property. Security is about protecting information: keeping it confidential, keeping it intact, keeping it available. It asks *is the data safe?* Privacy is about the rights of the people the data describes: whether it was collected lawfully, used for the purpose it was collected for, disclosed only with basis, and held no longer than needed. It asks *is the data yours to hold, and are you handling it as you promised?*
+
+A company can have excellent security and still breach privacy law. A perfectly encrypted database of customer records, sent to a third party overseas without a lawful basis for the transfer, is a privacy breach that no cipher will cure. The reverse holds too: a company scrupulous about collection notices can still leak the lot through a misconfigured storage bucket. The two disciplines protect the same asset from different directions, and an auditor who conflates them tests the wrong thing.
+
+The 2022 standard recognises this. ISO/IEC 27001's organisational control A.5.34, *Privacy and protection of personal information*, is explicit that an organisation's privacy obligations sit alongside its security obligations, and that meeting one does not discharge the other. Audit data protection and you are auditing both, against two rulebooks: the technical control objectives from Chapter 5, and the legal regime that governs personal information. For Tessera, that regime is the Australian *Privacy Act 1988* and its Australian Privacy Principles.
+
+I learned the cost of the conflation the hard way, on an engagement I would rather not describe in detail. The client answered every privacy question I asked with a cipher specification, and I wrote it down and moved on. Three weeks later the cross-border transfer I had not chased became the actual finding, and the finding was a notifiable breach. Encryption had been perfect. The legal basis had been absent. That is the gap this chapter exists to close.
+
+:::: {.callout-warning title="Watch out: 'we encrypt it' is not a privacy answer"}
+The first answer most engineers give to a privacy question is an encryption answer. Asked whether customer data is protected in transit to the AI vendor, they will say "TLS 1.3, end to end." Asked whether it is protected at rest, they will cite AES-256 and the key-management configuration. Both answers are correct. Neither is a privacy answer.
+
+Encryption addresses APP 11, the security principle. It does not address APP 3 (was the data collected lawfully?), APP 6 (is it being used only for the purpose disclosed?), or APP 8 (is the cross-border disclosure to the vendor lawful?). A data set can be encrypted to military grade and still be a notifiable breach waiting to happen, because the breach is in the handling, not the cipher. When a client answers a privacy question with a security control, write it down, and then ask the question again.
+::::
+
+## The Australian Privacy Principles
+
+The *Privacy Act* regulates how APP entities handle personal information, and the thirteen Australian Privacy Principles are its operative rules. An APP entity is, broadly, an organisation with an annual turnover above $3 million, plus a list of smaller entities caught regardless of size (health service providers, traders in personal information, and others). Tessera's revenue sailed past the threshold a funding round ago. It is an APP entity, and the APPs bind it.
+
+You do not need to memorise all thirteen to audit Tessera. You need to know which ones do the load-bearing work, and why.
+
+**APP 1** requires open and transparent management of personal information, manifested in a clear, current privacy policy. The Act I read tested whether that policy exists. The Act II test is whether practice matches it, and the gap is usually where the policy has not kept up with a feature the product team shipped.
+
+**APP 3** governs collection. An entity may collect only personal information that is reasonably necessary for its functions, by lawful and fair means. Sensitive information (health information, biometric data, political opinion, and the rest of the statutory list) attracts a higher bar, generally requiring consent. The audit question is whether Tessera collects what it actually needs, or hoovers up what is convenient.
+
+**APP 6** governs use and disclosure. Personal information collected for one purpose may be used or disclosed only for that purpose, for a secondary purpose the individual would reasonably expect, or with consent. This is the principle that decides whether Tessera may feed customer content through its summarisation feature at all, and it is the one most likely to surprise a product team.
+
+**APP 8** governs cross-border disclosure, and for a company that calls an overseas AI service it is the principle that will either save or sink the engagement. More on it below.
+
+**APP 11** requires an entity to take such steps as are reasonable in the circumstances to protect personal information from misuse, interference, loss, and unauthorised access, modification, or disclosure, and to destroy or de-identify it when no longer needed. APP 11 is where privacy and security meet, and where secure deletion lives.
+
+Read together, the APPs describe a lifecycle: collect lawfully, tell the subject, use it for the purpose you stated, protect it while you hold it, disclose it only with basis, and let it go when you are done. Auditing Tessera's privacy is auditing that lifecycle end to end, against the legal text rather than against a technical checklist.
+
+## The Notifiable Data Breaches scheme
+
+The *Privacy Act* also runs the Notifiable Data Breaches scheme, and it is the scheme that turns a bad weekend into a regulated event. Under Part IIIC, an APP entity that becomes aware of an *eligible data breach* must notify the Office of the Australian Information Commissioner and the affected individuals as soon as practicable.
+
+An eligible data breach is a three-part test, and the auditor should know it cold. First, there is unauthorised access to, unauthorised disclosure of, or loss of, personal information. Second, this is likely to result in *serious harm* to any of the individuals to whom the information relates. Third, the entity has not been able to prevent the risk of serious harm with remedial action. All three, and the notification obligation bites.
+
+The phrase that does the work is *serious harm*, and it is deliberately not a number. Serious harm is serious physical, psychological, emotional, financial, or reputational harm. Assessing it demands judgement about the kind of information, its sensitivity, who holds it now, and what they could do with it. A breach reaching a list of public business contact names may be low harm; the same breach reaching a file of health-related reports is catastrophic. The scheme forces an entity to think, on the worst day of its year, about consequences it would rather not.
+
+The scheme also has a clock. Once an entity suspects an eligible breach, it has a reasonable period to assess, and the Commissioner's guidance treats around thirty days as a reasonable upper bound. An auditor tests NDB readiness the way it tests every other readiness: does a playbook exist, who owns it, has it been rehearsed, and can the organisation answer the three-part test under pressure with its data inventory in front of it?
+
+That last clause hides the trap. You cannot assess serious harm for data you cannot locate or describe. The NDB scheme silently assumes a working data inventory, and a company whose asset register is rotting, the Chapter 6 finding, discovers the cost of that rot in the middle of a breach assessment, when the thirty-day clock is already running.
+
+## Cross-border disclosure and data sovereignty
+
+APP 8 is where modern SaaS architectures collide with a law written before they existed. Before an APP entity discloses personal information to an overseas recipient, it must take such steps as are reasonable in the circumstances to ensure the overseas recipient does not breach the APPs in relation to that information.
+
+Read that sentence twice. It is an accountability transfer, not a liability transfer. Since the 2014 amendments, section 16C of the *Privacy Act* provides that, where an entity discloses personal information to an overseas recipient, the entity is taken to have breached the APPs if the recipient does an act that would breach them. Tessera cannot outsource the obligation. If the overseas AI vendor mishandles the data, it is Tessera's breach, on Tessera's record, notified under Tessera's name.
+
+What counts as *reasonable steps* is the auditor's question, and the answer is unhappily open-ended. Reasonable steps may be contractual (a data-processing agreement that imposes APP-equivalent obligations and a right to audit), may be due diligence (confirming the vendor's certifications, sub-processor list, and data-handling configuration), and may be technical (encryption in transit, tokenisation of identifiers, minimisation of what is sent). The Commissioner expects an entity to have considered the steps and documented its reasoning, and an absence of either is the finding that writes itself.
+
+Note what is absent. Australian privacy law has no equivalent of the European Union's Standard Contractual Clauses, the prescribed contractual instrument the GDPR treats as an adequate transfer mechanism. In Australia a contract is one reasonable step among several; it is not a safe harbour. If you have audited a GDPR compliance programme, unlearn that reflex here, and watch for the people who have not.
+
+Data sovereignty is the adjacent concern, and it is not the same as residency. Where the data physically sits is one question. Which government can compel access to it, and under what law, is another. Tessera's core data lives in the AWS Sydney region (ap-southeast-2), which is the right answer for an Australian customer base that cares about residency. But residency is not the whole of sovereignty, and a single API call can undo it.
+
+:::: {.callout-warning title="Watch out: the hidden cross-border transfer inside an AI API call"}
+A developer adds a feature. The feature sends a customer's report to a model vendor's endpoint to be summarised. From the application's perspective it is a single function call. From a privacy perspective it is a cross-border disclosure of personal information to an overseas recipient under APP 8, and it triggers the full accountability regime of section 16C.
+
+These transfers hide inside features, not contracts. The procurement team may have signed the vendor's master agreement and reviewed its data-processing terms. The engineering team that wired up the endpoint may never have been told that the payload contains personal information, or that the vendor processes it in a jurisdiction the privacy team has not assessed. The transfer exists in the architecture. It does not exist in the contract file until someone traces the data flow and names it. That tracing is Act II work, and it is the single most common place a privacy audit finds a problem the organisation did not know it had.
+::::
+
+## The Privacy Impact Assessment
+
+The instrument that should have caught that hidden transfer before the feature shipped is the Privacy Impact Assessment. A PIA is a structured analysis of how a project, product, or change affects the privacy of the individuals whose information it touches. The Office of the Australian Information Commissioner publishes detailed guidance on conducting one, and it follows a recognisable shape.
+
+A PIA starts with a threshold assessment: is this project likely to have privacy impacts significant enough to warrant a full assessment? If yes, the analyst describes the project, maps the personal information flows (what is collected, from whom, where it goes, who sees it, how long it is kept), tests them against the APPs, and identifies the risks to individuals and their treatments. The output is a living document, not a one-off compliance artefact, and it is only as good as the data flow map it rests on.
+
+The data flow map is the heart of the exercise, and it is where the AI feature should have been caught. A correct map of Tessera's summarisation feature shows customer report content leaving Tessera's boundary, transiting to the model vendor, being processed in a location that may or may not be Australia, and being retained for a period the vendor's terms specify. Each arrow on that map is a question. Each question is an APP. Drawn accurately, the map is the audit.
+
+The Tessera Case below is a fragment of the PIA that should have existed for this feature. It did not exist when you arrived. The Act II finding is that it now needs to.
+
+:::: {.callout-note title="🤖 AI Field Note: drafting the PIA data map"}
+This is a task an AI accelerates dramatically, and it is worth using it, with the evaluator's brakes on. Hand an AI the feature spec, the privacy policy, and the vendor's terms, and ask for a first-cut data flow map with an APP-by-APP impact analysis. It will return a structured draft in minutes: the data elements, the recipients, the retention assumptions, the principles engaged. Most of it will be useful.
+
+Then read it for the invented clauses. Large language models are trained heavily on European material, and they reach for GDPR instruments reflexively. In the transfer-mechanism row, the AI will likely insert *Standard Contractual Clauses* as the safeguard that makes the cross-border disclosure lawful. That instrument exists in EU law. It does not exist in Australian law as a named, prescribed mechanism. Under APP 8 the safeguard is *reasonable steps*, and the accountability sits with Tessera regardless. Accept the clause the AI invented and you have imported a legal instrument that does not govern this engagement, and your PIA now asserts compliance it does not have.
+
+The correction is the audit. Walk every data flow the AI drew against the actual architecture: the endpoint's region, the vendor's documented retention, the contract's actual processing terms, the prompt-logging configuration. The AI produced the draft. You produced the truth. That is the drafter-to-evaluator shift, performed on a document whose only value is accuracy.
+::::
+
+::: {.tessera-case}
+**🗂️ Tessera Case: a PIA fragment for the summarisation feature**
+
+Here is the fragment you drafted back to Tessera after tracing the flow, abridged.
+
+*Project:* in-product summarisation of customer-uploaded reports via a third-party model vendor.
+
+*Personal information flows:*
+- *Report content uploaded by named customer users; may contain personal information of the customer's own staff or third parties named within the reports.*
+- *Content transmitted to the model vendor's inference endpoint over TLS 1.3.*
+- *Vendor processes in [region not pinned to a single location in the contract; routing across multiple regions permitted].*
+- *Prompt-logging confirmed enabled on the account; vendor retention per terms [30 days for abuse monitoring].*
+- *Training on customer inputs: data-processing agreement states the opt-out is configured; configuration to be verified against the account, not the marketing page.*
+
+*APP analysis:*
+- *APP 3 (collection): collected for the summarisation function the user requested. Likely necessary. Sensitive-information risk: reports may incidentally contain health or other sensitive data. Mitigation: pre-upload notice, or content classification.*
+- *APP 5 (notification): the current privacy policy does not disclose the AI processing or the vendor. Gap.*
+- *APP 6 (use and disclosure): summarisation is arguably within the purpose the user would reasonably expect. Secondary use of the content for vendor model training is not, and must be contractually excluded and technically verified.*
+- *APP 8 (cross-border): disclosure to an overseas recipient. Reasonable steps: the data-processing agreement is in place, but the processing region is unconfirmed and the sub-processor list is not attached. Accountability retained by Tessera under s.16C. Gap.*
+- *APP 11 (security): TLS in transit and encryption at rest confirmed. Tokenisation of customer identifiers before the payload leaves the boundary recommended.*
+
+*NDB exposure: a breach at the vendor that exposes report content would be an unauthorised disclosure by an overseas recipient for which Tessera is accountable under s.16C. Where the content includes sensitive information, serious harm is likely, and notification to the Commissioner and to affected individuals would be required. Tessera's NDB playbook does not currently include a vendor-side breach path. Gap.*
+
+*Recommendation: pause auto-enablement of the feature pending closure of APP 5, APP 8 region confirmation, training-opt-out verification against the live account configuration, and extension of the NDB playbook to the vendor-side path.*
+
+Each *Gap* in that fragment is an audit finding waiting to be written. Notice how many of them the desk read in Act I could not have produced.
+:::
+
+## Data masking, minimisation, and secure deletion
+
+If the APPs describe the legal lifecycle, the 2022 control set describes how to engineer it. Four controls do most of the privacy work, and all four were added in the 2022 edition, which is why a privacy audit against the 2013 standard felt so thinly tooled.
+
+**A.5.34, *Privacy and protection of personal information*,** is the organisational anchor. It requires the organisation to identify and meet its privacy obligations, which in practice means knowing which data is personal, who is responsible for it, and how the APPs are satisfied. It is the control under which the PIA lives.
+
+**A.8.10, *Information deletion*,** requires secure deletion of information no longer needed, in line with the retention schedule and using techniques appropriate to the storage medium. Deletion is not `rm`. A record deleted from a database may persist in backups, snapshots, replicas, and logs for weeks or months. Secure deletion means removal across every copy, backed by a retention schedule that decides when deletion is due. The auditor asks for the retention schedule and the deletion evidence, and reconciles the two.
+
+**A.8.11, *Data masking*,** requires the use of masking, pseudonymisation, or other techniques to limit the exposure of personal information where the full data is not needed. This is the control that should govern every development database, every analytics warehouse, and every test fixture built from production data. Real customer records do not belong in a staging environment; masked or synthetic records do. Unmasked production data in a non-production environment is one of the most common findings an auditor writes, because it is one of the most common shortcuts an engineering team takes.
+
+**A.8.12, *Data leakage prevention*,** closes the perimeter, requiring controls to detect and prevent the unauthorised exfiltration of information.
+
+Underlying all of them is data minimisation, which is less a control than a principle: collect the least personal information consistent with the function, hold it for the shortest time consistent with the purpose, and expose it in the narrowest form consistent with the use. Minimisation is the privacy control that pays back in every other dimension. Less data stored is less data to breach, less data to mask, less data to delete, and less data to map in the PIA. A company that minimises well audits well, because there is simply less of it to get wrong.
+
+## The privacy of the AI you bolt on
+
+The chapter's hardest question is also the most contemporary. Tessera's summarisation feature is not a privacy question only about the transfer. It is a privacy question about what the model itself does to personal information, and the 2022 control set does not yet carry a control labelled "AI." You audit it under the controls that exist, and you apply the scepticism the topic demands.
+
+:::: {.callout-important title="🔍 Auditing AI: privacy risks of the model itself"}
+An AI system introduces privacy risks that a conventional data store does not, and three of them belong in any privacy audit of an AI feature.
+
+*Training data retention and reuse.* A model vendor that ingests customer prompts as training data is folding that information into a statistical object it will keep indefinitely and expose, in fragmentary form, through the model's future outputs. A data-processing clause that says "we do not train on your inputs" is the right clause. Verify it against the configuration that governs the account, not the marketing page. The configuration is the control; the clause is the assertion.
+
+*Model inversion and membership inference.* These are the classes of attack that recover information about a model's training data from its behaviour. Model inversion reconstructs approximations of inputs from outputs; membership inference determines whether a specific record was in the training set. For a model trained on Tessera's customer data, these are privacy risks to Tessera's customers, and the risk scales with how much of their data is in the model. A vendor that does not train on your inputs removes the vector. A vendor that does, retains the risk permanently.
+
+*Prompts containing personal data.* Every call Tessera's feature makes to the vendor is a payload, and the payload will contain personal information whenever the summarised content does. Each call is therefore a fresh APP 8 disclosure, a fresh entry on the data flow map, and a fresh item in the breach surface. The privacy of the feature is not a single assessment done at procurement; it is a property re-asserted on every request. Tokenising customer identifiers before the payload leaves the boundary, and minimising what is sent, are the engineering controls that keep it defensible.
+
+Audit all three against evidence, not against the vendor's security page. The vendor's security page is the polished policy. The configuration, the data-processing agreement, the prompt-logging settings, and the architecture are the server behind it.
+::::
+
+:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 9)"}
+This week's artefact is the privacy half of your working papers, and it has two parts. Lock in the **Privacy Impact Assessment fragment** for the summarisation feature: the data flow map, the APP-by-APP analysis, and each named gap. Then lock in the **data-flow-to-AI-vendor assessment**: the endpoint, the confirmed processing region (or the gap where it is unconfirmed), the prompt-logging configuration, the training-opt-out verification status, and the NDB-relevant gaps, with the control each gap maps to and the access you would need to close it.
+
+Separate, as always, what you *found* from what you *suspect*. The cross-border transfer to the vendor is found; the lawful basis for it is the gap. The NDB playbook's missing vendor-side path is found; whether it would hold under a real breach is the gap. By the end of Act II these become the privacy findings in your certification-readiness opinion, and the locker is where they earn the right to be there.
+::::
+
+## The question, answered
+
+Is the crown jewel actually defended? On the evidence Act II has now let you gather, the honest answer for Tessera is: *partly, and the part that is missing is the part that matters most.*
+
+The security of customer data is largely in place. Encryption in transit and at rest is configured. Access is controlled. The AWS residency keeps the core data in Australia. On the security axis, Tessera can defend the crown jewel.
+
+On the privacy axis, the picture is rougher. The cross-border transfer to the AI vendor is a real APP 8 disclosure, made under a data-processing agreement whose region is unconfirmed and whose training opt-out is asserted but not yet verified against the live account. The privacy policy does not disclose the AI processing. The NDB playbook has no vendor-side path. The feature shipped without a PIA, and the fragment you drafted back lists four named gaps. Each gap is a place where the privacy lifecycle is broken, and a broken lifecycle is a notifiable breach waiting for its trigger.
+
+The crown jewel is encrypted. It is not yet, fully, protected. The distinction is the work of this chapter, and it is the distinction your opinion now has to carry.
+
+Next week the question changes shape. A defended crown jewel is still a crown jewel at risk from fire, flood, ransomware, and the region failure that takes a whole multi-tenant SaaS down with it. When the worst happens, the question is no longer whether you protected the data, but whether you can get it back. The question is **Recover?**

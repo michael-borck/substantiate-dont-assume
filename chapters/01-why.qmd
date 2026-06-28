@@ -1,0 +1,99 @@
+# Why? The Auditor's Mandate and Ethics {#sec-why}
+
+> *Why does Tessera need an audit, and why should they trust you?*
+
+::: {.tessera-case}
+**🗂️ Tessera Case: The engagement opens**
+
+The email arrives on a Monday. Tessera's CTO, racing toward an enterprise deal that requires ISO/IEC 27001 certification, has engaged your firm for a certification-readiness audit. The tone is confident: "We're pretty much there, we just need the paperwork signed off." That sentence is your first piece of evidence, and it is not the one the CTO thinks it is. An organisation that believes it is "pretty much there" is an organisation that has not yet tested whether it is. Your engagement opens with a question, not an answer: *why does Tessera need this audit, and why should they trust the person delivering the opinion?*
+:::
+
+## The auditor's mandate
+
+An auditor does not audit by accident. You audit because someone with the authority to ask for assurance has engaged you to provide it, on agreed terms, against agreed criteria. That is the mandate, and it has three parts that matter from day one.
+
+You are engaged by a party that wants the opinion. In Tessera's case, that is a board and a CTO chasing certification. You audit **against criteria**: a standard or framework that defines what "good" looks like, here ISO/IEC 27001:2022. And you deliver an **opinion** on whether the subject matter (Tessera's information security management system) conforms to those criteria, supported by evidence you gathered on terms you set.
+
+Notice what the mandate is not. It is not a licence to poke around wherever you like. It is not a guarantee that you will find wrongdoing. It is a scoped, criteria-bound engagement whose entire value rests on one quality you bring to it: the credibility of the person giving the opinion. That credibility has a name, and it is the rest of this chapter.
+
+## Three hats: counsellor, partner, investigator
+
+Auditors wear three hats, sometimes in the same meeting, and the skill is knowing which one the moment needs.
+
+The **counsellor** helps the organisation understand its obligations before an opinion is formed. A client asks, "Do we really need separate incident-response and business-continuity plans?" You explain the standard, the intent, and the trade-offs. You are advising, not judging, and you must remember the difference, because advice given today shapes the evidence you evaluate tomorrow.
+
+The **partner** works *with* the organisation to make the audit productive. You coordinate access, agree a realistic programme, and treat Tessera's staff as people running a business, not suspects to be interrogated. Most audits fail on logistics, not on findings.
+
+The **investigator** is the hat people picture: following the evidence where it leads, asking the uncomfortable question, refusing to accept "we do that" without proof. This is where professional scepticism lives, and it is the hat this book spends the most time on.
+
+The three hats share one requirement: whichever you wear, your judgement has to be yours, and it has to be defensible. That brings us to the foundation the whole profession stands on.
+
+## Independence and objectivity
+
+An audit opinion is only worth what the auditor's independence is worth. If the opinion can be bought, pressured, or quietly shaped by self-interest, it is worthless, and everyone who relies on it is misled.
+
+**Independence** is the *fact* of being free from relationships and interests that could compromise the opinion. **Objectivity** is the *state of mind*: the discipline to judge evidence on its merits, without bias, even when the answer is inconvenient. Independence is something an outsider can check; objectivity is something only you can guarantee, on every engagement, every day.
+
+The profession catalogues the threats so you can spot them.
+
+:::: {.callout-warning title="Watch out: threats to independence that look reasonable"}
+The dangerous threats are the ones that feel like normal business. A friendship with the CTO. A consulting contract that pays well and renews if the audit goes smoothly. A prior role inside the organisation. A desire to land next year's engagement. None of these is a crime. Each of them is a pressure on the opinion, and each requires a safeguard, or a refusal of the engagement, before you begin.
+::::
+
+The safeguards are familiar: rotate the engagement team, separate the audit from any consulting work, document the threats you identified and how you addressed them, and walk away when the threat cannot be reduced to an acceptable level. The discipline is not to pretend you have no interests. It is to be honest about them and act accordingly.
+
+## The ISACA Code of Ethics
+
+Information security auditors work within a professional code. ISACA's Code of Ethics is short and worth knowing by heart, because it is the standard your professional conduct will be measured against. Its obligations come down to a few commitments: support the organisation's legitimate objectives while maintaining your independence; act with due care and competence; keep information confidential and protect privacy; and uphold the reputation of the profession.
+
+Read it once and it sounds like generic good behaviour. Read it on the day a client asks you to soften a finding so a deal closes, and you find out what it actually costs. The code is not a poster. It is the answer you are expected to give when the pressure arrives, and the reason "no" is sometimes the only professional response.
+
+## Why would anyone invite an audit?
+
+Step back to the question Tessera's CTO has not fully asked: *why pay someone to come and find your problems?*
+
+The honest answer is that an organisation invites an audit because the opinion is worth more than the cost. To someone. For Tessera, certification unlocks enterprise customers whose procurement teams will not sign without it. For a board, an independent opinion is protection against the day something goes wrong: evidence that oversight was exercised, not neglected. For regulators, it is compliance made visible. And, less flatteringly but just as truly, organisations invite audits because the people inside them already suspect the gaps and want a credible outsider to name them.
+
+The auditor's job is to be worth that trust: to deliver an opinion that is genuinely independent, even when the organisation that paid for it hopes for a different answer. That is the whole deal. Tessera is not paying you to say they are ready. Tessera is paying you to find out whether they are.
+
+## Three kinds of control
+
+Before the engagement goes further you need the vocabulary every audit uses. Controls (the safeguards an organisation puts in place to manage risk) come in three kinds, and knowing which kind you are looking at tells you what evidence will prove it works.
+
+**Preventive** controls stop something going wrong. An access-review process that removes leavers' accounts before they can be misused. A firewall rule. Mandatory training before a user gets privileges.
+
+**Detective** controls notice that something has gone wrong, after the fact. A log that records a failed login. An alert when an admin account is created out of hours. A reconciliation that finds a discrepancy.
+
+**Corrective** controls fix something once it is found. An incident-response plan. A backup you restore from. A patch you push out.
+
+Most real defences are a chain of all three, because no single control is reliable on its own. A preventive control fails silently; you only find out it failed because a detective control caught it; you only recover because a corrective control exists. When you audit, you are testing the whole chain, and you are always asking the question that separates a control that *exists* from one that *works*.
+
+::: {.tessera-case}
+**🗂️ Tessera Case: Where Tessera's hats show**
+
+In your opening week you wear all three hats at once. As **counsellor**, you walk Tessera's CTO through what ISO/IEC 27001:2022 actually requires, and watch the confidence drain when "pretty much there" meets "93 controls across four themes." As **partner**, you agree how the engagement will run and what access you will get (limited, for now). As **investigator**, you file away the CTO's opening claim ("we're basically ready") as the first assertion the evidence will later confirm or demolish. Every chapter from here tests that claim a different way.
+:::
+
+:::: {.callout-note title="🤖 AI Field Note: Exploring the control categories"}
+Ask an AI to "explain preventive, detective, and corrective controls with examples for a SaaS company on AWS." It will give you a competent, well-structured answer in seconds, and that is exactly the trap. The examples will be *generic*: "firewall rules," "log monitoring," "incident response plan." Correct, and useless, because they describe every company.
+
+This is where you, the auditor, add the variation the machine cannot. Push back: "Give me a *preventive* control specific to a multi-tenant SaaS where customers configure their own IAM roles, and tell me how it would fail silently." Now the answer has to engage with Tessera's reality, not a textbook. The AI's first cut was a draft; your refinement is the work that matters. You have just done, in miniature, the drafter-to-evaluator shift the Introduction described.
+::::
+
+:::: {.callout-important title="🔍 Auditing AI: Can an AI be independent?"}
+Independence is a fact and objectivity is a state of mind, and an AI has neither. It has no relationships to disclose, true, but it also has no stake, no accountability, and no capacity to *refuse* an engagement when a threat cannot be managed. More subtly, an AI trained on an organisation's own data, or embedded in the tooling an organisation pays for, has interests of a new kind: commercial, algorithmic, and invisible.
+
+So can an AI deliver an audit opinion? It can *produce* one. It cannot *stand behind* one, which is the entire point of an opinion. As AI-assisted controls and AI-generated evidence spread through the estates you audit, the question stops being theoretical. We return to it in Chapter 7, when we ask whether you can trust a log an AI produced.
+::::
+
+:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 1)"}
+Open your Evidence Locker with the engagement's foundation. Record: the **mandate** (who engaged you, against what criteria, to deliver what opinion); the **independence threats** you identified for this engagement and the **safeguards** applied; and your one-line restatement of Tessera's opening claim, the assertion the rest of the engagement will substantiate or demolish. This is not note-taking. It is the first entry in a defensible audit trail.
+::::
+
+## The question, answered
+
+Why does Tessera need an audit? Because certification, customers, and a board all need a credible opinion they cannot give themselves, and because the people inside Tessera already suspect the gaps. Why should they trust *you*? Because your mandate is clear, your independence is real, your ethics are not for sale, and your discipline is to substantiate every conclusion with evidence rather than assume it.
+
+That is the audit mindset, stated. The next eleven chapters enact it, one question at a time, until the polished policy has met its evidence and you have formed an opinion you can defend.
+
+Next week, the first real question: *what could go wrong, and how do we measure it?*

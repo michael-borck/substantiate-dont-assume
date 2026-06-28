@@ -1,0 +1,128 @@
+# Expect? Technical Control Objectives {#sec-expect}
+
+> *What should be in place, and what does "good" actually look like?*
+
+::: {.tessera-case}
+**🗂️ Tessera Case: The diagram is not the territory**
+
+Tessera's head of engineering hands you a single-page architecture diagram in your second week. It is beautiful. Boxes for VPCs and subnets, arrows labelled TLS, a padlock on the database, "KMS" stamped on every storage layer, "IAM roles" on every service. He watches you study it, looking for the nod. You give him a different response. You ask, for each box: *what is the objective here, and how would I test whether it is actually met?* The diagram is a claim. Your job, from this chapter on, is to turn each claim into a control objective you can substantiate, or demolish, with evidence.
+:::
+
+## From control to control objective
+
+The previous chapters gave you the auditor's mindset, the risk picture, the frameworks, and the plan. None of that tells you what to test. This chapter does. It introduces the single tool that turns a list of controls into an audit: the **control objective**.
+
+A control is a safeguard. Encryption is a control. A firewall rule is a control. Multi-factor authentication is a control. A control objective is the *intent* that control is meant to deliver, written so that intent can be tested. "We encrypt the database" is a control. "No party, internal or external, authorised or not, can read customer data without an access decision that is logged and reviewable" is an objective. The first describes a configuration. The second describes an outcome you can try to defeat. That is the difference between auditing a screenshot and auditing a system.
+
+ISO/IEC 27001:2022 gives you the raw material in Annex A.8, the Technological controls, the largest of the standard's four themes. NIST CSF 2.0's Protect function and the ASD Essential Eight give you the same engineering from different angles. None of them hands you the objective. That is your job, and it is the job this chapter teaches: read the control, ask what "good" looks like, phrase it as a statement you could prove or disprove with evidence, and then go look. Every objective in this chapter is built that way.
+
+Here is a useful test for whether you have written an objective rather than a control. Can you describe how it would *fail silently*? If you cannot, you have written a feature, not a test. The objective is only real once you can picture the version of the world in which the control is present, the dashboard is green, and the objective is still not met. That picture is what you will spend the rest of the engagement trying to find.
+
+## Access control: identity is the new perimeter
+
+For a SaaS company like Tessera there is no perimeter in the old sense. There is no castle with a wall and a moat. There is a set of identities, human and machine, each holding some set of permissions, talking to services that live on someone else's hardware. Get identity right and most of your technical risk falls into line. Get it wrong and nothing else matters, because the attacker walks through the front door with valid credentials.
+
+The first objective is **least privilege**: every identity, human or service, holds only the permissions it needs, and nothing more. That sounds tidy until you ask for the access review and find the founding engineers still hold administrator rights across production, staging, and every customer tenant, because nobody has ever pruned them. I have yet to audit a fast-growing environment where the first access review did not surface a surprise, and Tessera is built to be no exception. Least privilege maps to ISO 27001 A.8.2 (privileged access rights) and A.8.3 (information access restriction), and to the Essential Eight's "restrict administrative privileges" strategy. The objective, though, is the testable version: *any permission not justified by current job function is removed within a defined window.*
+
+The second is **authentication strength**: access requires proof of identity proportionate to the risk, and for anything privileged, that proof resists phishing. Passwords alone fail this objective, and so does a six-digit SMS code relayed to a tired person at midnight. Phishing-resistant MFA, the kind built on FIDO2 and WebAuthn, is what "good" looks like for administrators and for anyone touching customer data. The Essential Eight pushes you here for a reason.
+
+The third is the **identity lifecycle**: accounts are created when someone joins, changed when their role moves, and removed when they leave, on a clock you can measure. The leaver control is the one that fails quietly, because the person is already gone and nobody is watching the account. Federation through SAML or OIDC, single sign-on, and automated provisioning through SCIM are how mature organisations make the lifecycle a system rather than a memory.
+
+The fourth is **privileged access** specifically. Administrators do not sit in a standing admin role all day. They elevate when they need to, for as long as they need to, and what they do while elevated is recorded. This is privileged access management: just-in-time elevation, break-glass accounts for emergencies, session recording, and time-boxed grants. The objective is not "we have PAM tooling." The objective is *no privileged action occurs without a time-limited, logged, reviewable elevation.*
+
+## Network security: assume the breach
+
+The old network question was "can the attacker get in?" The modern question, the one a zero-trust mindset demands, is "once the attacker is in, how far can they get?" NIST SP 800-207 states the principle: never trust, always verify, on every request, as if the network were already hostile. For a company whose entire estate is API calls to AWS, the network *is* already hostile by design.
+
+Segmentation is the engineering of that mindset. Tessera's VPCs, subnets, security groups, and network ACLs should carve the estate into zones that contain blast radius. Production separate from staging. Customer-facing services separate from internal tooling. Databases reachable only from the application tier, never from the open internet. Each of those is a control; the objective is that *an attacker who compromises one component cannot traverse to another without a fresh access decision.* That is the difference between a breached container and a breached company.
+
+Firewalls and security groups are the mechanism, but they are only as good as their rules, and rule drift is where segmentation goes to die. The rule opened for a vendor demo eighteen months ago and never closed. The `0.0.0.0/0` that someone applied to make a test pass. The database port exposed to the office range because a developer wanted to work from home. The objective is not "we use security groups." It is *every rule is justified, scoped to least access, and reviewed on a schedule*, which is a test you can actually run against the live configuration.
+
+## Cryptography and key management: the control that fails silently
+
+Encryption is where auditors go wrong, because encryption looks finished. The dashboard says "at rest: enabled." The browser shows the padlock. You tick the box and move on. Do not.
+
+Encryption at rest and in transit is the baseline, not the achievement. The achievement is **key management**, and it is where a cryptography control that looks perfect can be substantively broken. AWS Key Management Service (KMS) and hardware security modules (HSMs) exist to keep keys out of the data they protect. Customer-managed keys give Tessera control over who can use a key and when, through policies and grants that are themselves auditable. Key rotation limits the damage of a key that leaks. Separation of duties limits the damage of a rogue insider. ISO 27001 A.8.24 (use of cryptography) points here, and the Essential Eight's expectations on backups and data protection lean on the same foundation.
+
+Now picture the failure. Encryption is enabled on every S3 bucket. The dashboard is green. But the application role that reads customer data holds a KMS grant for a single key used by *every tenant*. One compromised token, one over-permissive policy, and the attacker decrypts everyone's data at once. The control exists. The objective, *ciphertext is useless to an attacker who steals the storage*, is not met. This is the silent failure, and it is exactly the kind of gap a control objective, not a control list, will catch.
+
+## Multi-tenant SaaS: isolation is the whole product
+
+Everything in this chapter converges on one fact about Tessera: it is a multi-tenant SaaS. Customers share the same application, the same databases, the same infrastructure. The product they are paying for is, at root, the promise that they cannot see each other. Get tenant isolation wrong and you do not have a security problem. You have an existential one.
+
+Tenant isolation is enforced through layered controls: per-tenant identity and namespace boundaries in IAM, row-level or logical separation in shared data stores, and, for the most sensitive work, per-tenant or customer-managed encryption keys so that even a database administrator with broad access cannot read another tenant's ciphertext. The classic failure has a name: insecure direct object reference, where a request for `/api/tenant/1043/data` is honoured for an authenticated user who belongs to tenant 1077, because nobody checked the relationship. IDOR is the silent failure of multi-tenancy, and it is widespread because it fails open: the request succeeds, the log looks normal, nobody is alerted.
+
+The objective for tenant isolation has to be absolute: *under no condition, including error paths, including a compromised application role, can tenant A read tenant B's data.* That is a strong statement, and it is the one your testing has to try to break. Customer-managed keys, sometimes called bring-your-own-key or hold-your-own-key, are how the most regulated tenants raise the bar: Tessera cannot decrypt what it has no key to decrypt, and the customer can prove it.
+
+## The shared-responsibility line: who secures what
+
+Underneath all of this is a line that determines who is responsible for what, and Tessera sits on the wrong side of it more often than its diagram suggests. AWS operates on a shared-responsibility model. AWS secures the cloud itself; Tessera secures what it puts in the cloud. The line is not a footnote. It is the boundary of your entire technical audit, because you can only test what Tessera owns, and a great deal of what looks like "AWS's problem" is actually Tessera's.
+
+AWS secures:
+
+- the physical data centres, hardware, and networking;
+- the virtualisation layer, and the regions, Availability Zones, and edge locations;
+- the managed services' underlying platforms.
+
+Tessera secures, in the cloud:
+
+- customer data, and its classification and handling;
+- IAM users, groups, roles, and policies;
+- the application code and its third-party dependencies;
+- the guest operating system and AMIs where the service is self-managed;
+- network configuration, VPCs, security groups, and routing;
+- client- and server-side encryption, key management, and the configuration of every managed service it switches on.
+
+And because Tessera is itself a service provider, there is a third line. Tessera's customers trust Tessera for application-layer security and tenant isolation, while they keep responsibility for their own users, their own tenant configuration, and the data they choose to put in. A multi-tenant SaaS inherits a shared responsibility on both sides.
+
+The shared-responsibility gap is the assumption that AWS covers something Tessera actually owns. "Encryption is AWS's job." "Patching is managed, so we're fine." "The region is resilient, so we don't need backups of our own." Each of those is a real sentence I have heard, and each is wrong in a way that a misread shared-responsibility line produces. ISO 27001 Annex A.5 covers supplier and cloud-service relationships precisely because this line is where assurance leaks out. Your audit has to draw the line explicitly, on Tessera's own architecture, and test only the Tessera-owned side.
+
+::::: {.callout-warning title="Watch out: 'it exists' is not 'it works'"}
+Two traps run through every technical audit, and they are the same disease: confusing the surface with the substance.
+
+The first: *a control that exists is not a control that is configured correctly.* Encryption is on, but the keys are shared across tenants. MFA is enforced, but the SMS fallback is enabled. Security groups exist, but the database is open to `0.0.0.0/0`. Each looks compliant on a dashboard. None meets its objective. Always ask what "good" looks like, then test for that.
+
+The second: *a control someone else owns is not a control you can assume.* AWS secures the hypervisor. It does not secure your IAM policies, your application code, your key grants, or your patch cadence on self-managed components. The shared-responsibility line is where you stop auditing AWS, which you cannot, and start auditing Tessera, which you can. If you cannot point to who owns a control, you have found a gap, not a comfort.
+:::::
+
+::: {.tessera-case}
+**🗂️ Tessera Case: What "good" looks like for tenant isolation**
+
+Take the padlock on the database in Tessera's diagram and turn it into a picture of good. The control objective for isolating one customer tenant from another reads something like this:
+
+> *A request that returns data belonging to tenant X is only ever honoured for an identity that a current, least-privilege policy has authorised for tenant X, on a decision that is logged, with the data decrypted only under a key whose use is restricted to that tenant's context. Under any error, compromise, or misconfiguration, the default behaviour is denial.*
+
+That single sentence is now your test plan. It tells you to examine the authorisation logic for tenant-boundary checks, to confirm IAM policies are scoped per tenant, to verify the KMS key grants do not collapse tenants into one decryptable blob, and to probe the error paths for IDOR. The diagram's padlock was a picture. This is the same padlock, rewritten as something you can break, and therefore something you can audit.
+:::
+
+::::: {.callout-note title="🤖 AI Field Note: From a generic list to a testable objective"}
+Ask an AI to "list the technical security controls for a multi-tenant SaaS hosted on AWS." You will get a competent list in seconds: encryption at rest, TLS in transit, MFA, a WAF, logging and monitoring, network segmentation, regular backups. Every item is correct, and the list is useless, because it describes every SaaS on Earth. It is a draft, and a draft of what everyone already knows has no edge.
+
+Push it. Ask, for each control: *what is the objective, in one testable sentence, and how would it fail silently at a fast-moving company where the founders still have god-mode access?* Now the AI has to engage with Tessera's reality, not a textbook. Take encryption. Its first cut was "encrypt data at rest using KMS." Pressed for the objective and the silent failure, a better answer emerges: the objective is that a stolen snapshot reveals no plaintext to anyone outside the access-decision path; the silent failure is that encryption is on but a single over-broad KMS grant lets one compromised application token decrypt every tenant's data at once. The first sentence any AI can write. The second is the variation you supplied. That is the drafter-to-evaluator shift, done on one line of output.
+:::::
+
+::::: {.callout-important title="🔍 Auditing AI: The AI estate is now part of the technical estate"}
+Tessera has shipped AI into its estate in two places. A support assistant reads customer tickets and drafts replies for the helpdesk team. And an AI feature inside the product lets customers summarise and query their own data. These are not experiments on a slide. They are workloads with identities, data access, and failure modes, and they sit squarely inside this chapter.
+
+Treat them like any other component. The support assistant has a service role: what can it read? If it can see every tenant's tickets when it only needs the active one, that is a least-privilege failure identical in shape to any other. The product feature sends customer data to a model: what is sent, what is retained, and does the model provider train on it or promise not to? That is a data-minimisation and key-boundary question, and it foreshadows Chapter 9's privacy work. Both run on a model from a vendor: which model, which version, and what does that vendor's SOC report actually cover? That is supplier assurance, the A.5 cloud-services territory Chapter 3 flagged.
+
+The objective for an AI workload has the same shape as for any other: *the AI system cannot exfiltrate or act on data it has no business reason to touch, and every action it takes is attributable.* Test it the same way: enumerate the role's permissions, trace what data crosses the model boundary, and check the logs that record model calls. Some of Tessera's controls are now run *by* AI, an assistant triaging alerts or flagging anomalies. When you audit those, you are back in territory Chapter 7 takes up in full: can you trust a control whose evidence an AI produced? For now, the discipline is the one this chapter teaches. State what good looks like, then go and try to break it.
+:::::
+
+::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 5)"}
+For each domain below, lock in one technical control objective for Tessera, phrased as a testable "good looks like" statement, plus the single piece of evidence that would prove or disprove it.
+
+- **Access control**: least privilege is in force for every human and service identity, with a documented leaver window, and privileged access is granted just-in-time and logged.
+- **Network security**: segmentation contains blast radius, and every security-group or firewall rule is justified and reviewable.
+- **Cryptography and key management**: ciphertext is useless to an attacker who steals storage, because keys are isolated, rotated, and bound by grants that respect tenant boundaries.
+- **Multi-tenant isolation**: under no condition, including error paths, can one tenant read another's data.
+- **Shared-responsibility boundary**: the line between AWS-owned and Tessera-owned controls is drawn on Tessera's own architecture, and only Tessera-owned controls appear in your test plan.
+
+This is the chapter where your Evidence Locker stops being narrative and starts being a test programme. Each objective is a row you will later mark green or red against evidence.
+:::::
+
+## The question, answered
+
+What should be in place, and what does good look like? In place: a layered set of technical controls across identity, network, cryptography, and the multi-tenant boundary, owned by Tessera on the correct side of the shared-responsibility line. Good looks like a set of *objectives* behind those controls, each phrased so it can be tested, each with a silent failure you can describe, each backed by evidence you can demand. The diagram Tessera's head of engineering handed you was a claim. You now hold the method that turns it into an audit.
+
+There is a catch, and it is the catch that closes the first act of this book. Technical controls are the part of the estate that is easiest to enumerate and easiest to test, and they are still only half the story. A perfectly configured IAM system is worthless if the person holding the admin token was never trained, or never had their access removed when they left, or sits inside an organisation whose security policy is a document nobody reads. Next, we turn from the machine to everything around it: the people, the physical world, and the management system that is supposed to hold it together. *Assess? Physical, people, and ISMS controls.*

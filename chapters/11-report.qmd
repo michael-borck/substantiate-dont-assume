@@ -1,0 +1,139 @@
+# Report? Findings and the Audit Opinion {#sec-report}
+
+> *What did we find, and how do we say it so the board acts?*
+
+::: {.tessera-case}
+**🗂️ Tessera Case: Twelve weeks of evidence, one page of findings**
+
+The fieldwork is done. Your Evidence Locker holds the re-rated risk matrix, the audit programme, the interview notes, the configuration exports, the log samples, the policy-gap analysis, the privacy walkthrough, and the incident-response test. Spread across a desk it is a small mountain of paper, and not one sheet of it is a finding yet. The CTO is expecting a report the board can act on by Friday. Your job this week is the hardest compression in the engagement: turn that mountain into a handful of statements so specific, so evidenced, and so honestly rated that a busy board knows exactly what to fix and why. Nothing you found matters until it survives this translation.
+:::
+
+## From evidence to a finding
+
+There is a moment every audit reaches where the evidence stops accumulating and the judgement begins. You have spent four chapters gathering proof: the configuration that contradicts the policy, the log that shows the control never fired, the interview where the operations lead admits the offboarding checklist "sometimes slips." Each is a fact. None of them, yet, is a finding.
+
+A finding is a structured claim. It takes a fact and binds it to a standard, a cause, a consequence, and a recommendation, in a form another auditor could reproduce and a board could act on. The discipline of this chapter is that binding. Evidence without a finding is noise. A finding without evidence is an opinion. The 5C+R format is how you make neither mistake.
+
+The compression is brutal, and it should be. A board will give your report twenty minutes. Out of a twelve-week engagement, twenty minutes is what you actually have to change how Tessera is run, so every sentence of the findings has to earn its place. The format exists because unstructured findings get ignored: too vague to act on, too soft to prioritise, too padded to read. A 5C+R finding cannot be any of those things and still call itself a finding.
+
+## The 5C+R format
+
+Five elements do the work, plus a sixth that ties the bow. Memorise the names. The order matters less than the completeness, but the names are how you will be marked, by certification bodies and by your own conscience.
+
+**Criteria** is the standard you are measuring against. A clause of ISO/IEC 27001:2022, a control objective, a Tessera policy. It is the *should*: what good looks like. Without a named criterion a finding is just a preference, and preferences do not drive remediation budgets. "A.6.5 requires that the access rights of personnel leaving or changing role be removed or revised" is a criterion. "People should lose access when they leave" is a gripe.
+
+**Condition** is what you actually found. The *is*. This is where your evidence lands, cited specifically enough to be defensible. Not "offboarding is weak" but "of twelve leavers tested in the period, five retained active AWS IAM or Google Workspace access beyond the 24-hour window defined in Tessera's own offboarding procedure; the longest, a senior engineer, retained production database access for 41 days." The condition is the fact, bound to the sample, stated without softening.
+
+**Cause** is why the condition exists. This is the one auditors under-invest in and boards need most, because a finding with no cause cannot be fixed, only patched. Causes live at the level of process and ownership, not individual mistake. "An engineer forgot" is not a cause. "The offboarding checklist is owned by HR but executes on systems HR cannot touch, with no automated trigger between the HR system and the identity provider, and no single accountable owner with cross-system authority" is a cause. This is where root-cause analysis earns its keep, and we will spend a section on it.
+
+**Consequence** is what the condition means for Tessera's objectives. This is the *so what*, and it is where the finding earns its risk rating. A retained access account is, in itself, a line in a log. The consequence is that an ex-employee with a grievance could reach customer data, that the same gap is a major nonconformity against A.6.5 that can block certification, and that any misuse is a notifiable data breach under the APPs and the NDB scheme, with contractual exposure to the enterprise customers whose data is involved. The consequence is measured against objectives and obligations, the same way impact was in Chapter 2.
+
+**Corrective action** is the immediate fix. Tight, time-bound, owned. Revoke the outstanding accounts this week. Reconcile the leavers list against live access today. Corrective action is the bandage: it stops the bleeding but says nothing about the cause.
+
+**Recommendation** (the +R) is the durable fix that addresses the cause. Automate the deprovisioning trigger, assign a single cross-system owner, build the leavers population into the quarterly access review, enforce the sign-off line with a system that will not let the checklist close otherwise. A recommendation maps to a cause the way a corrective action maps to a condition. Get this pairing right and your findings become a remediation plan. Get it wrong and the same finding reappears next year.
+
+## Root-cause analysis: the finding's centre of gravity
+
+Here is a confession that took me a few engagements to learn. I used to write the Cause last, as an afterthought, because the Condition felt like the real finding and the Recommendation felt like the deliverable. Boards taught me otherwise. A board given a finding with a patchy cause will fix the symptom, declare victory, and hand you the identical finding at re-audit. A board given a finding whose cause is named precisely will fix the system, and the finding stays fixed.
+
+Root-cause analysis is the discipline of refusing to stop at the first plausible explanation. The technique is older than information security. Ask *why*, repeatedly, until the answer stops being a person and starts being a process. The offboarding checklist did not run. Why? Because no one triggered it. Why? Because HR raises it, but the revocations live in systems HR cannot reach, and the handoff depends on an email that may or may not arrive. Why? Because there is no automated link between the HR system of record and the identity provider. Now you have a cause worth writing: a broken handoff and a missing integration, not a forgetful engineer.
+
+The "five whys" is a heuristic, not a religion. Sometimes the cause is obvious after two. Sometimes you need six and the sixth is "the organisation has never treated leavers as a security event, only an HR one." The point is to keep digging past the convenient answer, because the convenient answer is almost always a person, and blaming a person fixes nothing. A good root cause names a control gap, an ownership gap, or a design gap. It rarely names a name.
+
+This is also where professional scepticism turns inward. You have been sceptical of Tessera's claims all engagement. Now be sceptical of your own first draft of the cause. If your cause reads "human error," you have not finished. If your cause reads "insufficient training," ask why the training was insufficient and keep going. The cause you write is the cause that gets fixed. Settle for a shallow one and you have lent your authority to a remediation that will not hold.
+
+## Rating the finding: from guess to evidence
+
+Chapter 2 taught you likelihood times impact, and warned you that the matrix is a hypothesis. Here is what changes in Act II. You now have evidence, and evidence turns a hypothesis into an observation.
+
+The likelihood of the offboarding gap is not "medium" any more. You tested twelve leavers and five failed. That is not a likelihood estimate; it is a measured 42 per cent failure rate over the sample. Rate it on the observed frequency, and write the sample down so the rating is reproducible. This is the difference between a risk in a register, which is a forecast, and a risk in a finding, which is a fact.
+
+Impact is where judgement still rules, because impact is always counterfactual. The gap did not, as far as anyone knows, cause a breach. It could have. Rating the impact means reasoning about what a 41-day window of ex-employee production access would cost Tessera if it were misused: the NDB notification, the contractual breach with enterprise customers whose data-isolation clauses are implicated, the certification major nonconformity, the reputational drag. None of that happened. All of it was possible, and the possibility is what impact measures.
+
+The rating is the finding's priority, and it is where you will be pressured. Clients want findings down-rated so the report reads better and the remediation budget shrinks. Your defence is the same defence every chapter has built: the rating follows the evidence and the consequence, written down, reproducible by another auditor. If you can defend the 42 per cent sample and the contractual exposure, the rating defends itself. If you cannot, you should not have written it.
+
+## Forming a defensible audit opinion
+
+The findings are the building blocks. The opinion is the building. After eleven weeks you are finally doing the thing the whole engagement exists to do: standing behind a judgement about whether Tessera's controls do what they claim.
+
+An audit opinion is not a list of findings. It is a synthesised conclusion, defensible and repeatable, that a stakeholder can rely on. A defensible opinion has three properties, and they are the same three the Introduction named: it is **fair** (it presents the picture honestly, including what works, not just what fails), **repeatable** (another auditor with your working papers would reach it), and **ethical** (formed without pressure, on the evidence, regardless of what the client hoped to hear). Strip any of the three and the opinion is not worth the paper it is written on.
+
+The shape of the opinion follows the evidence. An **unqualified** opinion says controls are designed and operating effectively. You do not hand these out lightly, and you almost never hand them out on a first certification engagement, because the standard of proof is high and the tolerance for untested assertions is zero. A **qualified** opinion says controls are largely effective, with named exceptions. Most real opinions are qualified, because most real organisations have a mix of working and broken controls, and honesty demands you name both. An **adverse** opinion says controls are not effective, full stop. It is rare, it is serious, and it ends the certification conversation.
+
+The opinion you form for Tessera this week is built directly from the findings register. Each material finding presses on the opinion. A single high-rated finding on a load-bearing control may be enough to qualify it. A pattern of medium findings across a control family may amount to the same thing. Your job is to weigh the findings as a system, not count them, because five minor findings in an otherwise sound ISMS are a different opinion from one major nonconformity in the one control the certification depends on.
+
+I will not give you Tessera's verdict here. That is the work of the next chapter, which takes this opinion and converts it into a certification-readiness judgement, and then asks you to defend it under board questioning. What this chapter delivers is the opinion's raw material: a findings register so honestly rated that the verdict is, to a careful reader, already implied. Substantiate the findings, and the opinion writes itself.
+
+:::: {.callout-important title="🔍 Auditing AI: who writes the opinion?"}
+An AI can draft a finding. It cannot sign an opinion, and the distinction is the whole argument of this book in one sentence. An opinion is an act of accountability. It attaches a name, a reputation, and a professional licence to a judgement about someone else's security. The machine has none of those things to attach.
+
+This matters now because AI-assisted controls and AI-generated evidence have been flowing into your findings all engagement: logs summarised by a model, policies analysed by a model, findings drafted by a model. Each is input to the opinion. Your job, at the moment of signing, is to have substantiated every one of them, because the opinion is yours, not the model's, and you cannot defer accountability to a system that has none. We return to the two faces, AI in audit and auditing AI, in the final chapter. For now, hold the line: the opinion is the one artefact that is irreducibly human.
+::::
+
+:::: {.callout-note title="🤖 AI Field Note: AI drafts the finding; you supply the opinion"}
+This is where the drafter-to-evaluator arc lands, and it lands hard. Hand an AI the raw evidence for the offboarding finding, the relevant clauses of ISO/IEC 27001:2022, and a one-line prompt: "write this up as a 5C+R finding." It returns a perfectly structured finding in seconds. Criteria, Condition, Cause, Consequence, Corrective action, Recommendation, all in the right order, all grammatically immaculate. On structure alone it is indistinguishable from a senior auditor's first draft.
+
+Now read it as the evaluator, because this is where the work actually is. The Criteria and Condition the AI got right: it copied the clause and restated your evidence faithfully. The Cause it got wrong, in the precise way machines get causes wrong. Its draft read "offboarding is not consistently followed due to insufficient process adherence." That is a symptom dressed as a cause, and it is the shallow answer root-cause analysis exists to refuse. It tells the board to enforce the process harder, which is exactly the remediation that fails, because the process is not the problem; the broken handoff between HR and the identity provider is. You rewrite the Cause with the actual root cause.
+
+The Consequence the AI under-weighted. It listed "potential unauthorised access" and stopped there, because the generic register has no notion of Tessera's enterprise contracts, the APPs, the NDB scheme, or the certification exposure. You supply the consequence that matters: the contractual and regulatory exposure that turns a latent access gap into a board-level risk, and you rate it accordingly. The Recommendation the AI wrote was generic ("improve the offboarding process"). You replace it with the durable fix that maps to your named cause.
+
+What the machine produced in seconds was the scaffold. What you supplied in an hour was the judgement: the root cause, the consequence weighted to Tessera's real obligations, the rating, and, ultimately, the opinion. That is the entire arc of this book compressed into one artefact. The AI drafted the finding. The auditor supplied everything that makes the finding worth acting on.
+::::
+
+## Executive reporting: the board-facing version
+
+The findings register is for the auditors, the risk owners, and the remediation programme. The executive summary is for the board, and it is a different document written from the same evidence.
+
+A board does not want the 5C+R structure on the first page. A board wants, in one page, three things: what you found, in order of how much it matters; what the opinion is, in plain language; and what the organisation must do first. Lead with the opinion, because that is what the board is accountable for. Follow with the top three to five findings, each a sentence, each carrying its rating. Close with the remediation priorities, sequenced. Everything else is an appendix the board can ignore and the risk owners cannot.
+
+The trap in executive reporting is the softening that happens when a finding travels up the chain. An engineer says "production access retained for 41 days." A manager writes "minor delay in deprovisioning." A director reads "access management requires enhancement." By the boardroom the finding has evaporated into a platitude, and nobody acts because nobody was told what was actually wrong. Your job is to write the summary so tightly that softening has nowhere to hide. State the condition. State the rating. State the risk to objectives. Let the discomfort do the work, because discomfort is the point. A board that is comfortable with your findings has been given the wrong findings.
+
+::: {.tessera-case}
+**🗂️ Tessera Case: The offboarding finding, in full**
+
+Here is one finding from Tessera's register, the one Act I named as a gap and Act II closed with evidence. It is the artefact this chapter has been building toward.
+
+**Criteria.** ISO/IEC 27001:2022 A.6.5 (responsibilities after or during termination or change) requires that the access rights of personnel leaving or changing role be removed or revised. A.5.18 (access rights) requires formal authorisation and timely removal of access. Tessera's offboarding procedure (ISMS-PR-014, v3.1) defines a 24-hour window from last working day to full revocation across AWS IAM, Google Workspace, and Slack.
+
+**Condition.** Testing of twelve leavers in the twelve months to fieldwork found five (42 per cent) retained active access beyond the 24-hour window. The longest case retained production database access for 41 days. The Statement of Applicability records A.6.5 and A.5.18 as "implemented." Sample: 12 of 14 leavers (2 records incomplete and excluded, itself a control observation).
+
+**Cause.** The offboarding checklist is owned by HR but its revocation steps execute on systems HR cannot access. There is no automated trigger between the HR system of record and the identity provider; the handoff depends on email to IT, which went unacknowledged in three of the five failures. The checklist sign-off line exists but is not enforced by any system that can prevent checklist closure without revocation evidence. Root cause: a broken cross-functional handoff with no accountable single owner and no automation, not individual error.
+
+**Consequence.** A departing employee with retained production access represents a latent insider threat outside Tessera's awareness. Misuse would constitute a notifiable data breach under the APPs and the NDB scheme, breach data-isolation clauses in three enterprise contracts, and constitute a major nonconformity against A.6.5 and A.5.18 capable of blocking ISO/IEC 27001 certification.
+
+**Rating: High.** Likelihood established by observed 42 per cent sample failure (not estimated). Impact established by regulatory, contractual, and certification exposure.
+
+**Corrective action.** Revoke all outstanding leaver access within five working days; reconcile the full leavers population against current access; report results to the audit team. Owner: Head of IT. Due: fieldwork close plus two weeks.
+
+**Recommendation.** Implement automated deprovisioning triggered by HR status change into the identity provider, with revocation evidence required to close the checklist. Assign a single accountable owner with cross-system authority over the full offboarding workflow. Include the leavers population in the quarterly access review. Re-test at the surveillance audit.
+
+That is a finding a board can act on, a risk owner can remediate, and another auditor can reproduce. Notice what is absent: blame, softening, and any sentence that does not earn its place.
+:::
+
+:::: {.callout-warning title="Watch out: the finding that isn't"}
+Three counterfeits pass for findings, and each wastes the board's twenty minutes.
+
+The **recommendation dressed as a finding**. "Tessera should implement automated deprovisioning" is not a finding; it is the +R with the other five elements missing. A board cannot rate it, cannot trace it to a clause, and cannot tell whether it matters. If your finding reads as advice, rewrite it from the Criteria down.
+
+The **symptom without a root cause**. "Access revocation is inconsistent" names the Condition and stops. Without a Cause it tells the board to try harder at a process that is already failing for a reason it has not been given. The remediation will patch, not fix, and you will write it again next year. Every finding without a named root cause is a finding you have deferred, not delivered.
+
+The **consequence bent to please**. The client who wants the rating down will argue the impact is theoretical, that nothing happened. The client who wants a rival team's budget cut will argue the impact is catastrophic. Both are pressure on the Consequence, and both are the Introduction's "pressure is the auditor's real test" arriving on schedule. Rate the consequence against the objectives and the obligations, write the rationale, and refuse to move it for either flavour of comfort. A finding whose consequence has been massaged is not a softer finding. It is a wrong one with your name on it.
+
+There is a fourth pressure that does not counterfeit a single finding so much as the whole opinion: the urge to soften the verdict so the deal closes, the certification lands, the executive is spared. Hold the line the Introduction drew. An opinion given under pressure, without the evidence to back it, is not an efficiency. It is a liability you have signed.
+::::
+
+:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 11)"}
+This is the second-to-last entry, and it is the one that turns eleven weeks of work into an audit. Lock in two artefacts.
+
+First, your **findings register**: every finding in 5C+R form, each with a named criterion, a cited condition bound to its sample, a root cause, a consequence weighted to Tessera's objectives and obligations, a rating with written rationale, and a corrective action plus recommendation mapped to the cause. Order them by rating. This is the evidence base for your opinion, and by next week it is the body of your report.
+
+Second, your **draft defensible opinion**: one paragraph that synthesises the register into a fair, repeatable, ethical conclusion on whether Tessera's controls are designed and operating effectively. State the opinion type you are leaning toward and why, and name the one to three findings that press hardest on it. This is a draft. Chapter 12 will sharpen it into the certification-readiness verdict and make you defend it. But a draft opinion you can already stand behind is the measure that eleven chapters of substantiation have done their job.
+::::
+
+## The question, answered
+
+What did we find? A set of findings so specific, so evidenced, and so honestly rated that each one is reproducible by another auditor and actionable by a risk owner. The offboarding gap that Act I only suspected is now a measured 42 per cent failure rate with a named root cause and a durable fix. The polished policy has finally met its operational reality, and the reality is written down in a form no amount of softening can disguise.
+
+How do we say it so the board acts? In a 5C+R structure that leaves no finding vague, a rating that follows the evidence rather than the optimism, a root cause that points at the system rather than a scapegoat, and an executive summary tight enough that the discomfort has nowhere to hide. We say it fairly, naming what works alongside what fails. We say it ethically, refusing to bend the consequence or the opinion for the deal on the table. And we sign it, because an opinion is an act of accountability, and accountability is the one thing the machine cannot supply.
+
+Eleven weeks have run their course. The evidence is gathered, the findings are written, the opinion is drafted. What remains is the verdict that everything has been building toward, and the moment you have to stand up and defend it. Tessera's board is waiting. So is the certification body. The question, finally, is **Conclude?**

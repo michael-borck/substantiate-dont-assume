@@ -1,0 +1,83 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Substantiate, Don't Assume"
+  subtitle: "Why the Auditor's Opinion Matters More Than Ever in the Age of AI"
+  author: "Michael Borck"
+  date: today
+  license: "CC BY"
+  favicon: favicon.svg
+  cover-image: images/cover.png
+  page-navigation: true
+  chapters:
+    - index.qmd
+    - part: "Act I · Engage: Build the Case"
+      chapters:
+        - chapters/01-why.qmd
+        - chapters/02-risk.qmd
+        - chapters/03-which.qmd
+        - chapters/04-scope.qmd
+        - chapters/05-expect.qmd
+        - chapters/06-assess.qmd
+    - part: "Act II · Prove: From Suspicion to Proof"
+      chapters:
+        - chapters/07-prove.qmd
+        - chapters/08-comply.qmd
+        - chapters/09-protect.qmd
+        - chapters/10-recover.qmd
+        - chapters/11-report.qmd
+        - chapters/12-conclude.qmd
+  appendices:
+    - acknowledgments.qmd
+    - about-author.qmd
+  other-links:
+    - text: Download PDF
+      icon: file-pdf
+      href: substantiate-dont-assume.pdf
+    - text: Download EPUB
+      icon: book
+      href: substantiate-dont-assume.epub
+    - text: Tessera companion site
+      icon: globe2
+      href: https://tessera.locoensayo.org
+    - text: GitHub
+      icon: github
+      href: https://github.com/michael-borck/substantiate-dont-assume
+    - text: "Companion: Conversation, Not Delegation"
+      icon: chat-left-text
+      href: https://michael-borck.github.io/conversation-not-delegation/
+    - text: All Books
+      icon: collection
+      href: https://books.borck.education
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    include-after-body: chatbot.html
+    toc: true
+    toc-depth: 3
+    number-sections: true
+  pdf:
+    documentclass: book
+    toc: true
+    toc-depth: 1
+    number-sections: true
+    geometry:
+      - paperwidth=6in
+      - paperheight=9in
+      - inner=1in
+      - outer=0.625in
+      - top=0.75in
+      - bottom=0.75in
+    include-in-header: pdf-header.tex
+    include-before-body:
+      - copyright-page.tex
+  epub:
+    toc: true
+    toc-depth: 1
+    css: epub-styles.css
