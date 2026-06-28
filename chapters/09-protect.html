@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9&nbsp; Protect? Data Protection and Privacy – Substantiate, Don't Assume</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/10-recover.html" rel="next">
+<link href="../chapters/08-comply.html" rel="prev">
+<link href="../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/07-prove.html">Act II · Prove: From Suspicion to Proof</a></li><li class="breadcrumb-item"><a href="../chapters/09-protect.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Protect? Data Protection and Privacy</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Substantiate, Don’t Assume</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction: The Audit Mindset</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Act I · Engage: Build the Case</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-why.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Why? The Auditor’s Mandate and Ethics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Risk? Foundations of Risk Management</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-which.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Which? Frameworks and Standards</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-scope.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Scope? Audit Planning and Methodology</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-expect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Expect? Technical Control Objectives</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06-assess.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Assess? Physical, People, and ISMS Controls: Preliminary Readiness</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Act II · Prove: From Suspicion to Proof</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-prove.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Prove? Evidence Collection and Testing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08-comply.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Comply? Policy Evaluation: From Published to Proven</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/09-protect.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Protect? Data Protection and Privacy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-recover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Recover? Business Continuity and Incident Management</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Report? Findings and the Audit Opinion</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/12-conclude.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conclude? Certification, Defence, and the Future of Audit</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about-author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the Author</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-crown-jewel-and-why-privacy-is-not-security" id="toc-the-crown-jewel-and-why-privacy-is-not-security" class="nav-link active" data-scroll-target="#the-crown-jewel-and-why-privacy-is-not-security"><span class="header-section-number">9.1</span> The crown jewel, and why privacy is not security</a></li>
+  <li><a href="#the-australian-privacy-principles" id="toc-the-australian-privacy-principles" class="nav-link" data-scroll-target="#the-australian-privacy-principles"><span class="header-section-number">9.2</span> The Australian Privacy Principles</a></li>
+  <li><a href="#the-notifiable-data-breaches-scheme" id="toc-the-notifiable-data-breaches-scheme" class="nav-link" data-scroll-target="#the-notifiable-data-breaches-scheme"><span class="header-section-number">9.3</span> The Notifiable Data Breaches scheme</a></li>
+  <li><a href="#cross-border-disclosure-and-data-sovereignty" id="toc-cross-border-disclosure-and-data-sovereignty" class="nav-link" data-scroll-target="#cross-border-disclosure-and-data-sovereignty"><span class="header-section-number">9.4</span> Cross-border disclosure and data sovereignty</a></li>
+  <li><a href="#the-privacy-impact-assessment" id="toc-the-privacy-impact-assessment" class="nav-link" data-scroll-target="#the-privacy-impact-assessment"><span class="header-section-number">9.5</span> The Privacy Impact Assessment</a></li>
+  <li><a href="#data-masking-minimisation-and-secure-deletion" id="toc-data-masking-minimisation-and-secure-deletion" class="nav-link" data-scroll-target="#data-masking-minimisation-and-secure-deletion"><span class="header-section-number">9.6</span> Data masking, minimisation, and secure deletion</a></li>
+  <li><a href="#the-privacy-of-the-ai-you-bolt-on" id="toc-the-privacy-of-the-ai-you-bolt-on" class="nav-link" data-scroll-target="#the-privacy-of-the-ai-you-bolt-on"><span class="header-section-number">9.7</span> The privacy of the AI you bolt on</a></li>
+  <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">9.8</span> The question, answered</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/07-prove.html">Act II · Prove: From Suspicion to Proof</a></li><li class="breadcrumb-item"><a href="../chapters/09-protect.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Protect? Data Protection and Privacy</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-protect" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Protect? Data Protection and Privacy</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p><em>Security asks whether the wrong hands reached the data. Privacy asks whether you had the right to hold it at all.</em></p>
+</blockquote>
+<div class="tessera-case">
+<p><strong>🗂️ Tessera Case: the crown jewel</strong></p>
+<p>Full access landed on Monday, and the first thing you traced was the data itself. Tessera’s crown jewel is not its source code or its brand. It is its customers’ data: contract terms, account configuration, usage telemetry, and the operational reports its customers’ own staff upload for Tessera’s new AI feature to summarise. In Act I you could read the privacy policy and the data classification scheme and nothing more. Now you can follow the bytes. The question that opened the engagement, <em>is it actually defended?</em>, stops being rhetorical this week. It becomes a thing you can answer with a data-flow diagram, a contract clause, and a deletion log, or fail to.</p>
+</div>
+<section id="the-crown-jewel-and-why-privacy-is-not-security" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="the-crown-jewel-and-why-privacy-is-not-security"><span class="header-section-number">9.1</span> The crown jewel, and why privacy is not security</h2>
+<p>Every audit has a thing it is really about, and for Tessera that thing is personal information. Customer contact records. The named individuals inside customer organisations who log in. The contents of the reports those individuals upload. Protect that, and the certification means something. Fail to, and the rest of the control set is decoration.</p>
+<p>Here is the distinction this chapter turns on, and it is the one people get wrong first. Security and privacy are related but they are not the same property. Security is about protecting information: keeping it confidential, keeping it intact, keeping it available. It asks <em>is the data safe?</em> Privacy is about the rights of the people the data describes: whether it was collected lawfully, used for the purpose it was collected for, disclosed only with basis, and held no longer than needed. It asks <em>is the data yours to hold, and are you handling it as you promised?</em></p>
+<p>A company can have excellent security and still breach privacy law. A perfectly encrypted database of customer records, sent to a third party overseas without a lawful basis for the transfer, is a privacy breach that no cipher will cure. The reverse holds too: a company scrupulous about collection notices can still leak the lot through a misconfigured storage bucket. The two disciplines protect the same asset from different directions, and an auditor who conflates them tests the wrong thing.</p>
+<p>The 2022 standard recognises this. ISO/IEC 27001’s organisational control A.5.34, <em>Privacy and protection of personal information</em>, is explicit that an organisation’s privacy obligations sit alongside its security obligations, and that meeting one does not discharge the other. Audit data protection and you are auditing both, against two rulebooks: the technical control objectives from Chapter 5, and the legal regime that governs personal information. For Tessera, that regime is the Australian <em>Privacy Act 1988</em> and its Australian Privacy Principles.</p>
+<p>I learned the cost of the conflation the hard way, on an engagement I would rather not describe in detail. The client answered every privacy question I asked with a cipher specification, and I wrote it down and moved on. Three weeks later the cross-border transfer I had not chased became the actual finding, and the finding was a notifiable breach. Encryption had been perfect. The legal basis had been absent. That is the gap this chapter exists to close.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Watch out: 'we encrypt it' is not a privacy answer">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Watch out: ‘we encrypt it’ is not a privacy answer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The first answer most engineers give to a privacy question is an encryption answer. Asked whether customer data is protected in transit to the AI vendor, they will say “TLS 1.3, end to end.” Asked whether it is protected at rest, they will cite AES-256 and the key-management configuration. Both answers are correct. Neither is a privacy answer.</p>
+<p>Encryption addresses APP 11, the security principle. It does not address APP 3 (was the data collected lawfully?), APP 6 (is it being used only for the purpose disclosed?), or APP 8 (is the cross-border disclosure to the vendor lawful?). A data set can be encrypted to military grade and still be a notifiable breach waiting to happen, because the breach is in the handling, not the cipher. When a client answers a privacy question with a security control, write it down, and then ask the question again.</p>
+</div>
+</div>
+</section>
+<section id="the-australian-privacy-principles" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="the-australian-privacy-principles"><span class="header-section-number">9.2</span> The Australian Privacy Principles</h2>
+<p>The <em>Privacy Act</em> regulates how APP entities handle personal information, and the thirteen Australian Privacy Principles are its operative rules. An APP entity is, broadly, an organisation with an annual turnover above $3 million, plus a list of smaller entities caught regardless of size (health service providers, traders in personal information, and others). Tessera’s revenue sailed past the threshold a funding round ago. It is an APP entity, and the APPs bind it.</p>
+<p>You do not need to memorise all thirteen to audit Tessera. You need to know which ones do the load-bearing work, and why.</p>
+<p><strong>APP 1</strong> requires open and transparent management of personal information, manifested in a clear, current privacy policy. The Act I read tested whether that policy exists. The Act II test is whether practice matches it, and the gap is usually where the policy has not kept up with a feature the product team shipped.</p>
+<p><strong>APP 3</strong> governs collection. An entity may collect only personal information that is reasonably necessary for its functions, by lawful and fair means. Sensitive information (health information, biometric data, political opinion, and the rest of the statutory list) attracts a higher bar, generally requiring consent. The audit question is whether Tessera collects what it actually needs, or hoovers up what is convenient.</p>
+<p><strong>APP 6</strong> governs use and disclosure. Personal information collected for one purpose may be used or disclosed only for that purpose, for a secondary purpose the individual would reasonably expect, or with consent. This is the principle that decides whether Tessera may feed customer content through its summarisation feature at all, and it is the one most likely to surprise a product team.</p>
+<p><strong>APP 8</strong> governs cross-border disclosure, and for a company that calls an overseas AI service it is the principle that will either save or sink the engagement. More on it below.</p>
+<p><strong>APP 11</strong> requires an entity to take such steps as are reasonable in the circumstances to protect personal information from misuse, interference, loss, and unauthorised access, modification, or disclosure, and to destroy or de-identify it when no longer needed. APP 11 is where privacy and security meet, and where secure deletion lives.</p>
+<p>Read together, the APPs describe a lifecycle: collect lawfully, tell the subject, use it for the purpose you stated, protect it while you hold it, disclose it only with basis, and let it go when you are done. Auditing Tessera’s privacy is auditing that lifecycle end to end, against the legal text rather than against a technical checklist.</p>
+</section>
+<section id="the-notifiable-data-breaches-scheme" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="the-notifiable-data-breaches-scheme"><span class="header-section-number">9.3</span> The Notifiable Data Breaches scheme</h2>
+<p>The <em>Privacy Act</em> also runs the Notifiable Data Breaches scheme, and it is the scheme that turns a bad weekend into a regulated event. Under Part IIIC, an APP entity that becomes aware of an <em>eligible data breach</em> must notify the Office of the Australian Information Commissioner and the affected individuals as soon as practicable.</p>
+<p>An eligible data breach is a three-part test, and the auditor should know it cold. First, there is unauthorised access to, unauthorised disclosure of, or loss of, personal information. Second, this is likely to result in <em>serious harm</em> to any of the individuals to whom the information relates. Third, the entity has not been able to prevent the risk of serious harm with remedial action. All three, and the notification obligation bites.</p>
+<p>The phrase that does the work is <em>serious harm</em>, and it is deliberately not a number. Serious harm is serious physical, psychological, emotional, financial, or reputational harm. Assessing it demands judgement about the kind of information, its sensitivity, who holds it now, and what they could do with it. A breach reaching a list of public business contact names may be low harm; the same breach reaching a file of health-related reports is catastrophic. The scheme forces an entity to think, on the worst day of its year, about consequences it would rather not.</p>
+<p>The scheme also has a clock. Once an entity suspects an eligible breach, it has a reasonable period to assess, and the Commissioner’s guidance treats around thirty days as a reasonable upper bound. An auditor tests NDB readiness the way it tests every other readiness: does a playbook exist, who owns it, has it been rehearsed, and can the organisation answer the three-part test under pressure with its data inventory in front of it?</p>
+<p>That last clause hides the trap. You cannot assess serious harm for data you cannot locate or describe. The NDB scheme silently assumes a working data inventory, and a company whose asset register is rotting, the Chapter 6 finding, discovers the cost of that rot in the middle of a breach assessment, when the thirty-day clock is already running.</p>
+</section>
+<section id="cross-border-disclosure-and-data-sovereignty" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="cross-border-disclosure-and-data-sovereignty"><span class="header-section-number">9.4</span> Cross-border disclosure and data sovereignty</h2>
+<p>APP 8 is where modern SaaS architectures collide with a law written before they existed. Before an APP entity discloses personal information to an overseas recipient, it must take such steps as are reasonable in the circumstances to ensure the overseas recipient does not breach the APPs in relation to that information.</p>
+<p>Read that sentence twice. It is an accountability transfer, not a liability transfer. Since the 2014 amendments, section 16C of the <em>Privacy Act</em> provides that, where an entity discloses personal information to an overseas recipient, the entity is taken to have breached the APPs if the recipient does an act that would breach them. Tessera cannot outsource the obligation. If the overseas AI vendor mishandles the data, it is Tessera’s breach, on Tessera’s record, notified under Tessera’s name.</p>
+<p>What counts as <em>reasonable steps</em> is the auditor’s question, and the answer is unhappily open-ended. Reasonable steps may be contractual (a data-processing agreement that imposes APP-equivalent obligations and a right to audit), may be due diligence (confirming the vendor’s certifications, sub-processor list, and data-handling configuration), and may be technical (encryption in transit, tokenisation of identifiers, minimisation of what is sent). The Commissioner expects an entity to have considered the steps and documented its reasoning, and an absence of either is the finding that writes itself.</p>
+<p>Note what is absent. Australian privacy law has no equivalent of the European Union’s Standard Contractual Clauses, the prescribed contractual instrument the GDPR treats as an adequate transfer mechanism. In Australia a contract is one reasonable step among several; it is not a safe harbour. If you have audited a GDPR compliance programme, unlearn that reflex here, and watch for the people who have not.</p>
+<p>Data sovereignty is the adjacent concern, and it is not the same as residency. Where the data physically sits is one question. Which government can compel access to it, and under what law, is another. Tessera’s core data lives in the AWS Sydney region (ap-southeast-2), which is the right answer for an Australian customer base that cares about residency. But residency is not the whole of sovereignty, and a single API call can undo it.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Watch out: the hidden cross-border transfer inside an AI API call">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Watch out: the hidden cross-border transfer inside an AI API call
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A developer adds a feature. The feature sends a customer’s report to a model vendor’s endpoint to be summarised. From the application’s perspective it is a single function call. From a privacy perspective it is a cross-border disclosure of personal information to an overseas recipient under APP 8, and it triggers the full accountability regime of section 16C.</p>
+<p>These transfers hide inside features, not contracts. The procurement team may have signed the vendor’s master agreement and reviewed its data-processing terms. The engineering team that wired up the endpoint may never have been told that the payload contains personal information, or that the vendor processes it in a jurisdiction the privacy team has not assessed. The transfer exists in the architecture. It does not exist in the contract file until someone traces the data flow and names it. That tracing is Act II work, and it is the single most common place a privacy audit finds a problem the organisation did not know it had.</p>
+</div>
+</div>
+</section>
+<section id="the-privacy-impact-assessment" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="the-privacy-impact-assessment"><span class="header-section-number">9.5</span> The Privacy Impact Assessment</h2>
+<p>The instrument that should have caught that hidden transfer before the feature shipped is the Privacy Impact Assessment. A PIA is a structured analysis of how a project, product, or change affects the privacy of the individuals whose information it touches. The Office of the Australian Information Commissioner publishes detailed guidance on conducting one, and it follows a recognisable shape.</p>
+<p>A PIA starts with a threshold assessment: is this project likely to have privacy impacts significant enough to warrant a full assessment? If yes, the analyst describes the project, maps the personal information flows (what is collected, from whom, where it goes, who sees it, how long it is kept), tests them against the APPs, and identifies the risks to individuals and their treatments. The output is a living document, not a one-off compliance artefact, and it is only as good as the data flow map it rests on.</p>
+<p>The data flow map is the heart of the exercise, and it is where the AI feature should have been caught. A correct map of Tessera’s summarisation feature shows customer report content leaving Tessera’s boundary, transiting to the model vendor, being processed in a location that may or may not be Australia, and being retained for a period the vendor’s terms specify. Each arrow on that map is a question. Each question is an APP. Drawn accurately, the map is the audit.</p>
+<p>The Tessera Case below is a fragment of the PIA that should have existed for this feature. It did not exist when you arrived. The Act II finding is that it now needs to.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="🤖 AI Field Note: drafting the PIA data map">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>🤖 AI Field Note: drafting the PIA data map
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a task an AI accelerates dramatically, and it is worth using it, with the evaluator’s brakes on. Hand an AI the feature spec, the privacy policy, and the vendor’s terms, and ask for a first-cut data flow map with an APP-by-APP impact analysis. It will return a structured draft in minutes: the data elements, the recipients, the retention assumptions, the principles engaged. Most of it will be useful.</p>
+<p>Then read it for the invented clauses. Large language models are trained heavily on European material, and they reach for GDPR instruments reflexively. In the transfer-mechanism row, the AI will likely insert <em>Standard Contractual Clauses</em> as the safeguard that makes the cross-border disclosure lawful. That instrument exists in EU law. It does not exist in Australian law as a named, prescribed mechanism. Under APP 8 the safeguard is <em>reasonable steps</em>, and the accountability sits with Tessera regardless. Accept the clause the AI invented and you have imported a legal instrument that does not govern this engagement, and your PIA now asserts compliance it does not have.</p>
+<p>The correction is the audit. Walk every data flow the AI drew against the actual architecture: the endpoint’s region, the vendor’s documented retention, the contract’s actual processing terms, the prompt-logging configuration. The AI produced the draft. You produced the truth. That is the drafter-to-evaluator shift, performed on a document whose only value is accuracy.</p>
+</div>
+</div>
+<div class="tessera-case">
+<p><strong>🗂️ Tessera Case: a PIA fragment for the summarisation feature</strong></p>
+<p>Here is the fragment you drafted back to Tessera after tracing the flow, abridged.</p>
+<p><em>Project:</em> in-product summarisation of customer-uploaded reports via a third-party model vendor.</p>
+<p><em>Personal information flows:</em> - <em>Report content uploaded by named customer users; may contain personal information of the customer’s own staff or third parties named within the reports.</em> - <em>Content transmitted to the model vendor’s inference endpoint over TLS 1.3.</em> - <em>Vendor processes in [region not pinned to a single location in the contract; routing across multiple regions permitted].</em> - <em>Prompt-logging confirmed enabled on the account; vendor retention per terms [30 days for abuse monitoring].</em> - <em>Training on customer inputs: data-processing agreement states the opt-out is configured; configuration to be verified against the account, not the marketing page.</em></p>
+<p><em>APP analysis:</em> - <em>APP 3 (collection): collected for the summarisation function the user requested. Likely necessary. Sensitive-information risk: reports may incidentally contain health or other sensitive data. Mitigation: pre-upload notice, or content classification.</em> - <em>APP 5 (notification): the current privacy policy does not disclose the AI processing or the vendor. Gap.</em> - <em>APP 6 (use and disclosure): summarisation is arguably within the purpose the user would reasonably expect. Secondary use of the content for vendor model training is not, and must be contractually excluded and technically verified.</em> - <em>APP 8 (cross-border): disclosure to an overseas recipient. Reasonable steps: the data-processing agreement is in place, but the processing region is unconfirmed and the sub-processor list is not attached. Accountability retained by Tessera under s.16C. Gap.</em> - <em>APP 11 (security): TLS in transit and encryption at rest confirmed. Tokenisation of customer identifiers before the payload leaves the boundary recommended.</em></p>
+<p><em>NDB exposure: a breach at the vendor that exposes report content would be an unauthorised disclosure by an overseas recipient for which Tessera is accountable under s.16C. Where the content includes sensitive information, serious harm is likely, and notification to the Commissioner and to affected individuals would be required. Tessera’s NDB playbook does not currently include a vendor-side breach path. Gap.</em></p>
+<p><em>Recommendation: pause auto-enablement of the feature pending closure of APP 5, APP 8 region confirmation, training-opt-out verification against the live account configuration, and extension of the NDB playbook to the vendor-side path.</em></p>
+<p>Each <em>Gap</em> in that fragment is an audit finding waiting to be written. Notice how many of them the desk read in Act I could not have produced.</p>
+</div>
+</section>
+<section id="data-masking-minimisation-and-secure-deletion" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="data-masking-minimisation-and-secure-deletion"><span class="header-section-number">9.6</span> Data masking, minimisation, and secure deletion</h2>
+<p>If the APPs describe the legal lifecycle, the 2022 control set describes how to engineer it. Four controls do most of the privacy work, and all four were added in the 2022 edition, which is why a privacy audit against the 2013 standard felt so thinly tooled.</p>
+<p><strong>A.5.34, <em>Privacy and protection of personal information</em>,</strong> is the organisational anchor. It requires the organisation to identify and meet its privacy obligations, which in practice means knowing which data is personal, who is responsible for it, and how the APPs are satisfied. It is the control under which the PIA lives.</p>
+<p><strong>A.8.10, <em>Information deletion</em>,</strong> requires secure deletion of information no longer needed, in line with the retention schedule and using techniques appropriate to the storage medium. Deletion is not <code>rm</code>. A record deleted from a database may persist in backups, snapshots, replicas, and logs for weeks or months. Secure deletion means removal across every copy, backed by a retention schedule that decides when deletion is due. The auditor asks for the retention schedule and the deletion evidence, and reconciles the two.</p>
+<p><strong>A.8.11, <em>Data masking</em>,</strong> requires the use of masking, pseudonymisation, or other techniques to limit the exposure of personal information where the full data is not needed. This is the control that should govern every development database, every analytics warehouse, and every test fixture built from production data. Real customer records do not belong in a staging environment; masked or synthetic records do. Unmasked production data in a non-production environment is one of the most common findings an auditor writes, because it is one of the most common shortcuts an engineering team takes.</p>
+<p><strong>A.8.12, <em>Data leakage prevention</em>,</strong> closes the perimeter, requiring controls to detect and prevent the unauthorised exfiltration of information.</p>
+<p>Underlying all of them is data minimisation, which is less a control than a principle: collect the least personal information consistent with the function, hold it for the shortest time consistent with the purpose, and expose it in the narrowest form consistent with the use. Minimisation is the privacy control that pays back in every other dimension. Less data stored is less data to breach, less data to mask, less data to delete, and less data to map in the PIA. A company that minimises well audits well, because there is simply less of it to get wrong.</p>
+</section>
+<section id="the-privacy-of-the-ai-you-bolt-on" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="the-privacy-of-the-ai-you-bolt-on"><span class="header-section-number">9.7</span> The privacy of the AI you bolt on</h2>
+<p>The chapter’s hardest question is also the most contemporary. Tessera’s summarisation feature is not a privacy question only about the transfer. It is a privacy question about what the model itself does to personal information, and the 2022 control set does not yet carry a control labelled “AI.” You audit it under the controls that exist, and you apply the scepticism the topic demands.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="🔍 Auditing AI: privacy risks of the model itself">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>🔍 Auditing AI: privacy risks of the model itself
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An AI system introduces privacy risks that a conventional data store does not, and three of them belong in any privacy audit of an AI feature.</p>
+<p><em>Training data retention and reuse.</em> A model vendor that ingests customer prompts as training data is folding that information into a statistical object it will keep indefinitely and expose, in fragmentary form, through the model’s future outputs. A data-processing clause that says “we do not train on your inputs” is the right clause. Verify it against the configuration that governs the account, not the marketing page. The configuration is the control; the clause is the assertion.</p>
+<p><em>Model inversion and membership inference.</em> These are the classes of attack that recover information about a model’s training data from its behaviour. Model inversion reconstructs approximations of inputs from outputs; membership inference determines whether a specific record was in the training set. For a model trained on Tessera’s customer data, these are privacy risks to Tessera’s customers, and the risk scales with how much of their data is in the model. A vendor that does not train on your inputs removes the vector. A vendor that does, retains the risk permanently.</p>
+<p><em>Prompts containing personal data.</em> Every call Tessera’s feature makes to the vendor is a payload, and the payload will contain personal information whenever the summarised content does. Each call is therefore a fresh APP 8 disclosure, a fresh entry on the data flow map, and a fresh item in the breach surface. The privacy of the feature is not a single assessment done at procurement; it is a property re-asserted on every request. Tokenising customer identifiers before the payload leaves the boundary, and minimising what is sent, are the engineering controls that keep it defensible.</p>
+<p>Audit all three against evidence, not against the vendor’s security page. The vendor’s security page is the polished policy. The configuration, the data-processing agreement, the prompt-logging settings, and the architecture are the server behind it.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Week 9)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Week 9)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This week’s artefact is the privacy half of your working papers, and it has two parts. Lock in the <strong>Privacy Impact Assessment fragment</strong> for the summarisation feature: the data flow map, the APP-by-APP analysis, and each named gap. Then lock in the <strong>data-flow-to-AI-vendor assessment</strong>: the endpoint, the confirmed processing region (or the gap where it is unconfirmed), the prompt-logging configuration, the training-opt-out verification status, and the NDB-relevant gaps, with the control each gap maps to and the access you would need to close it.</p>
+<p>Separate, as always, what you <em>found</em> from what you <em>suspect</em>. The cross-border transfer to the vendor is found; the lawful basis for it is the gap. The NDB playbook’s missing vendor-side path is found; whether it would hold under a real breach is the gap. By the end of Act II these become the privacy findings in your certification-readiness opinion, and the locker is where they earn the right to be there.</p>
+</div>
+</div>
+</section>
+<section id="the-question-answered" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">9.8</span> The question, answered</h2>
+<p>Is the crown jewel actually defended? On the evidence Act II has now let you gather, the honest answer for Tessera is: <em>partly, and the part that is missing is the part that matters most.</em></p>
+<p>The security of customer data is largely in place. Encryption in transit and at rest is configured. Access is controlled. The AWS residency keeps the core data in Australia. On the security axis, Tessera can defend the crown jewel.</p>
+<p>On the privacy axis, the picture is rougher. The cross-border transfer to the AI vendor is a real APP 8 disclosure, made under a data-processing agreement whose region is unconfirmed and whose training opt-out is asserted but not yet verified against the live account. The privacy policy does not disclose the AI processing. The NDB playbook has no vendor-side path. The feature shipped without a PIA, and the fragment you drafted back lists four named gaps. Each gap is a place where the privacy lifecycle is broken, and a broken lifecycle is a notifiable breach waiting for its trigger.</p>
+<p>The crown jewel is encrypted. It is not yet, fully, protected. The distinction is the work of this chapter, and it is the distinction your opinion now has to carry.</p>
+<p>Next week the question changes shape. A defended crown jewel is still a crown jewel at risk from fire, flood, ransomware, and the region failure that takes a whole multi-tenant SaaS down with it. When the worst happens, the question is no longer whether you protected the data, but whether you can get it back. The question is <strong>Recover?</strong></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<!--
+  AnythingLLM chatbot embed for this book.
+  The book-publisher creates a chatbot grounded in the book's content and
+  fills in the embed id / base API URL here. Until then this is a deliberate
+  no-op so the `include-after-body` hook in _quarto.yml stays wired.
+-->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/08-comply.html" class="pagination-link" aria-label="Comply? Policy Evaluation: From Published to Proven">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Comply? Policy Evaluation: From Published to Proven</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/10-recover.html" class="pagination-link" aria-label="Recover? Business Continuity and Incident Management">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Recover? Business Continuity and Incident Management</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
