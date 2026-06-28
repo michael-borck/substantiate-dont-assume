@@ -71,7 +71,7 @@ Most real defences are a chain of all three, because no single control is reliab
 ::: {.tessera-case}
 **🗂️ Tessera Case: Where Tessera's hats show**
 
-In your opening week you wear all three hats at once. As **counsellor**, you walk Tessera's CTO through what ISO/IEC 27001:2022 actually requires, and watch the confidence drain when "pretty much there" meets "93 controls across four themes." As **partner**, you agree how the engagement will run and what access you will get (limited, for now). As **investigator**, you file away the CTO's opening claim ("we're basically ready") as the first assertion the evidence will later confirm or demolish. Every chapter from here tests that claim a different way.
+In your opening week you wear all three hats at once. As **counsellor**, you walk Tessera's CTO through what ISO/IEC 27001:2022 actually requires, and watch the confidence drain when "pretty much there" meets "93 controls across four themes." As **partner**, you agree how the engagement will run and what access you will get (limited, for now). As **investigator**, you file away the CTO's opening claim ("we're basically ready") as the first assertion the evidence will later confirm or refute. Every chapter from here tests that claim a different way.
 :::
 
 :::: {.callout-note title="🤖 AI Field Note: Exploring the control categories"}
@@ -87,7 +87,7 @@ So can an AI deliver an audit opinion? It can *produce* one. It cannot *stand be
 ::::
 
 :::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 1)"}
-Open your Evidence Locker with the engagement's foundation. Record: the **mandate** (who engaged you, against what criteria, to deliver what opinion); the **independence threats** you identified for this engagement and the **safeguards** applied; and your one-line restatement of Tessera's opening claim, the assertion the rest of the engagement will substantiate or demolish. This is not note-taking. It is the first entry in a defensible audit trail.
+Open your Evidence Locker with the engagement's foundation. Record: the **mandate** (who engaged you, against what criteria, to deliver what opinion); the **independence threats** you identified for this engagement and the **safeguards** applied; and your one-line restatement of Tessera's opening claim, the assertion the rest of the engagement will substantiate or refute. This is not note-taking. It is the first entry in a defensible audit trail.
 ::::
 
 ## The question, answered
