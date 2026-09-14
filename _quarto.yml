@@ -40,12 +40,18 @@ book:
     - text: Download EPUB
       icon: book
       href: substantiate-dont-assume.epub
+    - text: Download llm.txt
+      icon: robot
+      href: llm.txt
     - text: Tessera companion site
       icon: globe2
       href: https://tessera.locoensayo.org
     - text: GitHub
       icon: github
       href: https://github.com/michael-borck/substantiate-dont-assume
+    - text: DeepWiki
+      icon: search
+      href: https://deepwiki.com/michael-borck/substantiate-dont-assume
     - text: "Companion: Conversation, Not Delegation"
       icon: chat-left-text
       href: https://michael-borck.github.io/conversation-not-delegation/

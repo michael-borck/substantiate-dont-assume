@@ -88,7 +88,7 @@ Twelve weeks ago Tessera's CTO believed the company was "pretty much there." The
 
 *1. (Major nonconformity, A.5.18 / A.8.2) The quarterly privileged-access recertification for production and customer-data systems had not been performed for two consecutive quarters. Role-change reviews are not operating. This is systemic, not isolated.*
 
-*2. (Minor nonconformity, A.6.5) Of eight sampled leavers, two retained production access beyond the policy window (nine and twenty-three days respectively). Root cause addressed; control now operating for current leavers.*
+*2. (Minor nonconformity, A.6.5) Of the full population of forty-eight leavers, three retained access beyond the policy window (fifty hours, three days, and forty-seven days); the forty-seven-day case, a contractor's static AWS key, was the vector for incident TSR-INC-2025-031. Root cause (a broken cross-functional handoff and no sweep of non-human credentials on contractor exit) addressed and verified; the control now operates for current leavers, so the finding is minor in the certification sense (remediated and non-systemic) rather than minor in consequence.*
 
 *3. (Observation, A.5.9) Asset-register reconciliation identified six unregistered assets, now added. Register currency to be monitored.*
 
@@ -110,10 +110,10 @@ That is the opinion. Now the room tests it.
 The room goes quiet. The chair nods. The opinion stands, unchanged, because it was always the evidence restated, and the evidence did not move.
 :::
 
-:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 12)"}
-This is the capstone. By now your Evidence Locker is not a study aid; it *is* the audit. Lock in your **final certification-readiness opinion**: the conclusion, the criteria, the named findings with their 5C+R write-ups and ratings, the limitations of the engagement (period, sample, scope), and the conditions under which the opinion holds. Attach the third-party-assurance summary: each SOC report cited, its scope read, its period checked, and the complementary user controls you tested yourself. Add the board Q&A you rehearsed, with your defensible answer to each hostile question.
+::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Engagement milestone 12)"}
+This is the capstone. By now your Evidence Locker is not a preparatory exercise; it *is* the audit. Lock in your **final certification-readiness opinion**: the conclusion, the criteria, the named findings with their 5C+R write-ups and ratings, the limitations of the engagement (period, sample, scope), and the conditions under which the opinion holds. Attach the third-party-assurance summary: each SOC report cited, its scope read, its period checked, and the complementary user controls you tested yourself. Add the board Q&A you rehearsed, with your defensible answer to each hostile question.
 
-Do this and the locker becomes the working papers another auditor could pick up, follow, and reach the same conclusion. That reproducibility is the standard a defensible opinion is held to, and it is the standard your Assessment 3 will be marked against. The opinion is the artefact. The locker is the proof the opinion was earned.
+Do this and the locker becomes the working papers another auditor could pick up, follow, and reach the same conclusion. That reproducibility is the standard a defensible opinion is held to. The opinion is the artefact. The locker is the proof the opinion was earned.
 ::::
 
 ## Where to go from here
@@ -135,3 +135,23 @@ And here is the premise, returned to, one last time. The Introduction asked what
 Every chapter in this book has been one rehearsal of the same habit. The polished policy is an assertion. The green dashboard is an assertion. The vendor's clean report is an assertion. The AI's confident summary is an assertion. The CTO's "we're pretty much there" is an assertion. None of them is evidence until you have seen it work. You substantiate what you can. You name what you cannot. You form an opinion you can defend, and you defend it. That is the audit mindset, and it is the only mindset worth having now that the machine can draft and the estate is half algorithm.
 
 Substantiate, don't assume. The cast is AI. The judgement is yours.
+
+## Take it to the AI
+
+**Where to start.** Three questions worth arguing about rather than looking up:
+
+1. Give the AI your opinion and ask it to play a hostile non-executive director. The Field Note above recommends this, and the value is entirely in where *you* stumble, not in the quality of its questions.
+2. Ask what a SOC 2 Type II does and does not tell you about a vendor, then ask which complementary user entity controls it assumes you already have in place. That second list is what you still have to test yourself.
+3. Ask what an AI can and cannot do in an audit, and make it separate the two faces: the machine on your side of the desk and the machine inside the estate. An answer that blurs them has missed the argument of the book.
+
+**Keywords to steer with.** readiness assessment versus certification · accredited certification body · unqualified, qualified and adverse opinion · limitation of scope · SOC 1 versus SOC 2 · Type I versus Type II · bridge letter · complementary user entity controls · residual gap · drafter to evaluator · accountability
+
+**A starting prompt.**
+
+> **Role:** You are a board chair with a finance background, no patience for jargon, and a personal stake in the certification landing this quarter.
+>
+> **Task:** Probe my audit opinion as hard as a real board would. Ask the sharpest fair questions one at a time, and press when my answer is vague.
+>
+> **Context:** I have read a chapter on defending an opinion under pressure and on the difference between a readiness assessment and certification. Here is my opinion and my findings: [paste them]. Push on the ratings, on how I sampled, and on my reliance on third-party assurance. Do not accept "the evidence supports it" unless I name which evidence.
+>
+> **Format:** One question per turn, waiting for my answer. After at least six, tell me which of my answers would not have survived a real board, and exactly what each one needs.

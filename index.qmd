@@ -42,7 +42,7 @@ Which is also why pressure is the auditor's real test. A client facing a deal de
 
 This sounds obvious. In practice it is hard. The most dangerous control is the one that looks perfect on paper, because it lowers your guard. Tessera is written to be plausible: impressive in its marketing, rougher underneath, exactly like the real organisations you will audit. Good auditing does not assume the worst. It does something more disciplined: it substantiates what is actually there, names what is missing, and lets the evidence set the opinion.
 
-By the end of this book you will have done exactly that, one week at a time, against Tessera.
+By the end of this book you will have done exactly that, chapter by chapter, against Tessera.
 
 ## The auditor's moat in the age of AI
 
@@ -60,7 +60,7 @@ If an AI is equally good at running every company, then by definition there is n
 
 ### From drafter to evaluator
 
-As AI moves from chatbots to agentic systems that can run procedures on their own, the auditor's job shifts: from creator of the "shitty first draft" to **expert evaluator and editor** of AI-generated work. You will read AI-drafted risk assessments, AI-drafted control mappings, AI-drafted findings, and your value will be in spotting where they are generic, where they confabulated compliance, and where the nuance they smoothed over was the whole point. This book makes that discipline explicit and teaches it. The course's assessments already embody it: you are required to document where you *disagreed with or expanded on* an AI's analysis.
+As AI moves from chatbots to agentic systems that can run procedures on their own, the auditor’s job shifts: from creator of the “shitty first draft” to **expert evaluator and editor** of AI-generated work. You will read AI-drafted risk assessments, AI-drafted control mappings, AI-drafted findings, and your value will be in spotting where they are generic, where they confabulated compliance, and where the nuance they smoothed over was the whole point. This book makes that discipline explicit and teaches it. The habit it builds is non-negotiable: whenever you draft with AI, you document where you *disagreed with or expanded on* its analysis.
 
 ### Augmentation, not automation
 
@@ -74,24 +74,24 @@ This premise is the thread that runs through every chapter.
 
 ## Who this book is for
 
-This is the core text for **ISYS6018: Information Security Audit and Control** at Curtin University, and it is written for the student taking that unit: someone learning to audit against international standards for the first time. You do not need to be an auditor already. You need to be willing to form opinions and defend them with evidence.
+This book is written for the person learning to audit against international standards for the first time. You do not need to be an auditor already. You need to be willing to form opinions and defend them with evidence.
 
 It is also for any practitioner, new or experienced, who wants a readable, opinionated spine for the discipline of information security auditing, and a clear stance on where the human auditor fits once the machines can draft. If you audit, manage auditors, or rely on audit opinions, the argument here is for you.
 
 ## How this book works
 
-The book is one engagement told twelve ways. You audit **Tessera**, a fast-growing B2B software company built on AWS and chasing ISO/IEC 27001 certification. Each chapter is one topic, a single weekly question from *Why?* through *Risk?*, *Which?*, *Scope?* and on to *Report?* and *Conclude?*. **Chapter *N* = Topic *N*, delivered in Week *N* of the course**: read the chapter for a topic in the week you live that topic.
+The book is one engagement told twelve ways. You audit **Tessera**, a fast-growing B2B software company built on AWS and chasing ISO/IEC 27001 certification. Each chapter is one topic, a single question from *Why?* through *Risk?*, *Which?*, *Scope?* and on to *Report?* and *Conclude?*. The twelve chapters follow the phases of a real certification-readiness engagement, in the order an auditor actually lives them.
 
 The arc has two acts:
 
-| Act | Weeks | What it does | Ends in |
+| Act | Milestones | What it does | Ends in |
 |---|---|---|---|
 | **I · Engage** | 1–6 | Build the case against Tessera with *limited access* | A preliminary readiness opinion (desk audit) |
 | **II · Prove** | 7–12 | *Full access granted*, move from suspicion to proof | A defensible certification-readiness opinion |
 
 Act I forms judgement from documents alone. Act II opens with full auditor access (interviews, configurations, logs, incident records) and drives to evidence. The break between the acts is the break between suspicion and proof.
 
-Running through both acts is the **Evidence Locker**: a cumulative working-paper file you build one artefact at a time. Each chapter ends with an Evidence Locker prompt, the one thing to lock in this week. By the final week the locker is not a study aid; it *is* the audit.
+Running through both acts is the **Evidence Locker**: a cumulative working-paper file you build one artefact at a time. Each chapter ends with an Evidence Locker prompt, the one thing to lock in at that stage of the engagement. By the final chapter the locker is not a preparatory exercise; it *is* the audit.
 
 ## The companion site
 
@@ -110,7 +110,7 @@ Every chapter's Tessera Case narrates the worked example; the companion site is 
 Every chapter carries the same set of recurring features so you learn to recognise them. Each is rendered differently.
 
 :::: {.callout-note title="🤖 AI Field Note"}
-**Blue boxes** show AI used as a thinking partner for the chapter's task: a worked example against Tessera, including, crucially, where the AI got it wrong and how the auditor corrected it. This is the book version of the course's weekly AI Field Notes task.
+**Blue boxes** show AI used as a thinking partner for the chapter’s task: a worked example against Tessera, including, crucially, where the AI got it wrong and how the auditor corrected it. The habit it builds, draft with the machine, then supply the judgement it cannot, runs through every chapter.
 ::::
 
 :::: {.callout-important title="🔍 Auditing AI"}
@@ -118,7 +118,7 @@ Every chapter carries the same set of recurring features so you learn to recogni
 ::::
 
 :::: {.callout-tip title="🗄️ Evidence Locker: lock this in"}
-**Green boxes** are the weekly prompt: the one artefact to add to your cumulative working-paper file this chapter. By Week 12 the locker *is* the audit.
+**Green boxes** are the prompt for that chapter: the one artefact to add to your cumulative working-paper file. By the final chapter the locker *is* the audit.
 ::::
 
 ::: {.tessera-case}
@@ -128,6 +128,8 @@ Every chapter carries the same set of recurring features so you learn to recogni
 :::
 
 You will also see standard callouts for emphasis: **Watch out** (yellow) for traps that look right but are not, plus occasional **Key idea** and **Try this** boxes.
+
+Every chapter then closes with **Take it to the AI**. Where the AI Field Note shows you a worked example of the author using the machine and correcting it, this section hands the conversation to you: a few questions worth arguing about, the keywords that let you steer a conversation you cannot yet phrase, and a starting prompt written out in full. Those prompts spell out four things, the role the assistant should take, the task, the context it needs, and the format you want back. Write all four if you are running a small model on your own machine, the kind with a few billion parameters that fits on a laptop; its defaults come from a narrower range, and the structure is doing work the model will not do for you. On a current frontier model the task and context lines are usually enough on their own, and the rest is a checklist for your own thinking. Either way the first answer is where the conversation starts, and the discipline of this book applies to it as much as to Tessera: the confident output is an assertion until you have checked it. The AI-hygiene warning above applies without exception. Rehearse these conversations on Tessera or on scenarios you invent. Never on a real client's evidence.
 
 ## How this book was written
 

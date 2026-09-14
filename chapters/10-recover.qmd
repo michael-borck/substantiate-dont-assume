@@ -5,7 +5,7 @@
 ::: {.tessera-case}
 **🗂️ Tessera Case: When the region fails**
 
-Full access has changed the kinds of question you can ask. In week one you would have been grateful for a continuity policy to read; now you ask to see the failover runbook and the result of the last time it ran. Tessera's CTO points you to a 47-page business-continuity plan and a diagram showing a primary region, a standby region, and an RTO of four hours. It looks exactly right. So you ask the only question that matters: *when did you last fail over, and what happened?* The room goes quiet. That silence is your second piece of evidence, and it is the one this chapter is built around.
+Full access has changed the kinds of question you can ask. At the outset of the engagement you would have been grateful for a continuity policy to read; now you ask to see the failover runbook and the result of the last time it ran. Tessera’s CTO points you to a 47-page business-continuity plan and a diagram showing a primary region, a standby region, and an RTO of four hours. It looks exactly right. So you ask the only question that matters: *when did you last fail over, and what happened?* The room goes quiet. That silence is your second piece of evidence, and it is the one this chapter is built around.
 :::
 
 ## The break that is coming
@@ -90,8 +90,28 @@ When it breaks, can Tessera survive? On the evidence you now hold, not by the pl
 
 That is a defensible opinion because every line of it is tied to evidence: the draft BIA, the Terraform missing the replica, the eighteen-month-old tabletop with its open action items, and the incident register you reconciled against the alert log. None of it was visible from the desk. All of it became visible the moment full access turned the polished plan into a testable claim. *Substantiate, don't assume* has never been more practical than it is here: the plan said they could recover in four hours, and the estate says they cannot.
 
-:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 10)"}
-Lock two artefacts this week. First, the **BCDR test evidence**: the BIA (or its absence), the RTO and RPO derivation traced to the business impact and to the customer SLAs, the runbook, and the record of the most recent test at each depth you can find (tabletop, simulation, failover), with every open action item flagged. State explicitly, for each critical service, whether the stated objectives are achievable on the present estate. Second, the **incident-response readiness assessment**: the IR plan, the lifecycle test (two or three real incidents traced from detection to post-incident review), and the gap analysis between security events raised and incidents declared. By the end of the week your locker holds the proof, not the policy: what the organisation claims it would survive, and what the evidence says it actually would.
+::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Engagement milestone 10)"}
+Lock two artefacts this chapter. First, the **BCDR test evidence**: the BIA (or its absence), the RTO and RPO derivation traced to the business impact and to the customer SLAs, the runbook, and the record of the most recent test at each depth you can find (tabletop, simulation, failover), with every open action item flagged. State explicitly, for each critical service, whether the stated objectives are achievable on the present estate. Second, the **incident-response readiness assessment**: the IR plan, the lifecycle test (two or three real incidents traced from detection to post-incident review), and the gap analysis between security events raised and incidents declared. By the end of the chapter your locker holds the proof, not the policy: what the organisation claims it would survive, and what the evidence says it actually would.
 ::::
 
-Next week the evidence stops accumulating and starts to speak. You have findings; now they have to become an opinion someone will stand behind. The question is **Report?**
+The next chapter is where the evidence stops accumulating and starts to speak. You have findings; now they have to become an opinion someone will stand behind. The question is **Report?**
+
+## Take it to the AI
+
+**Where to start.** Three questions worth arguing about rather than looking up:
+
+1. Ask the AI for an RTO and an RPO, then ask where the numbers came from. Unattributed industry defaults are this chapter's named failure, and they arrive looking responsible.
+2. Give it a stated RTO and an uptime SLA and ask it to reconcile the two. The arithmetic usually contradicts the plan, and nobody notices until an auditor does it.
+3. Ask what a plan that has only ever been tabletopped proves, and what it does not. Then ask which test it would run first on a limited budget, and why that one.
+
+**Keywords to steer with.** business impact analysis · maximum tolerable downtime · RTO and RPO derivation · tabletop, simulation, failover · multi-AZ versus multi-region · replication lag · A.5.29 · A.5.30 ICT readiness · NIST SP 800-61 lifecycle · events versus declared incidents · post-incident action closure
+
+**A starting prompt.**
+
+> **Role:** You are a continuity consultant who always asks for the last failover test before asking for the runbook.
+>
+> **Task:** Interrogate the continuity plan I describe and tell me which of its numbers are derived and which are wishes.
+>
+> **Context:** I have read a chapter on deriving RTO and RPO from a business impact analysis, on testing depth from tabletop to failover, and on the gap between architecture diagrams and running infrastructure. The plan claims [state the RTO, the RPO, and the recovery approach]. The customer commitments are [state any SLA]. Ask me for what you need rather than assuming it.
+>
+> **Format:** For each claimed number, say whether it is derived or wished and what evidence would settle it. Then reconcile the RTO against the SLA explicitly. End with the single test you would run first and exactly what it would prove.

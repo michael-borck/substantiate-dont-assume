@@ -109,7 +109,7 @@ The 2022 edition is unusually well-timed here, because several of its *new* cont
 The audit move is to take each AI system in scope, walk it through these controls, and ask the standard question: *what evidence proves this control is present and working for this system?* An AI deployment does not earn an exception. It earns a closer look.
 ::::
 
-:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 3)"}
+::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Engagement milestone 3)"}
 Add your framework-selection working paper to the locker. Record three things: the **yardstick** and why it was chosen (ISO/IEC 27001:2022, because certification is Tessera's business goal); the **cross-checks** and the question each one answers (CSF 2.0 for lifecycle coverage; the Essential Eight for baseline hygiene); and a **starter cross-mapping table** with at least a dozen controls mapped honestly many-to-many, with gaps explicitly noted rather than papered over. This is the standard against which every later control test in this audit will be judged. Get the yardstick wrong and the whole engagement measures the wrong thing.
 ::::
 
@@ -120,3 +120,23 @@ Which yardstick? The one that answers the business question you are actually bei
 And "why not all of them?" Because collecting frameworks is not the same as building controls. The mature organisation picks one yardstick, certifies against it thoroughly, and lets the others inform the work without multiplying it. The discipline of choosing, and then of mapping honestly, is itself an audit skill: it is professional scepticism applied to the standards before you ever apply them to Tessera.
 
 You now have your criteria. The next question is the one that turns criteria into a plan: *what exactly are we auditing, on what terms, and how?* That is scope, and it is where the engagement stops being a reading exercise and becomes a method.
+
+## Take it to the AI
+
+**Where to start.** Three questions worth arguing about rather than looking up:
+
+1. Ask the AI to map three controls across ISO/IEC 27001:2022, NIST CSF 2.0 and the Essential Eight, then ask which rows are genuinely equivalent and which are merely adjacent. That distinction is where mappings lie.
+2. Ask it to defend certifying against a single framework to a board that wants every badge, then ask what the board is actually buying with each badge it names.
+3. Ask which Annex A numbers it cited and whether they are 2013 or 2022. Then verify at least three yourself against the current standard. This chapter's Field Note exists because models get this wrong quietly.
+
+**Keywords to steer with.** certifiable versus assessment framework · ISMS · Annex A themes · ISO/IEC 27002 · CSF functions · Govern · Essential Eight maturity levels · baseline versus complete framework · many-to-many mapping · adjacency versus equivalence · Statement of Applicability
+
+**A starting prompt.**
+
+> **Role:** You are a lead auditor who has read a dozen cross-framework mappings and trusted none of them.
+>
+> **Task:** Audit the control mapping I give you. For each row, say whether the two controls are equivalent, overlapping, or merely adjacent, and what evidence each one would actually require.
+>
+> **Context:** I have read a chapter on picking one yardstick and using the others as cross-checks, and on why honest mappings are many-to-many. My mapping is: [paste it]. Where you are uncertain about a control number, say so rather than filling the gap.
+>
+> **Format:** One row per line: my claim, your verdict, the difference in the evidence each would demand, and a confidence level. Then list every control number you could not verify, so I know what to check by hand.

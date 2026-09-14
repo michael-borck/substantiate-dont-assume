@@ -108,8 +108,8 @@ Here is the opinion Act I earns you, written for Tessera's board.
 That last line is the most important sentence in Act I. It is also the only honest one.
 :::
 
-:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 6)"}
-This is the Act I culmination, and it feeds Assessment 2 directly. Lock your **preliminary readiness opinion** into the Evidence Locker: a one-paragraph opinion on what the documents substantiate (design maturity), followed by a named list of the evidence gaps that limited access could not close. Separate, explicitly, what you *found* from what you *suspect*. Mark each gap with the control it would test and the access you would need to substantiate it.
+::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Engagement milestone 6)"}
+This is the Act I culmination. Lock your **preliminary readiness opinion** into the Evidence Locker: a one-paragraph opinion on what the documents substantiate (design maturity), followed by a named list of the evidence gaps that limited access could not close. Separate, explicitly, what you *found* from what you *suspect*. Mark each gap with the control it would test and the access you would need to substantiate it.
 
 This is not a draft to throw away in Act II. It is the agenda for Act II. Every gap you name here becomes a test you run once full access arrives, and the defensible opinion you ultimately stand behind is this opinion plus the evidence that closes those gaps, or fails to. Substantiate what you can. Name what you cannot. That discipline is the whole job.
 ::::
@@ -122,4 +122,24 @@ That closes Act I. Six weeks of engagement, built on limited access, have produc
 
 Act II opens the door. Full access arrives: the interviews, the live configurations, the logs, the incident records, the systems you have so far only read about. The polished policy finally meets its operational reality, and the suspicion you have earned here either hardens into evidence or dissolves. There is only one way to find out which.
 
-Next week the question changes tense, from *what does it look like on paper?* to *can you prove it works?* The question is **Prove?**
+The next chapter changes the question’s tense, from *what does it look like on paper?* to *can you prove it works?* The question is **Prove?**
+
+## Take it to the AI
+
+**Where to start.** Three questions worth arguing about rather than looking up:
+
+1. Give the AI a policy document and ask what it substantiates. Then ask what it does *not*. The second list is the more useful one, and models are reluctant to write it without being asked twice.
+2. Ask why an impressive policy library is weak evidence, then ask what would make it strong. Any answer about better writing has missed the point entirely.
+3. Ask it to write a preliminary opinion that is honest about its own limits, then hunt through the result for the slide from "the procedure exists" to "the procedure is followed."
+
+**Keywords to steer with.** design versus operating effectiveness · desk audit · Statement of Applicability · employment lifecycle · onboarding, role change, offboarding · asset register currency · supplier agreement versus supplier performance · document confidence trap · calibrated suspicion · named evidence gap
+
+**A starting prompt.**
+
+> **Role:** You are a quality reviewer who reads other auditors' preliminary opinions and sends most of them back.
+>
+> **Task:** Read my preliminary opinion and mark every sentence that claims more than the evidence supports.
+>
+> **Context:** I have read a chapter on the difference between a control that is designed and one that is operating, and on the document confidence trap. My opinion rests on documents only: no interviews, no system access, no observation. Here it is: [paste it].
+>
+> **Format:** Quote each overreaching sentence, say what it assumes, and rewrite it to what the evidence actually supports. Then list the evidence gaps my opinion should have named and did not.

@@ -5,7 +5,7 @@
 ::: {.tessera-case}
 **🗂️ Tessera Case: The diagram is not the territory**
 
-Tessera's head of engineering hands you a single-page architecture diagram in your second week. It is beautiful. Boxes for VPCs and subnets, arrows labelled TLS, a padlock on the database, "KMS" stamped on every storage layer, "IAM roles" on every service. He watches you study it, looking for the nod. You give him a different response. You ask, for each box: *what is the objective here, and how would I test whether it is actually met?* The diagram is a claim. Your job, from this chapter on, is to turn each claim into a control objective you can substantiate, or refute, with evidence.
+Tessera’s head of engineering hands you a single-page architecture diagram early in the engagement. It is beautiful. Boxes for VPCs and subnets, arrows labelled TLS, a padlock on the database, “KMS” stamped on every storage layer, “IAM roles” on every service. He watches you study it, looking for the nod. You give him a different response. You ask, for each box: *what is the objective here, and how would I test whether it is actually met?* The diagram is a claim. Your job, from this chapter on, is to turn each claim into a control objective you can substantiate, or refute, with evidence.
 :::
 
 ## From control to control objective
@@ -109,7 +109,7 @@ Treat them like any other component. The support assistant has a service role: w
 The objective for an AI workload has the same shape as for any other: *the AI system cannot exfiltrate or act on data it has no business reason to touch, and every action it takes is attributable.* Test it the same way: enumerate the role's permissions, trace what data crosses the model boundary, and check the logs that record model calls. Some of Tessera's controls are now run *by* AI, an assistant triaging alerts or flagging anomalies. When you audit those, you are back in territory Chapter 7 takes up in full: can you trust a control whose evidence an AI produced? For now, the discipline is the one this chapter teaches. State what good looks like, then go and try to break it.
 :::::
 
-::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 5)"}
+:::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Engagement milestone 5)"}
 For each domain below, lock in one technical control objective for Tessera, phrased as a testable "good looks like" statement, plus the single piece of evidence that would prove or disprove it.
 
 - **Access control**: least privilege is in force for every human and service identity, with a documented leaver window, and privileged access is granted just-in-time and logged.
@@ -126,3 +126,23 @@ This is the chapter where your Evidence Locker stops being narrative and starts 
 What should be in place, and what does good look like? In place: a layered set of technical controls across identity, network, cryptography, and the multi-tenant boundary, owned by Tessera on the correct side of the shared-responsibility line. Good looks like a set of *objectives* behind those controls, each phrased so it can be tested, each with a silent failure you can describe, each backed by evidence you can demand. The diagram Tessera's head of engineering handed you was a claim. You now hold the method that turns it into an audit.
 
 There is a catch, and it is the catch that closes the first act of this book. Technical controls are the part of the estate that is easiest to enumerate and easiest to test, and they are still only half the story. A perfectly configured IAM system is worthless if the person holding the admin token was never trained, or never had their access removed when they left, or sits inside an organisation whose security policy is a document nobody reads. Next, we turn from the machine to everything around it: the people, the physical world, and the management system that is supposed to hold it together. *Assess? Physical, people, and ISMS controls.*
+
+## Take it to the AI
+
+**Where to start.** Three questions worth arguing about rather than looking up:
+
+1. Take a control you rely on and ask the AI how it would fail silently. If it cannot describe the silent failure, you are holding a feature rather than an objective.
+2. Ask it to rewrite "we encrypt customer data" as a testable control objective. Then ask what evidence would *disprove* the objective, which is a harder request than asking what would confirm it.
+3. Ask where the shared-responsibility line sits for a service you actually use, then go and read the vendor's own documentation. The gap between the two answers is where findings live.
+
+**Keywords to steer with.** control versus control objective · silent failure · least privilege · phishing-resistant MFA · identity lifecycle · just-in-time elevation · zero trust · blast radius · rule drift · KMS grants · tenant isolation · insecure direct object reference · shared responsibility
+
+**A starting prompt.**
+
+> **Role:** You are a cloud security architect who has written control objectives that were later tested and failed.
+>
+> **Task:** Turn each control I name into an objective phrased so it can be disproved, then describe exactly how each one would fail while every dashboard stayed green.
+>
+> **Context:** I have read a chapter arguing that a control objective is only real once you can picture it failing silently. The controls are [list three or four]. The environment is [describe the platform, who uses it, and what data it holds].
+>
+> **Format:** For each control, the objective in one testable sentence, the silent-failure scenario in three sentences, and the single piece of evidence that would expose it. Rank them by which failure you would find hardest to detect.

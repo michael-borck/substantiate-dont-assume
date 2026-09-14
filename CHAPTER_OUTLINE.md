@@ -1,18 +1,17 @@
 # Substantiate, Don't Assume
 ## Why the Auditor's Opinion Matters More Than Ever in the Age of AI
 
-**Companion book to ISYS6018 — Information Security Audit and Control (Curtin University)**
 **Author:** Michael Borck
-**Status:** Chapter outline / proposal (working title)
-**Planned format:** Open-access Quarto book, deployed to GitHub Pages (mirroring `michael-borck.github.io/conversation-not-delegation/`)
+**Status:** Chapter outline / blueprint for the book
+**Format:** Open-access Quarto book, deployed to GitHub Pages (mirroring `michael-borck.github.io/conversation-not-delegation/`)
 
 ---
 
 ## 1. Why this book
 
-ISYS6018 is standards-driven, not textbook-driven — and that is currently a weakness. The unit's core references are ISO/IEC 27001, NIST CSF, the Privacy Act: authoritative, but not a *narrative* a student can read end to end. There is no spine. *Substantiate, Don't Assume* becomes that spine: a readable, opinionated, open-access core text that the twelve-week course is built around, in the same way ISYS6020 is built around *Conversation, Not Delegation*.
+Information security auditing is standards-driven, not textbook-driven — and that is a weakness for the person trying to learn it. The discipline's core references are ISO/IEC 27001, NIST CSF, the Privacy Act: authoritative, but not a *narrative* a reader can follow end to end. There is no spine. *Substantiate, Don't Assume* is that spine: a readable, opinionated, open-access book that follows one engagement from start to finish.
 
-The book solves a second, harder problem. The unit needs to be **AI-aware** — not by bolting "use ChatGPT" onto each lab, but by giving students a coherent stance on what professional judgement is *worth* when machines can draft the technical work. The book is where that stance lives.
+The book solves a second, harder problem. The discipline needs to be **AI-aware** — not by bolting "use ChatGPT" onto each topic, but by giving the reader a coherent stance on what professional judgement is *worth* when machines can draft the technical work. The book is where that stance lives.
 
 ---
 
@@ -24,7 +23,7 @@ The book takes a deliberately pragmatic position on AI — steering clear of bot
 
 **The variation argument (the human moat).** If an AI is equally good at running every company, then by definition there is no variation between companies that use it generically — and no variation means no competitive edge. The edge comes from variation: human agency, individual taste, a genuine point of view about what matters. For an auditor, that variation shows up as *professional scepticism* — the willingness to look at a polished policy and ask whether the evidence supports it, to decide which of a hundred small gaps actually matters, to form a defensible opinion rather than a confident average. The machine produces the draft; the auditor supplies the judgement. That judgement is the moat.
 
-**From drafter to evaluator.** As AI shifts from chatbots to agentic systems capable of running procedures independently, the auditor's job changes: from creator of "shitty first drafts" to **expert evaluator and editor** of AI-generated work. The unit's assessments already embody this — A2 and A3 require students to document where they *disagreed with or expanded on* AI's analysis. The book makes that discipline explicit and teaches it.
+**From drafter to evaluator.** As AI shifts from chatbots to agentic systems capable of running procedures independently, the auditor's job changes: from creator of "shitty first drafts" to **expert evaluator and editor** of AI-generated work. This is the discipline the book teaches explicitly: every AI-drafted artefact is followed by the evaluator's correction, the judgement the machine could not supply.
 
 **Augmentation, not automation.** The book's stance is proactive: use these tools for human augmentation and personalised learning — not passive automation that quietly atrophies the critical thinking the profession depends on. Efficiency is not the goal; *defensible judgement* is. If you use AI to skip the thinking, you have done the work wrong, no matter how good the output looks.
 
@@ -34,9 +33,9 @@ This premise is the thread that runs through every chapter.
 
 ## 3. Design principles
 
-1. **Co-designed with the twelve topics.** Each chapter is one topic: a weekly question (`Why? → Risk? → … → Conclude?`) plus its key concepts. **Chapter *N* = Topic *N*, delivered in Week *N* of the course.** The book and the course deliver the same twelve topics two ways, once to read and once to do. They use different case companies (the book's Tessera companion site, the course's Cloudcore); the topic and its weekly question are the shared spine.
+1. **One engagement, twelve phases.** Each chapter is one topic: a single question (`Why? → Risk? → … → Conclude?`) plus its key concepts. The twelve chapters follow the phases of a real certification-readiness engagement, in the order an auditor actually lives them.
 2. **Professional scepticism as the spine.** *Substantiate, don't assume* is stated in the introduction and enacted in every chapter.
-3. **One case company throughout the book.** A single case company runs through the book, so every concept lands on a concrete artefact. The book's case company is **Tessera** (on the book's companion site); the course runs the same topics against Cloudcore. The *topic* is shared; the *company* need not be. (Confirmed: Tessera, hosted on the open companion site **tessera.locoensayo.org** under the *LocoEnsayo* rehearsal environments; the course uses Cloudcore.)
+3. **One case company throughout the book.** A single case company runs through the book, so every concept lands on a concrete artefact. The case company is **Tessera**, hosted on the open companion site **tessera.locoensayo.org** under the *LocoEnsayo* rehearsal environments: kept full (all documents and staff), with red-herring distractors added; open all hours, no password.
 4. **AI as a first-class topic, integrated not appended.** Every chapter carries two recurring features (below): one on *using* AI as a thinking partner, one on *auditing* AI where the topic demands it.
 
 ---
@@ -45,16 +44,16 @@ This premise is the thread that runs through every chapter.
 
 Every chapter includes:
 
-- **AI Field Note**: how to use AI as a thinking partner for *this* chapter's task, with a worked example against Tessera. Demonstrates prompt refinement and, crucially, where the AI got it wrong and the auditor corrected it. (This is the book version of the course's weekly **AI Field Notes** task, Assessment 1 Part B. The unit retired BadgeQuest and renamed the weekly AI task accordingly; the book feature name now matches the assessment.)
+- **AI Field Note**: how to use AI as a thinking partner for *this* chapter's task, with a worked example against Tessera. Demonstrates prompt refinement and, crucially, where the AI got it wrong and the auditor corrected it.
 - **Auditing AI** *(where relevant)* — the chapter's concept applied *to* AI systems: which framework controls an AI deployment falls under, how you audit an AI-assisted control, what evidence an AI system produces.
 - **Tessera Case** — a concrete artefact from the Tessera engagement that anchors the chapter.
-- **Evidence Locker prompt** — what the student should lock into their cumulative working-paper file this chapter.
+- **Evidence Locker prompt** — the one artefact the reader should lock into their cumulative working-paper file that chapter. By the final chapter the locker *is* the audit.
 
 ---
 
 ## 5. Chapter outline
 
-Co-designed with the ISYS6018 twelve-week arc. Two acts: **Engage** (build the case) and **Prove** (from suspicion to proof).
+Two acts: **Engage** (build the case) and **Prove** (from suspicion to proof).
 
 ### Front matter
 
@@ -73,7 +72,7 @@ The risk lifecycle; likelihood × impact; the risk register; treatment options (
 ISO/IEC 27001:2022 (4 themes, 93 controls); NIST CSF 2.0 (including Govern); ASD Essential Eight; how to choose, map, and reconcile frameworks. *Auditing AI:* which controls apply to an AI deployment, and the new 2022 controls (cloud services, threat intelligence) that AI makes load-bearing.
 
 **Chapter 4 — Scope? Audit planning and methodology**
-Audit objectives, scope, materiality, criteria; the engagement letter; the audit programme; the six-stage audit lifecycle (ISO 19011). The chapter where students learn *how* to audit before *what*. *AI Field Note:* using AI to draft an audit programme — and stress-testing its scope assumptions.
+Audit objectives, scope, materiality, criteria; the engagement letter; the audit programme; the six-stage audit lifecycle (ISO 19011). The chapter where readers learn *how* to audit before *what*. *AI Field Note:* using AI to draft an audit programme — and stress-testing its scope assumptions.
 
 **Chapter 5 — Expect? Technical control objectives**
 Access control (IAM, least privilege), network security, cryptography and key management, multi-tenant SaaS controls, the AWS shared-responsibility model. Framed as control *objectives* — what "good" looks like, the thing you test against. *Auditing AI:* securing and auditing the AI systems that now sit inside the technical estate.
@@ -103,26 +102,23 @@ The certification-readiness opinion; defending it under board questioning; cloud
 
 ---
 
-## 6. Relationship to the course and to *Conversation, Not Delegation*
+## 6. Relationship to *Conversation, Not Delegation*
 
-- **The book and the course share twelve topics.** The ISYS6018 twelve-week arc and this chapter list cover the same twelve topics, in the same order, each with the same weekly question: **Chapter *N* = Topic *N*, delivered in Week *N*.** A student reads the chapter for a topic in the week they live that topic. The case company can differ between book and course; the *topic* is what is locked in lockstep.
-- **The Evidence Locker connects them.** Each chapter's *Evidence Locker prompt* becomes that week's artefact; by Week 12 the locker *is* the Assessment 3 working papers.
-- ***Conversation, Not Delegation* is the companion on the AI dimension.** Where *Substantiate, Don't Assume* teaches the audit discipline, *Conversation, Not Delegation* (https://michael-borck.github.io/conversation-not-delegation/) teaches the *how-to-use-AI-well* craft (the trust tool, staying in the loop, compensating for AI's predictable weaknesses). The two are complementary: one is the *what we verify*, the other the *how we work with the machine*. The course links both.
+*Conversation, Not Delegation* is the companion on the AI dimension. Where *Substantiate, Don't Assume* teaches the audit discipline (the *what we verify*), *Conversation, Not Delegation* (https://michael-borck.github.io/conversation-not-delegation/) teaches the *how-to-use-AI-well* craft (the trust tool, staying in the loop, compensating for AI's predictable weaknesses). The two are complementary: one is the *what we verify*, the other the *how we work with the machine*.
 
 ---
 
-## 7. Build and deployment (recommended)
+## 7. Build and deployment
 
 - **Format:** Quarto book (`quarto create-project --type book`), Markdown sources, renders to HTML + PDF + EPUB.
 - **Hosting:** GitHub Pages, repo slug `substantiate-dont-assume`, served at `michael-borck.github.io/substantiate-dont-assume/`.
-- **Licence:** Creative Commons BY (open access, attribution) — matches Curtin OER practice.
+- **Licence:** Creative Commons BY (open access, attribution).
 - **Versioning:** the book targets ISO/IEC 27001:2022 and NIST CSF 2.0 from the outset; standards drift is handled by edition, not errata.
 
 ---
 
-## 8. Next steps
+## 8. Notes
 
-1. Title confirmed: *Substantiate, Don't Assume: Why the Auditor's Opinion Matters More Than Ever in the Age of AI*. (Earlier alternatives, for the record: *Trust, But Verify*; *The Auditor's Edge*; *Judgment Over Automation*.)
-2. **Drafting happens in this folder.** This folder is both the book's spec and its draft home — the Quarto project is scaffolded and written here, mirroring `../conversation-not-delegation/` (one folder per book in the `books/` workspace). See [`README.md`](./README.md) for the handoff and resume instructions. *(Earlier versions of this outline said drafting happened in a separate Quarto project; that was superseded when the folder was relocated into the `books/` workspace. The README is authoritative.)*
-3. Scaffold the Quarto book here and write the Introduction + Chapter 1 as the vertical slice, using this outline as the blueprint.
-4. Wire the book link into `ISYS6018_outline.md` (done — see Companion Book section).
+- Title confirmed: *Substantiate, Don't Assume: Why the Auditor's Opinion Matters More Than Ever in the Age of AI*. (Earlier alternatives, for the record: *Trust, But Verify*; *The Auditor's Edge*; *Judgment Over Automation*.)
+- **Drafting happens in this folder.** The Quarto project is scaffolded and written here, mirroring `../conversation-not-delegation/` (one folder per book in the `books/` workspace). See [`README.md`](./README.md) for build and status.
+- House style: **no em dashes.** Use periods, colons, semicolons, parentheses, or commas instead. En dashes for number ranges (2022–2026) are fine.

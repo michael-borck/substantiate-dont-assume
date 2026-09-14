@@ -98,7 +98,7 @@ A programme is a fine thing to draft with an AI, because its structure is regula
 
 Because the AI scopes generically, it scopes wrongly for Tessera, and that is the lesson. Read the draft as an evaluator and the gaps are obvious. The draft assumes a single-tenant system and never tests the **multi-tenant boundary**, the control that stops one customer reaching another's data, which is the single highest-risk area in the platform. It schedules a full access-control test of the **payment processor**, duplicating assurance a SOC report already provides and burning hours you do not have. And it silently sweeps the **acquired subsidiary** into scope as if integration were finished, when the subsidiary is not yet on Tessera's ISMS at all. Three Tessera-specific boundaries, three misses, because the AI has no knowledge of the engagement letter and no judgement about where this company's risk actually lives.
 
-The correction is yours. You add a tenant-isolation test procedure that pulls configuration evidence on the separation logic. You remove the processor from the test plan and replace it with a procedure to review and rely on the SOC report. You add a scope-exclusion note for the subsidiary and a flag to revisit it at the next review. The AI wrote the skeleton. You supplied the judgement that turned a generic programme into Tessera's programme. That is the drafter-to-evaluator shift, on a real artefact, this week.
+The correction is yours. You add a tenant-isolation test procedure that pulls configuration evidence on the separation logic. You remove the processor from the test plan and replace it with a procedure to review and rely on the SOC report. You add a scope-exclusion note for the subsidiary and a flag to revisit it at the next review. The AI wrote the skeleton. You supplied the judgement that turned a generic programme into Tessera’s programme. That is the drafter-to-evaluator shift, on a real artefact, in this chapter.
 ::::
 
 :::: {.callout-important title="🔍 Auditing AI: Scoping the AI surface"}
@@ -107,12 +107,32 @@ Tessera runs an AI assistant inside its support portal and an AI-driven anomaly 
 The sharper point is that AI changes what "in scope" means over time. A model that behaves one way today can drift after a retrain, so a control that passed in week 2 may not pass in week 8. Scope has to say *when* the AI surface was examined, and the opinion has to honour that snapshot. We will test AI-generated evidence properly in Chapter 7. Here, the lesson is simpler: an AI you cannot see on the security page is still part of the ISMS, and a scope that ignores it is a scope with a hole in it.
 ::::
 
-:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 4)"}
-This week's artefact is the planning pair, and the part that earns its place in the locker is the documentation of *why*. Lock in: the **engagement letter** with objective, criteria, scope, and materiality stated; the **audit programme** with the controls and procedures prioritised by risk; and, most importantly, the **recorded scope decisions**, the subsidiary excluded pending integration, the processor covered by its SOC report, the AI surface included with its snapshot date. Explicit exclusions are not footnotes. They are the proof that the scope was a decision, not a default. By Week 12 this pair is the front matter of your working papers, and anyone reading them will see an engagement that knew what it was doing before it began.
+::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Engagement milestone 4)"}
+This chapter’s artefact is the planning pair, and the part that earns its place in the locker is the documentation of *why*. Lock in: the **engagement letter** with objective, criteria, scope, and materiality stated; the **audit programme** with the controls and procedures prioritised by risk; and, most importantly, the **recorded scope decisions**, the subsidiary excluded pending integration, the processor covered by its SOC report, the AI surface included with its snapshot date. Explicit exclusions are not footnotes. They are the proof that the scope was a decision, not a default. By the final chapter this pair is the front matter of your working papers, and anyone reading them will see an engagement that knew what it was doing before it began.
 ::::
 
 ## The question, answered
 
 What is in, what is out, and how do we know we are done? *In* is the AWS-hosted Tessera platform and its ISMS, measured against ISO/IEC 27001:2022. *Out*, deliberately and on the record, is the unintegrated subsidiary and the SOC-covered processor. We know we are done when the six-stage lifecycle has run its course, the audit programme's procedures have been executed to the depth the risk justified, the findings that cross the materiality line are raised, and the opinion follows the evidence rather than the deadline. Scope is not the paperwork before the audit. Scope is the first opinion the auditor forms, and the one every later opinion depends on.
 
-The boundary is drawn and the programme is written. Next week the work turns to what "good" looks like inside that boundary: *what should the technical controls actually do, and how do we recognise it when they do?*
+The boundary is drawn and the programme is written. The next chapter turns to what “good” looks like inside that boundary: *what should the technical controls actually do, and how do we recognise it when they do?*
+
+## Take it to the AI
+
+**Where to start.** Three questions worth arguing about rather than looking up:
+
+1. Ask the AI to scope a certification-readiness audit for an organisation you describe, then ask what it excluded and why. A scope with no exclusions is not a scope, and most first drafts have none.
+2. Ask it to separate materiality from completeness using an example from your own work. Then ask what it would deliberately not test, and make it defend that choice.
+3. Ask what scope creep looks like in the first three weeks of an engagement, and what sentence you should have ready for the moment it arrives.
+
+**Keywords to steer with.** audit objective · criteria · scope boundary · materiality · engagement letter · ISO/IEC 19011 · the six stages · audit programme · risk-based scoping · vanity scope · scope creep · documented exclusion
+
+**A starting prompt.**
+
+> **Role:** You are an engagement manager who has inherited two audits that ran over because nobody drew a boundary.
+>
+> **Task:** Force me to scope an engagement properly. Push back every time I include something without a reason or exclude something without one.
+>
+> **Context:** I have read a chapter on the audit objective, criteria, scope and materiality, the ISO/IEC 19011 lifecycle, and risk-based scoping. The organisation is [describe it]. The objective is [state it]. Assume six weeks and limited access.
+>
+> **Format:** Argue with me turn by turn. When we finish, give me the in-scope list, the out-of-scope list with a documented reason against each exclusion, and the materiality threshold you would put in the engagement letter.

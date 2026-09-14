@@ -71,7 +71,7 @@ Most real defences are a chain of all three, because no single control is reliab
 ::: {.tessera-case}
 **🗂️ Tessera Case: Where Tessera's hats show**
 
-In your opening week you wear all three hats at once. As **counsellor**, you walk Tessera's CTO through what ISO/IEC 27001:2022 actually requires, and watch the confidence drain when "pretty much there" meets "93 controls across four themes." As **partner**, you agree how the engagement will run and what access you will get (limited, for now). As **investigator**, you file away the CTO's opening claim ("we're basically ready") as the first assertion the evidence will later confirm or refute. Every chapter from here tests that claim a different way.
+From the outset of the engagement you wear all three hats at once. As **counsellor**, you walk Tessera’s CTO through what ISO/IEC 27001:2022 actually requires, and watch the confidence drain when “pretty much there” meets “93 controls across four themes.” As **partner**, you agree how the engagement will run and what access you will get (limited, for now). As **investigator**, you file away the CTO’s opening claim (“we’re basically ready”) as the first assertion the evidence will later confirm or refute. Every chapter from here tests that claim a different way.
 :::
 
 :::: {.callout-note title="🤖 AI Field Note: Exploring the control categories"}
@@ -86,7 +86,7 @@ Independence is a fact and objectivity is a state of mind, and an AI has neither
 So can an AI deliver an audit opinion? It can *produce* one. It cannot *stand behind* one, which is the entire point of an opinion. As AI-assisted controls and AI-generated evidence spread through the estates you audit, the question stops being theoretical. We return to it in Chapter 7, when we ask whether you can trust a log an AI produced.
 ::::
 
-:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 1)"}
+::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Engagement milestone 1)"}
 Open your Evidence Locker with the engagement's foundation. Record: the **mandate** (who engaged you, against what criteria, to deliver what opinion); the **independence threats** you identified for this engagement and the **safeguards** applied; and your one-line restatement of Tessera's opening claim, the assertion the rest of the engagement will substantiate or refute. This is not note-taking. It is the first entry in a defensible audit trail.
 ::::
 
@@ -96,4 +96,24 @@ Why does Tessera need an audit? Because certification, customers, and a board al
 
 That is the audit mindset, stated. The next eleven chapters enact it, one question at a time, until the polished policy has met its evidence and you have formed an opinion you can defend.
 
-Next week, the first real question: *what could go wrong, and how do we measure it?*
+The next chapter opens the first real question: *what could go wrong, and how do we measure it?*
+
+## Take it to the AI
+
+**Where to start.** Three questions worth arguing about rather than looking up:
+
+1. Ask the AI to argue that an internal auditor can be independent, then that they cannot. Watch whether it keeps independence (a fact) and objectivity (a state of mind) separate, or quietly merges them.
+2. Describe a real independence threat from your own working life and ask what safeguard would be sufficient. Then ask what would make it decline the engagement instead. The second answer is the harder one, and the profession turns on it.
+3. Ask it to make the case for inviting an audit to a founder who sees it as pure cost. Then ask which of those arguments would survive a bad quarter.
+
+**Keywords to steer with.** mandate · criteria · subject matter · assurance engagement · independence in fact and in appearance · objectivity · self-review threat · familiarity threat · ISACA Code of Ethics · safeguards · preventive, detective and corrective controls
+
+**A starting prompt.**
+
+> **Role:** You are an audit partner deciding whether your firm should accept an engagement.
+>
+> **Task:** Interrogate me about a proposed engagement until you can tell me whether to accept it, decline it, or accept it with safeguards.
+>
+> **Context:** I have read a chapter on the auditor's mandate, the three hats, independence and objectivity, and the ISACA code. Ask one question at a time and do not offer a conclusion until you have asked at least six.
+>
+> **Format:** One question per turn. At the end give your recommendation, the specific threats you identified, the safeguard you would apply to each, and the one condition that would make you walk away.

@@ -80,7 +80,7 @@ Two traps, both common, both dangerous.
 
 First, treating *residual* as if it meant *eliminated*. It does not. Residual risk is the risk that remains after treatment, and it remains because no control is perfect, because controls fail, and because the threat landscape moves. A register full of "residual: low" is not a register of solved problems. It is a register of bets on controls, and bets can lose. If the organisation talks as though treatment closed the risk, the treatment is probably aspirational.
 
-Second, the single-point likelihood × impact rating hiding aggregation and velocity. One phishing email rated "medium" tells you almost nothing, because phishing is not a one-off; it is a continuous stream, and the relevant question is the likelihood that *at least one* succeeds over a year, not the likelihood of any single attempt. Likewise, a risk whose impact compounds fast (a tenant-data leak that spreads as customers discover it, a ransomware payload that moves laterally in minutes) cannot be captured by a static impact score. A matrix cell is a still photograph. Real risk has a frame rate. When you re-rate, ask not just "how likely, how bad" but "how often, and how fast does it get worse."
+Second, the single-point likelihood × impact rating hiding aggregation and velocity. One phishing email rated "medium" tells you almost nothing, because phishing is not a one-off. It is a continuous stream. The relevant question is the likelihood that *at least one* succeeds over a year, not the likelihood of any single attempt. Likewise, a risk whose impact compounds fast (a tenant-data leak that spreads as customers discover it, a ransomware payload that moves laterally in minutes) cannot be captured by a static impact score. A matrix cell is a still photograph. Real risk has a frame rate. When you re-rate, ask not just "how likely, how bad" but "how often, and how fast does it get worse."
 ::::
 
 ## Two standards, one loop: ISO/IEC 27005 and NIST SP 800-30
@@ -121,7 +121,7 @@ Treat the model as an asset with its own threats and vulnerabilities. A threat s
 When you audit an organisation that has deployed AI, the risk register should contain rows for the model: who owns it, how it was assessed before deployment, what monitoring catches drift or misuse, what the residual risk is. If those rows are missing, the organisation has not managed the risk; it has assumed it. That is the very failure this chapter is about, wearing a new face.
 ::::
 
-:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 2)"}
+::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Engagement milestone 2)"}
 Lock in your **re-rated Tessera risk matrix**. For every rating you changed, document the rationale in a sentence another auditor could follow: *what context the original rating missed* (contractual, regulatory, operational, or aggregation), *what you re-rated it to*, and *on what evidence*. Note the **owner** you would assign where the register has none, and flag any risk you believe is **missing entirely**. By the end, your matrix should read less like the CTO's "we've covered the big risks" and more like a defensible argument about what could actually go wrong at Tessera. This is the artefact the rest of the engagement will keep returning to.
 ::::
 
@@ -132,3 +132,23 @@ What could go wrong at Tessera? Quite a lot: a cross-tenant leak that breaches c
 How do we measure it? With the same two questions, asked sceptically, over and over: *how likely, and how bad*, accounting for aggregation and velocity, and always measured against the objectives and obligations that make the impact real. Risk is likelihood times impact, scored against context the spreadsheet cannot supply on its own. The discipline is to supply that context, write the rationale down, and let the evidence set the rating rather than the optimism.
 
 Tessera's CTO sent a register with no red cells. By the time you have re-rated it, there will be red, and every red will be defensible. That is what risk management looks like when it is real, and it is the foundation the next ten chapters build on. Because once you know what could go wrong, the next question is the one Tessera's CTO has not yet thought to ask: *which rules do we measure ourselves against, and why those ones?*
+
+## Take it to the AI
+
+**Where to start.** Three questions worth arguing about rather than looking up:
+
+1. Give the AI a risk rated Medium and ask it to argue the rating up, then down. Both cases will be plausible. Note which one had to invent context and which used only what you supplied.
+2. Ask what a risk register looks like when it is averaging anxiety rather than measuring risk. Then hold a real register you have access to against that description.
+3. Ask how you would rate a risk whose impact compounds fast, such as a leak that widens as customers discover it. A static likelihood-times-impact score has no frame rate, and the answer has to work around that.
+
+**Keywords to steer with.** threat, vulnerability, objective · inherent and residual risk · risk owner · likelihood and impact · aggregation · velocity · risk appetite · implicit acceptance · avoid, mitigate, transfer, accept · ISO/IEC 27005 · NIST SP 800-30 · risk-based audit approach
+
+**A starting prompt.**
+
+> **Role:** You are a risk manager whose register was taken apart by an external auditor last year.
+>
+> **Task:** Take the risk I describe and challenge every part of the rating: the likelihood, the impact, the owner, and whether the treatment matches the decision actually recorded.
+>
+> **Context:** I have read a chapter on risk as a threat meeting a vulnerability and damaging an objective, on inherent versus residual risk, and on the four treatments. The risk is [describe it, with the organisation's sector, size, and regulatory obligations]. My current rating is [state it and the reasoning behind it].
+>
+> **Format:** One challenge per element, each naming the specific context you think the rating missed. End with the re-rating you would defend and a single sentence of rationale another auditor could follow.

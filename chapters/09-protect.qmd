@@ -5,7 +5,7 @@
 ::: {.tessera-case}
 **🗂️ Tessera Case: the crown jewel**
 
-Full access landed on Monday, and the first thing you traced was the data itself. Tessera's crown jewel is not its source code or its brand. It is its customers' data: contract terms, account configuration, usage telemetry, and the operational reports its customers' own staff upload for Tessera's new AI feature to summarise. In Act I you could read the privacy policy and the data classification scheme and nothing more. Now you can follow the bytes. The question that opened the engagement, *is it actually defended?*, stops being rhetorical this week. It becomes a thing you can answer with a data-flow diagram, a contract clause, and a deletion log, or fail to.
+Full access landed on Monday, and the first thing you traced was the data itself. Tessera’s crown jewel is not its source code or its brand. It is its customers’ data: contract terms, account configuration, usage telemetry, and the operational reports its customers’ own staff upload for Tessera’s new AI feature to summarise. In Act I you could read the privacy policy and the data classification scheme and nothing more. Now you can follow the bytes. The question that opened the engagement, *is it actually defended?*, stops being rhetorical in this chapter. It becomes a thing you can answer with a data-flow diagram, a contract clause, and a deletion log, or fail to.
 :::
 
 ## The crown jewel, and why privacy is not security
@@ -54,7 +54,7 @@ The phrase that does the work is *serious harm*, and it is deliberately not a nu
 
 The scheme also has a clock. Once an entity suspects an eligible breach, it has a reasonable period to assess, and the Commissioner's guidance treats around thirty days as a reasonable upper bound. An auditor tests NDB readiness the way it tests every other readiness: does a playbook exist, who owns it, has it been rehearsed, and can the organisation answer the three-part test under pressure with its data inventory in front of it?
 
-That last clause hides the trap. You cannot assess serious harm for data you cannot locate or describe. The NDB scheme silently assumes a working data inventory, and a company whose asset register is rotting, the Chapter 6 finding, discovers the cost of that rot in the middle of a breach assessment, when the thirty-day clock is already running.
+That last clause hides the trap. You cannot assess serious harm for data you cannot locate or describe. The NDB scheme silently assumes a working data inventory. A company whose asset register is rotting, which was the Chapter 6 finding, discovers the cost of that rot in the middle of a breach assessment, with the thirty-day clock already running.
 
 ## Cross-border disclosure and data sovereignty
 
@@ -150,8 +150,8 @@ An AI system introduces privacy risks that a conventional data store does not, a
 Audit all three against evidence, not against the vendor's security page. The vendor's security page is the polished policy. The configuration, the data-processing agreement, the prompt-logging settings, and the architecture are the server behind it.
 ::::
 
-:::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Week 9)"}
-This week's artefact is the privacy half of your working papers, and it has two parts. Lock in the **Privacy Impact Assessment fragment** for the summarisation feature: the data flow map, the APP-by-APP analysis, and each named gap. Then lock in the **data-flow-to-AI-vendor assessment**: the endpoint, the confirmed processing region (or the gap where it is unconfirmed), the prompt-logging configuration, the training-opt-out verification status, and the NDB-relevant gaps, with the control each gap maps to and the access you would need to close it.
+::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Engagement milestone 9)"}
+This chapter’s artefact is the privacy half of your working papers, and it has two parts. Lock in the **Privacy Impact Assessment fragment** for the summarisation feature: the data flow map, the APP-by-APP analysis, and each named gap. Then lock in the **data-flow-to-AI-vendor assessment**: the endpoint, the confirmed processing region (or the gap where it is unconfirmed), the prompt-logging configuration, the training-opt-out verification status, and the NDB-relevant gaps, with the control each gap maps to and the access you would need to close it.
 
 Separate, as always, what you *found* from what you *suspect*. The cross-border transfer to the vendor is found; the lawful basis for it is the gap. The NDB playbook's missing vendor-side path is found; whether it would hold under a real breach is the gap. By the end of Act II these become the privacy findings in your certification-readiness opinion, and the locker is where they earn the right to be there.
 ::::
@@ -166,4 +166,24 @@ On the privacy axis, the picture is rougher. The cross-border transfer to the AI
 
 The crown jewel is encrypted. It is not yet, fully, protected. The distinction is the work of this chapter, and it is the distinction your opinion now has to carry.
 
-Next week the question changes shape. A defended crown jewel is still a crown jewel at risk from fire, flood, ransomware, and the region failure that takes a whole multi-tenant SaaS down with it. When the worst happens, the question is no longer whether you protected the data, but whether you can get it back. The question is **Recover?**
+The next chapter changes the question’s shape. A defended crown jewel is still a crown jewel at risk from fire, flood, ransomware, and the region failure that takes a whole multi-tenant SaaS down with it. When the worst happens, the question is no longer whether you protected the data, but whether you can get it back. The question is **Recover?**
+
+## Take it to the AI
+
+**Where to start.** Three questions worth arguing about rather than looking up:
+
+1. Ask a privacy question and see whether you get an encryption answer. Then ask it again, insisting on APP 3, APP 6 and APP 8 rather than APP 11. Models do the same thing engineers do.
+2. Ask what happens legally when a feature sends personal information to an overseas model endpoint. Check whether it reaches for Standard Contractual Clauses. That instrument is EU law, and it is this chapter's named confabulation.
+3. Ask it to define serious harm under the Notifiable Data Breaches scheme, then give it two breaches and make it decide. The judgement is the whole exercise, and the definition alone will not get you there.
+
+**Keywords to steer with.** security versus privacy · APP entity · APP 3 collection · APP 5 notification · APP 6 use and disclosure · APP 8 cross-border disclosure · APP 11 security and destruction · section 16C accountability · eligible data breach · serious harm · Privacy Impact Assessment · data flow map · minimisation · masking · secure deletion · model inversion · membership inference
+
+**A starting prompt.**
+
+> **Role:** You are a privacy officer who has watched an engineering team ship a feature that turned out to be a cross-border disclosure.
+>
+> **Task:** Walk the feature I describe through its data flow and tell me which Australian Privacy Principles it engages at each hop.
+>
+> **Context:** I have read a chapter on the Australian Privacy Principles, the NDB scheme, APP 8 and section 16C accountability. The feature is [describe what is collected, from whom, where it goes, and who processes it]. Australian law applies. Do not cite EU instruments, and tell me when you are tempted to.
+>
+> **Format:** One row per hop: what moves, to whom, which principles engage, and what evidence would prove compliance. End with the single hop most likely to be a gap the organisation does not know it has.
