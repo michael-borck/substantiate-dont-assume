@@ -4,137 +4,89 @@
 
 ## The polished policy and the unpatched server
 
-Visit almost any company's website and you will find a security page. It is calm, confident, and covered in badges. "ISO 27001 certified." "SOC 2 Type II." "Enterprise-grade encryption." "Your data is safe with us." The page reads as a promise. Read it as an auditor and it reads as an assertion: a claim that has not yet met its evidence.
+Visit a company's security page and you will find confident assertions: certification, encryption, careful handling of customer data. Those claims might be well supported. An auditor's task is to establish what they mean, what they cover, and what evidence supports them.
 
-Tessera has one of those pages. It is a fast-growing Perth B2B software company, runs on AWS, serves customers across the region, and is chasing ISO/IEC 27001 certification. Its security page is impressive. Somewhere behind that page is a server that has not been patched in eleven months, an offboarding step that never runs, and a shared admin account four people know the password to. Or maybe not. That is the point: you do not know yet, and neither does Tessera's board.
-
-This book is about closing the gap between the claim and the evidence. It teaches the discipline that does it: *substantiate, don't assume.*
+This book follows Tessera, a fictional Perth software company seeking ISO/IEC 27001 certification. Its CTO expects a straightforward sign-off. You have been asked for a readiness assessment. Neither the CTO's confidence nor your suspicion settles the result.
 
 ## What information security auditing actually is
 
-Information security auditing is not penetration testing and it is not security monitoring, though it borrows from both. A penetration tester breaks in to show that it can be done. Monitoring watches systems continuously and alerts on trouble. An auditor does something different and, to many people, less glamorous: an auditor asks an organisation to *prove* that the controls it claims to rely on are actually present, actually working, and actually producing the evidence that says so.
+Information security auditing systematically evaluates evidence against agreed criteria. Those criteria may include a management-system standard, applicable law, contractual promises and the organisation's own policies. Authorised penetration testing and continuous monitoring can contribute evidence; they serve different purposes from an audit.
 
-The product of an audit is not a list of vulnerabilities. It is an **opinion**: a defensible, evidenced judgement about whether an organisation's information security arrangements do what they say they do. That opinion is the thing stakeholders cannot get any other way. A vendor will always say it is secure. A standard will always say what secure should look like. Only an independent auditor says whether the two match, here, now, against the evidence.
-
-The founding maxim of the profession captures this in three words.
+An **opinion** brings the findings together into a bounded judgement. It names the subject, criteria, period, methods and limitations. A readiness assessment advises an organisation preparing for certification. It does not award a certificate or replace the certification body's independent decision.
 
 ## Trust, but verify
 
-"Trust, but verify" is older than information security; it is the operating principle of any assurance function, from financial audit to nuclear inspections. It does not mean "be suspicious of everyone." It means: take a claim seriously enough to test it. Trust is the starting point, because without some trust there is no engagement at all. Verification is the work, because trust that is never tested is just hope.
+Professional scepticism means testing a claim fairly. Ask what would support it and what would contradict it. A nervous engineer may operate a sound control; a confident executive may have good evidence. Demeanour helps you plan a conversation, but does not determine your finding.
 
-The auditor's relationship to the organisation is therefore productive, not adversarial. You are not the security police, and the best auditors are not internal affairs. You are a guest the organisation has invited to find the gaps it suspects but cannot see. That only works as a relationship: open, transparent, and built on trust that runs both ways. Staff who fear you will hand you the polished version. Staff who trust you will show you the real one.
-
-Good auditors behave accordingly long before fieldwork begins. They meet first, run a quick paper assessment so they arrive informed, share the schedule ahead of time, and stay flexible enough to reassess as the picture changes. The engagement is a collaboration with a deadline, not a raid.
-
-To do this credibly you must be willing to find that the polished policy does not match the operational reality, and to say so, clearly, with evidence. That willingness has a name.
+A productive engagement needs cooperation. Agree access and timing, explain requests, protect confidential material and give people an opportunity to correct factual errors. Independence still requires you to report an unwelcome result when the evidence supports it.
 
 ## A snapshot, not a guarantee
 
-An audit opinion is a judgement about a moment. You gather evidence across a window of days or weeks, and you report what that evidence showed. The environment does not freeze while you write. Controls drift, staff turn over, configurations change, and a system that was compliant on Thursday can be breached on Friday. Your opinion does not guarantee the future. It guarantees that, at the time you looked, on the evidence you gathered, the claim held (or did not).
-
-This is why a defensible opinion has to be more than correct. It has to be **fair, repeatable, and ethical**, and it has to be documented well enough to serve as evidence itself, sometimes years later, in a board meeting, a regulator's inquiry, or a court. Another auditor following your working papers should be able to reach the same conclusion. A stakeholder reading them should be able to see how you got there.
-
-Which is also why pressure is the auditor's real test. A client facing a deal deadline, a certification cutoff, or an embarrassed executive will want you to sign off on "compliant" before the evidence is in. The professional answer to that pressure is the same as the answer to every other shortcut in this book: substantiate, don't assume. An opinion given under pressure, without evidence, is not an efficiency. It is a liability you have stamped your name on.
+An opinion provides bounded assurance about its subject and period. Sampling, incomplete records and changing systems limit what it can establish. It guarantees neither the past nor the future. Another competent reviewer should be able to follow your reasoning and identify where a different judgement could be defensible.
 
 ## Substantiate, don't assume
 
-**Substantiate, don't assume** is the spine of this book and the habit it tries to build. Every control claim is an assertion until evidence supports it. A policy on the intranet is an assertion. A dashboard showing green checks is an assertion. A manager's assurance that "we do that" is an assertion. None of them is evidence until you have seen it work, on terms you set, in a form you can defend.
+A policy is evidence of a stated requirement or design. An operating record can support a claim about performance over time. Observation can show a control running at a particular moment. Each has limits; none becomes universally reliable merely because you collected it yourself.
 
-This sounds obvious. In practice it is hard. The most dangerous control is the one that looks perfect on paper, because it lowers your guard. Tessera is written to be plausible: impressive in its marketing, rougher underneath, exactly like the real organisations you will audit. Good auditing does not assume the worst. It does something more disciplined: it substantiates what is actually there, names what is missing, and lets the evidence set the opinion.
+Throughout the book, keep this trail in your working papers:
 
-By the end of this book you will have done exactly that, chapter by chapter, against Tessera.
+criterion → evidence → test → result → finding → action → retest → opinion.
 
-## The auditor's moat in the age of AI
+“Insufficient evidence” is a legitimate result. So is clearing a concern after a test passes. You are not rewarded for producing the greatest number of failures.
 
-Here is the harder question this book takes seriously: *what is a human auditor actually for when a machine can draft the work?*
+## The auditor's work with AI
 
-The answer is not "the same thing, faster." The answer reshapes the job. The book takes a deliberately pragmatic stance on AI, steering clear of both alarmism and hype, and lands it on the auditor's desk. Four moves make the argument.
+AI can help draft procedures, suggest questions and compare a finding with its evidence. Performance varies with the model, task and inputs. Fluent output can contain unsupported mappings, mistaken calculations or invented closure claims.
 
-### The technical craft is being commoditised
-
-Listing ISO/IEC 27001:2022's 93 controls. Mapping them to NIST CSF 2.0. Drafting a test procedure for access reviews. Writing up a finding in the standard format. This is the technical craft of auditing, and it is exactly the kind of work generative AI is rapidly commoditising. An AI can enumerate the controls faster and more completely than any junior auditor. If the only thing an auditor does is *produce* that list, the auditor has no edge. Every organisation's auditor can now produce the same list.
-
-### Variation is the moat
-
-If an AI is equally good at running every company, then by definition there is no variation between companies that use it generically, and no variation means no competitive edge. The edge comes from variation: human agency, individual judgement, a genuine point of view about what matters. For an auditor, that variation shows up as **professional scepticism**: the willingness to look at a polished policy and ask whether the evidence supports it, to decide which of a hundred small gaps actually matters, to form a defensible opinion rather than a confident average. The machine produces the draft. The auditor supplies the judgement. That judgement is the moat.
-
-### From drafter to evaluator
-
-As AI moves from chatbots to agentic systems that can run procedures on their own, the auditor’s job shifts: from creator of the “shitty first draft” to **expert evaluator and editor** of AI-generated work. You will read AI-drafted risk assessments, AI-drafted control mappings, AI-drafted findings, and your value will be in spotting where they are generic, where they confabulated compliance, and where the nuance they smoothed over was the whole point. This book makes that discipline explicit and teaches it. The habit it builds is non-negotiable: whenever you draft with AI, you document where you *disagreed with or expanded on* its analysis.
-
-### Augmentation, not automation
-
-The stance is proactive. Use these tools for **augmentation and personalised learning**, not passive automation that quietly atrophies the critical thinking the profession depends on. Efficiency is never the goal; *defensible judgement* is. If you use AI to skip the thinking, you have done the work wrong, no matter how good the output looks. The companion book, *Conversation, Not Delegation*, teaches the craft of working with AI well; this book teaches what you must verify once the drafting is done.
+Use the [drafter-to-evaluator loop](appendices/a-drafter-to-evaluator-loop.qmd) when it helps: define the task, supply permitted inputs, check the draft against the record, and retain the corrections and limits. You remain responsible for the work. There is no requirement to find a model error if its answer is sound.
 
 :::: {.callout-warning title="Watch out: your own AI hygiene"}
-The AI you use is a third party. Do not paste Tessera's evidence, configurations, logs, or customer data into a consumer AI tool. That is a disclosure you cannot take back, and it may breach the engagement's confidentiality clauses and the Privacy Act. Use the approved or enterprise tooling your firm provides, or a locally hosted model. Treat every prompt as if it could become someone else's training data, because it might. The same scepticism you apply to Tessera's AI applies to your own: the tool is a thinking partner, not a safe drop box for client secrets.
+Use only the explicitly fictional book exercises with unapproved tools. For real engagements, obtain authority for the tool, data and processing arrangement before use. Enterprise branding or local hosting alone does not establish confidentiality, retention, access control or legal compliance. Do not upload client evidence, credentials, personal data or licensed standards without the necessary permissions.
 ::::
-
-This premise is the thread that runs through every chapter.
 
 ## Who this book is for
 
-This book is written for the person learning to audit against international standards for the first time. You do not need to be an auditor already. You need to be willing to form opinions and defend them with evidence.
+This is a first audit engagement for readers with basic security knowledge: accounts and permissions, logs, backups, and the idea that a cloud provider and its customer have different responsibilities. Technical terms are explained when they become relevant. No CISA credential, purchased lab or prior reading of the companion books is required.
 
-It is also for any practitioner, new or experienced, who wants a readable, opinionated spine for the discipline of information security auditing, and a clear stance on where the human auditor fits once the machines can draft. If you audit, manage auditors, or rely on audit opinions, the argument here is for you.
+By the end, you should be able to define a bounded engagement, select criteria, test supplied records, distinguish an observed exception rate from future incident likelihood, write a supported finding and defend a readiness conclusion.
+
+This is teaching material, not legal advice or a replacement for authorised copies of standards. Original case criteria are supplied so that the exercises can be completed without purchasing a standard. A real engagement requires its agreed editions and suitably qualified review.
 
 ## How this book works
 
-The book is one engagement told twelve ways. You audit **Tessera**, a fast-growing B2B software company built on AWS and chasing ISO/IEC 27001 certification. Each chapter is one topic, a single question from *Why?* through *Risk?*, *Which?*, *Scope?* and on to *Report?* and *Conclude?*. The twelve chapters follow the phases of a real certification-readiness engagement, in the order an auditor actually lives them.
+Twelve chapters retain the engagement's progression from **Why?** to **Conclude?**.
 
-The arc has two acts:
+| Act | Chapters | Observable outcome |
+|---|---|---|
+| I · Engage | 1–6 | A mandate, criteria map and test programme that distinguish design evidence from untested operating claims |
+| II · Prove | 7–12 | Reproducible working papers, a finding and closure ledger, and an opinion with explicit limitations |
 
-| Act | Milestones | What it does | Ends in |
-|---|---|---|---|
-| **I · Engage** | 1–6 | Build the case against Tessera with *limited access* | A preliminary readiness opinion (desk audit) |
-| **II · Prove** | 7–12 | *Full access granted*, move from suspicion to proof | A defensible certification-readiness opinion |
+The act break stages the release of information for learning. In practice, interviews, document review and operational testing overlap. Remote examination of logs can be operating-effectiveness work. “Full access” never means unlimited authority or complete assurance.
 
-Act I forms judgement from documents alone. Act II opens with full auditor access (interviews, configurations, logs, incident records) and drives to evidence. The break between the acts is the break between suspicion and proof.
+The **Evidence Locker** is your cumulative file. Use paper, a text document or a spreadsheet. Each chapter supplies one timed task and a checkable output. The [case pack](appendices/b-case-pack.qmd) contains the fixed inputs; the [answer checks](appendices/c-answer-checks.qmd) should be read after an attempt. No AI account, code execution or live interview is needed for the core route.
 
-Running through both acts is the **Evidence Locker**: a cumulative working-paper file you build one artefact at a time. Each chapter ends with an Evidence Locker prompt, the one thing to lock in at that stage of the engagement. By the final chapter the locker is not a preparatory exercise; it *is* the audit.
+## The fixed case and the companion site
 
-## The companion site
+The canonical worked engagement is **SDA-2026.1**, a book-only Tessera teaching scenario, with a final evidence cutoff of **30 June 2026**. The appendix supplies original synthetic records, not exports or quotations from the live site. Its dates, contracts and test populations govern this book's answers. The case is deliberately small and cannot establish an actual company's conformance.
 
-Tessera is not just a name in this book. It is a live, simulated company at **[tessera.locoensayo.org](https://tessera.locoensayo.org)**, part of the *LocoEnsayo* rehearsal environments. Their tagline is the right one for auditing: *rehearse the real world; the cast is AI; the judgement is yours.* The site is open all hours, with no password, so you can follow along wherever and whenever you read. By the end of the book you will have audited it.
+[Tessera's live companion site](https://tessera.locoensayo.org) remains an optional interview and discovery environment. It may describe a different date, certification status, contract or recovery target. Treat it as a separate exercise: record the page, retrieval date and your evidence, and do not splice changing website facts into the fixed case. Chatbot replies are simulated testimony, not verified records. Availability and answers can vary.
 
-Two things make Tessera worth auditing, and both are deliberate. Its people are AI characters you can interview, each with their own role, knowledge, and gaps, like the staff of any real company. And its document library is full, not curated. Not every document is evidence. Not every employee knows the answer. Some files are red herrings that look relevant and lead nowhere. Deciding which document to test and which person to ask is an audit skill in its own right, and Tessera gives you room to practise it. A scenario engineered to hand you the obvious evidence teaches you nothing. A messy, realistic one teaches you to find it.
-
-Every chapter's Tessera Case narrates the worked example; the companion site is where you run your own.
+If you find drift within this book, report the edition, evidence ID and conflicting passages through the [source repository](https://github.com/michael-borck/substantiate-dont-assume). No site content needs to be copied to complete the exercises.
 
 ## The companion book
 
-*Conversation, Not Delegation* (https://michael-borck.github.io/conversation-not-delegation/) is the companion on method. Where this book teaches the audit discipline (the *what we verify*), that book teaches *how to work with the machine well*: the conversation loop, staying in the loop, compensating for AI's predictable weaknesses. The two are complementary. Every chapter here assumes you are using AI, and assumes you are using it the way that book describes: as a thinking partner, not a delegate.
+[Conversation, Not Delegation](https://michael-borck.github.io/conversation-not-delegation/) develops the craft of working with AI. It is optional further reading. This book supplies its own method and practice inputs.
 
 ## Conventions used in this book
 
-Every chapter carries the same set of recurring features so you learn to recognise them. Each is rendered differently.
+**🗂️ Tessera Case** marks a worked example. **🗄️ Evidence Locker** identifies the task and the output to retain. **🤖 AI Field Note** shows a bounded illustrative draft and its evaluation; it is not a transcript of a measured model run. **🔍 Auditing AI** applies assurance methods to AI-supported systems.
 
-:::: {.callout-note title="🤖 AI Field Note"}
-**Blue boxes** show AI used as a thinking partner for the chapter’s task: a worked example against Tessera, including, crucially, where the AI got it wrong and how the auditor corrected it. The habit it builds, draft with the machine, then supply the judgement it cannot, runs through every chapter.
-::::
-
-:::: {.callout-important title="🔍 Auditing AI"}
-**Red boxes** apply the chapter's concept *to AI itself*: which controls an AI deployment falls under, how you audit an AI-assisted control, what evidence an AI system produces. These appear where the topic demands.
-::::
-
-:::: {.callout-tip title="🗄️ Evidence Locker: lock this in"}
-**Green boxes** are the prompt for that chapter: the one artefact to add to your cumulative working-paper file. By the final chapter the locker *is* the audit.
-::::
-
-::: {.tessera-case}
-**🗂️ Tessera Case**
-
-**Shaded case boxes** carry the running Tessera engagement, the concrete artefact each chapter lands on. Tessera is written to be plausible: impressive on paper, rougher underneath. Good auditing does not assume the worst. It substantiates what is there.
-:::
-
-You will also see standard callouts for emphasis: **Watch out** (yellow) for traps that look right but are not, plus occasional **Key idea** and **Try this** boxes.
-
-Every chapter then closes with **Take it to the AI**. Where the AI Field Note shows you a worked example of the author using the machine and correcting it, this section hands the conversation to you: a few questions worth arguing about, the keywords that let you steer a conversation you cannot yet phrase, and a starting prompt written out in full. Those prompts spell out four things, the role the assistant should take, the task, the context it needs, and the format you want back. Write all four if you are running a small model on your own machine, the kind with a few billion parameters that fits on a laptop; its defaults come from a narrower range, and the structure is doing work the model will not do for you. On a current frontier model the task and context lines are usually enough on their own, and the rest is a checklist for your own thinking. Either way the first answer is where the conversation starts, and the discipline of this book applies to it as much as to Tessera: the confident output is an assertion until you have checked it. The AI-hygiene warning above applies without exception. Rehearse these conversations on Tessera or on scenarios you invent. Never on a real client's evidence.
+Three chapters retain extended **Take it to the AI** activities. Other chapters use inspection, calculation, comparison or short written decisions. All have a solo route. Case dialogue and revised third-person audit vignettes are fictional teaching examples.
 
 ## How this book was written
 
-This book was written using the methodology its companion describes. AI tools were used as thinking partners at every stage: drafting, stress-testing, and being corrected. The relationship between author and AI in producing this book is exactly what the book argues the auditor's relationship to AI-generated work should be. The machine produces the draft; the author supplies the judgement, the evidence, and the defensible opinion. Every sentence reflects the author's judgement. The AI made the work faster. It did not do the thinking.
+AI tools supported drafting and revision. The author is responsible for checking and approving the published work. Source tests can catch arithmetic and continuity errors, but do not replace expert review or an unfamiliar reader's attempt.
 
-## A note on where this book is at
+## Edition and review status
 
-This is an open-access book in active development. The Introduction and Chapter 1 are the vertical slice: they exist to prove the voice and the recurring-feature format before the remaining eleven chapters are drafted. The online edition is always the most current. The standards targeted (ISO/IEC 27001:2022 and NIST CSF 2.0) are fixed from the outset; where standards drift, the book handles it by edition, not errata.
+All twelve chapters are drafted. This revision targets ISO/IEC 27001:2022 with its 2024 amendment and NIST CSF 2.0. Guidance editions and primary references are dated in the [source guide](appendices/d-sources.qmd). The online edition may be updated separately from downloaded or printed copies; check their edition information. KDP publication, human proofing and fresh-reader testing are separate release gates.

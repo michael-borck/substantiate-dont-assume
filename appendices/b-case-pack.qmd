@@ -1,0 +1,221 @@
+# Fixed case pack: SDA-2026.1 {#sec-case-pack}
+
+## Read this before testing
+
+These are original synthetic teaching inputs for the book-only Tessera scenario, version **SDA-2026.1**. They are not live-site exports, actual staff testimony or real audit evidence. The existing Tessera name provides continuity with the manuscript; no companion-site documents or chatbot responses are reproduced here. Live-site branding/reuse and existing artwork remain author release checks.
+
+Use the supplied facts for the core exercise. Do not fill gaps by searching the site or asking a model to invent a missing record. This compact case covers selected controls, not every requirement needed for certification. All times are **AWST (UTC+08:00)**. The opinion cutoff is **2026-06-30 17:00 AWST**.
+
+The records below are inputs. Interpretation and worked results are separated into the [answer checks](c-answer-checks.qmd). Electronic readers can also download the [leavers CSV](../resources/sda-2026-1/leavers.csv). The complete population is printed here, so downloading is optional.
+
+## Evidence manifest
+
+| ID | Record and effective date |
+|---|---|
+| E01 | Mandate, scope and engagement safeguards, 2026-04-01 |
+| E02 | Rating method agreed 2026-04-01 |
+| E03 | Policy and SoA extracts, effective throughout the leaver period unless stated |
+| E04 | Complete synthetic leavers and revocation extract, captured 2026-06-15 |
+| E05 | Incident and investigation chronology, through 2026-06-15 |
+| E06 | Review-register response, captured 2026-06-16 |
+| E07 | AI support-assistant privacy and vendor records, captured 2026-06-17 |
+| E08 | Recovery criteria and test observations, captured 2026-06-18 |
+| E09 | Supplier assurance summary and reliance worksheet, 2026-06-18 |
+| E10 | Management actions and auditor retest, through 2026-06-29 |
+| E11 | Tenant-authorisation test, 2026-06-19 |
+| X01 | Independent changed case, released after chapter 12 |
+
+Files under `resources/sda-2026-1/` include an electronic result ledger and checksums. A checksum detects changes relative to a recorded value; it does not authenticate the fictional source or prove population completeness. In a real engagement, retain source queries, collectors, permissions, transfer history, access restrictions and integrity checks at capture.
+
+## E01: mandate and scope
+
+The board requests an independent **certification-readiness assessment**, not a certification audit. The assessment covers the Perth-managed B2B SaaS ISMS: its AWS-hosted production service, workforce access, support assistant, relevant supplier dependencies, privacy handling and recovery arrangements. The historical leaver period is **1 June 2025 to 31 May 2026**. June follow-up evidence is separately identified.
+
+Criteria are the agreed ISO/IEC 27001:2022 requirements with Amd 1:2024, necessary controls documented in the SoA, applicable obligations, and the original teaching policies below. The board wants advice on preparation for Stage 1 and whether to proceed to Stage 2. The exercise provides only selected evidence; a whole-ISMS ready verdict cannot be inferred from it.
+
+The lead reviewer previously provided a generic public workshop but did not design Tessera's controls. The proposed analyst configured the offboarding integration as a contractor. The engagement partner assigns that analyst no testing or review of their own work; an independent reviewer must assess whether the remaining threat is acceptable before acceptance. If safeguards are inadequate, change the team or decline.
+
+The access schedule permits examination of supplied exports and agreed interviews. It does not authorise production failover, endpoint isolation, access revocation by the auditor, real customer-data extraction or uploads to unapproved AI services.
+
+## E02: rating and decision rules
+
+Severity is the engagement team's stated readiness-priority method, not a certification body's universal classification.
+
+- **High:** a supported failure or evidence gap on a critical control could seriously affect customer information or service commitments. It prevents a Stage 2 recommendation until addressed and adequately verified.
+- **Medium:** a significant weakness with bounded exposure requires an owned plan and evidence-based consideration of its effect on readiness.
+- **Low:** a limited weakness with little current impact still receives a record and response. It does not disappear from required coverage.
+- **Insufficient evidence:** a test result, not an automatic low rating or proof that the control failed.
+
+In the introductory risk matrix, likelihood scores are ordinal: 1 unlikely, 2 plausible, 3 likely; impact scores are 1 limited, 2 material, 3 severe. Scores 1–2 are low, 3–4 medium, and 6–9 high for planning. Document assumptions and dependencies. These products are prioritisation aids, not calibrated probabilities or substitutes for applicable criteria.
+
+## E03: policies and applicability
+
+**P-IT, v3.1:** revoke all leaver access, including separately owned AWS keys, within 24 elapsed hours of the end of the last working day. Record completion against each system.
+
+**P-HR, v2.0:** complete the same full revocation within two elapsed hours. Both documents remained approved during the historical test period. There is no approved precedence clause. Report performance against both and raise the conflict for authorised resolution.
+
+**P-REV, v2.2:** each quarter, review ordinary access for AWS, Workspace and Slack. Separately, every month review all privileged identities, including static/service credentials and their owners. The review must show population, reviewer, decisions and completed actions.
+
+**P-PRIV, v1.0:** record purposes, personal-data flows, relevant notices, supplier terms, processing locations, retention/deletion controls, training settings and incident escalation before enabling customer-ticket AI processing. Escalate uncertain legal grounds to the privacy adviser; unknown terms do not count as approval.
+
+**P-REC, v1.3:** demonstrate recovery of the production SaaS following loss of its primary region within four hours, with a recovery point no more than fifteen minutes before interruption. An approved business-impact analysis sets maximum tolerable disruption at eight hours. Demonstrate application and dependency recovery, data integrity and authorised cutover; an architecture diagram alone is insufficient.
+
+**SoA teaching extract:** A.5.18 access rights, A.5.23 cloud-service use, A.5.30 ICT readiness and A.5.34 privacy are recorded as necessary and “implemented”; evidence references are blank. A.6.5 concerns responsibilities continuing after employment, separately from access-right administration. The management-system clauses remain in the criteria register. No blanket exclusion for suppliers or low-risk controls is authorised. The context record notes regional disruption and interested-party continuity expectations, including consideration of climate-related relevance. These are teaching paraphrases, not quoted standard clauses.
+
+## E04: the full leaver population
+
+The fictional HR owner supplies these 48 unique leaver IDs. A separate synthetic payroll reconciliation attests to 48 departures with exactly the same ID set and no additions or removals in the period. For this bounded exercise that completeness fact is stipulated; a real auditor must obtain and check both independent source lists.
+
+Every last working day ends at **16:00**. The identity-provider record shows SSO, Workspace and Slack access all disabled at **17:00 on that day**. Each person also held one separately managed AWS key. The table gives its disable event. There are no other credentials in this simplified population; do not extrapolate that simplification to a real estate.
+
+| ID | Last day | Key disabled | Time |
+|---|---|---|---|
+| L001 | 2025-06-01 | 2025-06-01 | 17:00 |
+| L002 | 2025-06-08 | 2025-06-08 | 17:00 |
+| L003 | 2025-06-15 | 2025-06-15 | 17:00 |
+| L004 | 2025-06-22 | 2025-06-22 | 17:00 |
+| L005 | 2025-07-01 | 2025-07-01 | 17:00 |
+| L006 | 2025-07-08 | 2025-07-08 | 17:00 |
+| L007 | 2026-01-09 | 2026-02-25 | 16:00 |
+| L008 | 2025-07-22 | 2025-07-22 | 17:00 |
+| L009 | 2025-08-01 | 2025-08-01 | 17:00 |
+| L010 | 2025-08-08 | 2025-08-08 | 17:00 |
+| L011 | 2025-08-15 | 2025-08-15 | 17:00 |
+| L012 | 2025-08-22 | 2025-08-22 | 17:00 |
+| L013 | 2025-09-01 | 2025-09-01 | 17:00 |
+| L014 | 2025-09-08 | 2025-09-08 | 17:00 |
+| L015 | 2025-09-15 | 2025-09-15 | 17:00 |
+| L016 | 2025-09-22 | 2025-09-22 | 17:00 |
+| L017 | 2025-10-01 | 2025-10-01 | 17:00 |
+| L018 | 2025-10-08 | 2025-10-08 | 17:00 |
+| L019 | 2025-10-10 | 2025-10-12 | 18:00 |
+| L020 | 2025-10-22 | 2025-10-22 | 17:00 |
+| L021 | 2025-11-01 | 2025-11-01 | 17:00 |
+| L022 | 2025-11-08 | 2025-11-08 | 17:00 |
+| L023 | 2025-11-15 | 2025-11-15 | 17:00 |
+| L024 | 2025-11-22 | 2025-11-22 | 17:00 |
+| L025 | 2025-12-01 | 2025-12-01 | 17:00 |
+| L026 | 2025-12-08 | 2025-12-08 | 17:00 |
+| L027 | 2025-12-15 | 2025-12-15 | 17:00 |
+| L028 | 2025-12-22 | 2025-12-22 | 17:00 |
+| L029 | 2026-01-01 | 2026-01-01 | 17:00 |
+| L030 | 2026-01-08 | 2026-01-08 | 17:00 |
+| L031 | 2026-02-10 | 2026-02-13 | 16:00 |
+| L032 | 2026-01-22 | 2026-01-22 | 17:00 |
+| L033 | 2026-02-01 | 2026-02-01 | 17:00 |
+| L034 | 2026-02-08 | 2026-02-08 | 17:00 |
+| L035 | 2026-02-15 | 2026-02-15 | 17:00 |
+| L036 | 2026-02-22 | 2026-02-22 | 17:00 |
+| L037 | 2026-03-01 | 2026-03-01 | 17:00 |
+| L038 | 2026-03-08 | 2026-03-08 | 17:00 |
+| L039 | 2026-03-15 | 2026-03-15 | 17:00 |
+| L040 | 2026-03-22 | 2026-03-22 | 17:00 |
+| L041 | 2026-04-01 | 2026-04-01 | 17:00 |
+| L042 | 2026-04-08 | 2026-04-08 | 17:00 |
+| L043 | 2026-04-15 | 2026-04-15 | 17:00 |
+| L044 | 2026-04-22 | 2026-04-22 | 22:00 |
+| L045 | 2026-05-01 | 2026-05-01 | 17:00 |
+| L046 | 2026-05-08 | 2026-05-08 | 17:00 |
+| L047 | 2026-05-15 | 2026-05-15 | 17:00 |
+| L048 | 2026-05-22 | 2026-05-22 | 17:00 |
+
+The CSV supplies complete timestamps for termination, identity revocation and key revocation. These are prejoined teaching fields, not a native CloudTrail schema. In an engagement, verify the join keys and event semantics before relying on such a merged extract.
+
+## E05: incident and cause records
+
+**INC-01:** L007 was a contractor whose last day was 9 January 2026. Its separately owned key was disabled on 25 February. The synthetic investigation attributes unauthorised customer-file reads on 20–25 February to that key; discovery was on 27 February. Revocation had already stopped the key, but the earlier activity still required investigation.
+
+The privacy adviser's dated case assessment records a covered entity, unauthorised disclosure of personal information, likely serious harm and no effective remedial action preventing that risk. It records an eligible-breach conclusion and notifications on 3 March. Those facts are supplied for this scenario; they do not make every access exception legally notifiable.
+
+The checklist design had a human-account sign-off but no separate key-owner sweep. HR dispatch records for L019 and L031 lack acknowledged IT handoff; the associated keys were disabled late. L044's key job completed six hours after departure. The IT queue retained no reason for that delay. Cause evidence for L044 is incomplete; do not invent one.
+
+## E06: access-review records
+
+The quarterly ordinary-access population is AWS, Workspace and Slack. For the quarter ending 31 March 2026, signed records cover AWS and Workspace only. The owner could not supply Slack's review, decisions or remediation evidence.
+
+For the monthly privileged population, the required January, February and March 2026 reviews have no supplied review records for any of the three systems. The owner confirms a calendar reminder existed but cannot substantiate completed reviews. Do not relabel this as “two quarterly privileged reviews”.
+
+The June 16 inventory lists ordinary accounts separately from privileged users and service credentials. Management's June 28 note promises a complete quarterly catch-up and monthly process; no completed review or independent verification follows before the opinion cutoff.
+
+## E07: AI support-assistant privacy records
+
+The enabled assistant receives ticket text containing customer names, work email addresses and occasional uploaded documents. The customer-facing collection notice lists support handling but does not explain external AI processing. The processing register omits the assistant.
+
+The vendor order identifies a hosted model service, but the supplied bundle lacks the executed data-processing terms and confirmed processing/support-access regions. A screenshot shows “training disabled”; its account identifier and capture date are absent. The administrator cannot supply the change log or a vendor attestation tying it to this deployment.
+
+Prompt logs have no approved deletion schedule or demonstrated deletion test. The vendor-breach contact path is absent from the incident runbook. No evidence establishes an actual disclosure by this vendor or an eligible breach involving it. These are governance and assurance gaps under P-PRIV; seek qualified advice on the applicable legal duties.
+
+At cutoff, the action owner has requested terms and drafted a notice update. Neither a signed terms package, deployment-specific training verification, approved retention test nor exercised vendor-escalation path is supplied. Keep the whole finding open.
+
+## E08: recovery facts and test observations
+
+The signed contract offers **99.9% monthly availability** for the production SaaS, measured over a 30-day month in this exercise; agreed maintenance is excluded. Service credits are the specified remedy. A 0.1% budget is 43.2 minutes before applying exclusions. That budget is not itself the recovery time objective.
+
+P-REC and the signed BIA jointly specify **RTO four hours, RPO fifteen minutes, maximum tolerable disruption eight hours**. A draft architecture diagram shows a hot standby in another region. The deployment inventory has no such standby. The runbook instead describes a cold restore, which could be an acceptable strategy if evidenced against the targets.
+
+An authorised isolated recovery exercise records:
+
+| Event | AWST, 18 June 2026 |
+|---|---|
+| Simulated primary-region loss; start clock | 10:00 |
+| Latest independent, usable backup's data cutoff | 09:20 |
+| Restore environment available | 11:10 |
+| Database restore ends | 13:50 |
+| Application and dependencies pass service checks | 15:30 |
+
+There is no production cutover in this test. The restored copy passes the supplied integrity checks. DNS cutover authority and a key-service dependency remain untested. The exercise records allow a bounded timing conclusion, not an assertion that production recovery is proven. No newer successful exercise is supplied before cutoff.
+
+## E09: supplier reliance
+
+A fictional payment processor handles card transactions outside Tessera's own card-data storage. Its SOC 2 Type II report summary covers the payment API for 1 January–31 December 2025. It contains an exception for delayed privileged review in November and identifies customer responsibilities for API credential restriction and reconciliation.
+
+The report does not cover Tessera's support assistant or its 2026 operation. No bridge letter or other current-period evidence is supplied. The reliance worksheet requests exception impact analysis, current-period coverage and tests of Tessera's complementary controls. Those tests are not supplied. Outsourcing does not close this evidence gap or remove supplier oversight from scope.
+
+This is an original teaching summary, not a quotation from an actual SOC report. Do not claim its existence establishes all supplier assurance.
+
+## E10: actions and limited retest
+
+The Head of IT authorised containment and reconciliation on 16 June. The supplied live-access comparison found **zero** active credentials belonging to E04's 48 leavers. The historical keys were already disabled; this corroborates current state, not historical compliance.
+
+The board approved P-IT v3.2 and P-HR v2.1 on 19 June, both using **two hours prospectively**. That decision does not retrospectively change the historical criteria. IT added an acknowledged handoff, mandatory key-owner sweep and evidence-gated closure on 20 June.
+
+The complete post-change departure population to 28 June contains six records. All times are AWST. SSO was disabled within one hour in each. Key events are:
+
+| ID | Terminated | Key disabled |
+|---|---|---|
+| R01 | 21 June 16:00 | 21 June 17:00 |
+| R02 | 22 June 16:00 | 22 June 17:00 |
+| R03 | 23 June 16:00 | 23 June 17:00 |
+| R04 | 24 June 16:00 | 24 June 17:00 |
+| R05 | 25 June 16:00 | 25 June 17:00 |
+| R06 | 26 June 16:00 | No event supplied |
+
+The independent reviewer re-performed the join on 29 June and confirmed five complete pairs. R06 has a signed checklist but no key-disable event or independent current-state extract. Management says the job ran. No later evidence is supplied. This prevents closure of the systemic access finding. It does not prove R06's key remains active.
+
+Other owners have scheduled actions: review coverage by 10 July, privacy/vendor records by 17 July, tested recovery by 24 July, and supplier-reliance completion by 17 July. All are future commitments, not verified results.
+
+## E11: a concern that clears
+
+The auditor suspects a tenant-ID parameter permits cross-tenant reads. The authorised non-production test uses two synthetic tenants, A and B. Its fixed configuration is application version 6.2 with an ordinary, authenticated A user.
+
+| Request | Expected | Observed |
+|---|---|---|
+| A reads own record | Allowed | 200, A record only |
+| A changes ID to B | Denied | 403, no B record |
+| Anonymous reads B | Denied | 401, no B record |
+
+The application trace and access log agree on each request ID. No real customer data was used. This supports the three tested decisions in that configuration. It clears this specific concern; it does not prove isolation under every compromise or for every interface.
+
+## X01: independent changed case {#sec-transfer-input}
+
+Attempt this after chapter 12, before reading the answers. A separate fictional service, **Wattle Desk**, asks whether its scheduled Stage 2 audit should proceed. Use E02's readiness rules and these complete supplied facts only.
+
+- W-POL requires all leaver access disabled within two hours.
+- Its complete four-person departure population has delays of 1, 1, 3 and 1 hours, including keys. The three-hour record is W03; no misuse is evidenced.
+- Management corrected W03 and changed the job. The complete next six departures all have source-backed one-hour revocation events and a documented independent retest. No closure observation window beyond those six events is supplied.
+- W-REC requires RTO two hours and RPO ten minutes. An isolated, authorised exercise loses the primary at 10:00, uses an independently usable 09:55 backup, and passes application/dependency checks at 11:40. Production cutover is not tested.
+- W-REV requires monthly privileged reviews. The last three complete populations and signed reviews are supplied, with all actions verified.
+- The external support model's data-processing terms and processing regions remain unavailable. Wattle's own W-PRIV prohibits enabling that flow without approved terms; it is enabled.
+- There is no evidence about the rest of the ISMS.
+
+Write 300–500 words, or an equivalent dictated answer. Give the observed rates and timing, distinguish what improved from what remains unknown, state a bounded readiness recommendation and name the evidence that could change it. Do not copy Tessera's failure list onto Wattle.

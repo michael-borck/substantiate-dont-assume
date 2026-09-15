@@ -3,188 +3,134 @@
 > *You can read your way to a suspicion. You can only evidence your way to an opinion.*
 
 ::: {.tessera-case}
-**🗂️ Tessera Case: Full access granted**
+**🗂️ Tessera Case: Operating records arrive**
 
-The email lands on a Monday morning, and it changes the engagement. Tessera's CTO, Dr Sana Qureshi, has signed the access schedule. You have credentials for the AWS environment with read-only audit permissions, exported log streams for the last twelve months, and the complete HR leavers list. You also have calendar slots with Anika Desai, the head of people, and with Hamish Boyd, the IT operations lead, plus a standing invitation to walk the Perth office. For six weeks you have been reading about Tessera. From today you are looking at it. The preliminary opinion you wrote at the close of Act I, *promising on paper, not yet proven in practice*, now meets the only thing that can upgrade or overturn it: the evidence itself.
+Act I identified the revocation deadlines and the evidence needed to test them. E04 now supplies 48 leavers and their disable events. E05 adds incident and cause records. These are documentary operating evidence, even when read from a desk. Your task is to establish what each record supports and retain the reasoning so another reader can reproduce it.
 :::
 
 ## The act break: from suspicion to proof
 
-Act I ended with a disciplined confession. You had read the ISMS, the risk register, the Statement of Applicability, and every policy beneath them, and formed an honest opinion: designed well, operating unconfirmed. Every gap you named at the close of Chapter 6 was a control you had read about and never seen run. Full access is the thing that closes those gaps.
+The staged release of records changes what you can conclude. It does not remove uncertainty. A timestamp may refer to the wrong event; a join may omit service credentials; a complete-looking export may cover only one business unit.
 
-Notice the posture change. In Act I you accepted documents because documents were all you had; your scepticism was sharp but pointed at the page. Now it has somewhere to land. A policy that says access is revoked within twenty-four hours of a leaver's last day is, on the page, a promise. A log entry showing the account disabled at 16:11 that day is the promise kept; one showing it still active a week later is the promise broken. Both are evidence, and only full access could have produced them.
-
-Here is the trap that comes with the door opening. Access feels like proof, and that feeling is the new danger. A dashboard, a log, a configuration export, a confident engineer: each can look like evidence and still fail to substantiate anything. This chapter is the craft that turns raw access into a defensible opinion. Which evidence to gather, how much of it, how to keep it so it survives challenge, and which procedures prove a control operates rather than merely exists.
+Access is a prerequisite for some procedures, not assurance in itself. Start with the objective and examine whether the available evidence can answer it. Missing evidence belongs in the result, rather than being supplied through inference.
 
 ## Four kinds of evidence
 
-Every conclusion rests on evidence, and evidence is not all the same stuff. The profession sorts it into four kinds, and knowing which kind you are holding tells you how much it can carry.
+**Observational evidence** records what you saw: a revoked badge denied at a reader, or a tested access decision. It can be strong for that event. It may be less representative if staff alter their behaviour while observed.
 
-**Observational** evidence is what you see yourself: a leaver's badge denied at the side entrance, a privileged elevation granted, used, and revoked beside you. It is the most direct evidence that a control *operates*, with a hard limit: it only proves operation for the moment you watched. A control that ran perfectly under your gaze can fail the day after you leave.
+**Documentary evidence** includes policies, logs, signed checklists, contracts and external reports. A policy supports a design claim; historical logs may support operation over a period. Reliability depends on creation, access, retention and alteration controls. “System generated” is not enough if the system can omit events or the administrator can rewrite its output.
 
-**Documentary** evidence is the records the organisation and its systems produce: the access-revocation log, the CloudTrail export, the signed offboarding checklist, the supplier's SOC 2 report. This is the bulk of what Act II gathers, and its reliability depends on its source and the controls over how it was made. A system-generated log nobody can alter is strong; a spreadsheet a manager typed last week is weak.
+**Analytical evidence** is work you perform on inputs: reconciliation, elapsed-time calculations, trend analysis or re-performance of a review. It can expose an inconsistency, but inherits errors in those inputs. Producing a spreadsheet yourself does not make the source complete.
 
-**Analytical** evidence is your own work: reconciling the asset register against the live estate, re-running the calculation behind a tenant-isolation check, computing a deviation rate from a sample. It is powerful precisely because you produced it on terms you set, independent of the organisation's goodwill.
+**Oral evidence** includes interviews and explanations. It helps establish context and locate records. Memory, incentives and ambiguity can limit it. Corroborate consequential claims, especially when an objective record should exist.
 
-**Oral** evidence is what people tell you: the interview, the attestation, the corridor explanation. It is the weakest kind alone, because memory is selective and self-interest is real, but it is also where almost every other kind of evidence begins. A good interview does not conclude anything. It points you at the document, the log, or the observation that will.
-
-There is a persuasiveness hierarchy worth memorising. Evidence from outside the organisation beats evidence from inside it; what you obtain yourself beats what the client hands you; the original record beats a copy, a copy beats a summary, and a contemporaneous record beats a reconstruction. Keep that ordering in mind and you will feel the right scepticism for each artefact you are handed.
+There is no universal ranking that decides every case. Independent, contemporaneous and well-controlled records often deserve more weight, but relevance comes first. A current third-party report on the wrong service cannot answer a question about Tessera's leavers. A reliable internal event log can.
 
 ## Sufficiency and appropriateness
 
-Two words do most of the judgement work, and they answer different questions. **Sufficiency** is the *quantity* of evidence: is there enough of it to support the conclusion? **Appropriateness** is the *quality*: is it relevant to the assertion, and is it reliable?
+**Sufficiency** concerns how much evidence is needed for the conclusion. **Appropriateness** concerns its relevance and reliability. Evaluate both against the assertion, risk, period and intended reliance.
 
-Appropriateness has two halves, and students trip on the second. **Relevance** asks whether the evidence actually tests what you are trying to prove: a clean access-revocation log is irrelevant if your assertion is about badge access. **Reliability** asks whether you can trust the source: was the record produced by a system whose integrity is controlled, at or near the event, by someone without motive to distort it?
+One event may settle a narrow claim about that event. It cannot establish that the same control operated for every event in a year. Conversely, a large collection of irrelevant screenshots adds little assurance. State the population and what the evidence actually covers.
 
-The mistake is to chase one axis and ignore the other. A mountain of irrelevant evidence proves nothing, however large the pile; a single relevant item is a start but not a conclusion, because sufficiency is a property of the population, not of one match. High assurance needs both, enough of the right kind, and the craft of this chapter is deciding, control by control, how much of what kind will defend the opinion.
-
-:::: {.callout-warning title="Watch out: the evidence that isn't"}
-Three artefacts look like evidence and are not, and each sinks an audit that trusted it. A **screenshot** with no timestamp, source, or chain of custody is a picture someone made; it could be staged, old, or edited. A **self-attestation**, the manager's confident "we do that," is oral evidence, the weakest kind, and worthless uncorroborated. An **AI summary** standing in for the underlying logs is a secondary account of a primary record, and summarisation always loses the detail that decides whether a control actually ran.
-
-Then the sufficiency trap, subtler and more common. One corroborating item does not prove a control operates across a population. A single leaver whose access was revoked on time is reassuring; it is not evidence the control works for every leaver. Sufficiency asks how many, across how much, with what confidence. A single match answers none of those questions, and treating it as if it did is the same error as trusting a screenshot: mistaking the appearance of evidence for evidence itself.
-::::
+A screenshot without account, time or provenance may still be a lead. It is weak support for a deployment-specific claim. A summary can help navigate raw records; preserve and inspect the underlying records before relying on details that summarisation might omit.
 
 ## Sampling: why you cannot test everything, and how to size what you do
 
-Chapter 4 decided *where* to dig. Sampling decides *how much*. You cannot test every login, every leaver, every firewall rule across a year, so you test a defensible subset and reason about the whole from it. Done badly, sampling is a licence to miss the thing that matters. Done well, it is the most rigorous thing an auditor does, because the rigour is in the design, not the counting.
+Define the population before selecting items. For the fixed case, it is all 48 departures from 1 June 2025 to 31 May 2026, including their separately managed keys. The pack stipulates reconciliation with payroll for the exercise. In real work, obtain the independent population, inspect exclusions and reconcile identifiers yourself.
 
-The first rule, and the one most often broken, is that a sample proves nothing about a population you have not completely defined. To say something about "every leaver in the period," you need the complete list of every leaver, reconciled to a source you trust, such as payroll. A sample drawn from a convenient subset, the leavers IT happens to remember, proves something about that subset and nothing else. Population completeness comes first, always.
+For a large population, **attribute sampling** tests whether each selected item meets a defined condition. The sampling design must say how items are selected, what deviation means, how much sampling risk is accepted and how exceptions affect the conclusion. A convenience sample does not support a statistical confidence claim.
 
-For testing controls, the tool is **attribute sampling**. You are not measuring a sum of money; you are estimating a rate, the proportion of times a control deviated from its objective. The leaver's access was either revoked in the policy window or it was not, each test a yes or a no, and the sample lets you estimate the deviation rate across the whole population.
+### A numerical example
 
-Here is where the discipline bites. The sample size is not a number you feel; it is derived from three things. The **tolerable deviation rate** is how much failure you can accept and still conclude the control works: tighter tolerance, bigger sample. The **expected deviation rate** is what you think you will find: the worse you expect, the more you test. The **assurance level** is the confidence the engagement requires: certification work demands high assurance, and high assurance means a larger sample. Set those three and the size follows. Pick a round number because it sounds thorough, and you have a sample you cannot defend.
+Consider a separate, large population of similar independent events. Suppose you expect no deviations, want a zero-deviation acceptance design and choose a tolerable rate of 5%, with a one-sided sampling risk of 5%. If the actual deviation probability were 0.05, the chance of observing zero deviations in $n$ independent trials would be $0.95^n$.
+
+Choose the smallest $n$ for which:
+
+$$
+0.95^n \leq 0.05, \qquad
+n \geq \frac{\log(0.05)}{\log(0.95)} = 58.404\ldots
+$$
+
+Round up to **59**. With zero observed deviations, the one-sided exact binomial upper bound is approximately **4.95%**. This is not a claim that the control is 95% reliable or that the probability of a breach is 5%.
+
+The calculation assumes a binomial model and suitably independent representative selection. A finite population sampled without replacement requires an appropriate finite-population method; clustered events and different risks may require stratification or another design. If deviations are expected or found, this zero-acceptance example is not a complete evaluation plan. Agree the method and decision rules before drawing a sample.
+
+### Why Tessera uses a census
+
+There are only 48 leavers, and the key-coverage question is important enough to inspect each. We test **48 of 48: a census**, not a 59-item sample compressed into a smaller population. A census removes selection-based sampling uncertainty for those recorded items. It does not remove missing-population, recording, procedure or interpretation error, and it does not predict future operation.
 
 ## The five testing procedures
 
-You have your population and your sample. Now you need procedures that actually extract evidence from each item. The audit toolbox has five, rising in persuasive power as you move down the list.
+**Inquiry:** ask how a record was created and where exceptions are handled. Record what was claimed and what still needs corroboration.
 
-**Inquiry** is asking. You ask the IT operations lead how offboarding runs. Inquiry is where nearly every test begins, because it tells you where the evidence lives, and where nearly every test must not end, because what someone tells you is oral evidence, the weakest kind. "We disable accounts within twenty-four hours" is a lead, not a finding.
+**Observation:** watch an authorised control execution. Record the environment, participants and conditions; do not imply that the observed event represents an untested year.
 
-**Observation** is watching a control run: you attend an offboarding and observe the steps being performed. It proves the control operated at the moment you watched, and only that moment. It is excellent for physical and process controls and useless for anything that has to hold across the year.
+**Inspection:** examine the relevant records or assets. For revocation, establish whether an event means disablement, deletion, last use or merely a request. A key's “last used” timestamp does not prove when the key was revoked.
 
-**Inspection** is examining records and assets: the access-revocation log, the signed checklist, the CloudTrail export, the configuration file. Inspection is the workhorse of IS audit, and most of Act II is inspection done well, the right record, the right period, read sceptically.
+**Re-performance:** independently repeat a control or check, within the approved scope. Reconcile the complete leaver list with credential ownership and disable events rather than relying solely on a signed checklist.
 
-**Re-performance** is re-running the control yourself, independently. Rather than trust the reconciliation was done, you redo it; rather than trust the access review caught the orphaned account, you pull the live IAM state and look yourself. It is powerful because it does not depend on the organisation having done anything correctly: you are checking the outcome, not the report of the outcome.
+**Re-computation:** check arithmetic, such as elapsed time and exception rates. Keep timezone and boundary conventions explicit. A two-hour rule means elapsed time no greater than two hours here; a result exactly at two passes.
 
-**Re-computation** is the numeric cousin: you recompute the calculation a control is supposed to perform, whether a deviation rate, a key-rotation interval, or a backup-retention tally. It turns an assertion into a number you can verify.
-
-The order matters, because persuasive value rises as you go. An opinion built on inquiry alone is built on talk; one built on inspection, re-performance, and re-computation is built on what the evidence shows. State the control objective, pick the procedure that tests it at the assurance the engagement demands, and reach for the stronger procedure whenever the control is critical.
+These procedures answer different questions. Re-performing a calculation with incomplete inputs is not stronger than a reliable source record merely because it appears later in this list. Combine methods to address the assertion and its principal failure modes.
 
 :::: {.callout-note title="🤖 AI Field Note: AI drafts the sampling plan and the test steps"}
-This is the kind of structured work an AI drafts fluently, and so the kind you must evaluate hardest. Ask it to draft the work package for testing Tessera's access-revocation control and it returns a clean document in seconds: sampling plan, test steps, results table. Read it as an evaluator, because it is wrong in two instructive ways.
+An illustrative draft proposes “test 25 leavers, verify manager notification, and confirm that old accounts are disabled today.”
 
-First, the sample size. The AI proposes "test 25 leavers." A round, confident number with no basis. It carries no population, because the AI never asked how many leavers there were, and no tolerable deviation rate, expected rate, or assurance level, because it never fixed them. The number was chosen for how it reads, not derived from what the opinion requires. Your correction is to set the parameters the AI skipped: the complete HR leavers list as the population, a tight tolerable deviation rate, a low expected rate, and the high assurance a certification engagement demands. The derivation lands higher than twenty-five, and against a small population backing a control this critical, the defensible answer may be to test all of them. The AI picked a number. You derived one.
+The sample has no stated design. E04 is small enough for a census. Manager notification has no supplied event record and is not the revocation criterion. A current-state check cannot establish a past disable time. Replace the steps with an ID reconciliation, inspection of both credential families and elapsed-time calculations against both historical policies.
 
-Second, the test steps. The AI drafts three. "Verify that access was revoked within twenty-four hours of the leaver's last day." Performable, if the revocation timestamps exist, and they do. "Confirm the leaver's manager was notified within the policy window." Not performable: Tessera produces no record of that notification, so the step collapses into pure inquiry and proves nothing. "Determine whether the leaver still holds production access." Conflates *now* with *then*. For a departure three months ago, you cannot observe the state on their last day from a current snapshot; you depend on the historical audit trail, not a live check. The AI wrote steps that read as tests. Two of the three cannot be executed as written.
-
-The AI produced the draft quickly and well-structured, and that is the trap. The sample size was a guess dressed as a method; the test steps were plausible sentences that do not survive contact with the evidence Tessera actually keeps. You supplied the parameters, rewrote the steps to what the trail can support, and turned a generic work package into one that will hold up under review. That is the drafter-to-evaluator shift, on the artefact that matters most in this chapter.
+The correction is checkable from the pack; no forecast about how every model behaves is needed.
 ::::
 
 ## Chain of custody
 
-Evidence you gather has to survive challenge, sometimes years later, in a certification review, a board meeting, or a regulator's inquiry. That survival depends on chain of custody: a complete, defensible record of who collected what, when, from where, by what method, and what happened to it afterwards. An extract with no provenance is just a file someone made, and "someone made a file" is not a basis for an opinion.
+Record who obtained each item, when, from which system and by what query or export. Retain timezone, filters, permissions and transformations. Preserve the original and work on a controlled copy. Log transfers and restrict access according to the engagement's retention policy.
 
-The mechanics are unglamorous and non-negotiable. Every extract gets a hash, typically SHA-256, recorded at capture so any later alteration is detectable. Copies are read-only. Each artefact carries its source system, the query or export that produced it, the date and time in a clear timezone, and the name of the auditor who took it. Transfers between people, the log moving from the analyst who pulled it to the lead who filed it, are themselves logged. The whole chain is sealed into the working papers, and another auditor following them should be able to trace every conclusion back to a specific artefact captured on a specific day.
+A SHA-256 digest can detect a change relative to the recorded digest. It cannot tell you whether the original extract was truthful, complete or collected by the claimed person. Protect the manifest as well as the files. A digest invented for an illustration is not a reproducible checksum.
 
-I learned this the hard way. The first time full access landed, I went straight for the logs and forgot to record how I got them. Three weeks later a reviewer asked where a particular extract had come from, and I could not say. The extract was fine. Its provenance was gone. An evidence extract with no provenance is not evidence; it is an unsupported claim, which is exactly what we refuse to accept from the client. The discipline cuts as deep for us as it does for them, and it should.
+The book's source provides full checksums for its electronic teaching records. Those are packaging-integrity checks, not forensic provenance. For E04, use the manifest's synthetic-source description and capture date; do not record the author as a real-world auditor who extracted an actual client log.
+
+### One reproducible working paper
+
+For **L007**, termination is 9 January at 16:00 AWST. Identity access was disabled at 17:00 that day. The separate key was disabled on 25 February at 16:00: **47 days = 1,128 hours** later. The latest disable event determines full revocation. It exceeds both P-IT's 24-hour and P-HR's two-hour historical deadlines.
+
+For **L044**, the key delay is six hours. It passes P-IT and fails P-HR. That is why silently choosing the less demanding policy changes the result.
+
+For the full population, three records exceed 24 hours: L007, L019 and L031. Four exceed two hours: those three plus L044. Record **3/48 = 6.25%** and **4/48 ≈ 8.33%**, each with its criterion. These are observed deviations in the supplied historical population, not probabilities of misuse or a future breach.
 
 ## Auditing AI: can you trust a log an AI produced?
 
-This is the question earlier chapters promised to take up in full, and full access is where it lands. Tessera runs AI in two places inside the boundary you drew in Chapter 4: a support assistant that triages alerts, and an anomaly detector in the logging stack. Both were named as evidence gaps at the close of Act I. Both now produce logs, and the question is whether those logs count as evidence you can stand behind.
+Distinguish a deterministic event recording that a model was called from the model's generated account of what happened. A generated summary may omit, misstate or infer details. Compare it with the original event, the action actually taken and any downstream state change.
 
-Take the assistant. When it auto-resolves a low-priority alert, the log entry recording the resolution is, in a real sense, AI-produced. Can you trust it? Treat it as any system log, then add a layer. A log's reliability always depends on the controls over how it was generated, but an AI's record of its own action has a failure mode a deterministic system's log does not: it can confabulate, truncate, or summarise away the detail that would tell you whether the action was correct. The tidy "alert reviewed, no action required" may faithfully record a sound decision, or paper over a misjudgement; you cannot tell from the summary. Corroborate against the underlying system's own raw audit trail, the original alert event and the downstream actions, and treat the AI's log as one account among several, not the account of record.
+To evaluate an AI-assisted alert decision, define the desired decision, relevant classes and an independently reviewed reference set. Preserve uncertain labels and disagreements. Measure missed incidents as well as false alarms; a high overall accuracy can conceal failure on rare serious cases. Record model/version, configuration, period and operating context.
 
-Now the harder question, the one Chapter 5 raised: how do you test a control that an AI runs? The assistant triaging alerts is itself a detective control, and testing whether it *operates* means measuring its decisions against ground truth. Did it escalate what it should have? Auto-close what it should not have? That needs a labelled set, a sample of alerts where you know independently what the right outcome was, so you can measure the assistant's deviation rate the way you measure any control's. The five procedures apply: inquire how it was tuned, observe it on a live alert, inspect its decision log, then re-perform by re-judging the cases yourself against the labels. Re-performance, for an AI-run control, is exactly the drafter-to-evaluator posture this book argues for: the machine decided, and you are the evaluator who decides whether the decision holds.
-
-The conclusion is steadier than the anxiety around AI usually allows. You can audit a control an AI runs, and use evidence an AI helped produce, on one condition: never let the AI's account of itself be the only account. Corroborate against the raw trail, test its decisions against ground truth, and treat its summaries as leads to the primary evidence rather than the primary evidence itself. An AI's log is admissible. It is not self-authenticating.
+The fixed pack does not supply an alert-evaluation dataset, so it supports no conclusion about Tessera's anomaly detector. Treat this as a method extension. Do not add a successful AI-control test to the final opinion unless the underlying inputs and results exist.
 
 ## Interviewing for evidence
 
-Interviews are oral evidence, the weakest kind alone, and also where almost every stronger kind begins. The skill is running them so they open doors instead of closing opinions.
+Prepare from the objective. Ask an open process question, then request an example and its record. “Walk me through the last contractor departure” is more useful than a question that supplies the desired answer.
 
-Prepare before you sit down. Know the control objective you are testing and the evidence you seek. Ask open questions: not "do you revoke access within twenty-four hours," which invites the answer you want, but "walk me through what happens when someone leaves." Let silence do the work; people fill it, and what they fill it with is often the detail that matters.
+Keep three columns: claim, record requested, corroborated result. Differences between accounts can reflect scope, dates, memory or process variation. Investigate them rather than deciding in advance which person is evasive.
 
-The rule that turns an interview into an audit: never accept "we do that" without the record. Every claim about a process is a hypothesis until you produce the artefact that proves it. "Show me the last three times this ran" is the sentence that converts an attestation into a test. When the head of people says offboarding is always completed, ask for the last three checklists; when the SRE says privilege elevation is time-boxed, ask for the elevation log. Note where the claim and the record diverge: that is where the findings live.
-
-Corroborate across interviewees. The IT operations lead and the head of people should describe the same offboarding in compatible terms. Where their accounts differ, one describes aspiration and the other practice, and the documents will tell you which. A good interview produces leads. The records produce the conclusions.
-
-Run the interview as structured elicitation, not a conversation left to find its own shape. Before you sit down, fix three things: the control objective you are testing, the evidence each answer should point you toward, and the questions that will get you there in an order that does not telegraph the answer you want. An interview guide is not a script. It is a map of what you need to leave the room with, and writing one is how you find out whether you actually know what you are looking for before the witness starts talking. Work from the general to the specific: open the process wide, then close in on the moments where the records live. Every answer either produces a lead to an artefact or exposes a gap, and you note which before you ask the next question.
-
-## Difficult conversations
-
-Not every witness is cooperative, and the cooperative ones are not always the danger. The interviews that test you are the ones where the witness has a reason not to hand you the record, and that reason is usually where the finding lives. Four archetypes recur, and each asks for a different move.
-
-The *confident reciter* talks you through the process as it should run, fluently and at length. Everything they describe is correct on the page. The move is the same sentence every time: *show me the last three times this ran.* Confidence is not evidence, and a witness who can describe the policy perfectly but cannot point you to the artefact is describing aspiration.
-
-The *technical expert* knows more about their system than you do, and knows it. They will answer a question you did not ask, drown the specifics in context, and leave you feeling you understood something without having tested it. Do not compete on their ground. Return to the control objective, restate it plainly, and ask for the record that proves the control operates: the log, the configuration, the exception report. The expert's account of the system is a lead. The system's own records are the test.
-
-The *defensive witness* reads every question as an accusation and answers the smallest version of it. *We take that very seriously* is the tell. Pushing harder closes the door. The move is to lower the stakes and narrow the ask: not *is your offboarding secure*, but *where does the revocation get logged, and can I see one.* Give them a question they can answer with a file rather than a defence, and most will.
-
-The *evasive witness* has something to hide, or believes they do, and offers technically true answers that miss the point. This is where corroboration does the work you cannot do in the room. Do not corner them. Take their account, then check it against a second interviewee, a log, or a system export. Inconsistency is evidence of a kind no single interview can produce, and the divergence between two accounts is often the most honest thing either witness tells you.
-
-The rule across all four: never let the conversation become the finding. A difficult interview that ends in frustration has still done its job if it pointed you at a record or surfaced a gap between two accounts. Your opinion is built on what the evidence shows, not on who sounded most convincing in the room.
-
-## Rehearsing against simulated witnesses
-
-These are skills you cannot learn by reading about them, and they are awkward to rehearse on real colleagues or real clients. The Tessera companion site gives you a third option. Its staff, the head of people, the IT operations lead, the SRE, the privacy officer, are simulated witnesses with personalities, biases, and things they would rather you did not find. They are not a search box. Talk to them as you would a person across a desk.
-
-Use them to rehearse the moves this chapter teaches. Open with the broad question and let the answer breathe. Try the silence after a confident claim and watch what the witness fills it with. Run *show me the last three times this ran* against the head of people on offboarding, and see whether you get a checklist or a description of one. Practise the difficult-conversation moves: narrow the ask with the defensive witness, return to the record with the technical expert, and corroborate the evasive one's account against a second staff member or a document on the site. The red herrings are there on purpose. Some staff will point you at artefacts that look like evidence and are not, and learning to spot that in practice, before you meet it in the field, is half the point.
-
-One distinction matters, because the two tasks are easy to confuse. Interviewing a Tessera staff chatbot is rehearsing the human skill of talking to a witness. Using a general LLM as a thinking partner to prepare that interview, drafting your guide and pressure-testing your questions, is a different task, and it is the subject of *Conversation, Not Delegation*. Do both, but do not mix them. A chatbot playing a witness is not the same tool as a chatbot helping you think, and treating them as one flattens the practice you came for.
-
-::: {.tessera-case}
-**🗂️ Tessera Case: A sampling plan and a chain-of-custody log for access revocation**
-
-The artefact for this chapter is the test that closes the single most important gap Act I named: confirmation that the access-revocation control operates for every leaver. The control spans A.6.5 (responsibilities after termination or change) and A.8.3 (information access restriction), and its objective is testable: *for every leaver in the period, all logical access to Tessera systems is revoked within twenty-four hours of the last working day, and the revocation is logged.*
-
-The **population** is every leaver in the twelve-month period, sourced from the complete HR list and reconciled against payroll to confirm completeness. There are forty-eight. The **sample** is derived, not chosen: a tight tolerable deviation rate, a low expected rate, and the high assurance the engagement demands. Against forty-eight leavers backing a control this critical, the defensible answer is to test all of them, because sampling a fraction and extrapolating buys little when the whole population is small enough to test in full.
-
-The **procedure** runs per leaver: inspect the HR termination record for the last working day, inspect the IAM and single-sign-on audit logs for the revocation event, recompute the elapsed time, and flag any deviation over twenty-four hours. For every deviation, inquire for the cause and corroborate against the offboarding checklist.
-
-Every artefact the test touches enters a chain-of-custody log. A representative slice:
-
-| Artefact | Description | Source | Captured | By | Hash (prefix) |
-|---|---|---|---|---|---|
-| EVD-07-01 | HR leavers list, full period | HR system export | 2026-06-15 09:12 AWST | M. Borck | `3f9a…` |
-| EVD-07-02 | IAM revocation log, leaver A | AWS CloudTrail | 2026-06-15 09:41 AWST | M. Borck | `b1c7…` |
-| EVD-07-03 | SSO session log, leaver A | Identity provider | 2026-06-15 09:46 AWST | M. Borck | `8e2d…` |
-| EVD-07-04 | Offboarding checklist, leaver A | HR document store | 2026-06-15 10:03 AWST | M. Borck | `4a55…` |
-
-Each row is one extract, hashed at capture and sealed into the working papers. When the test finds forty-five of forty-eight revocations inside the window and three outside, that finding is traceable, leaver by leaver and artefact by artefact, back to the records that produced it. That traceability is what makes the conclusion defensible rather than merely asserted. You can run the same test against the live companion site at tessera.locoensayo.org.
-:::
+The [interview guide](../appendices/e-interview-guide.qmd) provides a paper dialogue and optional live-site route. A difficult conversation is not proof of a defective control. A fluent answer is not proof of a sound one.
 
 ::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Engagement milestone 7)"}
-Act II’s locker stops being narrative and becomes working papers in earnest. Lock in three things this chapter.
-
-First, a **sampling plan** for one Tessera control of your choosing: the population defined and reconciled for completeness, the control objective stated as a testable assertion, the tolerable and expected deviation rates and the assurance level stated explicitly, and the sample size *derived* from them rather than chosen. Second, a **chain-of-custody record** for every artefact the test touches: artefact, source, capture time, extractor, hash. Third, an **interview-notes template** that separates, on every line, what the interviewee *claimed* from what you subsequently *corroborated*, so that aspiration and practice never blur on the page.
-
-These three are not exercises. By the final chapter they are the spine of your working papers, and the discipline they enforce, sufficiency derived not assumed, custody recorded not implied, claims corroborated not trusted, is what makes an opinion defensible. Before you run any of them against a control that counts, rehearse the interview on the Tessera staff chatbots: a witness you fumble in front of costs you nothing, and one you fumble in the field can cost you the finding.
-::::
+**Time: 35 minutes. No AI or code required.** Test all 48 E04 rows. Retain the population definition, policy-specific result counts, four exceptional IDs, a full L007 calculation and a provenance note. Separately reproduce the 59-item sampling example with a calculator, or explain its assumptions from the worked calculation. Label the actual case test a census.
+:::::
 
 ## The question, answered
 
-Can we substantiate our suspicions? Yes, when the evidence is sufficient in quantity and appropriate in quality, gathered under a chain of custody that survives challenge, and tested by procedures strong enough to prove operation rather than existence. Act I left you with suspicion, calibrated and named. Act II gives you the means to convert it, item by item, into proof. The access-revocation control is no longer a promise on a page. It is forty-eight tested log entries, each traceable to a hashed extract captured on a known day, and the deviation rate they reveal is a number you can defend.
-
-That is the shift this chapter enacts, and the shift the rest of Act II runs on. The polished policy meets its operational reality, and every suspicion you earned in Act I either hardens into evidence or dissolves. The evidence has started to speak. The question now is whether the policy behind the controls was ever any good, because a control can run perfectly and still serve a policy whose intent has drifted from its operation.
-
-The next chapter turns the question from *can you prove it works?* to *does the policy itself hold up?* The question is **Comply?**
+A supported result states what was tested, what the records show and what remains uncertain. The next chapter uses these results to assess policy compliance and review coverage.
 
 ## Take it to the AI
 
-**Where to start.** Three questions worth arguing about rather than looking up:
+Optional, after the paper test:
 
-1. Ask the AI for a sample size, then ask where the number came from. If it cannot name a population, a tolerable deviation rate, an expected rate and an assurance level, it guessed and dressed the guess as a method.
-2. Ask it to write test steps for a control you know well, then check each step against the records the organisation actually keeps. Plausible steps that cannot be executed are the common failure, not wrong steps.
-3. Ask whether an AI-produced log counts as evidence. Push until it separates admissible from self-authenticating, because those are different claims.
-
-**Keywords to steer with.** observational, documentary, analytical and oral evidence · persuasiveness hierarchy · sufficiency · appropriateness · relevance and reliability · population completeness · attribute sampling · tolerable deviation rate · inquiry, observation, inspection, re-performance, re-computation · chain of custody · hashing at capture
-
-**A starting prompt.**
-
-> **Role:** You are a senior auditor reviewing a junior's test work package before it is executed.
+> **Role:** Review a trainee's audit calculation.
 >
-> **Task:** Take apart my sampling plan and test steps. Tell me which steps cannot be performed against the records the organisation actually keeps, and why.
+> **Task:** Check whether a proposed sample and conclusion follow from the supplied facts.
 >
-> **Context:** I have read a chapter on evidence types, sufficiency and appropriateness, attribute sampling, and the five testing procedures. My control objective is [state it]. My population is [state it and how I established completeness]. My proposed sample size is [state it, and its derivation or admit there is none]. My test steps are: [list them].
+> **Context:** The complete fictional population contains 48 leavers. Three exceed 24 hours; four exceed two hours. All 48 were tested. A draft says “a statistically derived sample proves a 6% chance of a future breach.”
 >
-> **Format:** For the sample, say whether the size is derived or guessed and what it should be. For each step, say whether it is performable, which of the five procedures it actually is, and give the rewritten version. End with the strongest procedure I am not using and should be.
+> **Format:** Identify each unsupported claim, correct the arithmetic and give a bounded two-sentence conclusion. Use no additional case facts.
+
+Check that the response separates census, historical deviation and future incident risk. A correct calculation still needs the source records behind it.

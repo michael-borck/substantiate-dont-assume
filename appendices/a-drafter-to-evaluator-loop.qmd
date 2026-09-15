@@ -1,34 +1,30 @@
 # The Drafter-to-Evaluator Loop
 
-This is the one-page reference for the habit the AI Field Notes build, chapter by chapter. It is not a prompting manual. For the craft of conversing with AI in general, read the companion, *Conversation, Not Delegation*. This is the audit-specific loop: how you use AI to draft the technical work, and then supply the judgement the machine cannot.
+Use this optional method when an AI draft helps. The Evidence Locker can also be completed without a model. The [companion book](https://michael-borck.github.io/conversation-not-delegation/) develops the conversation method further.
 
 ## The loop, in five moves
 
-1. **Set the specific context.** Give the model Tessera's reality, not a generic one: a multi-tenant SaaS on AWS, the customer contract, the regulatory regime, the population. A generic prompt earns a generic answer, and a generic answer has no edge.
-2. **Take the draft, not the answer.** Expect a first cut that is confident, well-structured, plausible, and probably wrong in the places that matter. It is the start of the work, not the end of it.
-3. **Probe the silent failure and the unattributed number.** Ask: *how would this control fail quietly? where did this rating, sample size, or RTO come from?* The model reaches for defaults that read well. Make it show its working, then check that working.
-4. **Hunt the confabulation.** Test every control number, legal clause, framework mapping, and compliance claim against the actual standard, the actual law, and the actual population. The model is fluent, not careful.
-5. **Supply the judgement.** The rating, the root cause, the consequence, and the opinion are yours. The machine drafts; you decide, you evidence, and you sign.
+1. **Define the task and permitted inputs.** State the criterion, population, period and intended output. Use fictional exercise records unless the actual data and tool have been authorised.
+2. **Obtain a draft.** Keep the prompt, model/version if available and the supplied evidence. Label the output as a draft, not a verified result.
+3. **Check the reasoning.** Recompute numbers and trace material claims to their source. Ask where a missing input affects the conclusion.
+4. **Resolve discrepancies.** Correct unsupported claims, retain sound work and preserve unknowns. Do not require disagreement if the draft is supported.
+5. **Approve and retain.** Record your final judgement, changes and limitations. The responsible person reviews the evidence; the tool does not assume that accountability.
 
-Run this every chapter and AI stops being a shortcut and becomes a force multiplier. That is the whole argument of the book, in working form.
+## Failure modes to check
 
-## Failure modes to hunt for
+| Possible error | Check |
+|---|---|
+| Generic objective | Name the actual boundary, criterion and observable outcome |
+| Incorrect mapping | Verify the source category and distinguish partial overlap from equivalence |
+| Unsupported sample | Record selection method and assumptions; distinguish a census |
+| Operation inferred from policy | Request the record of performance |
+| Wrong legal shortcut | Establish jurisdiction, facts, exceptions and qualified review |
+| Plausible but unsupported cause | Corroborate the mechanism or mark it provisional |
+| Default recovery target | Use the approved service criteria and BIA |
+| Invented closure | Require the actual retest population, results and limitations |
 
-The same handful of errors recur across the engagement. When the AI drafts, read specifically for these.
+The chapter Field Notes are illustrative teaching drafts, not measured transcripts of a particular model. They show errors worth checking for without asserting that every model makes them.
 
-| Failure mode | What it looks like | First seen |
-|---|---|---|
-| Generic examples | Controls and risks that describe every company | Ch 1 |
-| Stale standards | 2013 Annex A control numbers cited as 2022 | Ch 3 |
-| Invented entries | A mapping or control that exists in neither framework | Ch 3 |
-| Round-number samples | "Test 25 leavers" with no derivation | Ch 7 |
-| Compliance from design | "Reviews appear to be conducted," inferred from policy quality | Ch 6 |
-| Wrong-jurisdiction law | EU Standard Contractual Clauses offered for an Australian context | Ch 9 |
-| Symptom as cause | "Insufficient process adherence" reported as the root cause | Ch 11 |
-| Unattributed defaults | RTO and RPO copied from training data as if universal | Ch 10 |
+## A two-sided check
 
-None of these announce themselves. They look like good work, and that is exactly why the evaluator, not the drafter, signs the opinion.
-
-:::: {.callout-tip title="Try this: run the loop on your own draft"}
-Take any AI-generated item in your Evidence Locker and put it through the five moves. Anywhere you cannot defend a line, that line is not yet yours. Fix it before it reaches the opinion.
-::::
+Check the draft for excessive reassurance and excessive suspicion. “All six leavers passed” is unsupported when R06 lacks an event. “R06 is definitely still active” is also unsupported. A careful result preserves the distinction between a missing record and a demonstrated failure.

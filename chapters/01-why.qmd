@@ -5,7 +5,7 @@
 ::: {.tessera-case}
 **🗂️ Tessera Case: The engagement opens**
 
-The email arrives on a Monday. Tessera's CTO, racing toward an enterprise deal that requires ISO/IEC 27001 certification, has engaged your firm for a certification-readiness audit. The tone is confident: "We're pretty much there, we just need the paperwork signed off." That sentence is your first piece of evidence, and it is not the one the CTO thinks it is. An organisation that believes it is "pretty much there" is an organisation that has not yet tested whether it is. Your engagement opens with a question, not an answer: *why does Tessera need this audit, and why should they trust the person delivering the opinion?*
+The email arrives on a Monday. Tessera's CTO, racing toward an enterprise deal that requires ISO/IEC 27001 certification, has engaged your firm for a certification-readiness audit. The tone is confident: "We're pretty much there, we just need the paperwork signed off." That sentence records management's expectation. It is not evidence that controls work or fail. Ask what assessment supports it, and keep both possibilities open. Your engagement opens with a question, not an answer: *why does Tessera need this audit, and why should they trust the person delivering the opinion?*
 :::
 
 ## The auditor's mandate
@@ -32,7 +32,7 @@ The three hats share one requirement: whichever you wear, your judgement has to 
 
 An audit opinion is only worth what the auditor's independence is worth. If the opinion can be bought, pressured, or quietly shaped by self-interest, it is worthless, and everyone who relies on it is misled.
 
-**Independence** is the *fact* of being free from relationships and interests that could compromise the opinion. **Objectivity** is the *state of mind*: the discipline to judge evidence on its merits, without bias, even when the answer is inconvenient. Independence is something an outsider can check; objectivity is something only you can guarantee, on every engagement, every day.
+**Independence** is the *fact* of being free from relationships and interests that could compromise the opinion. **Objectivity** is the *state of mind*: the discipline to judge evidence on its merits, without bias, even when the answer is inconvenient. Independence is something an outsider can check; objectivity needs active safeguards and review throughout the engagement.
 
 The profession catalogues the threats so you can spot them.
 
@@ -71,13 +71,11 @@ Most real defences are a chain of all three, because no single control is reliab
 ::: {.tessera-case}
 **🗂️ Tessera Case: Where Tessera's hats show**
 
-From the outset of the engagement you wear all three hats at once. As **counsellor**, you walk Tessera’s CTO through what ISO/IEC 27001:2022 actually requires, and watch the confidence drain when “pretty much there” meets “93 controls across four themes.” As **partner**, you agree how the engagement will run and what access you will get (limited, for now). As **investigator**, you file away the CTO’s opening claim (“we’re basically ready”) as the first assertion the evidence will later confirm or refute. Every chapter from here tests that claim a different way.
+From the outset of the engagement you wear all three hats at once. As **counsellor**, you explain the management-system requirements and how necessary controls are selected and justified. Annex A's 93 controls are a reference set, not an undifferentiated mandatory checklist. As **partner**, you agree how the engagement will run and what access you will get (limited, for now). As **investigator**, you file away the CTO’s opening claim (“we’re basically ready”) as the first assertion the evidence will later confirm or refute. Every chapter from here tests that claim a different way.
 :::
 
 :::: {.callout-note title="🤖 AI Field Note: Exploring the control categories"}
-Ask an AI to "explain preventive, detective, and corrective controls with examples for a SaaS company on AWS." It will give you a competent, well-structured answer in seconds, and that is exactly the trap. The examples will be *generic*: "firewall rules," "log monitoring," "incident response plan." Correct, and useless, because they describe every company.
-
-This is where you, the auditor, add the variation the machine cannot. Push back: "Give me a *preventive* control specific to a multi-tenant SaaS where customers configure their own IAM roles, and tell me how it would fail silently." Now the answer has to engage with Tessera's reality, not a textbook. The AI's first cut was a draft; your refinement is the work that matters. You have just done, in miniature, the drafter-to-evaluator shift the Introduction described.
+An illustrative draft labels a scheduled access review “preventive because it stops former staff logging in.” The label depends on the mechanism. A periodic review detects inappropriate access; subsequent removal corrects it. An automatic disable at termination prevents later use of that credential. Write the mechanism and the evidence you would inspect before choosing a category. A model's label, correct or otherwise, does not perform that analysis for you.
 ::::
 
 :::: {.callout-important title="🔍 Auditing AI: Can an AI be independent?"}
@@ -90,30 +88,16 @@ So can an AI deliver an audit opinion? It can *produce* one. It cannot *stand be
 Open your Evidence Locker with the engagement's foundation. Record: the **mandate** (who engaged you, against what criteria, to deliver what opinion); the **independence threats** you identified for this engagement and the **safeguards** applied; and your one-line restatement of Tessera's opening claim, the assertion the rest of the engagement will substantiate or refute. This is not note-taking. It is the first entry in a defensible audit trail.
 ::::
 
-## The question, answered
+## From mandate to evidence
 
-Why does Tessera need an audit? Because certification, customers, and a board all need a credible opinion they cannot give themselves, and because the people inside Tessera already suspect the gaps. Why should they trust *you*? Because your mandate is clear, your independence is real, your ethics are not for sale, and your discipline is to substantiate every conclusion with evidence rather than assume it.
+[E01 in the fixed pack](../appendices/b-case-pack.qmd) defines this as a readiness assessment. An internal audit evaluates the organisation's own management system; a readiness assessment prepares for an external process; a certification body conducts its own audit and makes its own certification decision. Their roles and independence requirements cannot be treated as interchangeable.
 
-That is the audit mindset, stated. The next eleven chapters enact it, one question at a time, until the polished policy has met its evidence and you have formed an opinion you can defend.
+Here is a first working paper. **Criterion:** P-IT requires full access revocation within 24 hours. **Evidence requested:** a dated termination record, all credential ownership records and disable events. **Test:** reconcile identities and recompute elapsed time. **Possible conclusions:** met for the tested record, exception, or insufficient evidence. A signed policy alone establishes none of those operating results.
 
-The next chapter opens the first real question: *what could go wrong, and how do we measure it?*
+## Practice: accept the mandate?
 
-## Take it to the AI
+**Time: 15 minutes. No AI required.** Read E01. Write a 150-word acceptance note naming the engagement type, subject, criteria, reporting limit and the analyst's self-review threat. State a safeguard and the condition under which you would decline. Add it to milestone 1.
 
-**Where to start.** Three questions worth arguing about rather than looking up:
+**Check:** your authority must stop short of certification and unauthorised production testing. A team change must prevent the analyst assessing their own integration; simply declaring the relationship is insufficient. [Answer checks](../appendices/c-answer-checks.qmd) give the common standard for the locker.
 
-1. Ask the AI to argue that an internal auditor can be independent, then that they cannot. Watch whether it keeps independence (a fact) and objectivity (a state of mind) separate, or quietly merges them.
-2. Describe a real independence threat from your own working life and ask what safeguard would be sufficient. Then ask what would make it decline the engagement instead. The second answer is the harder one, and the profession turns on it.
-3. Ask it to make the case for inviting an audit to a founder who sees it as pure cost. Then ask which of those arguments would survive a bad quarter.
-
-**Keywords to steer with.** mandate · criteria · subject matter · assurance engagement · independence in fact and in appearance · objectivity · self-review threat · familiarity threat · ISACA Code of Ethics · safeguards · preventive, detective and corrective controls
-
-**A starting prompt.**
-
-> **Role:** You are an audit partner deciding whether your firm should accept an engagement.
->
-> **Task:** Interrogate me about a proposed engagement until you can tell me whether to accept it, decline it, or accept it with safeguards.
->
-> **Context:** I have read a chapter on the auditor's mandate, the three hats, independence and objectivity, and the ISACA code. Ask one question at a time and do not offer a conclusion until you have asked at least six.
->
-> **Format:** One question per turn. At the end give your recommendation, the specific threats you identified, the safeguard you would apply to each, and the one condition that would make you walk away.
+The next chapter develops the risk priorities behind the programme.

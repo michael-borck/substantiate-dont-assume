@@ -1,0 +1,37 @@
+# Interview guide and optional live practice {#sec-interview-guide}
+
+The main Evidence Locker is fully solo. Use this guide to practise interviewing without treating personality as a control test.
+
+## Prepare a bounded question
+
+Write the objective, the period and the record you need. Begin with an open question, then narrow it to an event. Give the interviewee time to identify the right system or person. Avoid supplying the answer in the question.
+
+For example: “Walk me through how a contractor's separately owned keys are handled at departure. Which record shows the last completion?” Keep claim, requested record and corroborated result separate.
+
+## Difficult conversations
+
+A fluent recitation may describe policy accurately without establishing practice. Ask for a dated example. A technical explanation may be relevant; restate what you understood and ask which record supports the particular claim. A hesitant or defensive response may reflect stress, unclear scope, accessibility needs or fear of blame. Clarify the purpose and narrow the request. None of these behaviours establishes dishonesty or a failed control.
+
+If accounts differ, compare periods, populations and roles before alleging a contradiction. Record both accounts fairly and seek corroboration. An unresolved inconsistency belongs in the working papers as unresolved.
+
+## Paper rehearsal: the missing event
+
+The following dialogue is fictional. Cover the review note until you have written your next question.
+
+**Reviewer:** “How do you know the new leaver process completed for R06?”
+
+**IT lead:** “The checklist is signed. The new job should revoke everything.”
+
+**Your turn:** write a question that requests the missing evidence without accusing the person or assuming the key remains active.
+
+**Review note:** a useful question is, “Which event or independent record links R06's key to its disable time? Can you show the job result and how the checklist was allowed to close?” If no record can be produced, E10 remains inconclusive. The interview answer cannot be upgraded to six verified passes.
+
+**Second turn:** the lead replies, “I can get a current state screenshot.” Explain what it could establish and what it would not. Current disabled state can support containment; it does not establish the historical disable time or deadline compliance.
+
+## Optional Tessera site route
+
+The [live Tessera interview portal](https://tessera.locoensayo.org/chatbots/index.html) is a separate, changing exercise. Record the URL, retrieval date and conversation context. Chatbot responses are simulated testimony and may be inconsistent or unavailable. Do not assume they reproduce SDA-2026.1.
+
+Use only fictional material. Do not send real client evidence or personal information. If the service is unavailable, the paper dialogue above covers the core interview skill; no assessment depends on a model response.
+
+A model used to help prepare questions is a drafting aid. A model playing a witness is an exercise character. Keep those roles distinct, and verify both against the applicable exercise inputs.

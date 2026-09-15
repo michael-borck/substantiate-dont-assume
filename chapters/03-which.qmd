@@ -5,16 +5,16 @@
 ::: {.tessera-case}
 **🗂️ Tessera Case: "Why can't we certify against everything?"**
 
-The board meeting runs long. Tessera's CTO has the slide up: ISO/IEC 27001, NIST CSF, the ASD Essential Eight, SOC 2, PCI DSS, a privacy overlay. "We're a SaaS company serving enterprise and government customers," she says. "Surely more badges is more trustworthy. Why not certify against all of them?" It is a reasonable question from a reasonable person, and it is exactly the wrong instinct. Your answer is not "pick one." It is "pick the right one, and use the rest as cross-checks." The whole meeting turns on why that distinction matters, and it sets the criteria every later chapter in this engagement will be measured against.
+The board meeting runs long. Tessera's CTO has the slide up: ISO/IEC 27001, NIST CSF, the ASD Essential Eight, SOC 2, PCI DSS, a privacy overlay. "We're a SaaS company serving enterprise and government customers," she says. "Surely more badges is more trustworthy. Why not certify against all of them?" It is a reasonable question from a reasonable person, and it is exactly the wrong instinct. Your answer separates the requested certification from other binding obligations and optional cross-checks. The whole meeting turns on why that distinction matters, and it sets the criteria every later chapter in this engagement will be measured against.
 :::
 
 ## Frameworks are tools, not trophies
 
 Before you choose, get clear on what these things actually are. A framework is a structured set of expectations: what good looks like, organised so an organisation can find its gaps and an auditor can test against them. They differ in scope, in origin, and, crucially, in what you can *do* with the result.
 
-Some frameworks are **certifiable**. ISO/IEC 27001 is the canonical example: an accredited body audits you against it and issues a certificate the market recognises. Certifiable frameworks are scarce and valuable precisely because the opinion behind them is independent and repeatable. Anyone can claim compliance; only a certified body can back the claim.
+Some frameworks are **certifiable**. ISO/IEC 27001 is the canonical example: an accredited body audits you against it and issues a certificate the market recognises. Certifiable frameworks are scarce and valuable precisely because the opinion behind them is independent and repeatable. An accredited certification body can issue accredited certification within its scope. Other assurance engagements have different mandates and reporting rules.
 
-Others are **assessment or maturity frameworks**. NIST CSF and the ASD Essential Eight live here. You can score yourself against them, an assessor can rate your maturity, and the result is genuinely useful. But there is no certificate to hang on the wall. They describe posture, not proof.
+Others are **assessment or maturity frameworks**. NIST CSF and the ASD Essential Eight live here. You can score yourself against them, an assessor can rate your maturity, and the result is genuinely useful. These are not ISO-style certification schemes. An assessment against their outcomes can still be evidence-based; its report should state scope, method and limitations.
 
 This distinction is the source of the board's confusion, and it is worth naming out loud in the room. "More badges" only counts if the badges are the kind procurement teams and regulators actually ask for. For Tessera, chasing ISO/IEC 27001 is not a stylistic choice; it is the answer to a specific business question, and the other frameworks answer different questions. Your job in that meeting is to choose the framework that answers the question you are actually being asked, then explain why the rest come along for a different reason.
 
@@ -39,31 +39,41 @@ The NIST Cybersecurity Framework takes a different cut through the same problem.
 
 **Govern, Identify, Protect, Detect, Respond, Recover.**
 
-The newest of these, **Govern**, is the headline change in CSF 2.0 (released in 2024), and it is the one that matters most to an auditor. The older version treated governance as something that lived outside the framework. Version 2.0 puts it squarely inside, recognising that the technical functions fail when nobody owns the decisions. Governance is where accountability, risk appetite, policy, and oversight live, and pulling it out of the wings and onto the stage is the single most consequential revision in the update.
+The newest of these, **Govern**, is the headline change in CSF 2.0 (released in 2024), and it is the one that matters most to an auditor. CSF 1.1 already included governance under Identify. Version 2.0 elevates it to its own function, as [NIST's change summary](https://www.nist.gov/cyberframework/faqs) explains. Governance is where accountability, risk appetite, policy, and oversight live, and pulling it out of the wings and onto the stage is the single most consequential revision in the update.
 
 CSF is not certifiable, and that is a feature rather than a limitation. It is a *communication and orientation* framework. You use it to explain posture to a board, to map what you have, to spot whether your coverage is lopsided (heavy on Protect, thin on Detect, say). For an auditor it is an excellent cross-check because it asks a question ISO 27001's themes do not: *do you cover the full lifecycle, from understanding what you have through to recovering when it breaks?*
 
-One warning that catches people out: CSF is not a control catalogue. It is functions, then categories, then subcategories that *reference* other standards. It points at controls rather than containing them. That is why it pairs so well with ISO 27001, and why using it *instead of* a control standard leaves you with posture and no proof. Posture tells a story; an audit needs evidence. CSF supplies the story; 27001 is where the evidence is tested.
+One warning that catches people out: CSF is not a control catalogue. It is functions, then categories, then subcategories that *reference* other standards. It points at controls rather than containing them. Its outcomes need translation into criteria and evidence requests appropriate to the engagement. Evidence can support a CSF assessment as well as an ISO assessment; neither framework supplies proof by itself.
 
 ## The ASD Essential Eight: the baseline
 
 The Essential Eight is the most specifically Australian artefact in the set, and for a Perth company chasing government work, that specificity is its value. Published by the Australian Signals Directorate, it is a **baseline**: eight mitigation strategies the ASD judges most effective at stopping common attacks.
 
-The eight are deliberately concrete and unglamorous: application control, patching applications, configuring Microsoft Office macros, user application hardening, restricting administrative privileges, patching operating systems, multi-factor authentication, and regular backups. Each is scored across **maturity levels 0 to 3**, from "not implemented" through to "fully managed and tested." A government customer asking for your Essential Eight maturity is not asking for a certificate; they are asking a pointed question about how well you do the unglamorous basics.
+The eight are deliberately concrete and unglamorous: application control, patching applications, configuring Microsoft Office macros, user application hardening, restricting administrative privileges, patching operating systems, multi-factor authentication, and regular backups. Each is scored across **maturity levels 0 to 3**, whose requirements address increasing adversary capability and techniques. They are not generic labels for documentation or management maturity; consult the [ASD maturity model](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model) for the strategy-specific requirements. A government customer asking for your Essential Eight maturity is not asking for a certificate; they are asking a pointed question about how well you do the unglamorous basics.
 
 Two things to keep straight. First, the Essential Eight is a *baseline*, not a complete framework. It will tell you whether your patching and admin-privilege hygiene is sound; it will not tell you whether your supplier risk management is adequate or your incident-response plan works. Treat it as the floor, not the ceiling. Second, it was designed around Microsoft-centric estates, which fits most organisations but not all. For Tessera, built on AWS with a mix of tooling, some strategies map cleanly and some need interpretation. That interpretation is exactly the kind of judgement the standard cannot supply and the auditor must.
 
-I will admit a personal bias here, because it shapes how I use these frameworks. The Essential Eight is the one I reach for first when I want to know whether an organisation can be *hacked tomorrow*. The others tell me whether it is well-governed; the Essential Eight tells me whether the doors are locked. Both questions matter, but on the day of an incident, only one of them was the difference.
+A strong Essential Eight result does not establish immunity from compromise. Its coverage is bounded; supplier governance, service architecture and additional obligations need their own assessment.
 
 ## Pick one yardstick, cross-check the rest
 
-Now the actual decision, and the one the board meeting is really about. You do not certify against multiple frameworks because certification is expensive, the audits overlap, and "we are certified against everything" is not a signal of trust but a signal that nobody chose. The mature move is to pick **one framework as the yardstick**: the thing you measure, certify, and score against. Then use the others as **cross-checks**: lenses that expose gaps the yardstick hides.
+Use a principal standard to organise this engagement, while recording every other binding criterion. Tessera wants ISO/IEC 27001 certification, so that is the principal standard. CSF and the Essential Eight are supplementary lenses unless a contract or other obligation makes particular outcomes mandatory. A payment obligation or privacy duty cannot be dismissed because it sits outside the preferred framework.
 
-For Tessera the choice is almost made for you. The business goal is a certificate that enterprise and government customers will accept. That is ISO/IEC 27001:2022. So 27001 becomes the yardstick. NIST CSF 2.0 becomes the cross-check that asks whether the controls add up to a full Govern-to-Recover lifecycle. The Essential Eight becomes the cross-check that asks whether the baseline technical hygiene actually holds. Three frameworks, one opinion, each doing a job the others cannot.
+Multiple assurance programmes may be justified by different customers. **SOC 2** is an attestation report on controls relevant to selected Trust Services Criteria, not an ISO certificate. A Type II report addresses a period; a report's scope, exceptions and user responsibilities matter to reliance. [AICPA's SOC 2 overview](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2) describes its purpose.
 
-:::: {.callout-warning title="Watch out: the collect-them-all fallacy"}
-The temptation, especially under a board that has read the marketing, is to chase every badge. "We'll do ISO 27001, SOC 2, PCI, the lot." Each certification is a real engagement with real cost, and the marginal badge is worth less than the marginal effort. Worse, organisations that spread themselves across many frameworks rarely do any one well: they collect mappings instead of building controls. The discipline is to choose the yardstick that answers the business question, certify against it, and let the rest inform rather than multiply the work. A company that certifies against one standard thoroughly beats a company that maps against five superficially, every time.
-::::
+## Applicability before the test plan
+
+The **Statement of Applicability (SoA)** records necessary controls, why they are included, implementation status and justified Annex A exclusions. Risk treatment can require controls beyond Annex A. The management-system requirements remain part of the audit; “not applicable” is not a way to remove an inconvenient requirement.
+
+Read E03's teaching extract. “Implemented” with no evidence reference is a management claim to test. A.5.18 concerns access rights; A.6.5 concerns responsibilities continuing after employment. A numbered control reference alone does not establish a precise operational deadline. Here the two-hour and 24-hour criteria come from the fictional policies.
+
+This edition uses ISO/IEC 27001:2022 with [Amd 1:2024](https://www.iso.org/standard/88435.html), the climate-action amendment. Record consideration of climate-related relevance to organisational context and interested-party requirements; do not silently omit the amendment. Use authorised copies for exact normative wording. The [source guide](../appendices/d-sources.qmd) identifies editions and the limits of these teaching paraphrases.
+
+## Supplier assurance before exclusions
+
+E09's fictional SOC 2 summary covers a payment API through December 2025. It has an exception and complementary user controls, with no supplied 2026 bridge evidence. Read the subject, service, period, report type, exceptions and customer responsibilities before deciding what reliance is justified.
+
+Do not exclude supplier oversight merely because a processor performs the transactions. You may lack authority to test the provider directly, yet still need to test Tessera's selection, contracts, monitoring and complementary controls. An unavailable report or missing period belongs in the evidence-gap register. Chapter 4 carries that limitation into scope and procedures.
 
 ## Mapping and reconciling
 
@@ -80,63 +90,51 @@ Now the worked artefact, and the place where AI earns and then loses your trust.
 
 You take the board through the decision on one slide. **Yardstick:** ISO/IEC 27001:2022, because certification is the business goal and 27001 is the certifiable answer. **Cross-check 1:** NIST CSF 2.0, to confirm the controls span Govern through Recover. **Cross-check 2:** the ASD Essential Eight, because government customers expect the baseline and Tessera wants the work. The board signs off, not because more is better but because each framework now has a defined job.
 
-You start the cross-mapping as a working paper, not a deliverable, and you keep it honestly many-to-many. A representative slice:
+You start the cross-mapping as a working paper, not a deliverable, and you keep it honestly many-to-many. A representative category-level slice, not a claim of full outcome equivalence. PR.PS is Platform Security; PR.IR is Technology Infrastructure Resilience. Verify subcategories and required evidence in the [CSF 2.0 Core](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf):
 
 | ISO/IEC 27001:2022 (yardstick) | NIST CSF 2.0 (cross-check) | ASD Essential Eight (cross-check) |
 |---|---|---|
 | A.5.15 Access control | PR.AA (Identity, authentication, authorization) | Restrict administrative privileges; MFA |
-| A.8.7 Protection against malware | PR.IR; DE.CM | Application control; user application hardening |
-| A.8.13 Information backup | RC.RP | Regular backups |
-| A.8.19 Installation of software on operational systems | PR.IR (Platform security) | Patch applications; patch operating systems |
+| A.8.7 Protection against malware | PR.PS; DE.CM | Application control; user application hardening |
+| A.8.13 Information backup | PR.DS; RC.RP (recovery use) | Regular backups |
+| A.8.19 Installation of software on operational systems | PR.PS (Platform Security) | Application control (partial overlap) |
 | A.5.7 Threat intelligence | ID.RA; DE.AE | *(no Essential Eight equivalent; the baseline does not cover it)* |
 
 The last row is the one to notice. Threat intelligence is a real 2022 control with no Essential Eight home, and a mapping that pretends otherwise is precisely the lie this table refuses to tell. Cross-checks expose gaps as honestly as they expose coverage, and a gap you have named is a gap you can manage.
 :::
 
 :::: {.callout-note title="🤖 AI Field Note: Mapping controls across frameworks"}
-This is a task AI is genuinely good at drafting and genuinely dangerous at finishing. Ask an AI to "produce a cross-mapping of ISO/IEC 27001:2022 Annex A to NIST CSF 2.0 and the ASD Essential Eight," and it returns a clean, plausible table in seconds. Most of it is right. That is the trap.
+An illustrative draft maps “A.8.19 → PR.IR (Platform Security) → patching” as an exact equivalence. Check it in stages. Platform Security is PR.PS. Software-installation restrictions and patch management overlap, but are not the same requirement. An installation allow-list test does not establish timely patching. Correct the category, state partial overlap and specify each separate test.
 
-Two confabulations to hunt for. First, **stale control numbers.** Models trained on older corpora quietly cite 2013 Annex A numbers, A.9.x for access control and A.12.x for operations, as if they were current 2022 controls. They are not; the 2022 renumbering retired them. Every control number must be checked against the actual 2022 Annex A before the table leaves your desk. Second, **invented entries.** In one run the AI helpfully added a row for "Configuration baselining" under the Essential Eight column. The Essential Eight has exactly eight strategies, and that is not one of them. The model pattern-matched "configuration management" to something that *should* exist and then asserted it did.
-
-Your correction is the work: count the Essential Eight strategies (you will find eight, never nine), verify each 27001 number against the current standard, and re-classify the many-to-many relationships the AI flattened into tidy one-to-one rows. The AI gave you a draft that saved an hour. The hour you spent correcting it is where the defensible opinion was built. Drafter to evaluator, exactly as the Introduction described.
+Do not upload a licensed standard to a model without permission. Public control titles and original teaching criteria are enough for this exercise.
 ::::
 
 :::: {.callout-important title="🔍 Auditing AI: Which controls does an AI deployment fall under?"}
 The frameworks were written before generative AI sat inside the estate, so no control is labelled "AI." That does not mean AI is uncovered. Treat an AI deployment as what it is: a cloud-delivered, data-hungry, rapidly-changing software system, and the 2022 controls land on it hard.
 
-The 2022 edition is unusually well-timed here, because several of its *new* controls are the very ones an AI deployment makes load-bearing. **A.5.23 Information security for use of cloud services** applies directly, since most enterprise AI is consumed through a cloud API and Tessera's data leaves its boundary to reach the model. **A.5.7 Threat intelligence** matters more, not less: model-abuse techniques, prompt-injection trends, and data exfiltration via tool calls are exactly the threat intel a current ISMS needs. **A.8.11 Data masking** applies to the training and prompt data that may carry personal information. **A.8.25 Secure development life cycle** (and its partner A.8.28 Secure coding) applies to the pipelines that build, fine-tune, and deploy models. And **A.5.30 ICT readiness for business continuity** applies the moment a business process depends on an AI service that can degrade silently.
+Relevant 2022 controls include both newly introduced controls and controls carried forward or reorganised from the prior edition. **A.5.23 Information security for use of cloud services** applies directly, since most enterprise AI is consumed through a cloud API and Tessera's data leaves its boundary to reach the model. **A.5.7 Threat intelligence** matters more, not less: model-abuse techniques, prompt-injection trends, and data exfiltration via tool calls are exactly the threat intel a current ISMS needs. **A.8.11 Data masking** applies to the training and prompt data that may carry personal information. **A.8.25 Secure development life cycle** (and its partner A.8.28 Secure coding) applies to the pipelines that build, fine-tune, and deploy models. And **A.5.30 ICT readiness for business continuity** applies the moment a business process depends on an AI service that can degrade silently.
 
 The audit move is to take each AI system in scope, walk it through these controls, and ask the standard question: *what evidence proves this control is present and working for this system?* An AI deployment does not earn an exception. It earns a closer look.
 ::::
 
 ::::: {.callout-tip title="🗄️ Evidence Locker: lock this in (Engagement milestone 3)"}
-Add your framework-selection working paper to the locker. Record three things: the **yardstick** and why it was chosen (ISO/IEC 27001:2022, because certification is Tessera's business goal); the **cross-checks** and the question each one answers (CSF 2.0 for lifecycle coverage; the Essential Eight for baseline hygiene); and a **starter cross-mapping table** with at least a dozen controls mapped honestly many-to-many, with gaps explicitly noted rather than papered over. This is the standard against which every later control test in this audit will be judged. Get the yardstick wrong and the whole engagement measures the wrong thing.
-::::
+**Time: 25 minutes. No AI required.** Build a criteria sheet from E01, E03 and E09. Record the principal standard, the two policy deadlines, the supplier-report scope and missing period, and three necessary control areas from the SoA extract. For each, name evidence you would need. Classify the two-hour/24-hour conflict as unresolved, not an invitation to choose the easier test.
+:::::
 
 ## The question, answered
 
-Which yardstick? The one that answers the business question you are actually being asked. For Tessera that is ISO/IEC 27001:2022, chosen not because it is the only framework but because certification is the goal and 27001 is the certifiable answer. NIST CSF 2.0 and the Essential Eight come alongside it as cross-checks, each exposing what the yardstick alone would hide: one the full Govern-to-Recover lifecycle, the other the technical baseline your government customers expect.
-
-And "why not all of them?" Because collecting frameworks is not the same as building controls. The mature organisation picks one yardstick, certifies against it thoroughly, and lets the others inform the work without multiplying it. The discipline of choosing, and then of mapping honestly, is itself an audit skill: it is professional scepticism applied to the standards before you ever apply them to Tessera.
-
-You now have your criteria. The next question is the one that turns criteria into a plan: *what exactly are we auditing, on what terms, and how?* That is scope, and it is where the engagement stops being a reading exercise and becomes a method.
+Framework choice establishes what the engagement will assess. Applicability and a criteria register make that choice testable. Keep contractual and legal obligations visible even when a single standard organises the report. Next, turn the criteria into a bounded programme.
 
 ## Take it to the AI
 
-**Where to start.** Three questions worth arguing about rather than looking up:
+This optional exercise follows the paper task. Use only E03's original teaching criteria and the illustrative mapping above.
 
-1. Ask the AI to map three controls across ISO/IEC 27001:2022, NIST CSF 2.0 and the Essential Eight, then ask which rows are genuinely equivalent and which are merely adjacent. That distinction is where mappings lie.
-2. Ask it to defend certifying against a single framework to a board that wants every badge, then ask what the board is actually buying with each badge it names.
-3. Ask which Annex A numbers it cited and whether they are 2013 or 2022. Then verify at least three yourself against the current standard. This chapter's Field Note exists because models get this wrong quietly.
-
-**Keywords to steer with.** certifiable versus assessment framework · ISMS · Annex A themes · ISO/IEC 27002 · CSF functions · Govern · Essential Eight maturity levels · baseline versus complete framework · many-to-many mapping · adjacency versus equivalence · Statement of Applicability
-
-**A starting prompt.**
-
-> **Role:** You are a lead auditor who has read a dozen cross-framework mappings and trusted none of them.
+> **Role:** Review a trainee's criteria mapping.
 >
-> **Task:** Audit the control mapping I give you. For each row, say whether the two controls are equivalent, overlapping, or merely adjacent, and what evidence each one would actually require.
+> **Task:** Identify unsupported equivalence claims. Do not invent standard wording or unseen evidence.
 >
-> **Context:** I have read a chapter on picking one yardstick and using the others as cross-checks, and on why honest mappings are many-to-many. My mapping is: [paste it]. Where you are uncertain about a control number, say so rather than filling the gap.
+> **Context:** The proposed mapping treats installation restrictions as proof of timely patching. Platform Security is PR.PS; PR.IR is Technology Infrastructure Resilience. The book's case has not supplied a patch test.
 >
-> **Format:** One row per line: my claim, your verdict, the difference in the evidence each would demand, and a confidence level. Then list every control number you could not verify, so I know what to check by hand.
+> **Format:** For each claim, give the supporting supplied fact, the missing test and a bounded correction.
+
+Check the answer against the source and your criteria sheet. Keep a correct answer if supported; disagreement is not a required performance.

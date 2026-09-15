@@ -1,0 +1,159 @@
+{
+  "version": "SDA-2026.1",
+  "fictional": true,
+  "cutoff": "2026-06-30T17:00:00+08:00",
+  "historical_period": {
+    "start": "2025-06-01",
+    "end": "2026-05-31"
+  },
+  "historical_threshold_hours": {
+    "P-IT": 24,
+    "P-HR": 2
+  },
+  "prospective_threshold_hours": 2,
+  "prospective_policy_effective": "2026-06-19",
+  "workflow_effective": "2026-06-20",
+  "retest_reviewed": "2026-06-29",
+  "recovery": {
+    "criterion": "P-REC",
+    "evidence": "E08",
+    "rto_minutes": 240,
+    "rpo_minutes": 15,
+    "max_tolerable_minutes": 480,
+    "loss": "2026-06-18T10:00:00+08:00",
+    "recovery_point": "2026-06-18T09:20:00+08:00",
+    "service_checked": "2026-06-18T15:30:00+08:00",
+    "integrity_passed": true,
+    "production_cutover_verified": false,
+    "key_dependency_verified": false
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "criterion": [
+        "P-IT",
+        "P-HR"
+      ],
+      "evidence": [
+        "E03",
+        "E04",
+        "E05",
+        "E10"
+      ],
+      "original_severity": "high",
+      "status": "open",
+      "retest": "incomplete",
+      "owner": "Head of IT",
+      "closure_requires": [
+        "R06 evidence",
+        "cause-directed action",
+        "adequate operating verification"
+      ]
+    },
+    {
+      "id": "F02",
+      "criterion": [
+        "P-REV"
+      ],
+      "evidence": [
+        "E03",
+        "E06",
+        "E10"
+      ],
+      "original_severity": "high",
+      "status": "open",
+      "retest": "not supplied",
+      "owner": "Head of IT",
+      "closure_requires": [
+        "quarterly ordinary reviews",
+        "monthly privileged reviews",
+        "verified actions"
+      ]
+    },
+    {
+      "id": "F03",
+      "criterion": [
+        "P-PRIV"
+      ],
+      "evidence": [
+        "E03",
+        "E07",
+        "E10"
+      ],
+      "original_severity": "high",
+      "status": "open",
+      "retest": "not supplied",
+      "owner": "Privacy lead",
+      "closure_requires": [
+        "notice and register",
+        "purpose and handling",
+        "terms and regions",
+        "training verification",
+        "retention and deletion",
+        "vendor incident escalation"
+      ]
+    },
+    {
+      "id": "F04",
+      "criterion": [
+        "P-REC"
+      ],
+      "evidence": [
+        "E03",
+        "E08",
+        "E10"
+      ],
+      "original_severity": "high",
+      "status": "open",
+      "retest": "not supplied",
+      "owner": "Operations lead",
+      "closure_requires": [
+        "RTO met",
+        "RPO met",
+        "dependency and cutover evidence",
+        "reconciled documentation"
+      ]
+    },
+    {
+      "id": "F05",
+      "criterion": [
+        "E01 supplier oversight"
+      ],
+      "evidence": [
+        "E01",
+        "E09",
+        "E10"
+      ],
+      "original_severity": "medium",
+      "status": "open",
+      "retest": "not supplied",
+      "owner": "Supplier owner",
+      "closure_requires": [
+        "current-period assurance",
+        "exception assessment",
+        "complementary controls tested"
+      ]
+    }
+  ],
+  "passed_concerns": [
+    {
+      "id": "P01",
+      "evidence": [
+        "E11"
+      ],
+      "status": "bounded pass",
+      "tested_requests": 3
+    }
+  ],
+  "conclusion": {
+    "stage_2": "defer",
+    "stage_1": "whole-ISMS readiness not established",
+    "certification": "not determined",
+    "critical_open_findings": [
+      "F01",
+      "F02",
+      "F03",
+      "F04"
+    ]
+  }
+}

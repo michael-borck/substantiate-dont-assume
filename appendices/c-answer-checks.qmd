@@ -1,0 +1,84 @@
+# Answer checks and assessment {#sec-answer-checks}
+
+Use these after an attempt. An answer can differ in wording or a justified rating while still meeting the task. It must not invent evidence, suppress an open issue or confuse a readiness assessment with certification.
+
+## Evidence Locker checks
+
+### Milestones 1–3: mandate, risk and criteria
+
+**1. Mandate:** name the board, Perth-managed SaaS ISMS, readiness purpose and selected criteria. Identify the analyst's self-review threat. Use an independent assignment/review or decline if safeguards cannot reduce the threat adequately. No certificate or production-testing authority follows from the mandate.
+
+**2. Risk:** the worked region-interruption row uses likelihood 2 and impact 3, giving a planning score of 6. The likelihood is an assumption. State the owner and the recovery evidence required before trusting a residual rating. Management's original colours need not follow the newly agreed method; record the difference. Another initial rating can be reasonable if its assumptions and method are explicit.
+
+**3. Criteria:** preserve P-IT's 24-hour and P-HR's two-hour historical rules. SoA “implemented” is unverified without operating support. E09 concerns a payment API, not the support model, and its period ends in 2025. Do not use a report title as proof of current supplier assurance.
+
+### Milestones 4–6: planning and design
+
+**4. Programme:** the revocation test needs termination, ownership and disable events for the same IDs and period. It compares the latest credential disable time against each deadline. Missing records receive an insufficient-evidence result. Supplier work addresses scope, period, exceptions and complementary controls even where direct provider-system testing is outside authority.
+
+**5. Technical objective:** E11 supports the expected results for its three requests in version 6.2 with the specified ordinary user. It clears P01 within that boundary. It says nothing about a compromised privileged application role or another API. An additional test requires explicit authority, synthetic records, expected outcomes and an isolated environment.
+
+**6. Preliminary opinion:** identify the policy conflict and unsupported implementation claims. Do not conclude that every design is sound or every supplier agreement exists. State the operating records and scope coverage still needed. Remote examination of logs can supply operating evidence.
+
+### Milestones 7–8: census and policy results
+
+**7. Census:** the historical population is 48 unique IDs within the stated twelve months. Full revocation is the later of identity and separately managed key disablement. All identity events are within one hour; the key events determine the four exceptional rows.
+
+| ID | Full-revocation delay | P-IT, 24 hours | P-HR, 2 hours |
+|---|---:|---|---|
+| L007 | 1,128 hours (47 days) | Exception | Exception |
+| L019 | 50 hours | Exception | Exception |
+| L031 | 72 hours (3 days) | Exception | Exception |
+| L044 | 6 hours | Met | Exception |
+
+Every other supplied record has a one-hour delay. Thus P-IT has 45 passes and 3 exceptions: **6.25%** deviations. P-HR has 44 passes and 4 exceptions: **8.33%** rounded. These are historical population results, not incident probabilities.
+
+The separate large-population sampling calculation rounds 58.404 up to **59** under its binomial, zero-acceptance assumptions. Testing all 48 leavers is a census, not that sampling design. A checksum confirms packaging integrity relative to a manifest; it does not verify a source or the stipulated payroll completeness fact.
+
+**8. Policy map:** F01 covers historical revocation and its causes/criteria conflict. F02 covers two distinct review duties: ordinary access quarterly across AWS, Workspace and Slack, and privileged access monthly. E06 supplies ordinary-review records for two of three systems in the March quarter; no monthly privileged-review records are supplied for January–March. Do not transform this into two missed quarterly privileged reviews. E11 tests a different assertion and closes neither finding.
+
+### Milestones 9–10: privacy and recovery
+
+**9. Privacy:** carry every E07 subissue into F03: notice/register, purpose/handling analysis, terms and regions, training verification, retention/deletion, and vendor incident escalation. A screenshot without account/date does not establish the deployed setting. Unknown regions or missing terms do not prove a particular illegal transfer. INC-01's eligible-breach outcome is supplied separately in E05; do not infer it for the AI vendor.
+
+**10. Recovery:** from 10:00 to 15:30 is **5 hours 30 minutes**, exceeding the four-hour RTO by **90 minutes**. The usable recovery point is 09:20, **40 minutes** before loss and **25 minutes** outside the RPO. The restored copy's integrity check passed. Production cutover and the key-service dependency remain untested. A 30-day month's 0.1% budget is **43.2 minutes** before exclusions. It is an availability-budget calculation, not the complete basis of an RTO.
+
+F04 stays open. The incident chronology distinguishes L007's January departure, February revocation and unauthorised reads, discovery on 27 February and the supplied assessment/notification outcome in March. Do not “correct” discovery to occur before revocation simply because that sequence feels more familiar.
+
+### Milestones 11–12: reporting and defence
+
+**11. F01 retest:** five complete one-hour results and one missing key event. R06 is inconclusive. E10 demonstrates current-state reconciliation of the historical population and prospective policy/workflow changes, but not sufficient operating verification for systemic closure. Original severity, correction progress and current status belong in separate fields.
+
+**12. Opinion:** account for F01–F05 and P01. A supported recommendation defers Stage 2, identifies the missing evidence and states that the supplied scope cannot establish whole-ISMS Stage 1 readiness or predict certification. Fixing access reviews alone cannot close privacy or recovery findings. F05's current-period and complementary-control gaps cannot be replaced with an assertion that all supplier assurance was obtained.
+
+## Independent transfer rubric {#sec-transfer-check}
+
+Score the saved Wattle Desk answer before revising it. Award 0 for absent/incorrect, 1 for partly supported, and 2 for complete and appropriately bounded, on each dimension below.
+
+| Dimension | Two-point performance |
+|---|---|
+| Access calculation | W03 is 1 of 4 historical exceptions, 25%; six subsequent passes are a separate population |
+| Recovery calculation | 100-minute restoration and 5-minute recovery-point gap meet the supplied targets |
+| Evidence limits | Names short post-change observation, untested production cutover and unassessed ISMS areas |
+| Different results | Recognises supplied complete monthly review evidence; does not copy Tessera's missing-review finding |
+| Privacy judgement | Applies W-PRIV to enabled processing with missing terms/regions; avoids inventing a breach |
+| Readiness recommendation | Explains why privacy blocks a Stage 2 recommendation under E02, without claiming certification authority |
+| Actions and traceability | Gives fact-specific evidence requests and distinguishes action promises from verification |
+
+**Practice threshold:** at least 11/14, with no invented evidence, automatic-notification claim or certification award. This is an educational self-check, not a professional credential. Revise any consequential error even if the numerical threshold is met.
+
+### One acceptable answer, after the attempt
+
+The historical access test found one exception among four departures, or 25%. Management corrected that record and supplied a cause-directed change followed by six source-backed passes. This supports improvement and a bounded retest result. It does not erase the historical exception or establish operation beyond the short observation period. State what further monitoring or verification the engagement requires before treating recurrence risk as adequately addressed.
+
+The recovery exercise restored the specified application and dependencies in 100 minutes against a 120-minute target. Its recovery point is five minutes before loss against a ten-minute target. Both supplied timing criteria were met. Production cutover remains untested, so the conclusion should name that limitation. The three complete monthly review populations and verified actions support the specific review requirement; a missing-review finding copied from Tessera would be unsupported.
+
+The enabled external support model lacks the terms and processing-region evidence required by W-PRIV before enablement. Under E02 this remains a critical governance/assurance issue. Recommend resolving the deployment decision with the authorised owner and privacy adviser, obtaining the missing evidence and verifying the approved controls before recommending Stage 2. Do not assert an actual vendor breach without incident evidence.
+
+The pack gives no evidence about the rest of Wattle's ISMS. Consequently, even resolving this privacy issue would require wider assessment before a whole-ISMS readiness recommendation. No certification decision is made here.
+
+## Fresh-reader test protocol
+
+Give an unfamiliar reader the rendered book, not coaching. Ask them to complete milestones 7, 11 and X01 without a chatbot, site access or author hints. Record actual time, missing inputs, ambiguous terms, calculation errors, evidence citations and rubric score. Let them use paper, a calculator, text or dictation. Do not count looking at these answers as an independent first attempt.
+
+The target is a usable unassisted route, not speed. If the reader cannot reconstruct a result, identify whether the cause is missing data, unclear instruction or an unexplained concept, and repair it before release. Automated tests cannot close this gate.

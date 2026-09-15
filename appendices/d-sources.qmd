@@ -1,0 +1,36 @@
+# Source guide and edition boundaries {#sec-sources}
+
+Reviewed 15 September 2026. These references support selected explanations; they are not a full legal or certification conformity assessment. Use current official material and the engagement's authorised editions for real work. The fixed case's original policies are sufficient for its exercises.
+
+## Standards and assurance
+
+- [ISO/IEC 27001](https://www.iso.org/standard/27001) and its [2024 climate-action amendment](https://www.iso.org/standard/88435.html): this book targets 27001:2022 with Amd 1:2024. The management-system criteria and necessary controls must be assessed together. Obtain authorised normative text; the book does not reproduce it.
+- [ISO 19011:2026](https://www.iso.org/standard/19011): management-system audit guidance. The six-stage presentation in chapter 4 is a teaching arrangement. ISO 19011 does not itself confer certification.
+- [ISO quality-management vocabulary](https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Astd%3Aiso%3A9000%3Aed-5%3Av1%3Aen): distinguishes correction from cause-directed corrective action. The book's 5C+R format is its own reporting template.
+- [NIST CSF 2.0 Core](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf) and [transition FAQ](https://www.nist.gov/cyberframework/faqs): confirm categories and outcome-level mappings. PR.PS and PR.IR are different categories; governance was already represented in CSF 1.1.
+- [ASD Essential Eight maturity model](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model): use strategy-specific requirements and adversary-based maturity distinctions rather than generic maturity labels.
+- [AICPA SOC 2 overview](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2): explains the report's purpose. Actual reliance needs the relevant report, scope, period, exceptions and complementary user controls.
+- [ISACA CISA requirements](https://www.isaca.org/credentialing/cisa/get-cisa-certified): professional certification requirements; CISA is not a universal statutory practice licence.
+
+## Risk, technical controls and recovery
+
+- [NIST SP 800-30 Rev. 1](https://csrc.nist.gov/pubs/sp/800/30/r1/final): risk-assessment method. The book's ordinal matrix is a teaching choice, not a calibrated probability model.
+- [NIST SP 800-207](https://csrc.nist.gov/pubs/sp/800/207/final): zero-trust architecture. Match an architectural principle to a bounded test rather than claiming universal security.
+- [AWS shared responsibility](https://aws.amazon.com/compliance/shared-responsibility-model/): service selection changes the boundary. Inspect the actual service and configuration.
+- [AWS KMS rotation](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html): prior key material remains available for decryption. Rotation and access revocation are distinct.
+- [NIST SP 800-61 Rev. 3](https://csrc.nist.gov/pubs/sp/800/61/r3/final): April 2025 incident-response guidance integrated with CSF 2.0. Chapter 10 labels the older Rev. 2 phase model historically.
+
+## Australian privacy
+
+- [OAIC APP guidelines](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines): establish applicability and use the relevant principle, including its exceptions. Chapter 9 links directly to APP 5, APP 6 and APP 11.
+- [OAIC overseas-information guidance](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/handling-personal-information/sending-personal-information-overseas): distinguish use from disclosure and consider effective control and exceptions.
+- [OAIC NDB guidance](https://www.oaic.gov.au/privacy/notifiable-data-breaches/preventing-preparing-for-and-responding-to-data-breaches/data-breach-preparation-and-response/part-4-notifiable-data-breach-ndb-scheme): assessment and notification are separate duties.
+- [Privacy Act 1988, official legislation](https://www.legislation.gov.au/C2004A03712/latest/text): consult the applicable compilation and qualified advice for consequential interpretation.
+
+## Scenario and permissions boundary
+
+SDA-2026.1 supplies original synthetic records. It is not a copy of the live Tessera library and does not inherit that site's changing dates or targets. The editorial resource review identified scenario differences; checking public availability does not authorise reuse of third-party assets.
+
+The author approved CC BY 4.0 International for this book and fictional framing for the unattributed audit anecdotes. Existing artwork is unchanged. Confirm any separate artwork or Tessera-brand permissions before a commercial release; this revision does not invent them.
+
+A link that responds successfully is not proof of factual accuracy. If a source changes, report the chapter, claim and edition so the book's wording and exercises can be reviewed together.

@@ -1,18 +1,21 @@
 project:
   type: book
   output-dir: _book
+  resources:
+    - resources/**
 
 book:
   title: "Substantiate, Don't Assume"
   subtitle: "Why the Auditor's Opinion Matters More Than Ever in the Age of AI"
   author: "Michael Borck"
   date: today
-  license: "CC BY"
+  license: "CC BY 4.0 International"
   favicon: favicon.svg
   cover-image: images/cover.png
   page-navigation: true
   chapters:
     - index.qmd
+    - copyright.qmd
     - part: "Act I · Engage: Build the Case"
       chapters:
         - chapters/01-why.qmd
@@ -31,18 +34,22 @@ book:
         - chapters/12-conclude.qmd
   appendices:
     - appendices/a-drafter-to-evaluator-loop.qmd
+    - appendices/b-case-pack.qmd
+    - appendices/c-answer-checks.qmd
+    - appendices/d-sources.qmd
+    - appendices/e-interview-guide.qmd
     - acknowledgments.qmd
     - about-author.qmd
   other-links:
     - text: Download PDF
       icon: file-pdf
-      href: substantiate-dont-assume.pdf
+      href: /substantiate-dont-assume.pdf
     - text: Download EPUB
       icon: book
-      href: substantiate-dont-assume.epub
+      href: /substantiate-dont-assume.epub
     - text: Download llm.txt
       icon: robot
-      href: llm.txt
+      href: /llm.txt
     - text: Tessera companion site
       icon: globe2
       href: https://tessera.locoensayo.org

@@ -12,9 +12,11 @@ Perth, Western Australia
 
 **ISBN:** (to be assigned)
 
-This work is licensed under a **Creative Commons Attribution (CC BY)** licence. You are free to share and adapt the material for any purpose, provided you give appropriate credit. The open-access edition is always the most current.
+This work is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**. See the [licence terms](https://creativecommons.org/licenses/by/4.0/). Give appropriate credit, link to the licence and indicate changes. Third-party material retains any separately stated terms.
 
-**AI disclosure:** This book was written using the methodology it describes. AI tools were used as thinking partners throughout the drafting, iterating, and refining process. The author reviewed, challenged, and took responsibility for every sentence. Full details of the tools used are in the Introduction.
+**AI disclosure:** AI tools supported drafting and revision. The author is responsible for reviewing and approving the published work. Case records and unattributed audit vignettes are fictional teaching examples, not evidence of actual client engagements.
+
+**Case edition:** SDA-2026.1, revised September 2026. The worked engagement has an evidence cutoff of 30 June 2026. This edition has not yet been published through KDP.
 
 **Companion website:** [https://michael-borck.github.io/substantiate-dont-assume](https://michael-borck.github.io/substantiate-dont-assume)\
 **Source:** [https://github.com/michael-borck/substantiate-dont-assume](https://github.com/michael-borck/substantiate-dont-assume)
