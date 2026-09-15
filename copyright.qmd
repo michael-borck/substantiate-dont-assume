@@ -7,12 +7,15 @@ Why the Auditor's Opinion Matters More Than Ever in the Age of AI
 
 Copyright © 2025 Michael Borck.
 
+Book content is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0 International)](https://creativecommons.org/licenses/by/4.0/). Original code examples and accompanying software are licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+These grants cover material the author has authority to license. Separately credited third-party material retains its stated terms. Give appropriate credit, link the content licence and indicate changes; retain the MIT notice when reusing code.
+
 Published by Michael Borck\
 Perth, Western Australia
 
 **ISBN:** (to be assigned)
 
-This work is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**. See the [licence terms](https://creativecommons.org/licenses/by/4.0/). Give appropriate credit, link to the licence and indicate changes. Third-party material retains any separately stated terms.
 
 **AI disclosure:** AI tools supported drafting and revision. The author is responsible for reviewing and approving the published work. Case records and unattributed audit vignettes are fictional teaching examples, not evidence of actual client engagements.
 

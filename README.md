@@ -39,3 +39,11 @@ The approved revision preserves chapter order, supplies a standalone case, repai
 Licence: **CC BY 4.0 International**, confirmed by the author. Existing artwork is unchanged. The author approved recasting unattributed audit anecdotes as fictional teaching examples. Verify separate artwork and Tessera-brand permissions, exact normative claims against authorised standards, a fresh-reader attempt and human release proof before publication.
 
 KDP status remains **not yet published**, with no assigned ISBN in the publisher registry. Source revision, website deployment, chatbot refresh and KDP release are separate actions.
+
+## Licence
+
+Book content is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0 International)](https://creativecommons.org/licenses/by/4.0/). Original code examples and accompanying software are licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+These grants cover material the author has authority to license. Separately credited third-party material retains its stated terms. Give appropriate credit, link the content licence and indicate changes; retain the MIT notice when reusing code.
+
+See [LICENSE](LICENSE), [LICENSE-CONTENT.md](LICENSE-CONTENT.md) and [LICENSE-CODE.md](LICENSE-CODE.md) for scope and full terms.
