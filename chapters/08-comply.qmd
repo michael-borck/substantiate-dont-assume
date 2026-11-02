@@ -10,7 +10,7 @@ Act I identified policy obligations and a conflict between revocation deadlines.
 
 ## What full access changes
 
-Act I recorded design observations and evidence gaps. Act II adds operating records and permitted tests. You can now interview the people named in the policies, log into the systems the policies describe, pull the logs the policies say are kept, and read the meeting minutes where the controls are supposed to be reviewed. Each is a different kind of evidence, and Chapter 7 taught you how to weigh it. This chapter teaches you what to point that evidence at: the policy set itself.
+Act I recorded design observations and evidence gaps. Act II adds operating records and permitted tests. You can now interview the people named in the policies, log into the systems the policies describe, pull the logs the policies say are kept, and read the meeting minutes where the controls are supposed to be reviewed. Each is a different kind of evidence, and Chapter 7 covers how to weigh it. Point it at the policy set itself.
 
 Policies are the soft tissue of an information security management system. They are also the part an organisation finds easiest to produce and hardest to live by, because writing a policy is a writing problem and following one is a behaviour problem. A fast-growing company like Tessera can write an excellent policy library in a quarter with a good consultant and a long weekend. It cannot build the habits that make those policies operate in anything like the same timeframe. The gap between the two is where this chapter lives.
 
@@ -32,7 +32,7 @@ That makes A.5 the natural home for the policy-effectiveness question, and it ma
 
 ## From published to operating: how to test a policy
 
-Testing whether a policy operates is a four-step move, and it works on any A.5 control. Learn it once and reuse it.
+Testing whether a policy operates is a four-step move, and it works on any A.5 control.
 
 **Read the policy for its operational claims.** Most policies mix aspiration with obligation. Your job is to extract the obligations: the things the policy says *will* happen, on a cadence, by a named owner, to a defined standard. "Access rights are reviewed quarterly" is an operational claim. "Security is a core value" is not. Underline the claims. Each one is a test waiting to be designed.
 

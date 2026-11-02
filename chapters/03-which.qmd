@@ -10,7 +10,7 @@ The board meeting runs long. Tessera's CTO has the slide up: ISO/IEC 27001, NIST
 
 ## Frameworks are tools, not trophies
 
-Before you choose, get clear on what these things actually are. A framework is a structured set of expectations: what good looks like, organised so an organisation can find its gaps and an auditor can test against them. They differ in scope, in origin, and, crucially, in what you can *do* with the result.
+Before you choose, get clear on what these things actually are. A framework is a structured set of expectations: what good looks like, organised so an organisation can find its gaps and an auditor can test against them. They differ in scope, in origin, and in what you can *do* with the result.
 
 Some frameworks are **certifiable**. ISO/IEC 27001 is the canonical example: an accredited body audits you against it and issues a certificate the market recognises. Certifiable frameworks are scarce and valuable precisely because the opinion behind them is independent and repeatable. An accredited certification body can issue accredited certification within its scope. Other assurance engagements have different mandates and reporting rules.
 
@@ -81,9 +81,7 @@ Once you have a yardstick, you map. The point of a cross-mapping is not to prove
 
 The mapping is **many-to-many**, and saying so plainly saves you from the most common mapping error. One ISO 27001 control, access reviews, touches Protect and Detect in CSF and several Essential Eight strategies (admin privileges, MFA, application control). One Essential Eight strategy, patching, maps to a technological control *and* to organizational policy. A neat one-to-one table is a lie. An honest many-to-many table is a working paper you can defend.
 
-And here is the auditor's scepticism applied to the frameworks themselves: a mapping is an *assertion* about correspondence, and assertions get tested. When someone hands you a cross-mapping, your job is to spot the row that claims two controls are equivalent when they are merely adjacent. "Both talk about logging" is not "both require the same evidence." Frameworks overlap; they do not coincide. The discipline of mapping is the discipline of saying exactly how much two controls actually share, and no more.
-
-Now the worked artefact, and the place where AI earns and then loses your trust.
+Apply the same scepticism to the frameworks themselves: a mapping is an *assertion* about correspondence, and assertions get tested. When someone hands you a cross-mapping, your job is to spot the row that claims two controls are equivalent when they are merely adjacent. "Both talk about logging" is not "both require the same evidence." Frameworks overlap; they do not coincide. The discipline of mapping is the discipline of saying exactly how much two controls actually share, and no more.
 
 ::: {.tessera-case}
 **🗂️ Tessera Case: Choosing the yardstick, and the starter map**

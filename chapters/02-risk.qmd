@@ -14,7 +14,7 @@ Risk is the effect of uncertainty on objectives. That is the ISO definition, str
 
 Notice what risk is *not*. It is not a threat, and it is not a vulnerability, though both create it. A threat is an actor or event that could cause harm: a ransomware crew, a flood, a careless insider. A vulnerability is a weakness that a threat could exploit: an unpatched server, a shared admin password, an offboarding step that never runs. Risk is what you get when a threat meets a vulnerability and the result could damage an objective. Tessera's unpatched server is not a risk by itself. The ransomware crew that could reach it, and the revenue loss and certification delay that would follow, is the risk.
 
-This three-part model, threat plus vulnerability plus impact on an objective, is the engine under every risk register you will ever read. Hold it in mind. Most of the optimism you will spend this chapter correcting comes from someone quietly dropping one of the three: naming a threat with no vulnerability, a vulnerability with no credible threat, or an impact with no objective attached.
+This three-part model, threat plus vulnerability plus impact on an objective, underlies every risk register. Most of the optimism you will spend this chapter correcting comes from someone quietly dropping one of the three: naming a threat with no vulnerability, a vulnerability with no credible threat, or an impact with no objective attached.
 
 ## The risk lifecycle
 
@@ -74,7 +74,7 @@ The choice is rarely pure. A real treatment plan combines them: mitigate hard, t
 
 ## Residual risk
 
-Here is the distinction that separates people who have read a standard from people who understand one. **Inherent risk** is the risk before controls: the raw exposure, threat meeting vulnerability with nothing in the way. **Residual risk** is what remains *after* treatment. The whole point of mitigation is to move a risk from its inherent level down to a residual level the organisation has decided is acceptable.
+**Inherent risk** is the risk before controls: the raw exposure, threat meeting vulnerability with nothing in the way. **Residual risk** is what remains *after* treatment. The whole point of mitigation is to move a risk from its inherent level down to a residual level the organisation has decided is acceptable.
 
 Residual risk is where auditors live. Inherent risk tells you about the world. Residual risk tells you whether the controls are doing their job. A risk that sits at "High inherent, High residual" may remain high despite functioning controls, or may reflect weak or unverified treatment. Distinguish those explanations. A risk at "High inherent, Low residual" has controls you now need to test, because the entire justification for that comfortable residual rating rests on them. Every residual rating in a register is a claim about a control. Your job, for the rest of the engagement, is to substantiate those claims one by one.
 
@@ -98,13 +98,13 @@ Their scopes differ: ISO/IEC 27005 addresses information-security risk managemen
 
 ## The risk-based audit approach
 
-Everything in this chapter converges on a method. The **risk-based audit approach** uses risk to decide where the audit looks hardest. You do not test every control with equal effort, because no engagement has the time or the budget for that, and because uniform effort is wasted effort: it spends the same care on a low-impact nicety as on a load-bearing control that protects the crown jewels.
+The **risk-based audit approach** uses risk to decide where the audit looks hardest. You do not test every control with equal effort, because no engagement has the time or the budget for that, and because uniform effort is wasted effort: it spends the same care on a low-impact nicety as on a load-bearing control that protects the crown jewels.
 
 Use the register as an input, then challenge it. Consider inherent exposure, dependence on critical controls, prior results and evidence reliability. A high-inherent/low-residual risk may need substantial operating tests because the low rating depends on those controls. Allocate depth proportionately while preserving required coverage; a management rating does not justify an existence-only test.
 
 There is a second, subtler dimension. You are not only using risk to plan the audit; you are auditing risk management itself. Is the register complete? Are the owners real? Do the ratings survive a challenge? Is the cycle actually running, or was it last touched the week before you arrived? For an organisation certifying to ISO/IEC 27001, a sound risk management process is not optional; it is the spine of the whole management system. An opinion on Tessera's readiness is, in large part, an opinion on whether their risk management is real. You cannot certify an organisation that manages controls but not risk.
 
-This is also where risk connects to everything that follows. The frameworks you will meet next chapter exist to give you a structured way to treat the risks this chapter identifies. The audit plan in Chapter 4 is built on the risk-based priorities you set here. Risk is the load-bearing concept of the entire engagement.
+The frameworks in the next chapter give a structured way to treat the risks identified here. The audit plan in Chapter 4 is built on the risk-based priorities you set here.
 
 :::: {.callout-note title="🤖 AI Field Note: Drafting the matrix, then fixing it"}
 Consider this illustrative draft: “Tenant leakage: medium; encryption limits harm to one customer.” The supplied record establishes neither the affected population nor that encryption prevents authorised application access. Ask for the data flow, isolation boundary and contractual criteria. Retain uncertainty until those facts are available.

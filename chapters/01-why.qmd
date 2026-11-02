@@ -14,7 +14,7 @@ An auditor does not audit by accident. You audit because someone with the author
 
 You are engaged by a party that wants the opinion. In Tessera's case, that is a board and a CTO chasing certification. You audit **against criteria**: a standard or framework that defines what "good" looks like, here ISO/IEC 27001:2022. And you deliver an **opinion** on whether the subject matter (Tessera's information security management system) conforms to those criteria, supported by evidence you gathered on terms you set.
 
-Notice what the mandate is not. It is not a licence to poke around wherever you like. It is not a guarantee that you will find wrongdoing. It is a scoped, criteria-bound engagement whose entire value rests on one quality you bring to it: the credibility of the person giving the opinion. That credibility has a name, and it is the rest of this chapter.
+The mandate does not license you to poke around wherever you like, and it does not guarantee that you will find wrongdoing. It is a scoped, criteria-bound engagement whose entire value rests on one quality you bring to it: the credibility of the person giving the opinion. That credibility has a name, and it is the rest of this chapter.
 
 ## Three hats: counsellor, partner, investigator
 
@@ -52,9 +52,9 @@ Read it once and it sounds like generic good behaviour. Read it on the day a cli
 
 Step back to the question Tessera's CTO has not fully asked: *why pay someone to come and find your problems?*
 
-The honest answer is that an organisation invites an audit because the opinion is worth more than the cost. To someone. For Tessera, certification unlocks enterprise customers whose procurement teams will not sign without it. For a board, an independent opinion is protection against the day something goes wrong: evidence that oversight was exercised, not neglected. For regulators, it is compliance made visible. And, less flatteringly but just as truly, organisations invite audits because the people inside them already suspect the gaps and want a credible outsider to name them.
+The honest answer is that an organisation invites an audit because the opinion is worth more than the cost to someone. For Tessera, certification unlocks enterprise customers whose procurement teams will not sign without it. For a board, an independent opinion is protection against the day something goes wrong: evidence that oversight was exercised, not neglected. For regulators, it is compliance made visible. And, less flatteringly but just as truly, organisations invite audits because the people inside them already suspect the gaps and want a credible outsider to name them.
 
-The auditor's job is to be worth that trust: to deliver an opinion that is genuinely independent, even when the organisation that paid for it hopes for a different answer. That is the whole deal. Tessera is not paying you to say they are ready. Tessera is paying you to find out whether they are.
+The auditor's job is to be worth that trust: to deliver an opinion that is genuinely independent, even when the organisation that paid for it hopes for a different answer. Tessera is paying you to find out whether they are ready.
 
 ## Three kinds of control
 

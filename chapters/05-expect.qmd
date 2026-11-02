@@ -10,11 +10,11 @@ Tessera’s head of engineering hands you a single-page architecture diagram ear
 
 ## From control to control objective
 
-The previous chapters gave you the auditor's mindset, the risk picture, the frameworks, and the plan. The small procedure in chapter 4 gave you a starting point. This chapter does. It introduces the single tool that turns a list of controls into an audit: the **control objective**.
+Chapter 4's small procedure is a starting point. The **control objective** is the tool that turns a list of controls into an audit.
 
 A control is a safeguard. Encryption is a control. A firewall rule is a control. Multi-factor authentication is a control. A control objective is the *intent* that control is meant to deliver, written so that intent can be tested. "We encrypt the database" is a control. "Requests through the tested customer-data API require an authorisation decision, with sufficient logging to reconstruct access" is an objective. The first describes a configuration. The second describes an outcome you can try to disprove. That is the difference between auditing a screenshot and auditing a system.
 
-ISO/IEC 27001:2022 gives you the raw material in Annex A.8, the Technological controls, the largest of the standard's four themes. NIST CSF 2.0's Protect function and the ASD Essential Eight give you the same engineering from different angles. None of them hands you the objective. That is your job, and it is the job this chapter teaches: read the control, ask what "good" looks like, phrase it as a statement you could prove or disprove with evidence, and then go look. Every objective in this chapter is built that way.
+ISO/IEC 27001:2022 gives you the raw material in Annex A.8, the Technological controls, the largest of the standard's four themes. NIST CSF 2.0's Protect function and the ASD Essential Eight give you the same engineering from different angles. None of them hands you the objective. That is your job, and it is the job this chapter teaches: read the control, ask what "good" looks like, phrase it as a statement you could prove or disprove with evidence, and then go look.
 
 Here is a useful test for whether you have written an objective rather than a control. Can you describe how it would *fail silently*? If you cannot, clarify the mechanism and likely failure conditions before choosing a test. The objective is only real once you can picture the version of the world in which the control is present, the dashboard is green, and the objective is still not met. That picture is what you will spend the rest of the engagement trying to find.
 
@@ -40,7 +40,7 @@ Firewalls and security groups are the mechanism, but they are only as good as th
 
 ## Cryptography and key management: the control that fails silently
 
-Encryption is where auditors go wrong, because encryption looks finished. The dashboard says "at rest: enabled." The browser shows the padlock. You tick the box and move on. Do not.
+Encryption is where auditors go wrong, because encryption looks finished. The dashboard says "at rest: enabled." The browser shows the padlock. Do not tick the box and move on.
 
 Encryption at rest and in transit is the baseline, not the achievement. The achievement is **key management**, and it is where a cryptography control that looks perfect can be substantively broken. AWS Key Management Service (KMS) and hardware security modules (HSMs) exist to keep keys out of the data they protect. Customer-managed keys give Tessera control over who can use a key and when, through policies and grants that are themselves auditable. Key rotation introduces new key material but does not by itself revoke access or neutralise exposed historical ciphertext. [AWS documents](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) that KMS retains earlier material for decryption; investigate exposure and permissions separately. Separation of duties limits the damage of a rogue insider. ISO 27001 A.8.24 (use of cryptography) points here, and the Essential Eight's expectations on backups and data protection lean on the same foundation.
 
@@ -48,9 +48,9 @@ Now picture the failure. Encryption is enabled on every S3 bucket. The dashboard
 
 ## Multi-tenant SaaS: isolation is the whole product
 
-Everything in this chapter converges on one fact about Tessera: it is a multi-tenant SaaS. Customers share the same application, the same databases, the same infrastructure. The product they are paying for is, at root, the promise that they cannot see each other. Get tenant isolation wrong and you do not have a security problem. You have an existential one.
+Tessera is a multi-tenant SaaS. Customers share the same application, the same databases, the same infrastructure. The product they are paying for is, at root, the promise that they cannot see each other. Get tenant isolation wrong and the problem is existential.
 
-Tenant isolation is enforced through layered controls: per-tenant identity and namespace boundaries in IAM, row-level or logical separation in shared data stores, and, for the most sensitive work, per-tenant encryption keys with separately controlled decrypt permissions. Whether an administrator can recover plaintext depends on the architecture and effective permissions. The classic failure has a name: insecure direct object reference, where a request for `/api/tenant/1043/data` is honoured for an authenticated user who belongs to tenant 1077, because nobody checked the relationship. IDOR is the silent failure of multi-tenancy, and it is widespread because it fails open: the request succeeds, the log looks normal, nobody is alerted.
+Layered controls enforce tenant isolation: per-tenant identity and namespace boundaries in IAM, row-level or logical separation in shared data stores, and, for the most sensitive work, per-tenant encryption keys with separately controlled decrypt permissions. Whether an administrator can recover plaintext depends on the architecture and effective permissions. The classic failure has a name: insecure direct object reference, where a request for `/api/tenant/1043/data` is honoured for an authenticated user who belongs to tenant 1077, because nobody checked the relationship. IDOR is the silent failure of multi-tenancy, and it is widespread because it fails open: the request succeeds, the log looks normal, nobody is alerted.
 
 State the tested boundary and threat model. For E11, an ordinary authenticated tenant A user must not read tenant B's record by changing an API identifier; unauthenticated requests must also be denied. That is testable. It does not cover compromise of a trusted application role, an administrator, every interface or every error path.
 
@@ -58,7 +58,7 @@ Customer-managed KMS keys and bring-your-own-key arrangements do not automatical
 
 ## The shared-responsibility line: who secures what
 
-Underneath all of this is a line that determines who is responsible for what, and Tessera sits on the wrong side of it more often than its diagram suggests. AWS operates on a shared-responsibility model. AWS secures the cloud itself; Tessera secures what it puts in the cloud. The line is not a footnote. It is the boundary of your entire technical audit, because you can only test what Tessera owns, and a great deal of what looks like "AWS's problem" is actually Tessera's.
+Underneath all of this is a line that determines who is responsible for what, and Tessera sits on the wrong side of it more often than its diagram suggests. AWS operates on a shared-responsibility model. AWS secures the cloud itself; Tessera secures what it puts in the cloud. That line bounds your entire technical audit, because you can only test what Tessera owns, and a great deal of what looks like "AWS's problem" is actually Tessera's.
 
 AWS secures:
 

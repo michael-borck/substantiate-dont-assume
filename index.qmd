@@ -46,11 +46,11 @@ Use only the explicitly fictional book exercises with unapproved tools. For real
 
 ## Who this book is for
 
-This is a first audit engagement for readers with basic security knowledge: accounts and permissions, logs, backups, and the idea that a cloud provider and its customer have different responsibilities. Technical terms are explained when they become relevant. No CISA credential, purchased lab or prior reading of the companion books is required.
+This is a first audit engagement for readers with basic security knowledge: accounts and permissions, logs, backups, and the idea that a cloud provider and its customer have different responsibilities. The book explains technical terms when they become relevant. No CISA credential, purchased lab or prior reading of the companion books is required.
 
 By the end, you should be able to define a bounded engagement, select criteria, test supplied records, distinguish an observed exception rate from future incident likelihood, write a supported finding and defend a readiness conclusion.
 
-This is teaching material, not legal advice or a replacement for authorised copies of standards. Original case criteria are supplied so that the exercises can be completed without purchasing a standard. A real engagement requires its agreed editions and suitably qualified review.
+This is teaching material, not legal advice or a replacement for authorised copies of standards. The book supplies original case criteria so that you can complete the exercises without purchasing a standard. A real engagement requires its agreed editions and suitably qualified review.
 
 ## How this book works
 

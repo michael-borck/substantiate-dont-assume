@@ -1,0 +1,13 @@
+version: 1
+style: editorial-c
+art: cover-art.png
+family: JUDGEMENT / AUDIT
+accent: '#4E5E8A'
+background: '#E3E6F0'
+title_lines:
+- Substantiate,
+- Don't Assume
+dark: false
+pixel: false
+scene: substantiate
+art_origin: Locally constructed editable vector illustration.

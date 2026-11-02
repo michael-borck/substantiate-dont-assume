@@ -18,7 +18,7 @@ A vague “all security controls” brief needs clarification before acceptance.
 
 ## The four things you must fix before you start
 
-Before a single document is reviewed or a single interview booked, four things must be fixed in writing. They are the legs the engagement stands on, and a wobble in any one of them propagates through everything that follows.
+Before you review a single document or book a single interview, you must fix four things in writing. They are the legs the engagement stands on, and a wobble in any one of them propagates through everything that follows.
 
 The **audit objective** is the question the engagement exists to answer. For Tessera, that question is specific: *is Tessera's information security management system ready for ISO/IEC 27001:2022 certification?* Not "is Tessera secure," which is unanswerable, and not "what is wrong with Tessera," which has no end. A good objective is a question with a finite, opinion-shaped answer.
 
@@ -28,7 +28,7 @@ The **scope** is the boundary: which parts of the subject matter the objective a
 
 And **materiality** is the threshold that decides what matters. Significance guides priorities and the executive summary. Record supported nonconformities against applicable criteria even when they are individually low severity. Materiality is what stops the report from being an exhaustive catalogue of minor nicks and makes it a judgement about the things that affect the opinion.
 
-Notice the relationship. The objective is the question; the criteria define "good"; the scope draws the fence; significance guides how findings are prioritised and communicated. Fix all four, and the engagement has a spine. Leave any vague, and you are back to the health check.
+The objective is the question; the criteria define "good"; the scope draws the fence; significance guides how findings are prioritised and communicated. Fix all four, and the engagement has a spine. Leave any vague, and you are back to the health check.
 
 ## Materiality is not completeness
 
@@ -63,7 +63,7 @@ The six stages, in order:
 5. **Completion.** The engagement is formally closed. Working papers are finalised and retained, lessons are captured, and the records that someone may need to reconstruct this audit in three years are put away properly.
 6. **Follow-up.** You verify that the corrective actions raised in the report have actually been taken and are working. An audit that reports a finding and never checks the fix is an audit that stops at diagnosis.
 
-Notice where the judgement sits. The stages are linear, but the decisions inside them are not. Initiation fixes scope, but preparation often forces a scope correction when the documents reveal something unexpected, and follow-up can reopen an engagement that completion thought was closed. The lifecycle is a spine, not a script. You move through it with your professional scepticism switched on at every stage.
+The stages are linear, but the decisions inside them are not. Initiation fixes scope, but preparation often forces a scope correction when the documents reveal something unexpected, and follow-up can reopen an engagement that completion thought was closed. The lifecycle is a spine, not a script. You move through it with your professional scepticism switched on at every stage.
 
 ## The audit programme and risk-based scoping
 
