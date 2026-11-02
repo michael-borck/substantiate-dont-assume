@@ -77,6 +77,8 @@ If you find drift within this book, report the edition, evidence ID and conflict
 
 [Conversation, Not Delegation](https://michael-borck.github.io/conversation-not-delegation/) develops the craft of working with AI. It is optional further reading. This book supplies its own method and practice inputs.
 
+The series trunk is *Conversation, Not Delegation* for method and *The Human Edge* for professional judgement. This book is the branch for assurance and audit.
+
 ## Conventions used in this book
 
 **🗂️ Tessera Case** marks a worked example. **🗄️ Evidence Locker** identifies the task and the output to retain. **🤖 AI Field Note** shows a bounded illustrative draft and its evaluation; it is not a transcript of a measured model run. **🔍 Auditing AI** applies assurance methods to AI-supported systems.

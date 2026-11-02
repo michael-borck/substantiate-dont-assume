@@ -74,7 +74,7 @@ The choice is rarely pure. A real treatment plan combines them: mitigate hard, t
 
 ## Residual risk
 
-**Inherent risk** is the risk before controls: the raw exposure, threat meeting vulnerability with nothing in the way. **Residual risk** is what remains *after* treatment. The whole point of mitigation is to move a risk from its inherent level down to a residual level the organisation has decided is acceptable.
+**Inherent risk** is the risk before controls: the raw exposure, threat meeting vulnerability with nothing in the way. **Residual risk** is what remains *after* treatment. Mitigation moves a risk from its inherent level down to a residual level the organisation has decided is acceptable.
 
 Residual risk is where auditors live. Inherent risk tells you about the world. Residual risk tells you whether the controls are doing their job. A risk that sits at "High inherent, High residual" may remain high despite functioning controls, or may reflect weak or unverified treatment. Distinguish those explanations. A risk at "High inherent, Low residual" has controls you now need to test, because the entire justification for that comfortable residual rating rests on them. Every residual rating in a register is a claim about a control. Your job, for the rest of the engagement, is to substantiate those claims one by one.
 
