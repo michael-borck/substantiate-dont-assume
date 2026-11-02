@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -34,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./about-author.html" rel="next">
-<link href="./appendices/a-drafter-to-evaluator-loop.html" rel="prev">
+<link href="./appendices/e-interview-guide.html" rel="prev">
 <link href="./favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -287,6 +291,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction: The Audit Mindset</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -398,6 +408,30 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./appendices/b-case-pack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Fixed case pack: SDA-2026.1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/c-answer-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Answer checks and assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/d-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Source guide and edition boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/e-interview-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./acknowledgments.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -417,7 +451,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></div>
+    <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="/llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/substantiate-dont-assume"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -441,21 +475,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This book grew out of a frustration and an opportunity. The frustration: information security auditing is taught from standards — ISO/IEC 27001, NIST CSF, the Privacy Act — which are authoritative but not a story a student can read end to end. The opportunity: AI is commoditising the technical craft of auditing, which forces the question of what the human auditor is actually <em>for</em>. This book is an attempt to answer both at once — to give ISYS6018 a readable spine and to take a clear stance on judgement in a world where machines can draft.</p>
-<p>The students of ISYS6018 — Information Security Audit and Control at Curtin University — are the reason this book exists. Their questions, their confusion, and their moments of “oh, <em>that’s</em> what an auditor does” shaped every chapter. The Tessera engagement is written for them, and the discipline it teaches — substantiate, don’t assume — is the one they carry into the profession.</p>
+<p>This book grew out of a frustration and an opportunity. The frustration: information security auditing is taught from standards (ISO/IEC 27001, NIST CSF, the Privacy Act) which are authoritative but not a story a reader can follow end to end. The opportunity: AI is commoditising the technical craft of auditing, which forces the question of what the human auditor is actually <em>for</em>. This book is an attempt to answer both at once: to give the discipline a readable spine and to take a clear stance on judgement in a world where machines can draft.</p>
+<p>This book began with the auditors and apprentices I have taught and worked with. Their questions, their confusion, and their moments of “oh, <em>that’s</em> what an auditor does” shaped every chapter. The Tessera engagement is written for them, and the discipline it teaches, substantiate and don’t assume, is the one they carry into the profession.</p>
 <p>Colleagues who reviewed early drafts and pushed back on arguments that were not yet strong enough made the book sharper. You know who you are, and I am grateful.</p>
 <p>The open-source community behind Quarto, Pandoc, and GitHub made it possible to write, build, and publish this book with tools that are free and transparent.</p>
-<p>This book was written using the methodology its companion, <em>Conversation, Not Delegation</em>, describes. AI was involved at every stage — as a drafting partner, a sounding board, and a source of plausible-sounding mistakes that needed catching. That last role is the point. An auditor’s relationship to AI-generated work is exactly what this book teaches: the machine produces the draft; the human supplies the judgement, the evidence, and the defensible opinion. Every sentence here reflects the author’s judgement. The AI made the work faster. It did not do the thinking.</p>
+<p>This book was written using the methodology its companion, <em>Conversation, Not Delegation</em>, describes. AI was involved at every stage: as a drafting partner, a sounding board, and a source of plausible-sounding mistakes that needed catching. An auditor’s relationship to AI-generated work is exactly what this book teaches: the machine produces the draft; the human supplies the judgement, the evidence, and the defensible opinion. Every sentence here reflects the author’s judgement. The AI made the work faster.</p>
 
 
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot embed for this book.
-  The book-publisher creates a chatbot grounded in the book's content and
-  fills in the embed id / base API URL here. Until then this is a deliberate
-  no-op so the `include-after-body` hook in _quarto.yml stays wired.
--->
+<script data-embed-id="d9721604-3074-4caf-8b0c-51c962499531" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -871,8 +901,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./appendices/a-drafter-to-evaluator-loop.html" class="pagination-link" aria-label="The Drafter-to-Evaluator Loop">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">The Drafter-to-Evaluator Loop</span></span>
+      <a href="./appendices/e-interview-guide.html" class="pagination-link" aria-label="Interview guide and optional live practice">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

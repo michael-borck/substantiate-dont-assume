@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -78,8 +81,38 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -287,6 +320,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction: The Audit Mindset</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -398,6 +437,30 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../appendices/b-case-pack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Fixed case pack: SDA-2026.1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/c-answer-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Answer checks and assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/d-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Source guide and edition boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/e-interview-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -423,14 +486,22 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-act-break-from-suspicion-to-proof" id="toc-the-act-break-from-suspicion-to-proof" class="nav-link active" data-scroll-target="#the-act-break-from-suspicion-to-proof"><span class="header-section-number">7.1</span> The act break: from suspicion to proof</a></li>
   <li><a href="#four-kinds-of-evidence" id="toc-four-kinds-of-evidence" class="nav-link" data-scroll-target="#four-kinds-of-evidence"><span class="header-section-number">7.2</span> Four kinds of evidence</a></li>
   <li><a href="#sufficiency-and-appropriateness" id="toc-sufficiency-and-appropriateness" class="nav-link" data-scroll-target="#sufficiency-and-appropriateness"><span class="header-section-number">7.3</span> Sufficiency and appropriateness</a></li>
-  <li><a href="#sampling-why-you-cannot-test-everything-and-how-to-size-what-you-do" id="toc-sampling-why-you-cannot-test-everything-and-how-to-size-what-you-do" class="nav-link" data-scroll-target="#sampling-why-you-cannot-test-everything-and-how-to-size-what-you-do"><span class="header-section-number">7.4</span> Sampling: why you cannot test everything, and how to size what you do</a></li>
+  <li><a href="#sampling-why-you-cannot-test-everything-and-how-to-size-what-you-do" id="toc-sampling-why-you-cannot-test-everything-and-how-to-size-what-you-do" class="nav-link" data-scroll-target="#sampling-why-you-cannot-test-everything-and-how-to-size-what-you-do"><span class="header-section-number">7.4</span> Sampling: why you cannot test everything, and how to size what you do</a>
+  <ul class="collapse">
+  <li><a href="#a-numerical-example" id="toc-a-numerical-example" class="nav-link" data-scroll-target="#a-numerical-example"><span class="header-section-number">7.4.1</span> A numerical example</a></li>
+  <li><a href="#why-tessera-uses-a-census" id="toc-why-tessera-uses-a-census" class="nav-link" data-scroll-target="#why-tessera-uses-a-census"><span class="header-section-number">7.4.2</span> Why Tessera uses a census</a></li>
+  </ul></li>
   <li><a href="#the-five-testing-procedures" id="toc-the-five-testing-procedures" class="nav-link" data-scroll-target="#the-five-testing-procedures"><span class="header-section-number">7.5</span> The five testing procedures</a></li>
-  <li><a href="#chain-of-custody" id="toc-chain-of-custody" class="nav-link" data-scroll-target="#chain-of-custody"><span class="header-section-number">7.6</span> Chain of custody</a></li>
+  <li><a href="#chain-of-custody" id="toc-chain-of-custody" class="nav-link" data-scroll-target="#chain-of-custody"><span class="header-section-number">7.6</span> Chain of custody</a>
+  <ul class="collapse">
+  <li><a href="#one-reproducible-working-paper" id="toc-one-reproducible-working-paper" class="nav-link" data-scroll-target="#one-reproducible-working-paper"><span class="header-section-number">7.6.1</span> One reproducible working paper</a></li>
+  </ul></li>
   <li><a href="#auditing-ai-can-you-trust-a-log-an-ai-produced" id="toc-auditing-ai-can-you-trust-a-log-an-ai-produced" class="nav-link" data-scroll-target="#auditing-ai-can-you-trust-a-log-an-ai-produced"><span class="header-section-number">7.7</span> Auditing AI: can you trust a log an AI produced?</a></li>
   <li><a href="#interviewing-for-evidence" id="toc-interviewing-for-evidence" class="nav-link" data-scroll-target="#interviewing-for-evidence"><span class="header-section-number">7.8</span> Interviewing for evidence</a></li>
   <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">7.9</span> The question, answered</a></li>
+  <li><a href="#take-it-to-the-ai" id="toc-take-it-to-the-ai" class="nav-link" data-scroll-target="#take-it-to-the-ai"><span class="header-section-number">7.10</span> Take it to the AI</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="/llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/substantiate-dont-assume"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -459,60 +530,56 @@ ul.task-list li input[type="checkbox"] {
 <p><em>You can read your way to a suspicion. You can only evidence your way to an opinion.</em></p>
 </blockquote>
 <div class="tessera-case">
-<p><strong>🗂️ Tessera Case: Full access granted</strong></p>
-<p>The email lands on a Monday morning, and it changes the engagement. Tessera’s CTO has signed the access schedule. You have credentials for the AWS environment with read-only audit permissions, exported log streams for the last twelve months, the complete HR leavers list, calendar slots with the head of people and the IT operations lead, and a standing invitation to walk the Perth office. For six weeks you have been reading about Tessera. From today you are looking at it. The preliminary opinion you wrote at the close of Act I, <em>promising on paper, not yet proven in practice</em>, now meets the only thing that can upgrade or overturn it: the evidence itself.</p>
+<p><strong>🗂️ Tessera Case: Operating records arrive</strong></p>
+<p>Act I identified the revocation deadlines and the evidence needed to test them. E04 now supplies 48 leavers and their disable events. E05 adds incident and cause records. These are documentary operating evidence, even when read from a desk. Your task is to establish what each record supports and retain the reasoning so another reader can reproduce it.</p>
 </div>
 <section id="the-act-break-from-suspicion-to-proof" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="the-act-break-from-suspicion-to-proof"><span class="header-section-number">7.1</span> The act break: from suspicion to proof</h2>
-<p>Act I ended with a disciplined confession. You had read the ISMS, the risk register, the Statement of Applicability, and every policy beneath them, and formed an honest opinion: designed well, operating unconfirmed. Every gap you named at the close of Chapter 6 was a control you had read about and never seen run. Full access is the thing that closes those gaps.</p>
-<p>Notice the posture change. In Act I you accepted documents because documents were all you had; your scepticism was sharp but pointed at the page. Now it has somewhere to land. A policy that says access is revoked within twenty-four hours of a leaver’s last day is, on the page, a promise. A log entry showing the account disabled at 16:11 that day is the promise kept; one showing it still active a week later is the promise broken. Both are evidence, and only full access could have produced them.</p>
-<p>Here is the trap that comes with the door opening. Access feels like proof, and that feeling is the new danger. A dashboard, a log, a configuration export, a confident engineer: each can look like evidence and still fail to substantiate anything. This chapter is the craft that turns raw access into a defensible opinion, which evidence to gather, how much, how to keep it so it survives challenge, and which procedures prove a control operates rather than merely exists.</p>
+<p>The staged release of records changes what you can conclude. It does not remove uncertainty. A timestamp may refer to the wrong event; a join may omit service credentials; a complete-looking export may cover only one business unit.</p>
+<p>Access is a prerequisite for some procedures, not assurance in itself. Start with the objective and examine whether the available evidence can answer it. Missing evidence belongs in the result, rather than being supplied through inference.</p>
 </section>
 <section id="four-kinds-of-evidence" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="four-kinds-of-evidence"><span class="header-section-number">7.2</span> Four kinds of evidence</h2>
-<p>Every conclusion rests on evidence, and evidence is not all the same stuff. The profession sorts it into four kinds, and knowing which kind you are holding tells you how much it can carry.</p>
-<p><strong>Observational</strong> evidence is what you see yourself: a leaver’s badge denied at the side entrance, a privileged elevation granted, used, and revoked beside you. It is the most direct evidence that a control <em>operates</em>, with a hard limit: it only proves operation for the moment you watched. A control that ran perfectly under your gaze can fail the day after you leave.</p>
-<p><strong>Documentary</strong> evidence is the records the organisation and its systems produce: the access-revocation log, the CloudTrail export, the signed offboarding checklist, the supplier’s SOC 2 report. This is the bulk of what Act II gathers, and its reliability depends on its source and the controls over how it was made. A system-generated log nobody can alter is strong; a spreadsheet a manager typed last week is weak.</p>
-<p><strong>Analytical</strong> evidence is your own work: reconciling the asset register against the live estate, re-running the calculation behind a tenant-isolation check, computing a deviation rate from a sample. It is powerful precisely because you produced it on terms you set, independent of the organisation’s goodwill.</p>
-<p><strong>Oral</strong> evidence is what people tell you: the interview, the attestation, the corridor explanation. It is the weakest kind alone, because memory is selective and self-interest is real, but it is also where almost every other kind of evidence begins. A good interview does not conclude anything. It points you at the document, the log, or the observation that will.</p>
-<p>There is a persuasiveness hierarchy worth memorising. Evidence from outside the organisation beats evidence from inside it; what you obtain yourself beats what the client hands you; the original record beats a copy, a copy beats a summary, and a contemporaneous record beats a reconstruction. Keep that ordering in mind and you will feel the right scepticism for each artefact you are handed.</p>
+<p><strong>Observational evidence</strong> records what you saw: a revoked badge denied at a reader, or a tested access decision. It can be strong for that event. It may be less representative if staff alter their behaviour while observed.</p>
+<p><strong>Documentary evidence</strong> includes policies, logs, signed checklists, contracts and external reports. A policy supports a design claim; historical logs may support operation over a period. Reliability depends on creation, access, retention and alteration controls. “System generated” is not enough if the system can omit events or the administrator can rewrite its output.</p>
+<p><strong>Analytical evidence</strong> is work you perform on inputs: reconciliation, elapsed-time calculations, trend analysis or re-performance of a review. It can expose an inconsistency, but inherits errors in those inputs. Producing a spreadsheet yourself does not make the source complete.</p>
+<p><strong>Oral evidence</strong> includes interviews and explanations. It helps establish context and locate records. Memory, incentives and ambiguity can limit it. Corroborate consequential claims, especially when an objective record should exist.</p>
+<p>There is no universal ranking that decides every case. Independent, contemporaneous and well-controlled records often deserve more weight, but relevance comes first. A current third-party report on the wrong service cannot answer a question about Tessera’s leavers. A reliable internal event log can.</p>
 </section>
 <section id="sufficiency-and-appropriateness" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="sufficiency-and-appropriateness"><span class="header-section-number">7.3</span> Sufficiency and appropriateness</h2>
-<p>Two words do most of the judgement work, and they answer different questions. <strong>Sufficiency</strong> is the <em>quantity</em> of evidence: is there enough of it to support the conclusion? <strong>Appropriateness</strong> is the <em>quality</em>: is it relevant to the assertion, and is it reliable?</p>
-<p>Appropriateness has two halves, and students trip on the second. <strong>Relevance</strong> asks whether the evidence actually tests what you are trying to prove: a clean access-revocation log is irrelevant if your assertion is about badge access. <strong>Reliability</strong> asks whether you can trust the source: was the record produced by a system whose integrity is controlled, at or near the event, by someone without motive to distort it?</p>
-<p>The mistake is to chase one axis and ignore the other. A mountain of irrelevant evidence proves nothing, however large the pile; a single relevant item is a start but not a conclusion, because sufficiency is a property of the population, not of one match. High assurance needs both, enough of the right kind, and the craft of this chapter is deciding, control by control, how much of what kind will defend the opinion.</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="Watch out: the evidence that isn't">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Watch out: the evidence that isn’t
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Three artefacts look like evidence and are not, and each sinks an audit that trusted it. A <strong>screenshot</strong> with no timestamp, source, or chain of custody is a picture someone made; it could be staged, old, or edited. A <strong>self-attestation</strong>, the manager’s confident “we do that,” is oral evidence, the weakest kind, and worthless uncorroborated. An <strong>AI summary</strong> standing in for the underlying logs is a secondary account of a primary record, and summarisation always loses the detail that decides whether a control actually ran.</p>
-<p>Then the sufficiency trap, subtler and more common. One corroborating item does not prove a control operates across a population. A single leaver whose access was revoked on time is reassuring; it is not evidence the control works for every leaver. Sufficiency asks how many, across how much, with what confidence. A single match answers none of those questions, and treating it as if it did is the same error as trusting a screenshot: mistaking the appearance of evidence for evidence itself.</p>
-</div>
-</div>
+<p><strong>Sufficiency</strong> concerns how much evidence is needed for the conclusion. <strong>Appropriateness</strong> concerns its relevance and reliability. Evaluate both against the assertion, risk, period and intended reliance.</p>
+<p>One event may settle a narrow claim about that event. It cannot establish that the same control operated for every event in a year. Conversely, a large collection of irrelevant screenshots adds little assurance. State the population and what the evidence actually covers.</p>
+<p>A screenshot without account, time or provenance may still be a lead. It is weak support for a deployment-specific claim. A summary can help navigate raw records; preserve and inspect the underlying records before relying on details that summarisation might omit.</p>
 </section>
 <section id="sampling-why-you-cannot-test-everything-and-how-to-size-what-you-do" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="sampling-why-you-cannot-test-everything-and-how-to-size-what-you-do"><span class="header-section-number">7.4</span> Sampling: why you cannot test everything, and how to size what you do</h2>
-<p>Chapter 4 decided <em>where</em> to dig. Sampling decides <em>how much</em>. You cannot test every login, every leaver, every firewall rule across a year, so you test a defensible subset and reason about the whole from it. Done badly, sampling is a licence to miss the thing that matters. Done well, it is the most rigorous thing an auditor does, because the rigour is in the design, not the counting.</p>
-<p>The first rule, and the one most often broken, is that a sample proves nothing about a population you have not completely defined. To say something about “every leaver in the period,” you need the complete list of every leaver, reconciled to a source you trust, such as payroll. A sample drawn from a convenient subset, the leavers IT happens to remember, proves something about that subset and nothing else. Population completeness comes first, always.</p>
-<p>For testing controls, the tool is <strong>attribute sampling</strong>. You are not measuring a sum of money; you are estimating a rate, the proportion of times a control deviated from its objective. The leaver’s access was either revoked in the policy window or it was not, each test a yes or a no, and the sample lets you estimate the deviation rate across the whole population.</p>
-<p>Here is where the discipline bites. The sample size is not a number you feel; it is derived from three things. The <strong>tolerable deviation rate</strong> is how much failure you can accept and still conclude the control works: tighter tolerance, bigger sample. The <strong>expected deviation rate</strong> is what you think you will find: the worse you expect, the more you test. The <strong>assurance level</strong> is the confidence the engagement requires: certification work demands high assurance, and high assurance means a larger sample. Set those three and the size follows. Pick a round number because it sounds thorough, and you have a sample you cannot defend.</p>
+<p>Define the population before selecting items. For the fixed case, it is all 48 departures from 1 June 2025 to 31 May 2026, including their separately managed keys. The pack stipulates reconciliation with payroll for the exercise. In real work, obtain the independent population, inspect exclusions and reconcile identifiers yourself.</p>
+<p>For a large population, <strong>attribute sampling</strong> tests whether each selected item meets a defined condition. The sampling design must say how items are selected, what deviation means, how much sampling risk is accepted and how exceptions affect the conclusion. A convenience sample does not support a statistical confidence claim.</p>
+<section id="a-numerical-example" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="a-numerical-example"><span class="header-section-number">7.4.1</span> A numerical example</h3>
+<p>Consider a separate, large population of similar independent events. Suppose you expect no deviations, want a zero-deviation acceptance design and choose a tolerable rate of 5%, with a one-sided sampling risk of 5%. If the actual deviation probability were 0.05, the chance of observing zero deviations in <span class="math inline">\(n\)</span> independent trials would be <span class="math inline">\(0.95^n\)</span>.</p>
+<p>Choose the smallest <span class="math inline">\(n\)</span> for which:</p>
+<p><span class="math display">\[
+0.95^n \leq 0.05, \qquad
+n \geq \frac{\log(0.05)}{\log(0.95)} = 58.404\ldots
+\]</span></p>
+<p>Round up to <strong>59</strong>. With zero observed deviations, the one-sided exact binomial upper bound is approximately <strong>4.95%</strong>. This is not a claim that the control is 95% reliable or that the probability of a breach is 5%.</p>
+<p>The calculation assumes a binomial model and suitably independent representative selection. A finite population sampled without replacement requires an appropriate finite-population method; clustered events and different risks may require stratification or another design. If deviations are expected or found, this zero-acceptance example is not a complete evaluation plan. Agree the method and decision rules before drawing a sample.</p>
+</section>
+<section id="why-tessera-uses-a-census" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="why-tessera-uses-a-census"><span class="header-section-number">7.4.2</span> Why Tessera uses a census</h3>
+<p>There are only 48 leavers, and the key-coverage question is important enough to inspect each. We test <strong>48 of 48: a census</strong>, not a 59-item sample compressed into a smaller population. A census removes selection-based sampling uncertainty for those recorded items. It does not remove missing-population, recording, procedure or interpretation error, and it does not predict future operation.</p>
+</section>
 </section>
 <section id="the-five-testing-procedures" class="level2" data-number="7.5">
 <h2 data-number="7.5" class="anchored" data-anchor-id="the-five-testing-procedures"><span class="header-section-number">7.5</span> The five testing procedures</h2>
-<p>You have your population and your sample. Now you need procedures that actually extract evidence from each item. The audit toolbox has five, rising in persuasive power as you move down the list.</p>
-<p><strong>Inquiry</strong> is asking. You ask the IT operations lead how offboarding runs. Inquiry is where nearly every test begins, because it tells you where the evidence lives, and where nearly every test must not end, because what someone tells you is oral evidence, the weakest kind. “We disable accounts within twenty-four hours” is a lead, not a finding.</p>
-<p><strong>Observation</strong> is watching a control run: you attend an offboarding and observe the steps being performed. It proves the control operated at the moment you watched, and only that moment. It is excellent for physical and process controls and useless for anything that has to hold across the year.</p>
-<p><strong>Inspection</strong> is examining records and assets: the access-revocation log, the signed checklist, the CloudTrail export, the configuration file. Inspection is the workhorse of IS audit, and most of Act II is inspection done well, the right record, the right period, read sceptically.</p>
-<p><strong>Re-performance</strong> is re-running the control yourself, independently. Rather than trust the reconciliation was done, you redo it; rather than trust the access review caught the orphaned account, you pull the live IAM state and look yourself. It is powerful because it does not depend on the organisation having done anything correctly: you are checking the outcome, not the report of the outcome.</p>
-<p><strong>Re-computation</strong> is the numeric cousin: you recompute the calculation a control is supposed to perform, whether a deviation rate, a key-rotation interval, or a backup-retention tally. It turns an assertion into a number you can verify.</p>
-<p>The order matters, because persuasive value rises as you go. An opinion built on inquiry alone is built on talk; one built on inspection, re-performance, and re-computation is built on what the evidence shows. State the control objective, pick the procedure that tests it at the assurance the engagement demands, and reach for the stronger procedure whenever the control is critical.</p>
+<p><strong>Inquiry:</strong> ask how a record was created and where exceptions are handled. Record what was claimed and what still needs corroboration.</p>
+<p><strong>Observation:</strong> watch an authorised control execution. Record the environment, participants and conditions; do not imply that the observed event represents an untested year.</p>
+<p><strong>Inspection:</strong> examine the relevant records or assets. For revocation, establish whether an event means disablement, deletion, last use or merely a request. A key’s “last used” timestamp does not prove when the key was revoked.</p>
+<p><strong>Re-performance:</strong> independently repeat a control or check, within the approved scope. Reconcile the complete leaver list with credential ownership and disable events rather than relying solely on a signed checklist.</p>
+<p><strong>Re-computation:</strong> check arithmetic, such as elapsed time and exception rates. Keep timezone and boundary conventions explicit. A two-hour rule means elapsed time no greater than two hours here; a result exactly at two passes.</p>
+<p>These procedures answer different questions. Re-performing a calculation with incomplete inputs is not stronger than a reliable source record merely because it appears later in this list. Combine methods to address the assertion and its principal failure modes.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="🤖 AI Field Note: AI drafts the sampling plan and the test steps">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -523,126 +590,70 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is the kind of structured work an AI drafts fluently, and so the kind you must evaluate hardest. Ask it to draft the work package for testing Tessera’s access-revocation control and it returns a clean document in seconds: sampling plan, test steps, results table. Read it as an evaluator, because it is wrong in two instructive ways.</p>
-<p>First, the sample size. The AI proposes “test 25 leavers.” A round, confident number with no basis. It carries no population, because the AI never asked how many leavers there were, and no tolerable deviation rate, expected rate, or assurance level, because it never fixed them. The number was chosen for how it reads, not derived from what the opinion requires. Your correction is to set the parameters the AI skipped: the complete HR leavers list as the population, a tight tolerable deviation rate, a low expected rate, and the high assurance a certification engagement demands. The derivation lands higher than twenty-five, and against a small population backing a control this critical, the defensible answer may be to test all of them. The AI picked a number. You derived one.</p>
-<p>Second, the test steps. The AI drafts three. “Verify that access was revoked within twenty-four hours of the leaver’s last day.” Performable, if the revocation timestamps exist, and they do. “Confirm the leaver’s manager was notified within the policy window.” Not performable: Tessera produces no record of that notification, so the step collapses into pure inquiry and proves nothing. “Determine whether the leaver still holds production access.” Conflates <em>now</em> with <em>then</em>. For a departure three months ago, you cannot observe the state on their last day from a current snapshot; you depend on the historical audit trail, not a live check. The AI wrote steps that read as tests. Two of the three cannot be executed as written.</p>
-<p>The AI produced the draft quickly and well-structured, and that is the trap. The sample size was a guess dressed as a method; the test steps were plausible sentences that do not survive contact with the evidence Tessera actually keeps. You supplied the parameters, rewrote the steps to what the trail can support, and turned a generic work package into one that will hold up under review. That is the drafter-to-evaluator shift, on the artefact that matters most this week.</p>
+<p>An illustrative draft proposes “test 25 leavers, verify manager notification, and confirm that old accounts are disabled today.”</p>
+<p>The sample has no stated design. E04 is small enough for a census. Manager notification has no supplied event record and is not the revocation criterion. A current-state check cannot establish a past disable time. Replace the steps with an ID reconciliation, inspection of both credential families and elapsed-time calculations against both historical policies.</p>
+<p>The correction is checkable from the pack; no forecast about how every model behaves is needed.</p>
 </div>
 </div>
 </section>
 <section id="chain-of-custody" class="level2" data-number="7.6">
 <h2 data-number="7.6" class="anchored" data-anchor-id="chain-of-custody"><span class="header-section-number">7.6</span> Chain of custody</h2>
-<p>Evidence you gather has to survive challenge, sometimes years later, in a certification review, a board meeting, or a regulator’s inquiry. That survival depends on chain of custody: a complete, defensible record of who collected what, when, from where, by what method, and what happened to it afterwards. An extract with no provenance is just a file someone made, and “someone made a file” is not a basis for an opinion.</p>
-<p>The mechanics are unglamorous and non-negotiable. Every extract gets a hash, typically SHA-256, recorded at capture so any later alteration is detectable. Copies are read-only. Each artefact carries its source system, the query or export that produced it, the date and time in a clear timezone, and the name of the auditor who took it. Transfers between people, the log moving from the analyst who pulled it to the lead who filed it, are themselves logged. The whole chain is sealed into the working papers, and another auditor following them should be able to trace every conclusion back to a specific artefact captured on a specific day.</p>
-<p>I learned this the hard way. The first time full access landed, I went straight for the logs and forgot to record how I got them. Three weeks later a reviewer asked where a particular extract had come from, and I could not say. The extract was fine. Its provenance was gone. An evidence extract with no provenance is not evidence; it is an unsupported claim, which is exactly what we refuse to accept from the client. The discipline cuts as deep for us as it does for them, and it should.</p>
+<p>Record who obtained each item, when, from which system and by what query or export. Retain timezone, filters, permissions and transformations. Preserve the original and work on a controlled copy. Log transfers and restrict access according to the engagement’s retention policy.</p>
+<p>A SHA-256 digest can detect a change relative to the recorded digest. It cannot tell you whether the original extract was truthful, complete or collected by the claimed person. Protect the manifest as well as the files. A digest invented for an illustration is not a reproducible checksum.</p>
+<p>The book’s source provides full checksums for its electronic teaching records. Those are packaging-integrity checks, not forensic provenance. For E04, use the manifest’s synthetic-source description and capture date; do not record the author as a real-world auditor who extracted an actual client log.</p>
+<section id="one-reproducible-working-paper" class="level3" data-number="7.6.1">
+<h3 data-number="7.6.1" class="anchored" data-anchor-id="one-reproducible-working-paper"><span class="header-section-number">7.6.1</span> One reproducible working paper</h3>
+<p>For <strong>L007</strong>, termination is 9 January at 16:00 AWST. Identity access was disabled at 17:00 that day. The separate key was disabled on 25 February at 16:00: <strong>47 days = 1,128 hours</strong> later. The latest disable event determines full revocation. It exceeds both P-IT’s 24-hour and P-HR’s two-hour historical deadlines.</p>
+<p>For <strong>L044</strong>, the key delay is six hours. It passes P-IT and fails P-HR. That is why silently choosing the less demanding policy changes the result.</p>
+<p>For the full population, three records exceed 24 hours: L007, L019 and L031. Four exceed two hours: those three plus L044. Record <strong>3/48 = 6.25%</strong> and <strong>4/48 ≈ 8.33%</strong>, each with its criterion. These are observed deviations in the supplied historical population, not probabilities of misuse or a future breach.</p>
+</section>
 </section>
 <section id="auditing-ai-can-you-trust-a-log-an-ai-produced" class="level2" data-number="7.7">
 <h2 data-number="7.7" class="anchored" data-anchor-id="auditing-ai-can-you-trust-a-log-an-ai-produced"><span class="header-section-number">7.7</span> Auditing AI: can you trust a log an AI produced?</h2>
-<p>This is the question earlier chapters promised to take up in full, and full access is where it lands. Tessera runs AI in two places inside the boundary you drew in Chapter 4: a support assistant that triages alerts, and an anomaly detector in the logging stack. Both were named as evidence gaps at the close of Act I. Both now produce logs, and the question is whether those logs count as evidence you can stand behind.</p>
-<p>Take the assistant. When it auto-resolves a low-priority alert, the log entry recording the resolution is, in a real sense, AI-produced. Can you trust it? Treat it as any system log, then add a layer. A log’s reliability always depends on the controls over how it was generated, but an AI’s record of its own action has a failure mode a deterministic system’s log does not: it can confabulate, truncate, or summarise away the detail that would tell you whether the action was correct. The tidy “alert reviewed, no action required” may faithfully record a sound decision, or paper over a misjudgement; you cannot tell from the summary. Corroborate against the underlying system’s own raw audit trail, the original alert event and the downstream actions, and treat the AI’s log as one account among several, not the account of record.</p>
-<p>Now the harder question, the one Chapter 5 raised: how do you test a control that an AI runs? The assistant triaging alerts is itself a detective control, and testing whether it <em>operates</em> means measuring its decisions against ground truth. Did it escalate what it should have? Auto-close what it should not have? That needs a labelled set, a sample of alerts where you know independently what the right outcome was, so you can measure the assistant’s deviation rate the way you measure any control’s. The five procedures apply: inquire how it was tuned, observe it on a live alert, inspect its decision log, then re-perform by re-judging the cases yourself against the labels. Re-performance, for an AI-run control, is exactly the drafter-to-evaluator posture this book argues for: the machine decided, and you are the evaluator who decides whether the decision holds.</p>
-<p>The conclusion is steadier than the anxiety around AI usually allows. You can audit a control an AI runs, and use evidence an AI helped produce, on one condition: never let the AI’s account of itself be the only account. Corroborate against the raw trail, test its decisions against ground truth, and treat its summaries as leads to the primary evidence rather than the primary evidence itself. An AI’s log is admissible. It is not self-authenticating.</p>
+<p>Distinguish a deterministic event recording that a model was called from the model’s generated account of what happened. A generated summary may omit, misstate or infer details. Compare it with the original event, the action actually taken and any downstream state change.</p>
+<p>To evaluate an AI-assisted alert decision, define the desired decision, relevant classes and an independently reviewed reference set. Preserve uncertain labels and disagreements. Measure missed incidents as well as false alarms; a high overall accuracy can conceal failure on rare serious cases. Record model/version, configuration, period and operating context.</p>
+<p>The fixed pack does not supply an alert-evaluation dataset, so it supports no conclusion about Tessera’s anomaly detector. Treat this as a method extension. Do not add a successful AI-control test to the final opinion unless the underlying inputs and results exist.</p>
 </section>
 <section id="interviewing-for-evidence" class="level2" data-number="7.8">
 <h2 data-number="7.8" class="anchored" data-anchor-id="interviewing-for-evidence"><span class="header-section-number">7.8</span> Interviewing for evidence</h2>
-<p>Interviews are oral evidence, the weakest kind alone, and also where almost every stronger kind begins. The skill is running them so they open doors instead of closing opinions.</p>
-<p>Prepare before you sit down. Know the control objective you are testing and the evidence you seek. Ask open questions: not “do you revoke access within twenty-four hours,” which invites the answer you want, but “walk me through what happens when someone leaves.” Let silence do the work; people fill it, and what they fill it with is often the detail that matters.</p>
-<p>The rule that turns an interview into an audit: never accept “we do that” without the record. Every claim about a process is a hypothesis until you produce the artefact that proves it. “Show me the last three times this ran” is the sentence that converts an attestation into a test. When the head of people says offboarding is always completed, ask for the last three checklists; when the SRE says privilege elevation is time-boxed, ask for the elevation log. Note where the claim and the record diverge: that is where the findings live.</p>
-<p>Corroborate across interviewees. The IT operations lead and the head of people should describe the same offboarding in compatible terms. Where their accounts differ, one describes aspiration and the other practice, and the documents will tell you which. A good interview produces leads. The records produce the conclusions.</p>
-<div class="tessera-case">
-<p><strong>🗂️ Tessera Case: A sampling plan and a chain-of-custody log for access revocation</strong></p>
-<p>The artefact for this chapter is the test that closes the single most important gap Act I named: confirmation that the access-revocation control operates for every leaver. The control spans A.6.5 (responsibilities after termination or change) and A.8.3 (information access restriction), and its objective is testable: <em>for every leaver in the period, all logical access to Tessera systems is revoked within twenty-four hours of the last working day, and the revocation is logged.</em></p>
-<p>The <strong>population</strong> is every leaver in the twelve-month period, sourced from the complete HR list and reconciled against payroll to confirm completeness. There are forty-eight. The <strong>sample</strong> is derived, not chosen: a tight tolerable deviation rate, a low expected rate, and the high assurance the engagement demands. Against forty-eight leavers backing a control this critical, the defensible answer is to test all of them, because sampling a fraction and extrapolating buys little when the whole population is small enough to test in full.</p>
-<p>The <strong>procedure</strong> runs per leaver: inspect the HR termination record for the last working day, inspect the IAM and single-sign-on audit logs for the revocation event, recompute the elapsed time, and flag any deviation over twenty-four hours. For every deviation, inquire for the cause and corroborate against the offboarding checklist.</p>
-<p>Every artefact the test touches enters a chain-of-custody log. A representative slice:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Artefact</th>
-<th>Description</th>
-<th>Source</th>
-<th>Captured</th>
-<th>By</th>
-<th>Hash (prefix)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>EVD-07-01</td>
-<td>HR leavers list, full period</td>
-<td>HR system export</td>
-<td>2026-06-15 09:12 AWST</td>
-<td>M. Borck</td>
-<td><code>3f9a…</code></td>
-</tr>
-<tr class="even">
-<td>EVD-07-02</td>
-<td>IAM revocation log, leaver A</td>
-<td>AWS CloudTrail</td>
-<td>2026-06-15 09:41 AWST</td>
-<td>M. Borck</td>
-<td><code>b1c7…</code></td>
-</tr>
-<tr class="odd">
-<td>EVD-07-03</td>
-<td>SSO session log, leaver A</td>
-<td>Identity provider</td>
-<td>2026-06-15 09:46 AWST</td>
-<td>M. Borck</td>
-<td><code>8e2d…</code></td>
-</tr>
-<tr class="even">
-<td>EVD-07-04</td>
-<td>Offboarding checklist, leaver A</td>
-<td>HR document store</td>
-<td>2026-06-15 10:03 AWST</td>
-<td>M. Borck</td>
-<td><code>4a55…</code></td>
-</tr>
-</tbody>
-</table>
-<p>Each row is one extract, hashed at capture and sealed into the working papers. When the test finds forty-five of forty-eight revocations inside the window and three outside, that finding is traceable, leaver by leaver and artefact by artefact, back to the records that produced it. That traceability is what makes the conclusion defensible rather than merely asserted. You can run the same test against the live companion site at tessera.locoensayo.org.</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Week 7)">
+<p>Prepare from the objective. Ask an open process question, then request an example and its record. “Walk me through the last contractor departure” is more useful than a question that supplies the desired answer.</p>
+<p>Keep three columns: claim, record requested, corroborated result. Differences between accounts can reflect scope, dates, memory or process variation. Investigate them rather than deciding in advance which person is evasive.</p>
+<p>The <a href="../appendices/e-interview-guide.html">interview guide</a> provides a paper dialogue and optional live-site route. A difficult conversation is not proof of a defective control. A fluent answer is not proof of a sound one.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Engagement milestone 7)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Week 7)
+<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Engagement milestone 7)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Act II’s locker stops being narrative and becomes working papers in earnest. Lock in three things this week.</p>
-<p>First, a <strong>sampling plan</strong> for one Tessera control of your choosing: the population defined and reconciled for completeness, the control objective stated as a testable assertion, the tolerable and expected deviation rates and the assurance level stated explicitly, and the sample size <em>derived</em> from them rather than chosen. Second, a <strong>chain-of-custody record</strong> for every artefact the test touches: artefact, source, capture time, extractor, hash. Third, an <strong>interview-notes template</strong> that separates, on every line, what the interviewee <em>claimed</em> from what you subsequently <em>corroborated</em>, so that aspiration and practice never blur on the page.</p>
-<p>These three are not exercises. By Week 12 they are the spine of your Assessment 3 working papers, and the discipline they enforce, sufficiency derived not assumed, custody recorded not implied, claims corroborated not trusted, is what makes an opinion defensible.</p>
+<p><strong>Time: 35 minutes. No AI or code required.</strong> Test all 48 E04 rows. Retain the population definition, policy-specific result counts, four exceptional IDs, a full L007 calculation and a provenance note. Separately reproduce the 59-item sampling example with a calculator, or explain its assumptions from the worked calculation. Label the actual case test a census.</p>
 </div>
 </div>
 </section>
 <section id="the-question-answered" class="level2" data-number="7.9">
 <h2 data-number="7.9" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">7.9</span> The question, answered</h2>
-<p>Can we substantiate our suspicions? Yes, when the evidence is sufficient in quantity and appropriate in quality, gathered under a chain of custody that survives challenge, and tested by procedures strong enough to prove operation rather than existence. Act I left you with suspicion, calibrated and named. Act II gives you the means to convert it, item by item, into proof. The access-revocation control is no longer a promise on a page. It is forty-eight tested log entries, each traceable to a hashed extract captured on a known day, and the deviation rate they reveal is a number you can defend.</p>
-<p>That is the shift this chapter enacts, and the shift the rest of Act II runs on. The polished policy meets its operational reality, and every suspicion you earned in Act I either hardens into evidence or dissolves. The evidence has started to speak. The question now is whether the policy behind the controls was ever any good, because a control can run perfectly and still serve a policy whose intent has drifted from its operation.</p>
-<p>Next week the question turns from <em>can you prove it works?</em> to <em>does the policy itself hold up?</em> The question is <strong>Comply?</strong></p>
+<p>A supported result states what was tested, what the records show and what remains uncertain. The next chapter uses these results to assess policy compliance and review coverage.</p>
+</section>
+<section id="take-it-to-the-ai" class="level2" data-number="7.10">
+<h2 data-number="7.10" class="anchored" data-anchor-id="take-it-to-the-ai"><span class="header-section-number">7.10</span> Take it to the AI</h2>
+<p>Optional, after the paper test:</p>
+<blockquote class="blockquote">
+<p><strong>Role:</strong> Review a trainee’s audit calculation.</p>
+<p><strong>Task:</strong> Check whether a proposed sample and conclusion follow from the supplied facts.</p>
+<p><strong>Context:</strong> The complete fictional population contains 48 leavers. Three exceed 24 hours; four exceed two hours. All 48 were tested. A draft says “a statistically derived sample proves a 6% chance of a future breach.”</p>
+<p><strong>Format:</strong> Identify each unsupported claim, correct the arithmetic and give a bounded two-sentence conclusion. Use no additional case facts.</p>
+</blockquote>
+<p>Check that the response separates census, historical deviation and future incident risk. A correct calculation still needs the source records behind it.</p>
 
 
 </section>
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot embed for this book.
-  The book-publisher creates a chatbot grounded in the book's content and
-  fills in the embed id / base API URL here. Until then this is a deliberate
-  no-op so the `include-after-body` hook in _quarto.yml stays wired.
--->
+<script data-embed-id="d9721604-3074-4caf-8b0c-51c962499531" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

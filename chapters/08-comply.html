@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -287,6 +291,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction: The Audit Mindset</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -398,6 +408,30 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../appendices/b-case-pack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Fixed case pack: SDA-2026.1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/c-answer-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Answer checks and assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/d-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Source guide and edition boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/e-interview-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -426,7 +460,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#from-published-to-operating-how-to-test-a-policy" id="toc-from-published-to-operating-how-to-test-a-policy" class="nav-link" data-scroll-target="#from-published-to-operating-how-to-test-a-policy"><span class="header-section-number">8.4</span> From published to operating: how to test a policy</a></li>
   <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">8.5</span> The question, answered</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="/llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/substantiate-dont-assume"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -456,19 +490,18 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: The library, reopened</strong></p>
-<p>Tessera’s document library looked finished in Act I. Now you have the keys to the building. Full access means the policy set is no longer something you read; it is something you can test. The information security policy and its supporting standards are still comprehensive on paper. This week’s discipline is to find out whether any of that paper survives contact with the people, the systems, and the logs it is supposed to govern.</p>
+<p>Act I identified policy obligations and a conflict between revocation deadlines. The operating records now let you test those obligations. Keep design issues and operating results distinct, and preserve the population and cadence of each review.</p>
 </div>
 <section id="what-full-access-changes" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="what-full-access-changes"><span class="header-section-number">8.1</span> What full access changes</h2>
-<p>Act I closed with calibrated suspicion. Act II opens with the thing that converts suspicion into evidence: access. You can now interview the people named in the policies, log into the systems the policies describe, pull the logs the policies say are kept, and read the meeting minutes where the controls are supposed to be reviewed. Each is a different kind of evidence, and Chapter 7 taught you how to weigh it. This chapter teaches you what to point that evidence at: the policy set itself.</p>
+<p>Act I recorded design observations and evidence gaps. Act II adds operating records and permitted tests. You can now interview the people named in the policies, log into the systems the policies describe, pull the logs the policies say are kept, and read the meeting minutes where the controls are supposed to be reviewed. Each is a different kind of evidence, and Chapter 7 covers how to weigh it. Point it at the policy set itself.</p>
 <p>Policies are the soft tissue of an information security management system. They are also the part an organisation finds easiest to produce and hardest to live by, because writing a policy is a writing problem and following one is a behaviour problem. A fast-growing company like Tessera can write an excellent policy library in a quarter with a good consultant and a long weekend. It cannot build the habits that make those policies operate in anything like the same timeframe. The gap between the two is where this chapter lives.</p>
 </section>
 <section id="compliance-is-not-effectiveness" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="compliance-is-not-effectiveness"><span class="header-section-number">8.2</span> Compliance is not effectiveness</h2>
-<p>Here is the distinction the chapter title is built on, and it is the one auditors get wrong when they are tired. <strong>Compliance</strong> asks whether a control exists and matches the words of a standard. <strong>Effectiveness</strong> asks whether the control actually achieves its objective when it runs. The first is a paperwork question. The second is the only question that matters.</p>
-<p>A policy that satisfies every clause of ISO/IEC 27001:2022 A.5.18, that quotes the standard’s own language back at it, that carries a version number and an approval signature, is <em>compliant</em>. It may also be unenforceable, unowned, or unknown to the people it binds, in which case it is compliant and worthless. Compliance is the floor. Effectiveness is the opinion.</p>
-<p>The standard makes this explicit in its own architecture. Clause 9.1 requires the organisation to evaluate the <em>effectiveness</em> of its information security management system, not merely confirm it exists. A.5.35 (independent review of information security) and A.5.36 (compliance with policies, rules and standards) exist specifically to make sure the organisation checks whether its own policies are followed, not merely filed. The standard itself separates design from operation. The auditor’s job is to make the same separation, with evidence.</p>
-<p>So the question for Act II is never “does Tessera have a policy on X?” That was an Act I question, and the answer was almost always yes. The Act II question is sharper: <em>does the policy on X actually operate, and does the evidence show it?</em></p>
+<p><strong>Compliance</strong> means meeting applicable requirements, which may themselves require effective operation. <strong>Effectiveness</strong> concerns achievement of the intended result. A well-written policy can establish a requirement without demonstrating either operating compliance or effectiveness.</p>
+<p>For example, P-REV requires a monthly privileged review. A signed policy with no review record does not demonstrate compliance with that requirement. A completed review might meet its documented cadence but still miss service credentials, undermining the objective.</p>
+<p>Assess design, implementation and operation separately. The management system’s performance-evaluation requirements and selected review controls need evidence of actual evaluation. Do not label the whole estate “compliant on paper” merely because documents mention the right topics.</p>
 </section>
 <section id="the-a.5-backbone" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="the-a.5-backbone"><span class="header-section-number">8.3</span> The A.5 backbone</h2>
@@ -478,37 +511,34 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="from-published-to-operating-how-to-test-a-policy" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="from-published-to-operating-how-to-test-a-policy"><span class="header-section-number">8.4</span> From published to operating: how to test a policy</h2>
-<p>Testing whether a policy operates is a four-step move, and it works on any A.5 control. Learn it once and reuse it.</p>
+<p>Testing whether a policy operates is a four-step move, and it works on any A.5 control.</p>
 <p><strong>Read the policy for its operational claims.</strong> Most policies mix aspiration with obligation. Your job is to extract the obligations: the things the policy says <em>will</em> happen, on a cadence, by a named owner, to a defined standard. “Access rights are reviewed quarterly” is an operational claim. “Security is a core value” is not. Underline the claims. Each one is a test waiting to be designed.</p>
 <p><strong>Identify the evidence the claim would produce if it were true.</strong> A quarterly access review leaves a footprint: a signed review record, a ticket, a change log, a meeting minute. A 24-hour leaver-revocation control leaves a footprint: a revocation timestamp in the identity provider, correlated against the HR termination date. If the control operates, the world looks a particular way. Decide what that way is before you go looking, so you test the claim rather than your own surprise.</p>
 <p><strong>Gather the evidence, then compare it to the claim.</strong> This is where full access earns its keep. Pull the population (every leaver, every privileged account, every supplier), not the sample the client offers you. Trace the operational claim through the population. Count the exceptions.</p>
-<p><strong>Form a judgement on effectiveness, not existence.</strong> The output of a policy test is not “compliant / non-compliant.” It is a statement about how reliably the control achieves its objective, on the evidence, across the population you tested. A control that operates for 95 per cent of the population and fails for 5 per cent is not “mostly compliant.” It is a control with a measured exception rate, and the consequence of that rate depends entirely on which 5 per cent.</p>
-<p>The tests themselves come in four flavours, and ISO/IEC 19011 and the wider assurance canon all recognise them. <strong>Inquiry</strong> is asking; treat the answer as a lead, never as evidence on its own. <strong>Inspection</strong> is reading the record the control should have produced. <strong>Observation</strong> is watching the control run. <strong>Re-performance</strong> is doing the control’s check yourself, on the client’s data, and seeing whether you reach the same answer. Inquiry is the weakest; re-performance is the strongest. A policy that survives only inquiry has not really been tested.</p>
+<p><strong>Form a judgement tied to the criterion.</strong> State whether the tested items meet it, the exception count and what that implies about effectiveness within the tested scope. A control that operates for 95 per cent of the population and fails for 5 per cent is not “mostly compliant.” It is a control with a measured exception rate, and the consequence of that rate depends entirely on which 5 per cent.</p>
+<p>Use the procedures in chapter 7: inquiry, inspection, observation, re-performance and re-computation as appropriate. Their value depends on the assertion and source quality. Preserve the record behind each result.</p>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: A.5.18 access rights, tested</strong></p>
-<p>Tessera’s access management standard is two pages and reads cleanly. The operational claims are explicit: access is granted on least privilege (A.5.15); access rights are reviewed at least quarterly (A.5.18); privileged accounts are reviewed monthly; and access is revoked within 24 hours of an employee’s last working day. Four claims. You design four tests.</p>
-<p><strong>The leaver test.</strong> HR gives you nine terminations in the last twelve months. You pull the identity provider’s revocation log and the AWS IAM credential last-used data, and you correlate. Three of the nine were revoked inside the 24-hour window. The median was six days. One contractor’s static AWS keys stayed active for forty-seven days after the contract ended, and they held production read access to the customer database. The policy says 24 hours. The evidence says six days, sometimes seven weeks.</p>
-<p><strong>The quarterly review test.</strong> The policy says every system owner runs a quarterly access review. You ask for the review records. One exists: a spreadsheet, signed off once, covering fourteen of the forty-odd systems in the asset register. The other systems have no review record, because nobody asked for one. “Quarterly” is operating for a third of the estate and not at all for the rest.</p>
-<p><strong>The privileged review test.</strong> No evidence. In interview, the CTO is candid: “We check privileged access when someone joins or changes role. We don’t have a standing monthly review.” The policy was written aspirationally and never built into a calendar.</p>
-<p><strong>The least-privilege test.</strong> You re-perform it. You take the ten most privileged IAM principals in the AWS estate and compare their attached policies to their stated job function. Three have broader access than their role requires, including one that can delete production databases.</p>
-<p>The policy is comprehensive and largely accurate. The control is partially operating, with a measured exception rate that is unacceptable for a company about to handle regulated customer data. You map each gap to A.5.18 and A.5.15, and you note the deeper failure: A.5.36 (compliance with policies) and A.5.35 (independent review) are the two controls meant to catch exactly this drift, and neither has caught it. The library was compliant on paper. The estate was not.</p>
+<p>Use E03, E04 and E06, keeping the populations separate.</p>
+<p><strong>The leaver test, F01.</strong> Both approved historical deadlines apply to the same full-revocation objective. Testing E04 yields three exceptions to 24 hours (L007, L019, L031) and four to two hours (also L044). The worst is L007’s 47-day key. E05 supplies incident evidence separately; an exception rate alone does not establish misuse.</p>
+<p><strong>The quarterly review test, F02.</strong> P-REV requires ordinary-access reviews for AWS, Workspace and Slack each quarter. E06 contains signed records for AWS and Workspace for the quarter ending March 2026, but none for Slack. The supplied result is incomplete quarterly coverage of the three-system population.</p>
+<p><strong>The monthly privileged test, also F02.</strong> January–March 2026 review evidence is absent for the separate privileged population, including service credentials. A calendar reminder does not establish completed reviews. Keep this monthly requirement distinct from the quarterly ordinary-access requirement.</p>
+<p><strong>The authorisation concern, P01.</strong> E11’s three requests met their expected decisions. This bounded pass belongs in the record alongside the failures. It does not close F01 or F02 because it tests different assertions.</p>
+<p>Management’s June 19 policy revision aligns the deadlines to two hours prospectively. E10 supplies the limited follow-up; it does not erase the historical exceptions.</p>
 </div>
-<p>This is what Act II looks like when it lands. A document that read as assurance in Act I now reads as a finding, and the only thing that changed is that you have the access to test it. Notice the shape of the judgement. You are not calling Tessera dishonest; the policy was written in good faith. You are reporting that a control’s design and its operation have diverged, by how much, and for which people and systems. That precision is the difference between an opinion and an impression.</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="Watch out: the compliant-on-paper trap">
+<div class="callout callout-style-default callout-warning callout-titled" title="Watch out: resolve conflicting criteria openly">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Watch out: the compliant-on-paper trap
+<span class="screen-reader-only">Warning</span>Watch out: resolve conflicting criteria openly
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The most expensive mistake in policy evaluation is grading the document instead of the behaviour. A policy can satisfy every clause of the standard and still fail three ways that no document review will ever catch. It can be <strong>unenforceable</strong>, with no mechanism behind it: a policy that says “review quarterly” but wires no review into any system or calendar. It can be <strong>unowned</strong>, where the name in the policy’s approval block left the company eighteen months ago and nobody inherited the obligation. Or it can be <strong>unknown</strong>, where the people the policy binds have never read it, never acknowledged it, and could not describe what it asks of them.</p>
-<p>All three read as fully compliant to anyone who only opens the file. None of them is a control. Treat “we have a policy” and “the control operates” as different sentences, and refuse to let the first stand in for the second until the evidence says it can.</p>
+<p>Report the result under each approved rule while seeking an authorised interpretation or correction. Do not choose the weaker requirement because it produces fewer exceptions. Record the decision’s effective date. A new rule does not automatically rewrite the criteria that applied during historical testing.</p>
 </div>
 </div>
-<p>I will tell you the confession that goes with this chapter, because it took me an embarrassing number of engagements to learn it. I used to be quietly pleased when a client handed me a thick, well-organised policy library. It felt like half the work was done. Then I started testing the policies against the estate, and I noticed a pattern I should have predicted: the organisations with the most impressive policy libraries were often the ones whose controls operated worst, because the library was where the effort went, and the operation was where it didn’t. A thin policy that someone actually follows beats a beautiful one that nobody does. I stopped being impressed by policy libraries. I started being impressed by review records.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="🤖 AI Field Note: The policy-gap analyst">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -519,9 +549,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is one of the tasks where an AI genuinely earns its place, and it is worth being precise about where it helps and where it lies. Hand the model Tessera’s access management standard, the information security policy, and the Statement of Applicability, and ask it to flag where the policy text is thin, ambiguous, or inconsistent with A.5. It is good at this. It will catch that the policy never defines what counts as a “privileged” account, that the contractor clause contradicts the leaver-revocation window, and that no retention period is specified for access logs. Those are real findings, surfaced in minutes, and they save you an afternoon.</p>
-<p>Then ask the question that matters: “Is Tessera compliant with this policy?” Watch what happens. The model has read the same documents you have, and documents contain no operational evidence. Pressed for an answer, it will do what these models do: it will infer compliance from design quality. It will tell you, with the confidence of a system that has never met a human, that “quarterly reviews appear to be conducted, as required by the policy.” That sentence is a confabulation. The policy <em>requires</em> the reviews; the model has mistaken the requirement for the performance. It has slid from “the policy says this happens” into “this happens.”</p>
-<p>Your override is the whole job. Mark every such claim “unverified, pending operational evidence.” The AI drafted the gap analysis; you supplied the one judgement it cannot, which is the difference between a promise on paper and a footprint in a log. That is the drafter-to-evaluator shift, demonstrated on a single page.</p>
+<p>An illustrative summary says “quarterly privileged reviews were missed twice.” E06 says something different: incomplete quarterly ordinary-access coverage, and no supplied monthly privileged reviews for January–March. Preserve cadence, population and period in the correction. A polished summary that merges them changes the finding.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="🔍 Auditing AI: The policy that forgot the AI">
@@ -534,41 +562,33 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>There is a policy-effectiveness gap that is specific to this moment, and Tessera has it. The acceptable use policy (A.5.10) was written before the product’s summarisation feature shipped and before staff began pasting customer data into consumer AI tools to draft replies. It says nothing about either. So an organisation that is “compliant” with its acceptable use policy is, in the same breath, silently permitting exactly the data movement the policy was written to control, because the policy predates the behaviour.</p>
-<p>Auditing this means asking not whether the policy exists but whether it covers the AI usage the estate actually contains. Look for a clause on approved AI services, on what data may and may not be entered, on retention by the AI vendor, and on disclosure to customers. If those clauses are absent, the control is designed for last year’s company. Policy effectiveness is a moving target, and AI moved it faster than most policy libraries update.</p>
+<p>E07 describes an enabled support assistant missing from the processing register, with incomplete terms and unverified settings. P-PRIV requires that information before enablement. Assess actual deployment against that requirement. An acceptable-use policy can also need revision as tools and data flows change; its existence is not evidence that a particular deployment was approved.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Week 8)">
+<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Engagement milestone 8)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Week 8)
+<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Engagement milestone 8)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This week’s artefact is the policy-effectiveness test, and it is the one most directly analogous to real working papers. For each A.5 control you tested, record: the <strong>operational claim</strong> you extracted from the policy (the sentence, quoted), the <strong>test</strong> you designed (type: inquiry, inspection, observation, re-performance), the <strong>population</strong> you drew, the <strong>evidence</strong> you gathered, and the <strong>result</strong>: the exception rate, the specific failures, and your effectiveness judgement.</p>
-<p>End with a <strong>gap map</strong>: every control where design and operation diverged, listed by A.5 clause, with the consequence of each gap named in one sentence. By Week 11 this gap map becomes your findings, and by Week 12 it becomes the evidence behind your opinion. A finding that says “A.5.18 partially operates, 9 leavers tested, 3 within window, median 6 days, 1 at 47 days” is defensible in any room. A finding that says “access control needs improvement” is not. Lock in the first kind.</p>
+<p><strong>Time: 25 minutes. No AI required.</strong> Build a four-row gap map: historical revocation under P-IT, historical revocation under P-HR, quarterly ordinary review and monthly privileged review. Give criterion, population/period, evidence IDs, result and finding ID. Explain why E11’s pass cannot close either access finding.</p>
 </div>
 </div>
 </section>
 <section id="the-question-answered" class="level2" data-number="8.5">
 <h2 data-number="8.5" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">8.5</span> The question, answered</h2>
-<p>Do the policies hold up, and do they match reality? The policies hold up. Tessera has built a policy library that is comprehensive, coherent, and well-mapped to the standard; that is a real achievement, and an organisation that cannot produce it is not ready. But the policies do not, not yet, match the reality of the estate they govern. Tested against access, the control operates inconsistently, with exception rates a certification body will not accept and a meta-control (A.5.36) that should have caught the drift and did not. The library is compliant on paper. The operation is the work that remains.</p>
-<p>That is the Act II posture, stated for policy. Documents asserted; evidence now decides. The polished standard that read as assurance in Act I has met its logs, its meeting minutes, and its missing review records, and the meeting has been honest in a way the desk review could never be.</p>
-<p>Next week the question turns to the thing those policies are ultimately written to protect. The policies are the promise; the data is the asset. <em>Whose data is Tessera holding, what does the law require of it, and does the estate actually protect it?</em> The question is <strong>Protect?</strong></p>
+<p>The policies contain testable obligations. E04 establishes historical exceptions, while E06 cannot substantiate the required review coverage. Keep F01 and F02 separate and carry both forward. The next chapter follows the assistant’s personal-information flow.</p>
 
 
 </section>
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot embed for this book.
-  The book-publisher creates a chatbot grounded in the book's content and
-  fills in the embed id / base API URL here. Until then this is a deliberate
-  no-op so the `include-after-body` hook in _quarto.yml stays wired.
--->
+<script data-embed-id="d9721604-3074-4caf-8b0c-51c962499531" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

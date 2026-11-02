@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -34,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../chapters/02-risk.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../copyright.html" rel="prev">
 <link href="../favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -287,6 +291,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction: The Audit Mindset</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -398,6 +408,30 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../appendices/b-case-pack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Fixed case pack: SDA-2026.1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/c-answer-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Answer checks and assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/d-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Source guide and edition boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/e-interview-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -426,9 +460,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-isaca-code-of-ethics" id="toc-the-isaca-code-of-ethics" class="nav-link" data-scroll-target="#the-isaca-code-of-ethics"><span class="header-section-number">1.4</span> The ISACA Code of Ethics</a></li>
   <li><a href="#why-would-anyone-invite-an-audit" id="toc-why-would-anyone-invite-an-audit" class="nav-link" data-scroll-target="#why-would-anyone-invite-an-audit"><span class="header-section-number">1.5</span> Why would anyone invite an audit?</a></li>
   <li><a href="#three-kinds-of-control" id="toc-three-kinds-of-control" class="nav-link" data-scroll-target="#three-kinds-of-control"><span class="header-section-number">1.6</span> Three kinds of control</a></li>
-  <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">1.7</span> The question, answered</a></li>
+  <li><a href="#from-mandate-to-evidence" id="toc-from-mandate-to-evidence" class="nav-link" data-scroll-target="#from-mandate-to-evidence"><span class="header-section-number">1.7</span> From mandate to evidence</a></li>
+  <li><a href="#practice-accept-the-mandate" id="toc-practice-accept-the-mandate" class="nav-link" data-scroll-target="#practice-accept-the-mandate"><span class="header-section-number">1.8</span> Practice: accept the mandate?</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="/llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/substantiate-dont-assume"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -458,13 +493,13 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: The engagement opens</strong></p>
-<p>The email arrives on a Monday. Tessera’s CTO, racing toward an enterprise deal that requires ISO/IEC 27001 certification, has engaged your firm for a certification-readiness audit. The tone is confident: “We’re pretty much there, we just need the paperwork signed off.” That sentence is your first piece of evidence, and it is not the one the CTO thinks it is. An organisation that believes it is “pretty much there” is an organisation that has not yet tested whether it is. Your engagement opens with a question, not an answer: <em>why does Tessera need this audit, and why should they trust the person delivering the opinion?</em></p>
+<p>The email arrives on a Monday. Tessera’s CTO, racing toward an enterprise deal that requires ISO/IEC 27001 certification, has engaged your firm for a certification-readiness audit. The tone is confident: “We’re pretty much there, we just need the paperwork signed off.” That sentence records management’s expectation. It is not evidence that controls work or fail. Ask what assessment supports it, and keep both possibilities open. Your engagement opens with a question, not an answer: <em>why does Tessera need this audit, and why should they trust the person delivering the opinion?</em></p>
 </div>
 <section id="the-auditors-mandate" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="the-auditors-mandate"><span class="header-section-number">1.1</span> The auditor’s mandate</h2>
 <p>An auditor does not audit by accident. You audit because someone with the authority to ask for assurance has engaged you to provide it, on agreed terms, against agreed criteria. That is the mandate, and it has three parts that matter from day one.</p>
 <p>You are engaged by a party that wants the opinion. In Tessera’s case, that is a board and a CTO chasing certification. You audit <strong>against criteria</strong>: a standard or framework that defines what “good” looks like, here ISO/IEC 27001:2022. And you deliver an <strong>opinion</strong> on whether the subject matter (Tessera’s information security management system) conforms to those criteria, supported by evidence you gathered on terms you set.</p>
-<p>Notice what the mandate is not. It is not a licence to poke around wherever you like. It is not a guarantee that you will find wrongdoing. It is a scoped, criteria-bound engagement whose entire value rests on one quality you bring to it: the credibility of the person giving the opinion. That credibility has a name, and it is the rest of this chapter.</p>
+<p>The mandate does not license you to poke around wherever you like, and it does not guarantee that you will find wrongdoing. It is a scoped, criteria-bound engagement whose entire value rests on one quality you bring to it: the credibility of the person giving the opinion. That credibility has a name, and it is the rest of this chapter.</p>
 </section>
 <section id="three-hats-counsellor-partner-investigator" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="three-hats-counsellor-partner-investigator"><span class="header-section-number">1.2</span> Three hats: counsellor, partner, investigator</h2>
@@ -477,7 +512,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="independence-and-objectivity" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="independence-and-objectivity"><span class="header-section-number">1.3</span> Independence and objectivity</h2>
 <p>An audit opinion is only worth what the auditor’s independence is worth. If the opinion can be bought, pressured, or quietly shaped by self-interest, it is worthless, and everyone who relies on it is misled.</p>
-<p><strong>Independence</strong> is the <em>fact</em> of being free from relationships and interests that could compromise the opinion. <strong>Objectivity</strong> is the <em>state of mind</em>: the discipline to judge evidence on its merits, without bias, even when the answer is inconvenient. Independence is something an outsider can check; objectivity is something only you can guarantee, on every engagement, every day.</p>
+<p><strong>Independence</strong> is the <em>fact</em> of being free from relationships and interests that could compromise the opinion. <strong>Objectivity</strong> is the <em>state of mind</em>: the discipline to judge evidence on its merits, without bias, even when the answer is inconvenient. Independence is something an outsider can check; objectivity needs active safeguards and review throughout the engagement.</p>
 <p>The profession catalogues the threats so you can spot them.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="Watch out: threats to independence that look reasonable">
 <div class="callout-header d-flex align-content-center">
@@ -502,8 +537,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="why-would-anyone-invite-an-audit" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="why-would-anyone-invite-an-audit"><span class="header-section-number">1.5</span> Why would anyone invite an audit?</h2>
 <p>Step back to the question Tessera’s CTO has not fully asked: <em>why pay someone to come and find your problems?</em></p>
-<p>The honest answer is that an organisation invites an audit because the opinion is worth more than the cost. To someone. For Tessera, certification unlocks enterprise customers whose procurement teams will not sign without it. For a board, an independent opinion is protection against the day something goes wrong: evidence that oversight was exercised, not neglected. For regulators, it is compliance made visible. And, less flatteringly but just as truly, organisations invite audits because the people inside them already suspect the gaps and want a credible outsider to name them.</p>
-<p>The auditor’s job is to be worth that trust: to deliver an opinion that is genuinely independent, even when the organisation that paid for it hopes for a different answer. That is the whole deal. Tessera is not paying you to say they are ready. Tessera is paying you to find out whether they are.</p>
+<p>The honest answer is that an organisation invites an audit because the opinion is worth more than the cost to someone. For Tessera, certification unlocks enterprise customers whose procurement teams will not sign without it. For a board, an independent opinion is protection against the day something goes wrong: evidence that oversight was exercised, not neglected. For regulators, it is compliance made visible. And, less flatteringly but just as truly, organisations invite audits because the people inside them already suspect the gaps and want a credible outsider to name them.</p>
+<p>The auditor’s job is to be worth that trust: to deliver an opinion that is genuinely independent, even when the organisation that paid for it hopes for a different answer. Tessera is paying you to find out whether they are ready.</p>
 </section>
 <section id="three-kinds-of-control" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="three-kinds-of-control"><span class="header-section-number">1.6</span> Three kinds of control</h2>
@@ -514,7 +549,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Most real defences are a chain of all three, because no single control is reliable on its own. A preventive control fails silently; you only find out it failed because a detective control caught it; you only recover because a corrective control exists. When you audit, you are testing the whole chain, and you are always asking the question that separates a control that <em>exists</em> from one that <em>works</em>.</p>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: Where Tessera’s hats show</strong></p>
-<p>In your opening week you wear all three hats at once. As <strong>counsellor</strong>, you walk Tessera’s CTO through what ISO/IEC 27001:2022 actually requires, and watch the confidence drain when “pretty much there” meets “93 controls across four themes.” As <strong>partner</strong>, you agree how the engagement will run and what access you will get (limited, for now). As <strong>investigator</strong>, you file away the CTO’s opening claim (“we’re basically ready”) as the first assertion the evidence will later confirm or refute. Every chapter from here tests that claim a different way.</p>
+<p>From the outset of the engagement you wear all three hats at once. As <strong>counsellor</strong>, you explain the management-system requirements and how necessary controls are selected and justified. Annex A’s 93 controls are a reference set, not an undifferentiated mandatory checklist. As <strong>partner</strong>, you agree how the engagement will run and what access you will get (limited, for now). As <strong>investigator</strong>, you file away the CTO’s opening claim (“we’re basically ready”) as the first assertion the evidence will later confirm or refute. Every chapter from here tests that claim a different way.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="🤖 AI Field Note: Exploring the control categories">
 <div class="callout-header d-flex align-content-center">
@@ -526,8 +561,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ask an AI to “explain preventive, detective, and corrective controls with examples for a SaaS company on AWS.” It will give you a competent, well-structured answer in seconds, and that is exactly the trap. The examples will be <em>generic</em>: “firewall rules,” “log monitoring,” “incident response plan.” Correct, and useless, because they describe every company.</p>
-<p>This is where you, the auditor, add the variation the machine cannot. Push back: “Give me a <em>preventive</em> control specific to a multi-tenant SaaS where customers configure their own IAM roles, and tell me how it would fail silently.” Now the answer has to engage with Tessera’s reality, not a textbook. The AI’s first cut was a draft; your refinement is the work that matters. You have just done, in miniature, the drafter-to-evaluator shift the Introduction described.</p>
+<p>An illustrative draft labels a scheduled access review “preventive because it stops former staff logging in.” The label depends on the mechanism. A periodic review detects inappropriate access; subsequent removal corrects it. An automatic disable at termination prevents later use of that credential. Write the mechanism and the evidence you would inspect before choosing a category. A model’s label, correct or otherwise, does not perform that analysis for you.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="🔍 Auditing AI: Can an AI be independent?">
@@ -544,13 +578,13 @@ ul.task-list li input[type="checkbox"] {
 <p>So can an AI deliver an audit opinion? It can <em>produce</em> one. It cannot <em>stand behind</em> one, which is the entire point of an opinion. As AI-assisted controls and AI-generated evidence spread through the estates you audit, the question stops being theoretical. We return to it in Chapter 7, when we ask whether you can trust a log an AI produced.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Week 1)">
+<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Engagement milestone 1)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Week 1)
+<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Engagement milestone 1)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -558,22 +592,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="the-question-answered" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">1.7</span> The question, answered</h2>
-<p>Why does Tessera need an audit? Because certification, customers, and a board all need a credible opinion they cannot give themselves, and because the people inside Tessera already suspect the gaps. Why should they trust <em>you</em>? Because your mandate is clear, your independence is real, your ethics are not for sale, and your discipline is to substantiate every conclusion with evidence rather than assume it.</p>
-<p>That is the audit mindset, stated. The next eleven chapters enact it, one question at a time, until the polished policy has met its evidence and you have formed an opinion you can defend.</p>
-<p>Next week, the first real question: <em>what could go wrong, and how do we measure it?</em></p>
+<section id="from-mandate-to-evidence" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="from-mandate-to-evidence"><span class="header-section-number">1.7</span> From mandate to evidence</h2>
+<p><a href="../appendices/b-case-pack.html">E01 in the fixed pack</a> defines this as a readiness assessment. An internal audit evaluates the organisation’s own management system; a readiness assessment prepares for an external process; a certification body conducts its own audit and makes its own certification decision. Their roles and independence requirements cannot be treated as interchangeable.</p>
+<p>Here is a first working paper. <strong>Criterion:</strong> P-IT requires full access revocation within 24 hours. <strong>Evidence requested:</strong> a dated termination record, all credential ownership records and disable events. <strong>Test:</strong> reconcile identities and recompute elapsed time. <strong>Possible conclusions:</strong> met for the tested record, exception, or insufficient evidence. A signed policy alone establishes none of those operating results.</p>
+</section>
+<section id="practice-accept-the-mandate" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="practice-accept-the-mandate"><span class="header-section-number">1.8</span> Practice: accept the mandate?</h2>
+<p><strong>Time: 15 minutes. No AI required.</strong> Read E01. Write a 150-word acceptance note naming the engagement type, subject, criteria, reporting limit and the analyst’s self-review threat. State a safeguard and the condition under which you would decline. Add it to milestone 1.</p>
+<p><strong>Check:</strong> your authority must stop short of certification and unauthorised production testing. A team change must prevent the analyst assessing their own integration; simply declaring the relationship is insufficient. <a href="../appendices/c-answer-checks.html">Answer checks</a> give the common standard for the locker.</p>
+<p>The next chapter develops the risk priorities behind the programme.</p>
 
 
 </section>
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot embed for this book.
-  The book-publisher creates a chatbot grounded in the book's content and
-  fills in the embed id / base API URL here. Until then this is a deliberate
-  no-op so the `include-after-body` hook in _quarto.yml stays wired.
--->
+<script data-embed-id="d9721604-3074-4caf-8b0c-51c962499531" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -989,8 +1024,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Introduction: The Audit Mindset">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction: The Audit Mindset</span>
+      <a href="../copyright.html" class="pagination-link" aria-label="Copyright">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Copyright</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

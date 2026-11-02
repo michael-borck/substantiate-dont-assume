@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -287,6 +291,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction: The Audit Mindset</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -398,6 +408,30 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../appendices/b-case-pack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Fixed case pack: SDA-2026.1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/c-answer-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Answer checks and assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/d-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Source guide and edition boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/e-interview-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -424,11 +458,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-5cr-format" id="toc-the-5cr-format" class="nav-link" data-scroll-target="#the-5cr-format"><span class="header-section-number">11.2</span> The 5C+R format</a></li>
   <li><a href="#root-cause-analysis-the-findings-centre-of-gravity" id="toc-root-cause-analysis-the-findings-centre-of-gravity" class="nav-link" data-scroll-target="#root-cause-analysis-the-findings-centre-of-gravity"><span class="header-section-number">11.3</span> Root-cause analysis: the finding’s centre of gravity</a></li>
   <li><a href="#rating-the-finding-from-guess-to-evidence" id="toc-rating-the-finding-from-guess-to-evidence" class="nav-link" data-scroll-target="#rating-the-finding-from-guess-to-evidence"><span class="header-section-number">11.4</span> Rating the finding: from guess to evidence</a></li>
-  <li><a href="#forming-a-defensible-audit-opinion" id="toc-forming-a-defensible-audit-opinion" class="nav-link" data-scroll-target="#forming-a-defensible-audit-opinion"><span class="header-section-number">11.5</span> Forming a defensible audit opinion</a></li>
-  <li><a href="#executive-reporting-the-board-facing-version" id="toc-executive-reporting-the-board-facing-version" class="nav-link" data-scroll-target="#executive-reporting-the-board-facing-version"><span class="header-section-number">11.6</span> Executive reporting: the board-facing version</a></li>
-  <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">11.7</span> The question, answered</a></li>
+  <li><a href="#the-offboarding-finding-in-full" id="toc-the-offboarding-finding-in-full" class="nav-link" data-scroll-target="#the-offboarding-finding-in-full"><span class="header-section-number">11.5</span> The offboarding finding, in full</a></li>
+  <li><a href="#show-the-retest-before-changing-the-status" id="toc-show-the-retest-before-changing-the-status" class="nav-link" data-scroll-target="#show-the-retest-before-changing-the-status"><span class="header-section-number">11.6</span> Show the retest before changing the status</a></li>
+  <li><a href="#the-finding-and-closure-ledger" id="toc-the-finding-and-closure-ledger" class="nav-link" data-scroll-target="#the-finding-and-closure-ledger"><span class="header-section-number">11.7</span> The finding and closure ledger</a></li>
+  <li><a href="#forming-a-defensible-audit-opinion" id="toc-forming-a-defensible-audit-opinion" class="nav-link" data-scroll-target="#forming-a-defensible-audit-opinion"><span class="header-section-number">11.8</span> Forming a defensible audit opinion</a></li>
+  <li><a href="#executive-reporting-the-board-facing-version" id="toc-executive-reporting-the-board-facing-version" class="nav-link" data-scroll-target="#executive-reporting-the-board-facing-version"><span class="header-section-number">11.9</span> Executive reporting: the board-facing version</a></li>
+  <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">11.10</span> The question, answered</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="/llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/substantiate-dont-assume"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -457,143 +494,164 @@ ul.task-list li input[type="checkbox"] {
 <p><em>What did we find, and how do we say it so the board acts?</em></p>
 </blockquote>
 <div class="tessera-case">
-<p><strong>🗂️ Tessera Case: Twelve weeks of evidence, one page of findings</strong></p>
-<p>The fieldwork is done. Your Evidence Locker holds the re-rated risk matrix, the audit programme, the interview notes, the configuration exports, the log samples, the policy-gap analysis, the privacy walkthrough, and the incident-response test. Spread across a desk it is a small mountain of paper, and not one sheet of it is a finding yet. The CTO is expecting a report the board can act on by Friday. Your job this week is the hardest compression in the engagement: turn that mountain into a handful of statements so specific, so evidenced, and so honestly rated that a busy board knows exactly what to fix and why. Nothing you found matters until it survives this translation.</p>
+<p><strong>🗂️ Tessera Case: the report must preserve the evidence</strong></p>
+<p>The CTO asks for a one-page conclusion. Your working papers include historical access exceptions, missing review records, unresolved privacy terms and a recovery test that missed its targets. Management has also made changes. The report must distinguish tested progress from promises without losing any issue on the way to the board.</p>
 </div>
 <section id="from-evidence-to-a-finding" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="from-evidence-to-a-finding"><span class="header-section-number">11.1</span> From evidence to a finding</h2>
-<p>There is a moment every audit reaches where the evidence stops accumulating and the judgement begins. You have spent four chapters gathering proof: the configuration that contradicts the policy, the log that shows the control never fired, the interview where the operations lead admits the offboarding checklist “sometimes slips.” Each is a fact. None of them, yet, is a finding.</p>
-<p>A finding is a structured claim. It takes a fact and binds it to a standard, a cause, a consequence, and a recommendation, in a form another auditor could reproduce and a board could act on. The discipline of this chapter is that binding. Evidence without a finding is noise. A finding without evidence is an opinion. The 5C+R format is how you make neither mistake.</p>
-<p>The compression is brutal, and it should be. A board will give your report twenty minutes. Out of a twelve-week engagement, twenty minutes is what you actually have to change how Tessera is run, so every sentence of the findings has to earn its place. The format exists because unstructured findings get ignored: too vague to act on, too soft to prioritise, too padded to read. A 5C+R finding cannot be any of those things and still call itself a finding.</p>
+<p>A finding connects a requirement with an evidenced condition. State the relevant population, period and limitation. A policy exception is not automatically an incident; an incident does not establish failure of every control. Missing evidence may prevent an assurance conclusion without proving the underlying activity never happened.</p>
+<p>Give each finding a stable ID. Use that ID in the test, management response, retest and final opinion. If wording changes, retain enough history to show that the underlying issue has not been replaced by an easier one.</p>
+<p>A finding can be reported before its root cause is fully established. Mark the cause as provisional or unknown and require investigation. Do not delay reporting a serious supported condition, or invent a cause, merely to fill a template.</p>
 </section>
 <section id="the-5cr-format" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="the-5cr-format"><span class="header-section-number">11.2</span> The 5C+R format</h2>
-<p>Five elements do the work, plus a sixth that ties the bow. Memorise the names. The order matters less than the completeness, but the names are how you will be marked, by certification bodies and by your own conscience.</p>
-<p><strong>Criteria</strong> is the standard you are measuring against. A clause of ISO/IEC 27001:2022, a control objective, a Tessera policy. It is the <em>should</em>: what good looks like. Without a named criterion a finding is just a preference, and preferences do not drive remediation budgets. “A.6.5 requires that the access rights of personnel leaving or changing role be removed or revised” is a criterion. “People should lose access when they leave” is a gripe.</p>
-<p><strong>Condition</strong> is what you actually found. The <em>is</em>. This is where your evidence lands, cited specifically enough to be defensible. Not “offboarding is weak” but “of twelve leavers tested in the period, five retained active AWS IAM or Google Workspace access beyond the 24-hour window defined in Tessera’s own offboarding procedure; the longest, a senior engineer, retained production database access for 41 days.” The condition is the fact, bound to the sample, stated without softening.</p>
-<p><strong>Cause</strong> is why the condition exists. This is the one auditors under-invest in and boards need most, because a finding with no cause cannot be fixed, only patched. Causes live at the level of process and ownership, not individual mistake. “An engineer forgot” is not a cause. “The offboarding checklist is owned by HR but executes on systems HR cannot touch, with no automated trigger between the HR system and the identity provider, and no single accountable owner with cross-system authority” is a cause. This is where root-cause analysis earns its keep, and we will spend a section on it.</p>
-<p><strong>Consequence</strong> is what the condition means for Tessera’s objectives. This is the <em>so what</em>, and it is where the finding earns its risk rating. A retained access account is, in itself, a line in a log. The consequence is that an ex-employee with a grievance could reach customer data, that the same gap is a major nonconformity against A.6.5 that can block certification, and that any misuse is a notifiable data breach under the APPs and the NDB scheme, with contractual exposure to the enterprise customers whose data is involved. The consequence is measured against objectives and obligations, the same way impact was in Chapter 2.</p>
-<p><strong>Corrective action</strong> is the immediate fix. Tight, time-bound, owned. Revoke the outstanding accounts this week. Reconcile the leavers list against live access today. Corrective action is the bandage: it stops the bleeding but says nothing about the cause.</p>
-<p><strong>Recommendation</strong> (the +R) is the durable fix that addresses the cause. Automate the deprovisioning trigger, assign a single cross-system owner, build the leavers population into the quarterly access review, enforce the sign-off line with a system that will not let the checklist close otherwise. A recommendation maps to a cause the way a corrective action maps to a condition. Get this pairing right and your findings become a remediation plan. Get it wrong and the same finding reappears next year.</p>
+<p>This book uses <strong>5C+R as an author-created working template</strong>, not a universal certification-body marking scheme. Follow the actual engagement’s reporting requirements. Here the five Cs are Criteria, Condition, Cause, Consequence and <strong>Correction</strong>; the recommendation records proposed corrective action and management’s response.</p>
+<p><strong>Criteria:</strong> identify the requirement, its version and why it applies. P-IT and P-HR supply the operational deadlines in this case. A.5.18 is the related access-rights area; A.6.5 addresses continuing responsibilities. Do not put quotation marks around a paraphrase and attribute it to the standard.</p>
+<p><strong>Condition:</strong> state what the test found, including what it did not establish. “Three of 48 leavers exceeded 24 hours” is reproducible from E04. “Offboarding is bad” loses the period, population and threshold.</p>
+<p><strong>Cause:</strong> distinguish supported mechanism from hypothesis. E05 supports a missing key-owner step and unacknowledged handoffs for two exceptions. L044’s six-hour delay has no supplied cause. An unresolved cause needs an owner and investigation, not a plausible sentence supplied by a model.</p>
+<p><strong>Consequence:</strong> explain the effect on objectives and obligations. Separate actual harm, plausible exposure and uncertainty. E05 provides realised misuse for L007; it does not establish misuse for the other exceptions.</p>
+<p><strong>Correction:</strong> address the detected problem, such as authorised revocation of a remaining credential or repair of an incorrect record. Record owner, authority, deadline and evidence of completion.</p>
+<p><strong>Recommendation and response:</strong> propose or agree <strong>corrective action</strong>, which addresses causes and recurrence. Management owns implementation; the auditor evaluates the response and verifies the evidence within the agreed mandate. A checklist change alone is not proof that the revised workflow operates.</p>
+<p>Correction and corrective action have different purposes. The distinction is consistent with <a href="https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Astd%3Aiso%3A9000%3Aed-5%3Av1%3Aen">ISO’s quality-management vocabulary</a>. The exact management-system requirements must still be checked in the authorised edition.</p>
 </section>
 <section id="root-cause-analysis-the-findings-centre-of-gravity" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="root-cause-analysis-the-findings-centre-of-gravity"><span class="header-section-number">11.3</span> Root-cause analysis: the finding’s centre of gravity</h2>
-<p>Here is a confession that took me a few engagements to learn. I used to write the Cause last, as an afterthought, because the Condition felt like the real finding and the Recommendation felt like the deliverable. Boards taught me otherwise. A board given a finding with a patchy cause will fix the symptom, declare victory, and hand you the identical finding at re-audit. A board given a finding whose cause is named precisely will fix the system, and the finding stays fixed.</p>
-<p>Root-cause analysis is the discipline of refusing to stop at the first plausible explanation. The technique is older than information security. Ask <em>why</em>, repeatedly, until the answer stops being a person and starts being a process. The offboarding checklist did not run. Why? Because no one triggered it. Why? Because HR raises it, but the revocations live in systems HR cannot reach, and the handoff depends on an email that may or may not arrive. Why? Because there is no automated link between the HR system of record and the identity provider. Now you have a cause worth writing: a broken handoff and a missing integration, not a forgetful engineer.</p>
-<p>The “five whys” is a heuristic, not a religion. Sometimes the cause is obvious after two. Sometimes you need six and the sixth is “the organisation has never treated leavers as a security event, only an HR one.” The point is to keep digging past the convenient answer, because the convenient answer is almost always a person, and blaming a person fixes nothing. A good root cause names a control gap, an ownership gap, or a design gap. It rarely names a name.</p>
-<p>This is also where professional scepticism turns inward. You have been sceptical of Tessera’s claims all engagement. Now be sceptical of your own first draft of the cause. If your cause reads “human error,” you have not finished. If your cause reads “insufficient training,” ask why the training was insufficient and keep going. The cause you write is the cause that gets fixed. Settle for a shallow one and you have lent your authority to a remediation that will not hold.</p>
+<p>Repeated “why?” questions can help locate a mechanism, but they do not prove it. Test proposed causes against records and consider alternatives. If the handoff failed because a queue was inaccessible, training alone may not correct it. If a signed checklist omitted a separately owned key, enforcing the same incomplete checklist may reproduce the problem.</p>
+<p>A fictional junior auditor writes “staff did not follow the process” and proposes refresher training. The reviewer asks which step failed, who owned it and how completion was established. E05 shows that the process did not cover key ownership and did not ensure an acknowledged handoff. The revised response needs those mechanisms addressed. It need not prescribe automation as the only possible solution.</p>
+<p>Keep accountability clear without treating a person’s name as a complete causal explanation. Equally, do not assume that every failure must have a purely systemic cause. Record the investigation, alternative explanations and evidence still missing.</p>
 </section>
 <section id="rating-the-finding-from-guess-to-evidence" class="level2" data-number="11.4">
 <h2 data-number="11.4" class="anchored" data-anchor-id="rating-the-finding-from-guess-to-evidence"><span class="header-section-number">11.4</span> Rating the finding: from guess to evidence</h2>
-<p>Chapter 2 taught you likelihood times impact, and warned you that the matrix is a hypothesis. Here is what changes in Act II. You now have evidence, and evidence turns a hypothesis into an observation.</p>
-<p>The likelihood of the offboarding gap is not “medium” any more. You tested twelve leavers and five failed. That is not a likelihood estimate; it is a measured 42 per cent failure rate over the sample. Rate it on the observed frequency, and write the sample down so the rating is reproducible. This is the difference between a risk in a register, which is a forecast, and a risk in a finding, which is a fact.</p>
-<p>Impact is where judgement still rules, because impact is always counterfactual. The gap did not, as far as anyone knows, cause a breach. It could have. Rating the impact means reasoning about what a 41-day window of ex-employee production access would cost Tessera if it were misused: the NDB notification, the contractual breach with enterprise customers whose data-isolation clauses are implicated, the certification major nonconformity, the reputational drag. None of that happened. All of it was possible, and the possibility is what impact measures.</p>
-<p>The rating is the finding’s priority, and it is where you will be pressured. Clients want findings down-rated so the report reads better and the remediation budget shrinks. Your defence is the same defence every chapter has built: the rating follows the evidence and the consequence, written down, reproducible by another auditor. If you can defend the 42 per cent sample and the contractual exposure, the rating defends itself. If you cannot, you should not have written it.</p>
+<p>E04 establishes <strong>3/48 = 6.25%</strong> historical deviations against 24 hours, and <strong>4/48 ≈ 8.33%</strong> against two hours. These are observed rates in a census. They do not establish the probability of future misuse, a future breach or the proportion of all access controls that are ineffective.</p>
+<p>E05 changes the consequence assessment: one retained key was used for unauthorised reads and the supplied adviser assessment records an eligible breach. No misuse is evidenced for the other records. Assess continuing exposure separately from the incident already realised.</p>
+<p>Use E02’s agreed readiness-priority rules. F01 is high because of the critical credential-coverage failure, realised misuse and incomplete verification of the revised process. That is this engagement’s risk judgement. It is not an automatic ISO “major” classification based on a percentage. Preserve the original severity when recording remediation; closure status and residual risk are separate fields.</p>
 </section>
-<section id="forming-a-defensible-audit-opinion" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="forming-a-defensible-audit-opinion"><span class="header-section-number">11.5</span> Forming a defensible audit opinion</h2>
-<p>The findings are the building blocks. The opinion is the building. After eleven weeks you are finally doing the thing the whole engagement exists to do: standing behind a judgement about whether Tessera’s controls do what they claim.</p>
-<p>An audit opinion is not a list of findings. It is a synthesised conclusion, defensible and repeatable, that a stakeholder can rely on. A defensible opinion has three properties, and they are the same three the Introduction named: it is <strong>fair</strong> (it presents the picture honestly, including what works, not just what fails), <strong>repeatable</strong> (another auditor with your working papers would reach it), and <strong>ethical</strong> (formed without pressure, on the evidence, regardless of what the client hoped to hear). Strip any of the three and the opinion is not worth the paper it is written on.</p>
-<p>The shape of the opinion follows the evidence. An <strong>unqualified</strong> opinion says controls are designed and operating effectively. You do not hand these out lightly, and you almost never hand them out on a first certification engagement, because the standard of proof is high and the tolerance for untested assertions is zero. A <strong>qualified</strong> opinion says controls are largely effective, with named exceptions. Most real opinions are qualified, because most real organisations have a mix of working and broken controls, and honesty demands you name both. An <strong>adverse</strong> opinion says controls are not effective, full stop. It is rare, it is serious, and it ends the certification conversation.</p>
-<p>The opinion you form for Tessera this week is built directly from the findings register. Each material finding presses on the opinion. A single high-rated finding on a load-bearing control may be enough to qualify it. A pattern of medium findings across a control family may amount to the same thing. Your job is to weigh the findings as a system, not count them, because five minor findings in an otherwise sound ISMS are a different opinion from one major nonconformity in the one control the certification depends on.</p>
-<p>I will not give you Tessera’s verdict here. That is the work of the next chapter, which takes this opinion and converts it into a certification-readiness judgement, and then asks you to defend it under board questioning. What this chapter delivers is the opinion’s raw material: a findings register so honestly rated that the verdict is, to a careful reader, already implied. Substantiate the findings, and the opinion writes itself.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="🔍 Auditing AI: who writes the opinion?">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>🔍 Auditing AI: who writes the opinion?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>An AI can draft a finding. It cannot sign an opinion, and the distinction is the whole argument of this book in one sentence. An opinion is an act of accountability. It attaches a name, a reputation, and a professional licence to a judgement about someone else’s security. The machine has none of those things to attach.</p>
-<p>This matters now because AI-assisted controls and AI-generated evidence have been flowing into your findings all engagement: logs summarised by a model, policies analysed by a model, findings drafted by a model. Each is input to the opinion. Your job, at the moment of signing, is to have substantiated every one of them, because the opinion is yours, not the model’s, and you cannot defer accountability to a system that has none. We return to the two faces, AI in audit and auditing AI, in the final chapter. For now, hold the line: the opinion is the one artefact that is irreducibly human.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="🤖 AI Field Note: AI drafts the finding; you supply the opinion">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>🤖 AI Field Note: AI drafts the finding; you supply the opinion
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is where the drafter-to-evaluator arc lands, and it lands hard. Hand an AI the raw evidence for the offboarding finding, the relevant clauses of ISO/IEC 27001:2022, and a one-line prompt: “write this up as a 5C+R finding.” It returns a perfectly structured finding in seconds. Criteria, Condition, Cause, Consequence, Corrective action, Recommendation, all in the right order, all grammatically immaculate. On structure alone it is indistinguishable from a senior auditor’s first draft.</p>
-<p>Now read it as the evaluator, because this is where the work actually is. The Criteria and Condition the AI got right: it copied the clause and restated your evidence faithfully. The Cause it got wrong, in the precise way machines get causes wrong. Its draft read “offboarding is not consistently followed due to insufficient process adherence.” That is a symptom dressed as a cause, and it is the shallow answer root-cause analysis exists to refuse. It tells the board to enforce the process harder, which is exactly the remediation that fails, because the process is not the problem; the broken handoff between HR and the identity provider is. You rewrite the Cause with the actual root cause.</p>
-<p>The Consequence the AI under-weighted. It listed “potential unauthorised access” and stopped there, because the generic register has no notion of Tessera’s enterprise contracts, the APPs, the NDB scheme, or the certification exposure. You supply the consequence that matters: the contractual and regulatory exposure that turns a latent access gap into a board-level risk, and you rate it accordingly. The Recommendation the AI wrote was generic (“improve the offboarding process”). You replace it with the durable fix that maps to your named cause.</p>
-<p>What the machine produced in seconds was the scaffold. What you supplied in an hour was the judgement: the root cause, the consequence weighted to Tessera’s real obligations, the rating, and, ultimately, the opinion. That is the entire arc of this book compressed into one artefact. The AI drafted the finding. The auditor supplied everything that makes the finding worth acting on.</p>
-</div>
-</div>
-</section>
-<section id="executive-reporting-the-board-facing-version" class="level2" data-number="11.6">
-<h2 data-number="11.6" class="anchored" data-anchor-id="executive-reporting-the-board-facing-version"><span class="header-section-number">11.6</span> Executive reporting: the board-facing version</h2>
-<p>The findings register is for the auditors, the risk owners, and the remediation programme. The executive summary is for the board, and it is a different document written from the same evidence.</p>
-<p>A board does not want the 5C+R structure on the first page. A board wants, in one page, three things: what you found, in order of how much it matters; what the opinion is, in plain language; and what the organisation must do first. Lead with the opinion, because that is what the board is accountable for. Follow with the top three to five findings, each a sentence, each carrying its rating. Close with the remediation priorities, sequenced. Everything else is an appendix the board can ignore and the risk owners cannot.</p>
-<p>The trap in executive reporting is the softening that happens when a finding travels up the chain. An engineer says “production access retained for 41 days.” A manager writes “minor delay in deprovisioning.” A director reads “access management requires enhancement.” By the boardroom the finding has evaporated into a platitude, and nobody acts because nobody was told what was actually wrong. Your job is to write the summary so tightly that softening has nowhere to hide. State the condition. State the rating. State the risk to objectives. Let the discomfort do the work, because discomfort is the point. A board that is comfortable with your findings has been given the wrong findings.</p>
+<section id="the-offboarding-finding-in-full" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="the-offboarding-finding-in-full"><span class="header-section-number">11.5</span> The offboarding finding, in full</h2>
 <div class="tessera-case">
-<p><strong>🗂️ Tessera Case: The offboarding finding, in full</strong></p>
-<p>Here is one finding from Tessera’s register, the one Act I named as a gap and Act II closed with evidence. It is the artefact this chapter has been building toward.</p>
-<p><strong>Criteria.</strong> ISO/IEC 27001:2022 A.6.5 (responsibilities after or during termination or change) requires that the access rights of personnel leaving or changing role be removed or revised. A.5.18 (access rights) requires formal authorisation and timely removal of access. Tessera’s offboarding procedure (ISMS-PR-014, v3.1) defines a 24-hour window from last working day to full revocation across AWS IAM, Google Workspace, and Slack.</p>
-<p><strong>Condition.</strong> Testing of twelve leavers in the twelve months to fieldwork found five (42 per cent) retained active access beyond the 24-hour window. The longest case retained production database access for 41 days. The Statement of Applicability records A.6.5 and A.5.18 as “implemented.” Sample: 12 of 14 leavers (2 records incomplete and excluded, itself a control observation).</p>
-<p><strong>Cause.</strong> The offboarding checklist is owned by HR but its revocation steps execute on systems HR cannot access. There is no automated trigger between the HR system of record and the identity provider; the handoff depends on email to IT, which went unacknowledged in three of the five failures. The checklist sign-off line exists but is not enforced by any system that can prevent checklist closure without revocation evidence. Root cause: a broken cross-functional handoff with no accountable single owner and no automation, not individual error.</p>
-<p><strong>Consequence.</strong> A departing employee with retained production access represents a latent insider threat outside Tessera’s awareness. Misuse would constitute a notifiable data breach under the APPs and the NDB scheme, breach data-isolation clauses in three enterprise contracts, and constitute a major nonconformity against A.6.5 and A.5.18 capable of blocking ISO/IEC 27001 certification.</p>
-<p><strong>Rating: High.</strong> Likelihood established by observed 42 per cent sample failure (not estimated). Impact established by regulatory, contractual, and certification exposure.</p>
-<p><strong>Corrective action.</strong> Revoke all outstanding leaver access within five working days; reconcile the full leavers population against current access; report results to the audit team. Owner: Head of IT. Due: fieldwork close plus two weeks.</p>
-<p><strong>Recommendation.</strong> Implement automated deprovisioning triggered by HR status change into the identity provider, with revocation evidence required to close the checklist. Assign a single accountable owner with cross-system authority over the full offboarding workflow. Include the leavers population in the quarterly access review. Re-test at the surveillance audit.</p>
-<p>That is a finding a board can act on, a risk owner can remediate, and another auditor can reproduce. Notice what is absent: blame, softening, and any sentence that does not earn its place.</p>
+<p><strong>🗂️ Tessera Case: F01</strong></p>
+<p><strong>Criteria:</strong> E03’s P-IT v3.1 requires full revocation within 24 elapsed hours; P-HR v2.0 requires two hours. Both applied during the historical period without an approved precedence rule. Access rights relate to A.5.18. The exact deadlines are Tessera’s requirements.</p>
+<p><strong>Condition:</strong> E04 contains all 48 supplied departures for 1 June 2025–31 May 2026. L007, L019 and L031 exceed 24 hours; L044 additionally exceeds two hours. L007’s key remained enabled for 47 days. E05 records unauthorised use of that key. Full population coverage is stipulated by the exercise’s reconciliation fact, rather than independently verified by the reader.</p>
+<p><strong>Cause:</strong> E05 supports incomplete key coverage and unacknowledged handoffs. L044’s separate delay remains unexplained. The conflicting policy deadlines also require authorised resolution.</p>
+<p><strong>Consequence:</strong> retained credentials can permit access after authority ends. INC-01 supplies one realised case and a dated privacy assessment; no equivalent incident is established for the other leavers.</p>
+<p><strong>Rating:</strong> high under E02. The rating rests on critical access exposure, realised harm and incomplete corrective-action verification, not an inferred 6.25% incident probability.</p>
+<p><strong>Correction:</strong> the Head of IT authorised current-access reconciliation on 16 June. E10 found no active credentials belonging to the 48 historical leavers. Any newly discovered hazardous access would require prompt authorised containment and investigation; the auditor does not revoke it independently.</p>
+<p><strong>Corrective action and response:</strong> the approved 19 June policy changes align the deadlines to two hours prospectively. The 20 June workflow adds acknowledged handoff, a key-owner sweep and evidence-gated closure. The Head of IT owns investigation of the missing R06 evidence and a further agreed observation/retest period. Do not wait until a later surveillance audit to verify a readiness blocker.</p>
+<p><strong>Status at 30 June:</strong> historical current-state reconciliation completed; policy conflict corrected prospectively; systemic finding <strong>open, retest incomplete</strong>. Original severity remains high.</p>
 </div>
-<div class="callout callout-style-default callout-warning callout-titled" title="Watch out: the finding that isn't">
+</section>
+<section id="show-the-retest-before-changing-the-status" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="show-the-retest-before-changing-the-status"><span class="header-section-number">11.6</span> Show the retest before changing the status</h2>
+<p>E10 supplies the complete six-person post-change population and the independent review on 29 June. Five records have paired termination and key-disable events showing one-hour completion. R06 has a signed checklist but lacks its key-disable event or independent state evidence.</p>
+<p>The supported retest result is <strong>five demonstrated passes and one insufficient-evidence result</strong>, not six passes and not a proved active key. The observation period is short. Request the missing R06 evidence, investigate why the closure gate accepted an incomplete record and agree further testing that addresses recurrence.</p>
+<p>A promise, a new policy and a successful sample answer different questions. Record each, then decide whether their combined evidence is sufficient for closure. Closing F01 would not close the separate access-review, privacy, recovery or supplier issues.</p>
+</section>
+<section id="the-finding-and-closure-ledger" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="the-finding-and-closure-ledger"><span class="header-section-number">11.7</span> The finding and closure ledger</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Evidence and issue</th>
+<th>Status at cutoff</th>
+<th>What would change it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>F01</td>
+<td>E03–E05, E10: historical revocation and incomplete retest</td>
+<td>High; open</td>
+<td>Resolve R06, substantiate cause-directed action and adequate operating verification</td>
+</tr>
+<tr class="even">
+<td>F02</td>
+<td>E03, E06, E10: quarterly ordinary and monthly privileged review coverage</td>
+<td>High; open</td>
+<td>Complete the distinct populations/reviews and verify resulting actions and recurrence controls</td>
+</tr>
+<tr class="odd">
+<td>F03</td>
+<td>E03, E07, E10: AI privacy/terms/settings/retention/escalation</td>
+<td>High; open</td>
+<td>Deployment-specific evidence for every listed subissue, with qualified privacy review</td>
+</tr>
+<tr class="even">
+<td>F04</td>
+<td>E03, E08, E10: missed recovery targets and untested dependencies</td>
+<td>High; open</td>
+<td>Revised, authorised exercise meets targets with dependency/cutover evidence and reconciled documentation</td>
+</tr>
+<tr class="odd">
+<td>F05</td>
+<td>E01, E09, E10: supplier-report period, exception and user-control reliance</td>
+<td>Medium; open</td>
+<td>Current relevant assurance, exception assessment and tested complementary controls</td>
+</tr>
+<tr class="even">
+<td>P01</td>
+<td>E11: three tenant-authorisation requests</td>
+<td>Concern cleared, bounded pass</td>
+<td>Reassess if configuration or threat model changes</td>
+</tr>
+</tbody>
+</table>
+<p>The electronic ledger uses these same IDs. Do not merge P01 into a global “access passed” conclusion. It tested a different assertion from F01 and F02.</p>
+</section>
+<section id="forming-a-defensible-audit-opinion" class="level2" data-number="11.8">
+<h2 data-number="11.8" class="anchored" data-anchor-id="forming-a-defensible-audit-opinion"><span class="header-section-number">11.8</span> Forming a defensible audit opinion</h2>
+<p>The opinion synthesises the ledger against the mandate. It should explain which issues prevent the requested recommendation, which limited successes were observed and where evidence or scope prevents a broader conclusion.</p>
+<p>Financial-audit labels such as unqualified, qualified and adverse are not universal ISO readiness classifications. This book uses a plain-language recommendation under E02. Formal certification findings and decisions follow the certification body’s applicable rules.</p>
+<p>A single critical unresolved issue can outweigh several bounded passes. That does not make the passes irrelevant; they establish progress and prevent an unfairly blanket negative account. Chapter 12 uses the full ledger to show both.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="🤖 AI Field Note: evaluate the claimed closure">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Watch out: the finding that isn’t
+<span class="screen-reader-only">Note</span>🤖 AI Field Note: evaluate the claimed closure
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Three counterfeits pass for findings, and each wastes the board’s twenty minutes.</p>
-<p>The <strong>recommendation dressed as a finding</strong>. “Tessera should implement automated deprovisioning” is not a finding; it is the +R with the other five elements missing. A board cannot rate it, cannot trace it to a clause, and cannot tell whether it matters. If your finding reads as advice, rewrite it from the Criteria down.</p>
-<p>The <strong>symptom without a root cause</strong>. “Access revocation is inconsistent” names the Condition and stops. Without a Cause it tells the board to try harder at a process that is already failing for a reason it has not been given. The remediation will patch, not fix, and you will write it again next year. Every finding without a named root cause is a finding you have deferred, not delivered.</p>
-<p>The <strong>consequence bent to please</strong>. The client who wants the rating down will argue the impact is theoretical, that nothing happened. The client who wants a rival team’s budget cut will argue the impact is catastrophic. Both are pressure on the Consequence, and both are the Introduction’s “pressure is the auditor’s real test” arriving on schedule. Rate the consequence against the objectives and the obligations, write the rationale, and refuse to move it for either flavour of comfort. A finding whose consequence has been massaged is not a softer finding. It is a wrong one with your name on it.</p>
-<p>There is a fourth pressure that does not counterfeit a single finding so much as the whole opinion: the urge to soften the verdict so the deal closes, the certification lands, the executive is spared. Hold the line the Introduction drew. An opinion given under pressure, without the evidence to back it, is not an efficiency. It is a liability you have signed.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Week 11)">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Week 11)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is the second-to-last entry, and it is the one that turns eleven weeks of work into an audit. Lock in two artefacts.</p>
-<p>First, your <strong>findings register</strong>: every finding in 5C+R form, each with a named criterion, a cited condition bound to its sample, a root cause, a consequence weighted to Tessera’s objectives and obligations, a rating with written rationale, and a corrective action plus recommendation mapped to the cause. Order them by rating. This is the evidence base for your opinion, and by next week it is the body of your report.</p>
-<p>Second, your <strong>draft defensible opinion</strong>: one paragraph that synthesises the register into a fair, repeatable, ethical conclusion on whether Tessera’s controls are designed and operating effectively. State the opinion type you are leaning toward and why, and name the one to three findings that press hardest on it. This is a draft. Chapter 12 will sharpen it into the certification-readiness verdict and make you defend it. But a draft opinion you can already stand behind is the measure that eleven chapters of substantiation have done their job.</p>
+<p>An illustrative report draft says, “The root cause was fixed and the leaver finding is now minor.” E10 supports a changed workflow and five demonstrated passes, but one retest record is incomplete. Rewrite the sentence to preserve the original severity and current status. The missing evidence must remain visible in the conclusion.</p>
 </div>
 </div>
 </section>
-<section id="the-question-answered" class="level2" data-number="11.7">
-<h2 data-number="11.7" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">11.7</span> The question, answered</h2>
-<p>What did we find? A set of findings so specific, so evidenced, and so honestly rated that each one is reproducible by another auditor and actionable by a risk owner. The offboarding gap that Act I only suspected is now a measured 42 per cent failure rate with a named root cause and a durable fix. The polished policy has finally met its operational reality, and the reality is written down in a form no amount of softening can disguise.</p>
-<p>How do we say it so the board acts? In a 5C+R structure that leaves no finding vague, a rating that follows the evidence rather than the optimism, a root cause that points at the system rather than a scapegoat, and an executive summary tight enough that the discomfort has nowhere to hide. We say it fairly, naming what works alongside what fails. We say it ethically, refusing to bend the consequence or the opinion for the deal on the table. And we sign it, because an opinion is an act of accountability, and accountability is the one thing the machine cannot supply.</p>
-<p>Eleven weeks have run their course. The evidence is gathered, the findings are written, the opinion is drafted. What remains is the verdict that everything has been building toward, and the moment you have to stand up and defend it. Tessera’s board is waiting. So is the certification body. The question, finally, is <strong>Conclude?</strong></p>
+<section id="executive-reporting-the-board-facing-version" class="level2" data-number="11.9">
+<h2 data-number="11.9" class="anchored" data-anchor-id="executive-reporting-the-board-facing-version"><span class="header-section-number">11.9</span> Executive reporting: the board-facing version</h2>
+<p>Lead with the recommendation and its limitations, then the issues driving it. Name the next action, owner and verification needed. Keep the detailed working papers available through finding IDs.</p>
+<p>Avoid both euphemism and drama. “Access needs enhancement” hides the specific failure. “Every leaver can breach the company” exceeds the evidence. A useful sentence says that historical key revocation failed for identified records and the revised process is not yet sufficiently verified.</p>
+<p>Do not measure success by whether the board looks uncomfortable. The report should enable an informed decision, including a decision to defer an external audit or change a deployment.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Engagement milestone 11)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Engagement milestone 11)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Time: 30 minutes. No AI required.</strong> Write F01 in the corrected 5C+R template. Re-perform E10’s six-record retest and state precisely why closure is not supported. Complete the six-row ledger, then draft a 150-word executive summary accounting for F01–F05 and P01. Keep original severity, action progress and closure status separate.</p>
+</div>
+</div>
+</section>
+<section id="the-question-answered" class="level2" data-number="11.10">
+<h2 data-number="11.10" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">11.10</span> The question, answered</h2>
+<p>A finding earns its place through a criterion, an evidenced condition and a defensible assessment of consequence. Remediation earns closure through sufficient verification. The final chapter makes that ledger answer the board’s readiness question.</p>
 
 
 </section>
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot embed for this book.
-  The book-publisher creates a chatbot grounded in the book's content and
-  fills in the embed id / base API URL here. Until then this is a deliberate
-  no-op so the `include-after-body` hook in _quarto.yml stays wired.
--->
+<script data-embed-id="d9721604-3074-4caf-8b0c-51c962499531" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

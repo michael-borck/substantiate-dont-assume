@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -287,6 +291,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction: The Audit Mindset</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -398,6 +408,30 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../appendices/b-case-pack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Fixed case pack: SDA-2026.1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/c-answer-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Answer checks and assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/d-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Source guide and edition boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/e-interview-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -425,10 +459,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#materiality-is-not-completeness" id="toc-materiality-is-not-completeness" class="nav-link" data-scroll-target="#materiality-is-not-completeness"><span class="header-section-number">4.3</span> Materiality is not completeness</a></li>
   <li><a href="#the-engagement-letter" id="toc-the-engagement-letter" class="nav-link" data-scroll-target="#the-engagement-letter"><span class="header-section-number">4.4</span> The engagement letter</a></li>
   <li><a href="#the-six-stage-audit-lifecycle" id="toc-the-six-stage-audit-lifecycle" class="nav-link" data-scroll-target="#the-six-stage-audit-lifecycle"><span class="header-section-number">4.5</span> The six-stage audit lifecycle</a></li>
-  <li><a href="#the-audit-programme-and-risk-based-scoping" id="toc-the-audit-programme-and-risk-based-scoping" class="nav-link" data-scroll-target="#the-audit-programme-and-risk-based-scoping"><span class="header-section-number">4.6</span> The audit programme and risk-based scoping</a></li>
+  <li><a href="#the-audit-programme-and-risk-based-scoping" id="toc-the-audit-programme-and-risk-based-scoping" class="nav-link" data-scroll-target="#the-audit-programme-and-risk-based-scoping"><span class="header-section-number">4.6</span> The audit programme and risk-based scoping</a>
+  <ul class="collapse">
+  <li><a href="#a-small-procedure-before-the-full-test" id="toc-a-small-procedure-before-the-full-test" class="nav-link" data-scroll-target="#a-small-procedure-before-the-full-test"><span class="header-section-number">4.6.1</span> A small procedure before the full test</a></li>
+  </ul></li>
   <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">4.7</span> The question, answered</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="/llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/substantiate-dont-assume"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -463,37 +500,23 @@ ul.task-list li input[type="checkbox"] {
 <section id="scope-before-substance" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="scope-before-substance"><span class="header-section-number">4.1</span> Scope before substance</h2>
 <p>You cannot audit everything, and you should not try. An information security management system touches every server, every account, every supplier, every line of policy, and every corridor with a lock on it. A certification-readiness audit has weeks, not years, and limited access. The gap between what exists and what you can examine is enormous, and the auditor’s first job is to close it intelligently rather than pretend it is not there.</p>
-<p>That act of choosing, what you will examine and what you will deliberately leave, is called scope, and it is the first place your judgement becomes visible. Anyone can say “we’ll look at everything, to be safe.” That sentence is not diligence. It is the absence of a point of view, dressed up as thoroughness. A scope that contains everything contains no priority, and an engagement with no priority will spend its hours evenly across the trivial and the critical, which is how audits run out of time before they reach the part that matters.</p>
-<p>I have inherited engagements whose scope read “all security controls.” The first week was not spent auditing. It was spent drawing the boundary that should have existed on day one. Scope is the cheapest mistake to make and the most expensive to fix, because every later stage is built on it.</p>
-<p>The discipline is to choose. Some choices will turn out wrong; that is the nature of planning under uncertainty, and it is why scope is revisited, not carved in stone. But a scope that names what is in and what is out is a scope an auditor can defend, and a scope that can be defended is the only kind worth having. The rest of this chapter is the machinery for making those choices well.</p>
+<p>Separate three decisions. <strong>Scope</strong> bounds the subject and period. <strong>Coverage</strong> records which applicable requirements will be assessed. <strong>Test depth</strong> determines the procedures and evidence needed for each. A broad scope can still have clear priorities. A short deadline does not permit silently omitting a required control.</p>
+<p>A vague “all security controls” brief needs clarification before acceptance. Establish the service boundary, dependencies, evidence access and reporting limits. Revisit those decisions when new information appears, recording the reason and agreement.</p>
 </section>
 <section id="the-four-things-you-must-fix-before-you-start" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="the-four-things-you-must-fix-before-you-start"><span class="header-section-number">4.2</span> The four things you must fix before you start</h2>
-<p>Before a single document is reviewed or a single interview booked, four things must be fixed in writing. They are the legs the engagement stands on, and a wobble in any one of them propagates through everything that follows.</p>
+<p>Before you review a single document or book a single interview, you must fix four things in writing. They are the legs the engagement stands on, and a wobble in any one of them propagates through everything that follows.</p>
 <p>The <strong>audit objective</strong> is the question the engagement exists to answer. For Tessera, that question is specific: <em>is Tessera’s information security management system ready for ISO/IEC 27001:2022 certification?</em> Not “is Tessera secure,” which is unanswerable, and not “what is wrong with Tessera,” which has no end. A good objective is a question with a finite, opinion-shaped answer.</p>
-<p>The <strong>criteria</strong> are the benchmark the subject matter is measured against. You cannot say whether something conforms without first saying what it should conform to. Tessera’s criteria are ISO/IEC 27001:2022, supported by the controls of Annex A and the 93 controls across the four themes you met in Chapter 3. The criteria decide what counts as evidence and what counts as a finding.</p>
+<p>The <strong>criteria</strong> are the benchmark the subject matter is measured against. You cannot say whether something conforms without first saying what it should conform to. Tessera’s criteria include ISO/IEC 27001:2022 with Amd 1:2024, the necessary controls in its SoA, applicable obligations and its own policies. E01 and E03 record the teaching criteria. The criteria decide what counts as evidence and what counts as a finding.</p>
 <p>The <strong>scope</strong> is the boundary: which parts of the subject matter the objective applies to. Which systems, which locations, which business units, which period of time, which controls. Scope turns the objective from an idea into a finite piece of work.</p>
-<p>And <strong>materiality</strong> is the threshold that decides what matters. Not everything that is imperfect is a finding; only what is material is. Materiality is what stops the report from being an exhaustive catalogue of minor nicks and makes it a judgement about the things that affect the opinion.</p>
-<p>Notice the relationship. The objective is the question; the criteria define “good”; the scope draws the fence; materiality decides what inside the fence is worth reporting. Fix all four, and the engagement has a spine. Leave any vague, and you are back to the health check.</p>
+<p>And <strong>materiality</strong> is the threshold that decides what matters. Significance guides priorities and the executive summary. Record supported nonconformities against applicable criteria even when they are individually low severity. Materiality is what stops the report from being an exhaustive catalogue of minor nicks and makes it a judgement about the things that affect the opinion.</p>
+<p>The objective is the question; the criteria define “good”; the scope draws the fence; significance guides how findings are prioritised and communicated. Fix all four, and the engagement has a spine. Leave any vague, and you are back to the health check.</p>
 </section>
 <section id="materiality-is-not-completeness" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="materiality-is-not-completeness"><span class="header-section-number">4.3</span> Materiality is not completeness</h2>
-<p>Here is the distinction students trip over most, and it is worth slowing down for. Completeness asks: <em>did we look at everything?</em> Materiality asks: <em>did we look at what matters?</em> These are not the same question, and an auditor who answers the first has not answered the second.</p>
-<p>In financial audit, materiality has a number: a percentage of revenue or profit below which an error is too small to affect a reader’s decision. Information security is fuzzier. There is no tidy formula that says a control gap of severity 3.2 crosses the line. But the principle transfers exactly. A missing offboarding step that leaves orphaned administrator accounts is material, because it breaks a core control and the evidence of the breakage is exactly what a certification body will probe. A policy typo is not material, because it changes nothing about whether the controls work. The job is to tell them apart.</p>
-<p>The temptation is to chase completeness because it feels safe. If you catalogue every imperfection, the reasoning goes, you cannot be accused of missing anything. You can, and you will be, because a report that lists everything lists nothing in priority order, and the reader who relies on it cannot tell the catastrophic from the cosmetic. Materiality is the auditor’s permission to be selective, and selectivity, backed by judgement, is what makes the opinion useful.</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="Watch out: completeness masquerading as rigour">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Watch out: completeness masquerading as rigour
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A scope or a report that tries to cover everything is not more thorough. It is less useful. The trap is to treat “we examined all 93 controls” as the deliverable. It is not. The deliverable is an opinion on the controls that matter, supported by evidence you can defend. If your materiality instinct is missing, your engagement will drown in detail and still miss the thing that sinks the certification. Completeness is a checklist. Materiality is a judgement.</p>
-</div>
-</div>
+<p>Coverage and significance answer different questions. Coverage asks whether required areas were addressed. Significance asks how a result affects the conclusion and action priorities. They are complementary.</p>
+<p>A spelling error that changes no obligation may be an editorial observation. Missing evidence for a required access review is an audit issue even if no misuse was found. Do not import a financial-audit numerical threshold as permission to suppress management-system nonconformities.</p>
+<p>Maintain a complete findings register, then write a prioritised executive summary. Where access or time prevents a required test, record the limitation and its effect on the opinion. “We did not assess it” is clearer than an unsupported low-risk conclusion.</p>
 </section>
 <section id="the-engagement-letter" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="the-engagement-letter"><span class="header-section-number">4.4</span> The engagement letter</h2>
@@ -516,7 +539,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-six-stage-audit-lifecycle" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="the-six-stage-audit-lifecycle"><span class="header-section-number">4.5</span> The six-stage audit lifecycle</h2>
-<p>Once the engagement is agreed, the work itself follows a lifecycle that ISO/IEC 19011 sets out and that every competent audit function recognises. ISO/IEC 19011 is the standard for <em>auditing management systems</em>: not what to audit, but how to run an audit. It is the methodology volume of the standards library, and its six stages are the backbone of how an engagement actually unfolds. Learn them, because they are how you will structure your time from here to the opinion.</p>
+<p>This book groups the engagement into six practical stages. <a href="https://www.iso.org/standard/19011">ISO 19011:2026</a> provides guidance on management-system auditing; the sequence below is a teaching arrangement, not a quotation of mandatory certification rules. Specific audit programmes may overlap stages and agree different follow-up arrangements.</p>
 <p>The six stages, in order:</p>
 <ol type="1">
 <li><strong>Initiating.</strong> You establish contact, confirm the engagement is feasible, agree the objective, scope, and criteria, and form the audit team with the competence the engagement needs. The engagement letter is signed here, and the audit programme is begun.</li>
@@ -526,20 +549,22 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Completion.</strong> The engagement is formally closed. Working papers are finalised and retained, lessons are captured, and the records that someone may need to reconstruct this audit in three years are put away properly.</li>
 <li><strong>Follow-up.</strong> You verify that the corrective actions raised in the report have actually been taken and are working. An audit that reports a finding and never checks the fix is an audit that stops at diagnosis.</li>
 </ol>
-<p>Notice where the judgement sits. The stages are linear, but the decisions inside them are not. Initiation fixes scope, but preparation often forces a scope correction when the documents reveal something unexpected, and follow-up can reopen an engagement that completion thought was closed. The lifecycle is a spine, not a script. You move through it with your professional scepticism switched on at every stage.</p>
+<p>The stages are linear, but the decisions inside them are not. Initiation fixes scope, but preparation often forces a scope correction when the documents reveal something unexpected, and follow-up can reopen an engagement that completion thought was closed. The lifecycle is a spine, not a script. You move through it with your professional scepticism switched on at every stage.</p>
 </section>
 <section id="the-audit-programme-and-risk-based-scoping" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="the-audit-programme-and-risk-based-scoping"><span class="header-section-number">4.6</span> The audit programme and risk-based scoping</h2>
-<p>The engagement letter says <em>what</em> you will do and <em>where the boundary is</em>. The <strong>audit programme</strong> says <em>how</em>, in operational detail: which controls you will test, which evidence you will gather for each, which sample sizes, which interviews, and in what order. If the engagement letter is the charter, the audit programme is the work order. (ISO/IEC 19011 is precise about terms: it reserves “audit plan” for one audit’s schedule and “audit programme” for a coordinated set of audits. In practice, auditors say “audit programme” for the engagement’s procedure list, and so will this book.)</p>
-<p>You do not write the programme by listing all 93 controls and assigning each a test. That is the completeness trap in a different costume. You write it by ranking. <strong>Risk-based scoping</strong> is the principle that audit effort follows risk: the controls and areas where a failure would most threaten the objective get the most hours, the deepest sampling, and the most experienced eyes. The areas where a failure is unlikely or low-impact get a lighter touch, sometimes just a documented review.</p>
-<p>This is where Chapter 2 does real work. The Tessera risk register you helped build, the likelihood-times-impact ratings, the residual risks after treatment, all of it now becomes the input to where this engagement spends its time. A risk that is rated high and is the only treatment for a critical asset is where you dig. A control that backs a risk already accepted at a low residual level gets enough attention to confirm it exists, and no more. The audit programme is the risk register translated into hours.</p>
-<p>Risk-based scoping has a courage requirement. It asks you to <em>not</em> test something, on purpose, because the risk does not justify it, and to write down why. That “why” is your defence when a reviewer asks why a control was lightly examined. The answer “because the risk was low, and here is the analysis” is a complete answer. The answer “we ran out of time” is not.</p>
+<p>The engagement letter says <em>what</em> you will do and <em>where the boundary is</em>. The <strong>audit programme</strong> says <em>how</em>, in operational detail: which controls you will test, which evidence you will gather for each, which sample sizes, which interviews, and in what order. This book uses “test programme” for the procedure list. Distinguish it from an audit programme covering one or more audits and an audit plan describing the activities and arrangements for a particular audit.</p>
+<p>Start with applicable coverage, then choose proportionate depth. The risk register informs this decision, but its residual ratings depend on claims you may still need to test. High inherent exposure with low asserted residual risk can require deep testing of the controls responsible for that reduction.</p>
+<p>Write the rationale for each procedure, population and period. If evidence is unavailable, record the gap rather than replacing an operating test with confirmation that a policy exists. Required coverage, evidence reliability and key-control dependence matter alongside risk scores.</p>
+<section id="a-small-procedure-before-the-full-test" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="a-small-procedure-before-the-full-test"><span class="header-section-number">4.6.1</span> A small procedure before the full test</h3>
+<p>Use E03 and one E04 record. <strong>Objective:</strong> all access disabled within the applicable deadline. <strong>Inputs:</strong> termination time, identity disable time and separately owned key disable time. <strong>Procedure:</strong> match the ID, check that all required credential types are represented, subtract termination from each disable timestamp, and compare the latest disable time with both two and 24 hours. <strong>Output:</strong> met, exception or insufficient evidence under each policy, with record ID and calculation.</p>
+<p>A missing disable event is not automatically proof of active access. Request an independent event source or authorised state check. A current disabled state does not establish when historical revocation occurred.</p>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: Drawing the Tessera boundary</strong></p>
-<p>The artefact for this chapter is a pair: the engagement letter and the audit programme, and the most useful part of both is what they exclude. Tessera’s scope, agreed in writing, runs like this.</p>
-<p><em>In scope:</em> the AWS-hosted Tessera SaaS platform, its production and staging environments, the customer data flows, and the information security management system that governs them, audited against ISO/IEC 27001:2022. The ISMS documentation, the risk register, the policies, and the controls that back them are all inside the fence.</p>
-<p><em>Out of scope, with reasons recorded:</em> a recently acquired subsidiary, brought in three months ago, whose systems are not yet integrated into Tessera’s ISMS and whose inclusion would require a separate assessment. And the third-party payment processor Tessera routes transactions through, which is covered by its own current SOC 2 Type II report, a form of assurance you will accept and verify rather than duplicate.</p>
-<p>Two exclusions, two different logics, both written down. The subsidiary is out because it is not yet part of the system of record; including it would mean auditing an ISMS boundary Tessera has not finished drawing. The processor is out because its assurance already exists; re-auditing it would waste hours Tessera needs elsewhere. These are not evasions. They are documented scope decisions an auditor can defend, and they are exactly the kind of decision the generic “health check” would never have forced. You can run this same exercise against the live Tessera site at tessera.locoensayo.org and see whether your own boundary holds up.</p>
+<p>E01 fixes the scope: the Perth-managed SaaS ISMS, relevant customer-data flows and supplier dependencies. Direct testing of a supplier’s production systems is outside the granted authority. Tessera’s supplier governance and complementary controls remain inside the assessment.</p>
+<p>E09’s payment report ends in December 2025. Its exception and missing current-period evidence mean reliance is unresolved. Record those requests and the effect of their absence. Do not write “covered by SOC 2” as though it were a completed test.</p>
+<p>The opening mandate contains no subsidiary in this fixed scenario. If an acquisition were introduced, assess its interfaces and scope implications before deciding whether it can be excluded. A separate legal entity is not automatically outside an ISMS.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="🤖 AI Field Note: Drafting the audit programme">
 <div class="callout-header d-flex align-content-center">
@@ -551,9 +576,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A programme is a fine thing to draft with an AI, because its structure is regular and its content is largely standard. Prompt an AI: “Draft a Stage 2 certification-readiness audit programme for a multi-tenant B2B SaaS company hosted on AWS, against ISO/IEC 27001:2022, with controls grouped by the four Annex A themes.” In a minute you have a structured programme: objectives, the control families to test, sample procedures, and a schedule. That draft is genuinely useful, and it is where the work begins, not where it ends.</p>
-<p>Because the AI scopes generically, it scopes wrongly for Tessera, and that is the lesson. Read the draft as an evaluator and the gaps are obvious. The draft assumes a single-tenant system and never tests the <strong>multi-tenant boundary</strong>, the control that stops one customer reaching another’s data, which is the single highest-risk area in the platform. It schedules a full access-control test of the <strong>payment processor</strong>, duplicating assurance a SOC report already provides and burning hours you do not have. And it silently sweeps the <strong>acquired subsidiary</strong> into scope as if integration were finished, when the subsidiary is not yet on Tessera’s ISMS at all. Three Tessera-specific boundaries, three misses, because the AI has no knowledge of the engagement letter and no judgement about where this company’s risk actually lives.</p>
-<p>The correction is yours. You add a tenant-isolation test procedure that pulls configuration evidence on the separation logic. You remove the processor from the test plan and replace it with a procedure to review and rely on the SOC report. You add a scope-exclusion note for the subsidiary and a flag to revisit it at the next review. The AI wrote the skeleton. You supplied the judgement that turned a generic programme into Tessera’s programme. That is the drafter-to-evaluator shift, on a real artefact, this week.</p>
+<p>An illustrative draft says “exclude payment processing because the processor has SOC 2.” E09 does not justify that conclusion. Correct the procedure to inspect scope, period, exceptions and complementary user controls, then decide reliance. The missing bridge evidence remains a limitation. No model output can supply a report the case does not contain.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="🔍 Auditing AI: Scoping the AI surface">
@@ -566,39 +589,35 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Tessera runs an AI assistant inside its support portal and an AI-driven anomaly detector in its logging stack. Neither is on the security page, and both are inside the boundary you just drew, so the scoping question lands now, not later. An AI system has a scope of its own: the model, the training and inference data, the prompts and outputs, the human-in-the-loop checks, and the integrations that feed it. Decide which of those the engagement covers, because “we tested the model” is not the same as “we tested the control the model is part of.”</p>
+<p>The fixed case includes an AI support assistant. An anomaly detector would require a separate work package; later chapters discuss that as a method extension without claiming a completed test. An AI system has a scope of its own: the model, relevant data, prompts and outputs, human review and integrations. State which components and operating period the engagement covers. A model-only test cannot establish the effectiveness of the surrounding control.</p>
 <p>The sharper point is that AI changes what “in scope” means over time. A model that behaves one way today can drift after a retrain, so a control that passed in week 2 may not pass in week 8. Scope has to say <em>when</em> the AI surface was examined, and the opinion has to honour that snapshot. We will test AI-generated evidence properly in Chapter 7. Here, the lesson is simpler: an AI you cannot see on the security page is still part of the ISMS, and a scope that ignores it is a scope with a hole in it.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Week 4)">
+<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Engagement milestone 4)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Week 4)
+<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Engagement milestone 4)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This week’s artefact is the planning pair, and the part that earns its place in the locker is the documentation of <em>why</em>. Lock in: the <strong>engagement letter</strong> with objective, criteria, scope, and materiality stated; the <strong>audit programme</strong> with the controls and procedures prioritised by risk; and, most importantly, the <strong>recorded scope decisions</strong>, the subsidiary excluded pending integration, the processor covered by its SOC report, the AI surface included with its snapshot date. Explicit exclusions are not footnotes. They are the proof that the scope was a decision, not a default. By Week 12 this pair is the front matter of your working papers, and anyone reading them will see an engagement that knew what it was doing before it began.</p>
+<p><strong>Time: 25 minutes. No AI required.</strong> Write a one-page scope and test programme using E01, E03 and E09. Include an access-revocation procedure and a supplier-reliance procedure. For each, state coverage, population/period, evidence required, permitted action and output. Separate an authority boundary from an evidence gap.</p>
 </div>
 </div>
 </section>
+</section>
 <section id="the-question-answered" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">4.7</span> The question, answered</h2>
-<p>What is in, what is out, and how do we know we are done? <em>In</em> is the AWS-hosted Tessera platform and its ISMS, measured against ISO/IEC 27001:2022. <em>Out</em>, deliberately and on the record, is the unintegrated subsidiary and the SOC-covered processor. We know we are done when the six-stage lifecycle has run its course, the audit programme’s procedures have been executed to the depth the risk justified, the findings that cross the materiality line are raised, and the opinion follows the evidence rather than the deadline. Scope is not the paperwork before the audit. Scope is the first opinion the auditor forms, and the one every later opinion depends on.</p>
-<p>The boundary is drawn and the programme is written. Next week the work turns to what “good” looks like inside that boundary: <em>what should the technical controls actually do, and how do we recognise it when they do?</em></p>
+<p>A bounded engagement can support a useful opinion even when evidence is incomplete, provided that the conclusion states the limitations. Next, make the technical objectives precise enough to test.</p>
 
 
 </section>
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot embed for this book.
-  The book-publisher creates a chatbot grounded in the book's content and
-  fills in the embed id / base API URL here. Until then this is a deliberate
-  no-op so the `include-after-body` hook in _quarto.yml stays wired.
--->
+<script data-embed-id="d9721604-3074-4caf-8b0c-51c962499531" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

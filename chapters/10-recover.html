@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -287,6 +291,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction: The Audit Mindset</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -398,6 +408,30 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../appendices/b-case-pack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Fixed case pack: SDA-2026.1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/c-answer-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Answer checks and assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/d-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Source guide and edition boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/e-interview-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -428,7 +462,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ict-readiness-for-business-continuity" id="toc-ict-readiness-for-business-continuity" class="nav-link" data-scroll-target="#ict-readiness-for-business-continuity"><span class="header-section-number">10.6</span> ICT readiness for business continuity</a></li>
   <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">10.7</span> The question, answered</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="/llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/substantiate-dont-assume"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -458,19 +492,21 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: When the region fails</strong></p>
-<p>Full access has changed the kinds of question you can ask. In week one you would have been grateful for a continuity policy to read; now you ask to see the failover runbook and the result of the last time it ran. Tessera’s CTO points you to a 47-page business-continuity plan and a diagram showing a primary region, a standby region, and an RTO of four hours. It looks exactly right. So you ask the only question that matters: <em>when did you last fail over, and what happened?</em> The room goes quiet. That silence is your second piece of evidence, and it is the one this chapter is built around.</p>
+<p>Full access has changed the kinds of question you can ask. At the outset of the engagement you would have been grateful for a continuity policy to read; now you ask to see the failover runbook and the result of the last time it ran. Tessera’s CTO points you to a 47-page business-continuity plan and a diagram showing a primary region, a standby region, and an RTO of four hours. It looks exactly right. So you ask the only question that matters: <em>when did you last fail over, and what happened?</em> Pause for the answer and request the record. Silence tells you nothing reliable about whether the recovery capability works.</p>
 </div>
 <section id="the-break-that-is-coming" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="the-break-that-is-coming"><span class="header-section-number">10.1</span> The break that is coming</h2>
-<p>Every control in the nine chapters behind you exists to stop something going wrong. This one is about what happens when they do not. Continuity and incident management are the controls that assume failure, and a mature organisation treats the question as <em>when</em>, not <em>if</em>. AWS regions fail. Databases corrupt. Ransomware encrypts. A contractor clicks the link. The discipline here is not to prevent those events, because that was the last nine chapters. It is to survive them, and to prove you can.</p>
+<p>Continuity and incident management are the controls that assume failure. A mature organisation treats the question as <em>when</em>, not <em>if</em>: AWS regions fail, databases corrupt, ransomware encrypts, a contractor clicks the link. The discipline here is to survive those events, and to prove you can.</p>
 <p>ISO/IEC 27001:2022 treats this seriously, and mostly inside the large organizational family. Information security during disruption (A.5.29) and ICT readiness for business continuity (A.5.30) are the two continuity controls, the latter new in the 2022 edition and worth a section of its own. Incident management is a five-control cluster: planning and preparation (A.5.24), assessment and decision on security events (A.5.25), response (A.5.26), learning (A.5.27), and collection of evidence (A.5.28). NIST CSF 2.0 gives the work two whole functions of its own: Respond (RS) and Recover (RC). The ASD Essential Eight, for its part, folds the same intent into its eighth and most underestimated mitigation: regular backups.</p>
-<p>The posture shift of Act II matters here more than anywhere. In Act I you read the continuity policy and noted, correctly, that its design looked complete and that you could not tell whether any of it operated. Now you hold the runbook, the test schedule, the incident log, the backup configuration, and the people who would actually run it at 2am on a Sunday. The polished plan finally meets its evidence. What follows is how you make them meet, and how you form an opinion that survives the question every certification body eventually asks: <em>have you ever actually done this?</em></p>
+<p>The posture shift of Act II matters here more than anywhere. In Act I you read the continuity policy and noted, correctly, that its design looked complete and that you could not tell whether any of it operated. Now you hold the runbook, the test schedule, the incident log, the backup configuration, and the people who would actually run it at 2am on a Sunday. The polished plan finally meets its evidence.</p>
 </section>
 <section id="rto-and-rpo-derived-not-picked" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="rto-and-rpo-derived-not-picked"><span class="header-section-number">10.2</span> RTO and RPO: derived, not picked</h2>
-<p>Two acronyms carry almost all the weight in continuity, and most of the mistakes. The Recovery Time Objective (RTO) is the maximum acceptable time to restore a service after a disruption: how long the business can be down before the damage becomes intolerable. The Recovery Point Objective (RPO) is the maximum acceptable loss of data, measured in time: how stale the restored data is allowed to be, which in practice dictates how often you back up or replicate. If the RPO is fifteen minutes and the last good backup is six hours old, the plan and the reality are two different documents.</p>
-<p>Here is the part the textbooks underplay and the machine gets quietly wrong. RTO and RPO are not numbers you pick from a menu of industry defaults. They are <em>derived</em>, from a business-impact analysis (BIA) that asks, for each critical process, what the disruption actually costs hour by hour: revenue lost, customers breached, SLAs broken, regulators notified, reputation damaged, and, for some industries, people harmed. The BIA traces each process down to the systems and data it depends on, and the RTO is set at the point where the cumulative cost of downtime crosses from tolerable to unacceptable. It has to sit underneath a ceiling called the Maximum Tolerable Downtime (MTD): the absolute limit the organisation can survive, within which the RTO plus the work of making the recovered system usable must fit. RPO is set the same way, against the cost of recreating or losing data.</p>
-<p>This is why an RTO of “four hours” scrawled into a plan with no analysis behind it is not a control. It is a wish, and it is the single most common finding in continuity auditing, because the number looks responsible and proves nothing. The audit test is simple and uncompromising: show me the analysis that produced the number, and show me it is consistent with the promises you have already made. For a SaaS like Tessera that sells on uptime, those promises live in customer contracts. A 99.9% monthly uptime SLA allows roughly forty-three minutes of downtime a month; a stated RTO of four hours is not consistent with that SLA, because a single qualifying incident consumes the entire allowance five times over. The RTO either comes down, the SLA comes honest, or the gap becomes a finding.</p>
+<p>The <strong>Recovery Time Objective (RTO)</strong> is a target interval for restoring the specified service after disruption. Define the start event and what counts as restored service. The <strong>Recovery Point Objective (RPO)</strong> specifies how far back in time the recovered data may be relative to the disruption.</p>
+<p>Keep these separate from <strong>maximum tolerable disruption</strong>, the business-impact limit beyond which consequences become unacceptable. An RTO should leave room for required business resumption within that limit. A restored database alone may not constitute a restored service.</p>
+<p>A business-impact analysis identifies affected processes, dependencies and the consequences of interruption over time. It informs targets alongside commitments, feasible strategies and authorised risk decisions. Targets must be agreed and supported; a generic “industry standard” number is not a derivation.</p>
+<p>E08 supplies the signed criteria for this exercise: RTO four hours, RPO fifteen minutes and maximum tolerable disruption eight hours. The contract separately promises 99.9% monthly availability. In a 30-day month, 0.1% is <strong>43.2 minutes</strong>, before applying the contract’s exclusions. A four-hour qualifying outage would exceed that monthly budget. It does not follow that the SLA automatically sets an RTO of 43.2 minutes: examine service definition, exclusions, remedies, business impact and risk acceptance.</p>
+<p>The auditor should make that exposure visible. Ask whether management understands the consequences of a recovery that meets its RTO yet misses its availability commitment. Do not silently alter either criterion to reconcile them.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="🤖 AI Field Note: Drafting the BCDR test plan">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -481,47 +517,46 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ask an AI to “draft a BCDR test plan for a multi-tenant SaaS on AWS, including RTO and RPO targets,” and you will have a fluent, well-structured document in under a minute. The testing methods will be right (tabletop, simulation, failover), the RACI will be sensible, and the schedule will look professional. It will also, almost certainly, have copied its RTO and RPO from whatever SaaS continuity plans it was trained on. You will see “RTO 4 hours, RPO 1 hour” presented as if those were universal constants, with no derivation, no BIA, and no mention of what Tessera has actually promised its customers.</p>
-<p>This is the exact point where the drafter hands back to the evaluator. The AI’s defaults are not wrong because the numbers are impossible; they are wrong because they are unattributed. Your correction is to send the numbers back to their source: tie the RTO to the 99.9% uptime clause in the enterprise contract (which it contradicts), tie the RPO to the volume of transactions Tessera processes per hour (which the AI never asked about), and require a per-service BIA with an MTD ceiling. Then ask the question the AI cannot answer: <em>was this test ever actually run?</em> The plan it drafted is a competent first cut. The derivation is your judgement, and the proof of execution is your evidence. Use it for the first; never let it pretend to the other two.</p>
+<p>An illustrative draft changes the case’s RPO to one hour because that is a plausible SaaS target. E03 and E08 say fifteen minutes. Restore the agreed criterion before evaluating the test. A second draft concludes that a five-and-a-half-hour restore meets the four-hour RTO because it is below the eight-hour disruption limit. That confuses a recovery target with a business-impact ceiling.</p>
 </div>
 </div>
 </section>
 <section id="how-you-test-a-plan-tabletop-simulation-failover" class="level2" data-number="10.3">
 <h2 data-number="10.3" class="anchored" data-anchor-id="how-you-test-a-plan-tabletop-simulation-failover"><span class="header-section-number">10.3</span> How you test a plan: tabletop, simulation, failover</h2>
 <p>A plan that has never been exercised is a draft. ISO/IEC 27001 expects continuity controls to be tested, and the discipline in Act II is to establish not just that a test happened but that it tested the right thing at the right depth. Testing falls along a spectrum, and the deeper you go, the more it costs in time and risk, and the more it proves.</p>
-<p><strong>Tabletop</strong> is a paper walkthrough. The team sits in a room, or on a call, and talks through a scenario: “Sydney is down, here is the runbook, what do you do?” It tests understanding, roles, decision rights, and whether the runbook reads the way someone under stress would need it to. It costs almost nothing, and it reliably surfaces the first category of problem: the plan nobody has read, the contact list with last year’s phone numbers, the approval step that names a person who left the company. Tabletop proves the team knows the plan. It proves nothing about whether the plan works.</p>
-<p><strong>Simulation</strong> raises the stakes. A scenario is run against a realistic but non-production environment, with some actual mobilisation: pages go out, an incident channel opens, people log in to the recovery systems. Simulation tests the <em>process</em> under load: how fast the team assembles, how the runbook holds when the steps are real, where the confusion lives. It still does not touch production, which is what makes it the workhorse test for most organisations, run once or twice a year.</p>
-<p><strong>Failover</strong> is the real thing. The service is actually moved to the recovery environment, either in parallel with production or, in the most demanding form, by interrupting production to force the switch. Failover is the only test that proves the technical claim: that the standby database really has the data, that DNS really reroutes traffic, that the application really starts in the standby region, that the RTO is achievable and the RPO holds. It is also the test organisations avoid, because it is expensive, it is risky, and it can break the very thing it is meant to protect. So they do not run it, and then they tell you it would work.</p>
-<p>My own rule, earned the hard way, is to ask for the last failover test before I ask for the runbook. Organisations that have actually done one will show you before you finish the sentence, usually with a date and a post-mortem. Organisations that have not will change the subject. The speed of the answer is the evidence; the runbook is just the paperwork.</p>
+<p><strong>Tabletop</strong> is a paper walkthrough. The team sits in a room, or on a call, and talks through a scenario: “Sydney is down, here is the runbook, what do you do?” It tests understanding, roles, decision rights, and whether the runbook reads the way someone under stress would need it to. It costs almost nothing, and it reliably surfaces the first category of problem: the plan nobody has read, the contact list with last year’s phone numbers, the approval step that names a person who left the company. A tabletop can support conclusions about understanding and decision paths under the exercise conditions. It does not demonstrate technical restoration throughput or data integrity.</p>
+<p><strong>Simulation</strong> raises the stakes. The team runs a scenario against a realistic but non-production environment, with some actual mobilisation: pages go out, an incident channel opens, people log in to the recovery systems. Simulation tests the <em>process</em> under load: how fast the team assembles, how the runbook holds when the steps are real, where the confusion lives. It still does not touch production, which is what makes it the workhorse test for most organisations, run once or twice a year.</p>
+<p><strong>Failover</strong> is the real thing. The service is actually moved to the recovery environment, either in parallel with production or, in the most demanding form, by interrupting production to force the switch. A well-designed failover test can provide integrated evidence: that the standby database really has the data, that DNS really reroutes traffic, that the application really starts in the standby region, that the RTO is achievable and the RPO holds. It is also the test organisations avoid, because it is expensive, it is risky, and it can break the very thing it is meant to protect. So they do not run it, and then they tell you it would work.</p>
+<p>An isolated restore can also test technical claims, including backup usability, throughput and application checks. State what it omits, such as production routing or live dependencies. A more disruptive test is not automatically better evidence for every question.</p>
+<p>Agree the environment, authority, rollback, stop conditions and acceptable business impact before any exercise. The auditor requests and observes authorised tests; this book does not authorise readers to fail over production. The speed of a witness’s answer is not a substitute for the test record.</p>
 </section>
 <section id="the-region-failure-audit" class="level2" data-number="10.4">
 <h2 data-number="10.4" class="anchored" data-anchor-id="the-region-failure-audit"><span class="header-section-number">10.4</span> The region-failure audit</h2>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: The failover that has never failed over</strong></p>
-<p>You take Tessera’s continuity plan at its word and work backwards. The plan promises a four-hour RTO and a fifteen-minute RPO against an AWS region failure, achieved by failing over from the primary (Sydney, ap-southeast-2) to a standby region. You ask for three things: the BIA that set those numbers, the runbook an on-call engineer would follow, and the result of the last failover test.</p>
-<p>The BIA is a spreadsheet labelled “v0.3 (draft)”. It lists RTO and RPO columns with the numbers already filled in and a comment in one cell that reads “industry standard for SaaS”. That is your first finding: the objectives were picked, not derived. There is no per-process impact curve, no link to the customer contracts that set the uptime SLAs, and no MTD ceiling anywhere in the document. The four-hour RTO is inconsistent with the 99.9% SLA Tessera’s largest customer negotiated, which the BIA does not even mention.</p>
-<p>The runbook is better. It is detailed, step-numbered, with a named owner. But step seven, “promote the Aurora Global cluster to primary”, assumes a configuration you cannot find in the Terraform, and step twelve, “switch Route 53 to the standby region”, has no health-check policy attached. You ask to see the standby region’s actual state. The primary database is Multi-AZ within Sydney (good: it survives an availability-zone failure), but there is no cross-region read replica and no global database. The “standby region” in the diagram is a drawing, not infrastructure. On the present estate a region failure is unrecoverable, and the fifteen-minute RPO is a fiction: with no cross-region replication at all, the real RPO is “since the last backup”, which is hours.</p>
-<p>The test record is the last piece. The most recent entry is a tabletop, eighteen months ago, whose action items (build the standby, document the failover, run a simulation) are all still open. No simulation has been run. No failover has ever been performed. The plan is an artefact of aspiration, and every number in it is untested. When you put it to the CTO that a Sydney outage would take Tessera’s multi-tenant service offline for an unbounded period, the honest answer is yes. That is the finding, and it is a serious one.</p>
+<p>E08 resolves the book’s scenario version. Its signed BIA and policy set the targets. A draft diagram depicts a hot standby that the deployment inventory does not contain. The actual runbook uses a cold restore. That discrepancy needs correction, but absence of a standby alone does not prove recovery impossible.</p>
+<p>The isolated exercise starts at <strong>10:00</strong> and passes application/dependency checks at <strong>15:30</strong>. Elapsed time is <strong>5 hours 30 minutes</strong>, exceeding the four-hour RTO by <strong>1 hour 30 minutes</strong>. The latest usable backup contains data through <strong>09:20</strong>, so the recovery-point gap at interruption is <strong>40 minutes</strong>, exceeding the fifteen-minute RPO by <strong>25 minutes</strong>.</p>
+<p>The restored copy passed its supplied integrity checks. That positive result belongs in the record. It does not cancel the missed targets, untested production cutover and untested key-service dependency. Nor does a non-production result establish exactly how long a real regional incident would last.</p>
+<p>Record <strong>F04</strong>, high under E02: the supplied recovery exercise misses P-REC’s targets and leaves material dependencies unverified. No later successful test exists in the case. Management’s planned July exercise is an action, not evidence of closure.</p>
 </div>
-<div class="callout callout-style-default callout-warning callout-titled" title="Watch out: the untested plan, and the single-zone SaaS">
+<div class="callout callout-style-default callout-warning callout-titled" title="Watch out: availability zones and regions">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Watch out: the untested plan, and the single-zone SaaS
+<span class="screen-reader-only">Warning</span>Watch out: availability zones and regions
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Two traps recur in continuity auditing, and both look responsible from the outside. The first is the beautiful runbook that has never been exercised. It reads perfectly, it maps cleanly to the standard, it names every owner, and it has never been run. A plan untested is a plan unproven, and an RTO written without a BIA is an aspiration, not an analysis. Insist on the test record, and read the action items. Items left open year after year tell you the testing is theatre.</p>
-<p>The second is more technical and easier to miss: the “highly available” SaaS whose HA lives in a single availability zone. Multi-AZ resilience survives the loss of a zone; it does not survive the loss of a region. If the only replication is within one region, a region outage takes the service down, and “high availability” was a marketing term. Check the actual topology: where do the primary and its replica live, and what is the replication lag? The architecture diagram says one thing; the configuration usually says another. Verify the configuration.</p>
+<p>Multiple availability zones can reduce exposure to a zone failure while leaving regional dependencies. Inspect where the usable backups, replicas, keys and recovery tooling reside and what failures they are designed to survive. A cold restore can be a valid strategy if it meets the agreed objectives and is adequately tested. A diagram alone establishes neither deployment nor recoverability.</p>
 </div>
 </div>
 </section>
 <section id="incident-response-the-lifecycle-you-audit" class="level2" data-number="10.5">
 <h2 data-number="10.5" class="anchored" data-anchor-id="incident-response-the-lifecycle-you-audit"><span class="header-section-number">10.5</span> Incident response: the lifecycle you audit</h2>
 <p>Continuity is the slow failure: the region is down, we recover. Incident response is the fast one: we are under attack, or something is wrong, right now. The two share people and overlap in practice, because every incident has a recovery phase, but they answer different questions and they audit differently.</p>
-<p>NIST SP 800-61 lays out the incident lifecycle in four stages, and it is the spine you audit against: preparation; detection and analysis; containment, eradication, and recovery; and post-incident activity. The ISO 27001:2022 controls map onto it almost one-to-one, which makes them a useful cross-check: A.5.24 is preparation, A.5.25 is the assessment that decides an event is an incident, A.5.26 is the response, A.5.27 is learning, and A.5.28 is the evidence you collect along the way, increasingly load-bearing when the incident touches personal data and the Notifiable Data Breaches clock from chapter nine starts running.</p>
+<p>The familiar four-phase model, preparation; detection and analysis; containment, eradication and recovery; post-incident activity, comes from SP 800-61 Rev.&nbsp;2. <a href="https://csrc.nist.gov/pubs/sp/800/61/r3/final">Revision 3</a>, published in April 2025, superseded it and integrates incident response throughout CSF 2.0 risk management. The older phase names remain a useful historical teaching aid, not the current publication’s structure. Related ISO/IEC 27001:2022 control areas can guide evidence requests without implying exact equivalence: A.5.24 is preparation, A.5.25 is the assessment that decides an event is an incident, A.5.26 is the response, A.5.27 is learning, and A.5.28 is the evidence you collect along the way, increasingly load-bearing when the incident touches personal data and the Notifiable Data Breaches clock from chapter nine starts running.</p>
 <p>The desk audit in Act I could confirm the IR plan existed and named a team. Act II asks whether it operates, and the test is the same as everywhere else: trace real events through the lifecycle. Ask for the last two or three security incidents and walk each one forward. Was it detected, by what, and how fast? Was it triaged and severity-assigned against the defined scale? Was the plan invoked, and is there a record of who did what and when: the incident channel, the paging history, the incident bridge notes? Was containment applied, and was the eradication complete or merely cosmetic? Was recovery validated before the incident was closed? And the step organisations skip most: was there a post-incident review, and were its action items tracked to closure, or did they die in a spreadsheet?</p>
 <p>The single most revealing test is the gap between events and incidents. Pull the security event log over the same window as the incident register and compare them. If the alerts fired and nothing was triaged, detection exists but response does not, and the control is broken in the place nobody looked. A plan that handles declared incidents beautifully while the queue of undeclared ones piles up is a control that works on paper and fails in practice.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="🔍 Auditing AI: when the detector decides for you">
@@ -534,45 +569,41 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Tessera’s detection is partly automated, and increasingly so. AWS GuardDuty raises findings from machine-learning models, and Tessera has wired some of them to auto-remediate through Lambda. This is the modern shape of incident response, and it raises a question the lifecycle does not answer on its own: when a machine decides an event is benign, or fires a response on one, can you trust it?</p>
-<p>The audit moves in two directions. First, tune and coverage: what is the false-positive rate, what classes of threat are in scope and (crucially) out of scope, and who reviews the detection logic and how often? An untuned detector drowns the team in noise until they mute it, which is functionally identical to having no detector at all. Second, the human-in-the-loop boundary: which automated actions run without approval, and is that list defensible? Auto-quarantining an endpoint is low-risk and high-value; auto-shutting down a production database on a model’s judgement is not. Ask to see the action that fired, the model’s confidence, and the human review that followed. If the response was fully automated with no record, the control ran, but nobody can tell you whether it ran correctly. An AI that reports “all clear” is still a judgement, and a judgement with no reviewer is an unattended control.</p>
+<p>As a method extension, consider an organisation that connects cloud detection findings to automated response. The fixed case supplies no detector-evaluation or auto-remediation test, so this example adds no successful control result to Tessera’s opinion. This is the modern shape of incident response, and it raises a question the lifecycle does not answer on its own: when a machine decides an event is benign, or fires a response on one, can you trust it?</p>
+<p>The audit moves in two directions. First, tune and coverage: what is the false-positive rate, what classes of threat are in scope and (crucially) out of scope, and who reviews the detection logic and how often? An untuned detector drowns the team in noise until they mute it, which is functionally identical to having no detector at all. Second, the human-in-the-loop boundary: which automated actions run without approval, and is that list defensible? Endpoint quarantine can interrupt clinical, industrial or business-critical work. Assess each action’s authority, blast radius, reversibility, dependencies and stop conditions; neither quarantine nor a production shutdown is universally safe. Ask to see the action that fired, the model’s confidence, and the human review that followed. If the response was fully automated with no record, the control ran, but nobody can tell you whether it ran correctly. An AI that reports “all clear” is still a judgement, and a judgement with no reviewer is an unattended control.</p>
 </div>
 </div>
 </section>
 <section id="ict-readiness-for-business-continuity" class="level2" data-number="10.6">
 <h2 data-number="10.6" class="anchored" data-anchor-id="ict-readiness-for-business-continuity"><span class="header-section-number">10.6</span> ICT readiness for business continuity</h2>
 <p>A.5.30, ICT readiness for business continuity, is a 2022 addition, and it deserves to be named because it is easy to read past and because it does work the older “information security during disruption” control does not. A.5.29 says the organisation must keep information security working during a disruption: controls do not switch off because you are in a crisis. A.5.30 says something more demanding: the ICT services themselves must be ready to meet the continuity objectives the business has set. It forces the join between the BIA’s numbers and the technology that has to hit them, and that join is exactly where Tessera’s plan falls apart.</p>
-<p>Readiness is a property you can test. It asks whether the recovery environment exists and is kept current, not spun up on the day from a cold backup; whether the data replication actually runs and within the RPO; whether the runbook matches the infrastructure that is really there; and whether the people who would execute it have rehearsed. NIST SP 800-34 and ISO 22301 give the broader contingency and continuity disciplines their proper home, and ISO/IEC 27031 is the one aimed squarely at ICT readiness. For an auditor, A.5.30 collapses all of that into a single testable question: if the disruption happened today, on the estate as it actually stands, would the ICT services meet the objectives? For Tessera, as you have just seen, the honest answer is no, because the standby does not exist and the objectives were never derived.</p>
+<p>Readiness is a property you can test. It asks whether the chosen hot, warm or cold recovery strategy meets the objectives; whether the data replication actually runs and within the RPO; whether the runbook matches the infrastructure that is really there; and whether the people who would execute it have rehearsed. NIST SP 800-34 and ISO 22301 give the broader contingency and continuity disciplines their proper home, and ISO/IEC 27031 is the one aimed squarely at ICT readiness. For an auditor, A.5.30 collapses all of that into a single testable question: if the disruption happened today, on the estate as it actually stands, would the ICT services meet the objectives? For Tessera, the supplied exercise misses the agreed targets, and dependencies remain untested. That is the supported conclusion.</p>
 </section>
 <section id="the-question-answered" class="level2" data-number="10.7">
 <h2 data-number="10.7" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">10.7</span> The question, answered</h2>
-<p>When it breaks, can Tessera survive? On the evidence you now hold, not by the plan they have written. The continuity policy is well-structured and the runbook reads well, but the RTO and RPO were picked from industry defaults rather than derived from a business-impact analysis, the standby region the plan depends on is a diagram rather than running infrastructure, and no failover has ever been tested. A region failure would take the multi-tenant service offline for an unbounded period, and the fifteen-minute RPO is a fiction the present estate cannot meet. Incident response is in better shape: the plan exists, the team is named, and the events you traced through the lifecycle mostly made it from detection to closure, with the predictable gap in post-incident learning. Continuity is the finding; incident management is the partial.</p>
-<p>That is a defensible opinion because every line of it is tied to evidence: the draft BIA, the Terraform missing the replica, the eighteen-month-old tabletop with its open action items, and the incident register you reconciled against the alert log. None of it was visible from the desk. All of it became visible the moment full access turned the polished plan into a testable claim. <em>Substantiate, don’t assume</em> has never been more practical than it is here: the plan said they could recover in four hours, and the estate says they cannot.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Week 10)">
+<p>The supplied cold restore recovered an integrity-checked copy but missed both agreed targets. Production cutover and a key-service dependency remain unverified. F04 stays open; the evidence does not justify a promise of four-hour regional recovery.</p>
+<p>E05 separately supplies one incident chronology and a privacy-adviser assessment. Trace detection, containment state, assessment and notification using those records. It does not establish that every incident in the period was identified or handled effectively.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Engagement milestone 10)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Week 10)
+<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Engagement milestone 10)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Lock two artefacts this week. First, the <strong>BCDR test evidence</strong>: the BIA (or its absence), the RTO and RPO derivation traced to the business impact and to the customer SLAs, the runbook, and the record of the most recent test at each depth you can find (tabletop, simulation, failover), with every open action item flagged. State explicitly, for each critical service, whether the stated objectives are achievable on the present estate. Second, the <strong>incident-response readiness assessment</strong>: the IR plan, the lifecycle test (two or three real incidents traced from detection to post-incident review), and the gap analysis between security events raised and incidents declared. By the end of the week your locker holds the proof, not the policy: what the organisation claims it would survive, and what the evidence says it actually would.</p>
+<p><strong>Time: 25 minutes. No AI required.</strong> Recompute E08’s elapsed restoration time, recovery-point gap and SLA budget. Compare each with its own criterion. State one supported success and two limitations. Add F04 and its closure evidence request, then trace INC-01 from E05 without inventing additional incidents.</p>
 </div>
 </div>
-<p>Next week the evidence stops accumulating and starts to speak. You have findings; now they have to become an opinion someone will stand behind. The question is <strong>Report?</strong></p>
+<p>The next chapter turns the tested conditions into findings and an explicit closure ledger.</p>
 
 
 </section>
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot embed for this book.
-  The book-publisher creates a chatbot grounded in the book's content and
-  fills in the embed id / base API URL here. Until then this is a deliberate
-  no-op so the `include-after-body` hook in _quarto.yml stays wired.
--->
+<script data-embed-id="d9721604-3074-4caf-8b0c-51c962499531" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

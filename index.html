@@ -2,22 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Michael Borck">
-<meta name="dcterms.date" content="2026-06-28">
+<meta name="dcterms.date" content="2026-11-02">
 
 <title>Substantiate, Don’t Assume</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -35,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./chapters/01-why.html" rel="next">
+<link href="./copyright.html" rel="next">
 <link href="./favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -43,14 +46,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,6 +84,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -288,6 +292,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction: The Audit Mindset</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -399,6 +409,30 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./appendices/b-case-pack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Fixed case pack: SDA-2026.1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/c-answer-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Answer checks and assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/d-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Source guide and edition boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/e-interview-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -428,23 +462,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#trust-but-verify" id="toc-trust-but-verify" class="nav-link" data-scroll-target="#trust-but-verify">Trust, but verify</a></li>
   <li><a href="#a-snapshot-not-a-guarantee" id="toc-a-snapshot-not-a-guarantee" class="nav-link" data-scroll-target="#a-snapshot-not-a-guarantee">A snapshot, not a guarantee</a></li>
   <li><a href="#substantiate-dont-assume" id="toc-substantiate-dont-assume" class="nav-link" data-scroll-target="#substantiate-dont-assume">Substantiate, don’t assume</a></li>
-  <li><a href="#the-auditors-moat-in-the-age-of-ai" id="toc-the-auditors-moat-in-the-age-of-ai" class="nav-link" data-scroll-target="#the-auditors-moat-in-the-age-of-ai">The auditor’s moat in the age of AI</a>
-  <ul class="collapse">
-  <li><a href="#the-technical-craft-is-being-commoditised" id="toc-the-technical-craft-is-being-commoditised" class="nav-link" data-scroll-target="#the-technical-craft-is-being-commoditised">The technical craft is being commoditised</a></li>
-  <li><a href="#variation-is-the-moat" id="toc-variation-is-the-moat" class="nav-link" data-scroll-target="#variation-is-the-moat">Variation is the moat</a></li>
-  <li><a href="#from-drafter-to-evaluator" id="toc-from-drafter-to-evaluator" class="nav-link" data-scroll-target="#from-drafter-to-evaluator">From drafter to evaluator</a></li>
-  <li><a href="#augmentation-not-automation" id="toc-augmentation-not-automation" class="nav-link" data-scroll-target="#augmentation-not-automation">Augmentation, not automation</a></li>
-  </ul></li>
+  <li><a href="#the-auditors-work-with-ai" id="toc-the-auditors-work-with-ai" class="nav-link" data-scroll-target="#the-auditors-work-with-ai">The auditor’s work with AI</a></li>
   <li><a href="#who-this-book-is-for" id="toc-who-this-book-is-for" class="nav-link" data-scroll-target="#who-this-book-is-for">Who this book is for</a></li>
   <li><a href="#how-this-book-works" id="toc-how-this-book-works" class="nav-link" data-scroll-target="#how-this-book-works">How this book works</a></li>
-  <li><a href="#the-companion-site" id="toc-the-companion-site" class="nav-link" data-scroll-target="#the-companion-site">The companion site</a></li>
+  <li><a href="#the-fixed-case-and-the-companion-site" id="toc-the-fixed-case-and-the-companion-site" class="nav-link" data-scroll-target="#the-fixed-case-and-the-companion-site">The fixed case and the companion site</a></li>
   <li><a href="#the-companion-book" id="toc-the-companion-book" class="nav-link" data-scroll-target="#the-companion-book">The companion book</a></li>
   <li><a href="#conventions-used-in-this-book" id="toc-conventions-used-in-this-book" class="nav-link" data-scroll-target="#conventions-used-in-this-book">Conventions used in this book</a></li>
   <li><a href="#how-this-book-was-written" id="toc-how-this-book-was-written" class="nav-link" data-scroll-target="#how-this-book-was-written">How this book was written</a></li>
-  <li><a href="#a-note-on-where-this-book-is-at" id="toc-a-note-on-where-this-book-is-at" class="nav-link" data-scroll-target="#a-note-on-where-this-book-is-at">A note on where this book is at</a></li>
+  <li><a href="#edition-and-review-status" id="toc-edition-and-review-status" class="nav-link" data-scroll-target="#edition-and-review-status">Edition and review status</a></li>
   </ul></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="/llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/substantiate-dont-assume"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -470,7 +498,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 28, 2026</p>
+      <p class="date">November 2, 2026</p>
     </div>
   </div>
   
@@ -484,60 +512,40 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="introduction-the-audit-mindset" class="level1 unnumbered">
-<h1 class="unnumbered">Introduction: The Audit Mindset</h1><p><img src="images/cover.png" title="Substantiate, Don't Assume" class="quarto-cover-image nolightbox img-fluid"></p>
+<h1 class="unnumbered">Introduction: The Audit Mindset</h1><p><img src="cover.png" title="Substantiate, Don't Assume" class="quarto-cover-image nolightbox img-fluid"></p>
 <blockquote class="blockquote">
 <p><em>Every organisation claims its information is secure. The auditor’s job is to find out whether that claim survives contact with evidence.</em></p>
 </blockquote>
 <section id="the-polished-policy-and-the-unpatched-server" class="level2">
 <h2 class="anchored" data-anchor-id="the-polished-policy-and-the-unpatched-server">The polished policy and the unpatched server</h2>
-<p>Visit almost any company’s website and you will find a security page. It is calm, confident, and covered in badges. “ISO 27001 certified.” “SOC 2 Type II.” “Enterprise-grade encryption.” “Your data is safe with us.” The page reads as a promise. Read it as an auditor and it reads as an assertion: a claim that has not yet met its evidence.</p>
-<p>Tessera has one of those pages. It is a fast-growing Perth B2B software company, runs on AWS, serves customers across the region, and is chasing ISO/IEC 27001 certification. Its security page is impressive. Somewhere behind that page is a server that has not been patched in eleven months, an offboarding step that never runs, and a shared admin account four people know the password to. Or maybe not. That is the point: you do not know yet, and neither does Tessera’s board.</p>
-<p>This book is about closing the gap between the claim and the evidence. It teaches the discipline that does it: <em>substantiate, don’t assume.</em></p>
+<p>Visit a company’s security page and you will find confident assertions: certification, encryption, careful handling of customer data. Those claims might be well supported. An auditor’s task is to establish what they mean, what they cover, and what evidence supports them.</p>
+<p>This book follows Tessera, a fictional Perth software company seeking ISO/IEC 27001 certification. Its CTO expects a straightforward sign-off. You have been asked for a readiness assessment. Neither the CTO’s confidence nor your suspicion settles the result.</p>
 </section>
 <section id="what-information-security-auditing-actually-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-information-security-auditing-actually-is">What information security auditing actually is</h2>
-<p>Information security auditing is not penetration testing and it is not security monitoring, though it borrows from both. A penetration tester breaks in to show that it can be done. Monitoring watches systems continuously and alerts on trouble. An auditor does something different and, to many people, less glamorous: an auditor asks an organisation to <em>prove</em> that the controls it claims to rely on are actually present, actually working, and actually producing the evidence that says so.</p>
-<p>The product of an audit is not a list of vulnerabilities. It is an <strong>opinion</strong>: a defensible, evidenced judgement about whether an organisation’s information security arrangements do what they say they do. That opinion is the thing stakeholders cannot get any other way. A vendor will always say it is secure. A standard will always say what secure should look like. Only an independent auditor says whether the two match, here, now, against the evidence.</p>
-<p>The founding maxim of the profession captures this in three words.</p>
+<p>Information security auditing systematically evaluates evidence against agreed criteria. Those criteria may include a management-system standard, applicable law, contractual promises and the organisation’s own policies. Authorised penetration testing and continuous monitoring can contribute evidence; they serve different purposes from an audit.</p>
+<p>An <strong>opinion</strong> brings the findings together into a bounded judgement. It names the subject, criteria, period, methods and limitations. A readiness assessment advises an organisation preparing for certification. It does not award a certificate or replace the certification body’s independent decision.</p>
 </section>
 <section id="trust-but-verify" class="level2">
 <h2 class="anchored" data-anchor-id="trust-but-verify">Trust, but verify</h2>
-<p>“Trust, but verify” is older than information security; it is the operating principle of any assurance function, from financial audit to nuclear inspections. It does not mean “be suspicious of everyone.” It means: take a claim seriously enough to test it. Trust is the starting point, because without some trust there is no engagement at all. Verification is the work, because trust that is never tested is just hope.</p>
-<p>The auditor’s relationship to the organisation is therefore productive, not adversarial. You are not the security police, and the best auditors are not internal affairs. You are a guest the organisation has invited to find the gaps it suspects but cannot see. That only works as a relationship: open, transparent, and built on trust that runs both ways. Staff who fear you will hand you the polished version. Staff who trust you will show you the real one.</p>
-<p>Good auditors behave accordingly long before fieldwork begins. They meet first, run a quick paper assessment so they arrive informed, share the schedule ahead of time, and stay flexible enough to reassess as the picture changes. The engagement is a collaboration with a deadline, not a raid.</p>
-<p>To do this credibly you must be willing to find that the polished policy does not match the operational reality, and to say so, clearly, with evidence. That willingness has a name.</p>
+<p>Professional scepticism means testing a claim fairly. Ask what would support it and what would contradict it. A nervous engineer may operate a sound control; a confident executive may have good evidence. Demeanour helps you plan a conversation, but does not determine your finding.</p>
+<p>A productive engagement needs cooperation. Agree access and timing, explain requests, protect confidential material and give people an opportunity to correct factual errors. Independence still requires you to report an unwelcome result when the evidence supports it.</p>
 </section>
 <section id="a-snapshot-not-a-guarantee" class="level2">
 <h2 class="anchored" data-anchor-id="a-snapshot-not-a-guarantee">A snapshot, not a guarantee</h2>
-<p>An audit opinion is a judgement about a moment. You gather evidence across a window of days or weeks, and you report what that evidence showed. The environment does not freeze while you write. Controls drift, staff turn over, configurations change, and a system that was compliant on Thursday can be breached on Friday. Your opinion does not guarantee the future. It guarantees that, at the time you looked, on the evidence you gathered, the claim held (or did not).</p>
-<p>This is why a defensible opinion has to be more than correct. It has to be <strong>fair, repeatable, and ethical</strong>, and it has to be documented well enough to serve as evidence itself, sometimes years later, in a board meeting, a regulator’s inquiry, or a court. Another auditor following your working papers should be able to reach the same conclusion. A stakeholder reading them should be able to see how you got there.</p>
-<p>Which is also why pressure is the auditor’s real test. A client facing a deal deadline, a certification cutoff, or an embarrassed executive will want you to sign off on “compliant” before the evidence is in. The professional answer to that pressure is the same as the answer to every other shortcut in this book: substantiate, don’t assume. An opinion given under pressure, without evidence, is not an efficiency. It is a liability you have stamped your name on.</p>
+<p>An opinion provides bounded assurance about its subject and period. Sampling, incomplete records and changing systems limit what it can establish. It guarantees neither the past nor the future. Another competent reviewer should be able to follow your reasoning and identify where a different judgement could be defensible.</p>
 </section>
 <section id="substantiate-dont-assume" class="level2">
 <h2 class="anchored" data-anchor-id="substantiate-dont-assume">Substantiate, don’t assume</h2>
-<p><strong>Substantiate, don’t assume</strong> is the spine of this book and the habit it tries to build. Every control claim is an assertion until evidence supports it. A policy on the intranet is an assertion. A dashboard showing green checks is an assertion. A manager’s assurance that “we do that” is an assertion. None of them is evidence until you have seen it work, on terms you set, in a form you can defend.</p>
-<p>This sounds obvious. In practice it is hard. The most dangerous control is the one that looks perfect on paper, because it lowers your guard. Tessera is written to be plausible: impressive in its marketing, rougher underneath, exactly like the real organisations you will audit. Good auditing does not assume the worst. It does something more disciplined: it substantiates what is actually there, names what is missing, and lets the evidence set the opinion.</p>
-<p>By the end of this book you will have done exactly that, one week at a time, against Tessera.</p>
+<p>A policy is evidence of a stated requirement or design. An operating record can support a claim about performance over time. Observation can show a control running at a particular moment. Each has limits; none becomes universally reliable merely because you collected it yourself.</p>
+<p>Throughout the book, keep this trail in your working papers:</p>
+<p>criterion → evidence → test → result → finding → action → retest → opinion.</p>
+<p>“Insufficient evidence” is a legitimate result. So is clearing a concern after a test passes. You are not rewarded for producing the greatest number of failures.</p>
 </section>
-<section id="the-auditors-moat-in-the-age-of-ai" class="level2">
-<h2 class="anchored" data-anchor-id="the-auditors-moat-in-the-age-of-ai">The auditor’s moat in the age of AI</h2>
-<p>Here is the harder question this book takes seriously: <em>what is a human auditor actually for when a machine can draft the work?</em></p>
-<p>The answer is not “the same thing, faster.” The answer reshapes the job. The book takes a deliberately pragmatic stance on AI, steering clear of both alarmism and hype, and lands it on the auditor’s desk. Four moves make the argument.</p>
-<section id="the-technical-craft-is-being-commoditised" class="level3">
-<h3 class="anchored" data-anchor-id="the-technical-craft-is-being-commoditised">The technical craft is being commoditised</h3>
-<p>Listing ISO/IEC 27001:2022’s 93 controls. Mapping them to NIST CSF 2.0. Drafting a test procedure for access reviews. Writing up a finding in the standard format. This is the technical craft of auditing, and it is exactly the kind of work generative AI is rapidly commoditising. An AI can enumerate the controls faster and more completely than any junior auditor. If the only thing an auditor does is <em>produce</em> that list, the auditor has no edge. Every organisation’s auditor can now produce the same list.</p>
-</section>
-<section id="variation-is-the-moat" class="level3">
-<h3 class="anchored" data-anchor-id="variation-is-the-moat">Variation is the moat</h3>
-<p>If an AI is equally good at running every company, then by definition there is no variation between companies that use it generically, and no variation means no competitive edge. The edge comes from variation: human agency, individual judgement, a genuine point of view about what matters. For an auditor, that variation shows up as <strong>professional scepticism</strong>: the willingness to look at a polished policy and ask whether the evidence supports it, to decide which of a hundred small gaps actually matters, to form a defensible opinion rather than a confident average. The machine produces the draft. The auditor supplies the judgement. That judgement is the moat.</p>
-</section>
-<section id="from-drafter-to-evaluator" class="level3">
-<h3 class="anchored" data-anchor-id="from-drafter-to-evaluator">From drafter to evaluator</h3>
-<p>As AI moves from chatbots to agentic systems that can run procedures on their own, the auditor’s job shifts: from creator of the “shitty first draft” to <strong>expert evaluator and editor</strong> of AI-generated work. You will read AI-drafted risk assessments, AI-drafted control mappings, AI-drafted findings, and your value will be in spotting where they are generic, where they confabulated compliance, and where the nuance they smoothed over was the whole point. This book makes that discipline explicit and teaches it. The course’s assessments already embody it: you are required to document where you <em>disagreed with or expanded on</em> an AI’s analysis.</p>
-</section>
-<section id="augmentation-not-automation" class="level3">
-<h3 class="anchored" data-anchor-id="augmentation-not-automation">Augmentation, not automation</h3>
-<p>The stance is proactive. Use these tools for <strong>augmentation and personalised learning</strong>, not passive automation that quietly atrophies the critical thinking the profession depends on. Efficiency is never the goal; <em>defensible judgement</em> is. If you use AI to skip the thinking, you have done the work wrong, no matter how good the output looks. The companion book, <em>Conversation, Not Delegation</em>, teaches the craft of working with AI well; this book teaches what you must verify once the drafting is done.</p>
+<section id="the-auditors-work-with-ai" class="level2">
+<h2 class="anchored" data-anchor-id="the-auditors-work-with-ai">The auditor’s work with AI</h2>
+<p>AI can help draft procedures, suggest questions and compare a finding with its evidence. Performance varies with the model, task and inputs. Fluent output can contain unsupported mappings, mistaken calculations or invented closure claims.</p>
+<p>Use the <a href="./appendices/a-drafter-to-evaluator-loop.html">drafter-to-evaluator loop</a> when it helps: define the task, supply permitted inputs, check the draft against the record, and retain the corrections and limits. You remain responsible for the work. There is no requirement to find a model error if its answer is sound.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="Watch out: your own AI hygiene">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -548,131 +556,78 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The AI you use is a third party. Do not paste Tessera’s evidence, configurations, logs, or customer data into a consumer AI tool. That is a disclosure you cannot take back, and it may breach the engagement’s confidentiality clauses and the Privacy Act. Use the approved or enterprise tooling your firm provides, or a locally hosted model. Treat every prompt as if it could become someone else’s training data, because it might. The same scepticism you apply to Tessera’s AI applies to your own: the tool is a thinking partner, not a safe drop box for client secrets.</p>
+<p>Use only the explicitly fictional book exercises with unapproved tools. For real engagements, obtain authority for the tool, data and processing arrangement before use. Enterprise branding or local hosting alone does not establish confidentiality, retention, access control or legal compliance. Do not upload client evidence, credentials, personal data or licensed standards without the necessary permissions.</p>
 </div>
 </div>
-<p>This premise is the thread that runs through every chapter.</p>
-</section>
 </section>
 <section id="who-this-book-is-for" class="level2">
 <h2 class="anchored" data-anchor-id="who-this-book-is-for">Who this book is for</h2>
-<p>This is the core text for <strong>ISYS6018: Information Security Audit and Control</strong> at Curtin University, and it is written for the student taking that unit: someone learning to audit against international standards for the first time. You do not need to be an auditor already. You need to be willing to form opinions and defend them with evidence.</p>
-<p>It is also for any practitioner, new or experienced, who wants a readable, opinionated spine for the discipline of information security auditing, and a clear stance on where the human auditor fits once the machines can draft. If you audit, manage auditors, or rely on audit opinions, the argument here is for you.</p>
+<p>This is a first audit engagement for readers with basic security knowledge: accounts and permissions, logs, backups, and the idea that a cloud provider and its customer have different responsibilities. The book explains technical terms when they become relevant. No CISA credential, purchased lab or prior reading of the companion books is required.</p>
+<p>By the end, you should be able to define a bounded engagement, select criteria, test supplied records, distinguish an observed exception rate from future incident likelihood, write a supported finding and defend a readiness conclusion.</p>
+<p>This is teaching material, not legal advice or a replacement for authorised copies of standards. The book supplies original case criteria so that you can complete the exercises without purchasing a standard. A real engagement requires its agreed editions and suitably qualified review.</p>
 </section>
 <section id="how-this-book-works" class="level2">
 <h2 class="anchored" data-anchor-id="how-this-book-works">How this book works</h2>
-<p>The book is one engagement told twelve ways. You audit <strong>Tessera</strong>, a fast-growing B2B software company built on AWS and chasing ISO/IEC 27001 certification. Each chapter is one topic, a single weekly question from <em>Why?</em> through <em>Risk?</em>, <em>Which?</em>, <em>Scope?</em> and on to <em>Report?</em> and <em>Conclude?</em>. <strong>Chapter <em>N</em> = Topic <em>N</em>, delivered in Week <em>N</em> of the course</strong>: read the chapter for a topic in the week you live that topic.</p>
-<p>The arc has two acts:</p>
+<p>Twelve chapters retain the engagement’s progression from <strong>Why?</strong> to <strong>Conclude?</strong>.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Act</th>
-<th>Weeks</th>
-<th>What it does</th>
-<th>Ends in</th>
+<th>Chapters</th>
+<th>Observable outcome</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>I · Engage</strong></td>
+<td>I · Engage</td>
 <td>1–6</td>
-<td>Build the case against Tessera with <em>limited access</em></td>
-<td>A preliminary readiness opinion (desk audit)</td>
+<td>A mandate, criteria map and test programme that distinguish design evidence from untested operating claims</td>
 </tr>
 <tr class="even">
-<td><strong>II · Prove</strong></td>
+<td>II · Prove</td>
 <td>7–12</td>
-<td><em>Full access granted</em>, move from suspicion to proof</td>
-<td>A defensible certification-readiness opinion</td>
+<td>Reproducible working papers, a finding and closure ledger, and an opinion with explicit limitations</td>
 </tr>
 </tbody>
 </table>
-<p>Act I forms judgement from documents alone. Act II opens with full auditor access (interviews, configurations, logs, incident records) and drives to evidence. The break between the acts is the break between suspicion and proof.</p>
-<p>Running through both acts is the <strong>Evidence Locker</strong>: a cumulative working-paper file you build one artefact at a time. Each chapter ends with an Evidence Locker prompt, the one thing to lock in this week. By the final week the locker is not a study aid; it <em>is</em> the audit.</p>
+<p>The act break stages the release of information for learning. In practice, interviews, document review and operational testing overlap. Remote examination of logs can be operating-effectiveness work. “Full access” never means unlimited authority or complete assurance.</p>
+<p>The <strong>Evidence Locker</strong> is your cumulative file. Use paper, a text document or a spreadsheet. Each chapter supplies one timed task and a checkable output. The <a href="./appendices/b-case-pack.html">case pack</a> contains the fixed inputs; the <a href="./appendices/c-answer-checks.html">answer checks</a> should be read after an attempt. No AI account, code execution or live interview is needed for the core route.</p>
 </section>
-<section id="the-companion-site" class="level2">
-<h2 class="anchored" data-anchor-id="the-companion-site">The companion site</h2>
-<p>Tessera is not just a name in this book. It is a live, simulated company at <strong><a href="https://tessera.locoensayo.org">tessera.locoensayo.org</a></strong>, part of the <em>LocoEnsayo</em> rehearsal environments. Their tagline is the right one for auditing: <em>rehearse the real world; the cast is AI; the judgement is yours.</em> The site is open all hours, with no password, so you can follow along wherever and whenever you read. By the end of the book you will have audited it.</p>
-<p>Two things make Tessera worth auditing, and both are deliberate. Its people are AI characters you can interview, each with their own role, knowledge, and gaps, like the staff of any real company. And its document library is full, not curated. Not every document is evidence. Not every employee knows the answer. Some files are red herrings that look relevant and lead nowhere. Deciding which document to test and which person to ask is an audit skill in its own right, and Tessera gives you room to practise it. A scenario engineered to hand you the obvious evidence teaches you nothing. A messy, realistic one teaches you to find it.</p>
-<p>Every chapter’s Tessera Case narrates the worked example; the companion site is where you run your own.</p>
+<section id="the-fixed-case-and-the-companion-site" class="level2">
+<h2 class="anchored" data-anchor-id="the-fixed-case-and-the-companion-site">The fixed case and the companion site</h2>
+<p>The canonical worked engagement is <strong>SDA-2026.1</strong>, a book-only Tessera teaching scenario, with a final evidence cutoff of <strong>30 June 2026</strong>. The appendix supplies original synthetic records, not exports or quotations from the live site. Its dates, contracts and test populations govern this book’s answers. The case is deliberately small and cannot establish an actual company’s conformance.</p>
+<p><a href="https://tessera.locoensayo.org">Tessera’s live companion site</a> remains an optional interview and discovery environment. It may describe a different date, certification status, contract or recovery target. Treat it as a separate exercise: record the page, retrieval date and your evidence, and do not splice changing website facts into the fixed case. Chatbot replies are simulated testimony, not verified records. Availability and answers can vary.</p>
+<p>If you find drift within this book, report the edition, evidence ID and conflicting passages through the <a href="https://github.com/michael-borck/substantiate-dont-assume">source repository</a>. No site content needs to be copied to complete the exercises.</p>
 </section>
 <section id="the-companion-book" class="level2">
 <h2 class="anchored" data-anchor-id="the-companion-book">The companion book</h2>
-<p><em>Conversation, Not Delegation</em> (https://michael-borck.github.io/conversation-not-delegation/) is the companion on method. Where this book teaches the audit discipline (the <em>what we verify</em>), that book teaches <em>how to work with the machine well</em>: the conversation loop, staying in the loop, compensating for AI’s predictable weaknesses. The two are complementary. Every chapter here assumes you are using AI, and assumes you are using it the way that book describes: as a thinking partner, not a delegate.</p>
+<p><a href="https://michael-borck.github.io/conversation-not-delegation/">Conversation, Not Delegation</a> develops the craft of working with AI. It is optional further reading. This book supplies its own method and practice inputs.</p>
 </section>
 <section id="conventions-used-in-this-book" class="level2">
 <h2 class="anchored" data-anchor-id="conventions-used-in-this-book">Conventions used in this book</h2>
-<p>Every chapter carries the same set of recurring features so you learn to recognise them. Each is rendered differently.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="🤖 AI Field Note">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>🤖 AI Field Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Blue boxes</strong> show AI used as a thinking partner for the chapter’s task: a worked example against Tessera, including, crucially, where the AI got it wrong and how the auditor corrected it. This is the book version of the course’s weekly AI Field Notes task.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled" title="🔍 Auditing AI">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>🔍 Auditing AI
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Red boxes</strong> apply the chapter’s concept <em>to AI itself</em>: which controls an AI deployment falls under, how you audit an AI-assisted control, what evidence an AI system produces. These appear where the topic demands.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Green boxes</strong> are the weekly prompt: the one artefact to add to your cumulative working-paper file this chapter. By Week 12 the locker <em>is</em> the audit.</p>
-</div>
-</div>
-<div class="tessera-case">
-<p><strong>🗂️ Tessera Case</strong></p>
-<p><strong>Shaded case boxes</strong> carry the running Tessera engagement, the concrete artefact each chapter lands on. Tessera is written to be plausible: impressive on paper, rougher underneath. Good auditing does not assume the worst. It substantiates what is there.</p>
-</div>
-<p>You will also see standard callouts for emphasis: <strong>Watch out</strong> (yellow) for traps that look right but are not, plus occasional <strong>Key idea</strong> and <strong>Try this</strong> boxes.</p>
+<p><strong>🗂️ Tessera Case</strong> marks a worked example. <strong>🗄️ Evidence Locker</strong> identifies the task and the output to retain. <strong>🤖 AI Field Note</strong> shows a bounded illustrative draft and its evaluation; it is not a transcript of a measured model run. <strong>🔍 Auditing AI</strong> applies assurance methods to AI-supported systems.</p>
+<p>Three chapters retain extended <strong>Take it to the AI</strong> activities. Other chapters use inspection, calculation, comparison or short written decisions. All have a solo route. Case dialogue and revised third-person audit vignettes are fictional teaching examples.</p>
 </section>
 <section id="how-this-book-was-written" class="level2">
 <h2 class="anchored" data-anchor-id="how-this-book-was-written">How this book was written</h2>
-<p>This book was written using the methodology its companion describes. AI tools were used as thinking partners at every stage: drafting, stress-testing, and being corrected. The relationship between author and AI in producing this book is exactly what the book argues the auditor’s relationship to AI-generated work should be. The machine produces the draft; the author supplies the judgement, the evidence, and the defensible opinion. Every sentence reflects the author’s judgement. The AI made the work faster. It did not do the thinking.</p>
+<p>AI tools supported drafting and revision. The author is responsible for checking and approving the published work. Source tests can catch arithmetic and continuity errors, but do not replace expert review or an unfamiliar reader’s attempt.</p>
 </section>
-<section id="a-note-on-where-this-book-is-at" class="level2">
-<h2 class="anchored" data-anchor-id="a-note-on-where-this-book-is-at">A note on where this book is at</h2>
-<p>This is an open-access book in active development. The Introduction and Chapter 1 are the vertical slice: they exist to prove the voice and the recurring-feature format before the remaining eleven chapters are drafted. The online edition is always the most current. The standards targeted (ISO/IEC 27001:2022 and NIST CSF 2.0) are fixed from the outset; where standards drift, the book handles it by edition, not errata.</p>
+<section id="edition-and-review-status" class="level2">
+<h2 class="anchored" data-anchor-id="edition-and-review-status">Edition and review status</h2>
+<p>All twelve chapters are drafted. This revision targets ISO/IEC 27001:2022 with its 2024 amendment and NIST CSF 2.0. Guidance editions and primary references are dated in the <a href="./appendices/d-sources.html">source guide</a>. The online edition may be updated separately from downloaded or printed copies; check their edition information. KDP publication, human proofing and fresh-reader testing are separate release gates.</p>
 
 
 </section>
 </section>
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot embed for this book.
-  The book-publisher creates a chatbot grounded in the book's content and
-  fills in the embed id / base API URL here. Until then this is a deliberate
-  no-op so the `include-after-body` hook in _quarto.yml stays wired.
--->
+<script data-embed-id="d9721604-3074-4caf-8b0c-51c962499531" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1090,8 +1045,8 @@ ul.task-list li input[type="checkbox"] {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapters/01-why.html" class="pagination-link" aria-label="Why? The Auditor's Mandate and Ethics">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Why? The Auditor’s Mandate and Ethics</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./copyright.html" class="pagination-link" aria-label="Copyright">
+        <span class="nav-page-text">Copyright</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

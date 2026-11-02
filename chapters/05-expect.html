@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -287,6 +291,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction: The Audit Mindset</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -398,6 +408,30 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../appendices/b-case-pack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Fixed case pack: SDA-2026.1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/c-answer-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Answer checks and assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/d-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Source guide and edition boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/e-interview-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -428,7 +462,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-shared-responsibility-line-who-secures-what" id="toc-the-shared-responsibility-line-who-secures-what" class="nav-link" data-scroll-target="#the-shared-responsibility-line-who-secures-what"><span class="header-section-number">5.6</span> The shared-responsibility line: who secures what</a></li>
   <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">5.7</span> The question, answered</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="/llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/substantiate-dont-assume"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -458,44 +492,45 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: The diagram is not the territory</strong></p>
-<p>Tessera’s head of engineering hands you a single-page architecture diagram in your second week. It is beautiful. Boxes for VPCs and subnets, arrows labelled TLS, a padlock on the database, “KMS” stamped on every storage layer, “IAM roles” on every service. He watches you study it, looking for the nod. You give him a different response. You ask, for each box: <em>what is the objective here, and how would I test whether it is actually met?</em> The diagram is a claim. Your job, from this chapter on, is to turn each claim into a control objective you can substantiate, or refute, with evidence.</p>
+<p>Tessera’s head of engineering hands you a single-page architecture diagram early in the engagement. It is beautiful. Boxes for VPCs and subnets, arrows labelled TLS, a padlock on the database, “KMS” stamped on every storage layer, “IAM roles” on every service. He watches you study it, looking for the nod. You give him a different response. You ask, for each box: <em>what is the objective here, and how would I test whether it is actually met?</em> The diagram is a claim. Your job, from this chapter on, is to turn each claim into a control objective you can substantiate, or refute, with evidence.</p>
 </div>
 <section id="from-control-to-control-objective" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="from-control-to-control-objective"><span class="header-section-number">5.1</span> From control to control objective</h2>
-<p>The previous chapters gave you the auditor’s mindset, the risk picture, the frameworks, and the plan. None of that tells you what to test. This chapter does. It introduces the single tool that turns a list of controls into an audit: the <strong>control objective</strong>.</p>
-<p>A control is a safeguard. Encryption is a control. A firewall rule is a control. Multi-factor authentication is a control. A control objective is the <em>intent</em> that control is meant to deliver, written so that intent can be tested. “We encrypt the database” is a control. “No party, internal or external, authorised or not, can read customer data without an access decision that is logged and reviewable” is an objective. The first describes a configuration. The second describes an outcome you can try to disprove. That is the difference between auditing a screenshot and auditing a system.</p>
-<p>ISO/IEC 27001:2022 gives you the raw material in Annex A.8, the Technological controls, the largest of the standard’s four themes. NIST CSF 2.0’s Protect function and the ASD Essential Eight give you the same engineering from different angles. None of them hands you the objective. That is your job, and it is the job this chapter teaches: read the control, ask what “good” looks like, phrase it as a statement you could prove or disprove with evidence, and then go look. Every objective in this chapter is built that way.</p>
-<p>Here is a useful test for whether you have written an objective rather than a control. Can you describe how it would <em>fail silently</em>? If you cannot, you have written a feature, not a test. The objective is only real once you can picture the version of the world in which the control is present, the dashboard is green, and the objective is still not met. That picture is what you will spend the rest of the engagement trying to find.</p>
+<p>Chapter 4’s small procedure is a starting point. The <strong>control objective</strong> is the tool that turns a list of controls into an audit.</p>
+<p>A control is a safeguard. Encryption is a control. A firewall rule is a control. Multi-factor authentication is a control. A control objective is the <em>intent</em> that control is meant to deliver, written so that intent can be tested. “We encrypt the database” is a control. “Requests through the tested customer-data API require an authorisation decision, with sufficient logging to reconstruct access” is an objective. The first describes a configuration. The second describes an outcome you can try to disprove. That is the difference between auditing a screenshot and auditing a system.</p>
+<p>ISO/IEC 27001:2022 gives you the raw material in Annex A.8, the Technological controls, the largest of the standard’s four themes. NIST CSF 2.0’s Protect function and the ASD Essential Eight give you the same engineering from different angles. None of them hands you the objective. That is your job, and it is the job this chapter teaches: read the control, ask what “good” looks like, phrase it as a statement you could prove or disprove with evidence, and then go look.</p>
+<p>Here is a useful test for whether you have written an objective rather than a control. Can you describe how it would <em>fail silently</em>? If you cannot, clarify the mechanism and likely failure conditions before choosing a test. The objective is only real once you can picture the version of the world in which the control is present, the dashboard is green, and the objective is still not met. That picture is what you will spend the rest of the engagement trying to find.</p>
 </section>
 <section id="access-control-identity-is-the-new-perimeter" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="access-control-identity-is-the-new-perimeter"><span class="header-section-number">5.2</span> Access control: identity is the new perimeter</h2>
 <p>For a SaaS company like Tessera there is no perimeter in the old sense. There is no castle with a wall and a moat. There is a set of identities, human and machine, each holding some set of permissions, talking to services that live on someone else’s hardware. Get identity right and most of your technical risk falls into line. Get it wrong and nothing else matters, because the attacker walks through the front door with valid credentials.</p>
-<p>The first objective is <strong>least privilege</strong>: every identity, human or service, holds only the permissions it needs, and nothing more. That sounds tidy until you ask for the access review and find the founding engineers still hold administrator rights across production, staging, and every customer tenant, because nobody has ever pruned them. I have yet to audit a fast-growing environment where the first access review did not surface a surprise, and Tessera is built to be no exception. Least privilege maps to ISO 27001 A.8.2 (privileged access rights) and A.8.3 (information access restriction), and to the Essential Eight’s “restrict administrative privileges” strategy. The objective, though, is the testable version: <em>any permission not justified by current job function is removed within a defined window.</em></p>
+<p>The first objective is <strong>least privilege</strong>: every identity, human or service, holds only the permissions it needs, and nothing more. That sounds tidy until you ask for the access review and find the founding engineers still hold administrator rights across production, staging, and every customer tenant, because nobody has ever pruned them. A review may reveal inherited privileges, or may substantiate that they remain justified. Least privilege maps to ISO 27001 A.8.2 (privileged access rights) and A.8.3 (information access restriction), and to the Essential Eight’s “restrict administrative privileges” strategy. The objective, though, is the testable version: <em>any permission not justified by current job function is removed within a defined window.</em></p>
 <p>The second is <strong>authentication strength</strong>: access requires proof of identity proportionate to the risk, and for anything privileged, that proof resists phishing. Passwords alone fail this objective, and so does a six-digit SMS code relayed to a tired person at midnight. Phishing-resistant MFA, the kind built on FIDO2 and WebAuthn, is what “good” looks like for administrators and for anyone touching customer data. The Essential Eight pushes you here for a reason.</p>
 <p>The third is the <strong>identity lifecycle</strong>: accounts are created when someone joins, changed when their role moves, and removed when they leave, on a clock you can measure. The leaver control is the one that fails quietly, because the person is already gone and nobody is watching the account. Federation through SAML or OIDC, single sign-on, and automated provisioning through SCIM are how mature organisations make the lifecycle a system rather than a memory.</p>
 <p>The fourth is <strong>privileged access</strong> specifically. Administrators do not sit in a standing admin role all day. They elevate when they need to, for as long as they need to, and what they do while elevated is recorded. This is privileged access management: just-in-time elevation, break-glass accounts for emergencies, session recording, and time-boxed grants. The objective is not “we have PAM tooling.” The objective is <em>no privileged action occurs without a time-limited, logged, reviewable elevation.</em></p>
 </section>
 <section id="network-security-assume-the-breach" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="network-security-assume-the-breach"><span class="header-section-number">5.3</span> Network security: assume the breach</h2>
-<p>The old network question was “can the attacker get in?” The modern question, the one a zero-trust mindset demands, is “once the attacker is in, how far can they get?” NIST SP 800-207 states the principle: never trust, always verify, on every request, as if the network were already hostile. For a company whose entire estate is API calls to AWS, the network <em>is</em> already hostile by design.</p>
+<p>The old network question was “can the attacker get in?” The modern question, the one a zero-trust mindset demands, is “once the attacker is in, how far can they get?” NIST SP 800-207 describes zero trust without implicit trust based solely on network location or asset ownership. Authentication and authorisation precede access to a resource. For a company whose entire estate is API calls to AWS, the network <em>is</em> already hostile by design.</p>
 <p>Segmentation is the engineering of that mindset. Tessera’s VPCs, subnets, security groups, and network ACLs should carve the estate into zones that contain blast radius. Production separate from staging. Customer-facing services separate from internal tooling. Databases reachable only from the application tier, never from the open internet. Each of those is a control; the objective is that <em>an attacker who compromises one component cannot traverse to another without a fresh access decision.</em> That is the difference between a breached container and a breached company.</p>
 <p>Firewalls and security groups are the mechanism, but they are only as good as their rules, and rule drift is where segmentation goes to die. The rule opened for a vendor demo eighteen months ago and never closed. The <code>0.0.0.0/0</code> that someone applied to make a test pass. The database port exposed to the office range because a developer wanted to work from home. The objective is not “we use security groups.” It is <em>every rule is justified, scoped to least access, and reviewed on a schedule</em>, which is a test you can actually run against the live configuration.</p>
 </section>
 <section id="cryptography-and-key-management-the-control-that-fails-silently" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="cryptography-and-key-management-the-control-that-fails-silently"><span class="header-section-number">5.4</span> Cryptography and key management: the control that fails silently</h2>
-<p>Encryption is where auditors go wrong, because encryption looks finished. The dashboard says “at rest: enabled.” The browser shows the padlock. You tick the box and move on. Do not.</p>
-<p>Encryption at rest and in transit is the baseline, not the achievement. The achievement is <strong>key management</strong>, and it is where a cryptography control that looks perfect can be substantively broken. AWS Key Management Service (KMS) and hardware security modules (HSMs) exist to keep keys out of the data they protect. Customer-managed keys give Tessera control over who can use a key and when, through policies and grants that are themselves auditable. Key rotation limits the damage of a key that leaks. Separation of duties limits the damage of a rogue insider. ISO 27001 A.8.24 (use of cryptography) points here, and the Essential Eight’s expectations on backups and data protection lean on the same foundation.</p>
-<p>Now picture the failure. Encryption is enabled on every S3 bucket. The dashboard is green. But the application role that reads customer data holds a KMS grant for a single key used by <em>every tenant</em>. One compromised token, one over-permissive policy, and the attacker decrypts everyone’s data at once. The control exists. The objective, <em>ciphertext is useless to an attacker who steals the storage</em>, is not met. This is the silent failure, and it is exactly the kind of gap a control objective, not a control list, will catch.</p>
+<p>Encryption is where auditors go wrong, because encryption looks finished. The dashboard says “at rest: enabled.” The browser shows the padlock. Do not tick the box and move on.</p>
+<p>Encryption at rest and in transit is the baseline, not the achievement. The achievement is <strong>key management</strong>, and it is where a cryptography control that looks perfect can be substantively broken. AWS Key Management Service (KMS) and hardware security modules (HSMs) exist to keep keys out of the data they protect. Customer-managed keys give Tessera control over who can use a key and when, through policies and grants that are themselves auditable. Key rotation introduces new key material but does not by itself revoke access or neutralise exposed historical ciphertext. <a href="https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">AWS documents</a> that KMS retains earlier material for decryption; investigate exposure and permissions separately. Separation of duties limits the damage of a rogue insider. ISO 27001 A.8.24 (use of cryptography) points here, and the Essential Eight’s expectations on backups and data protection lean on the same foundation.</p>
+<p>Now picture the failure. Encryption is enabled on every S3 bucket. The dashboard is green. But the application role that reads customer data holds a KMS grant for a single key used by <em>every tenant</em>. One compromised token, one over-permissive policy, and the attacker decrypts everyone’s data at once. This is an application-role compromise with decrypt permission, not storage theft alone. Test those threat models separately; the presence of encryption does not prevent misuse of an authorised decrypt path. This is the silent failure, and it is exactly the kind of gap a control objective, not a control list, will catch.</p>
 </section>
 <section id="multi-tenant-saas-isolation-is-the-whole-product" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="multi-tenant-saas-isolation-is-the-whole-product"><span class="header-section-number">5.5</span> Multi-tenant SaaS: isolation is the whole product</h2>
-<p>Everything in this chapter converges on one fact about Tessera: it is a multi-tenant SaaS. Customers share the same application, the same databases, the same infrastructure. The product they are paying for is, at root, the promise that they cannot see each other. Get tenant isolation wrong and you do not have a security problem. You have an existential one.</p>
-<p>Tenant isolation is enforced through layered controls: per-tenant identity and namespace boundaries in IAM, row-level or logical separation in shared data stores, and, for the most sensitive work, per-tenant or customer-managed encryption keys so that even a database administrator with broad access cannot read another tenant’s ciphertext. The classic failure has a name: insecure direct object reference, where a request for <code>/api/tenant/1043/data</code> is honoured for an authenticated user who belongs to tenant 1077, because nobody checked the relationship. IDOR is the silent failure of multi-tenancy, and it is widespread because it fails open: the request succeeds, the log looks normal, nobody is alerted.</p>
-<p>The objective for tenant isolation has to be absolute: <em>under no condition, including error paths, including a compromised application role, can tenant A read tenant B’s data.</em> That is a strong statement, and it is the one your testing has to try to break. Customer-managed keys, sometimes called bring-your-own-key or hold-your-own-key, are how the most regulated tenants raise the bar: Tessera cannot decrypt what it has no key to decrypt, and the customer can prove it.</p>
+<p>Tessera is a multi-tenant SaaS. Customers share the same application, the same databases, the same infrastructure. The product they are paying for is, at root, the promise that they cannot see each other. Get tenant isolation wrong and the problem is existential.</p>
+<p>Layered controls enforce tenant isolation: per-tenant identity and namespace boundaries in IAM, row-level or logical separation in shared data stores, and, for the most sensitive work, per-tenant encryption keys with separately controlled decrypt permissions. Whether an administrator can recover plaintext depends on the architecture and effective permissions. The classic failure has a name: insecure direct object reference, where a request for <code>/api/tenant/1043/data</code> is honoured for an authenticated user who belongs to tenant 1077, because nobody checked the relationship. IDOR is the silent failure of multi-tenancy, and it is widespread because it fails open: the request succeeds, the log looks normal, nobody is alerted.</p>
+<p>State the tested boundary and threat model. For E11, an ordinary authenticated tenant A user must not read tenant B’s record by changing an API identifier; unauthenticated requests must also be denied. That is testable. It does not cover compromise of a trusted application role, an administrator, every interface or every error path.</p>
+<p>Customer-managed KMS keys and bring-your-own-key arrangements do not automatically prevent the service from decrypting. Inspect key policy, grants, service integration and who can alter them. A design in which only the customer can decrypt is a different architectural claim and needs its own evidence.</p>
 </section>
 <section id="the-shared-responsibility-line-who-secures-what" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="the-shared-responsibility-line-who-secures-what"><span class="header-section-number">5.6</span> The shared-responsibility line: who secures what</h2>
-<p>Underneath all of this is a line that determines who is responsible for what, and Tessera sits on the wrong side of it more often than its diagram suggests. AWS operates on a shared-responsibility model. AWS secures the cloud itself; Tessera secures what it puts in the cloud. The line is not a footnote. It is the boundary of your entire technical audit, because you can only test what Tessera owns, and a great deal of what looks like “AWS’s problem” is actually Tessera’s.</p>
+<p>Underneath all of this is a line that determines who is responsible for what, and Tessera sits on the wrong side of it more often than its diagram suggests. AWS operates on a shared-responsibility model. AWS secures the cloud itself; Tessera secures what it puts in the cloud. That line bounds your entire technical audit, because you can only test what Tessera owns, and a great deal of what looks like “AWS’s problem” is actually Tessera’s.</p>
 <p>AWS secures:</p>
 <ul>
 <li>the physical data centres, hardware, and networking;</li>
@@ -512,7 +547,7 @@ ul.task-list li input[type="checkbox"] {
 <li>client- and server-side encryption, key management, and the configuration of every managed service it switches on.</li>
 </ul>
 <p>And because Tessera is itself a service provider, there is a third line. Tessera’s customers trust Tessera for application-layer security and tenant isolation, while they keep responsibility for their own users, their own tenant configuration, and the data they choose to put in. A multi-tenant SaaS inherits a shared responsibility on both sides.</p>
-<p>The shared-responsibility gap is the assumption that AWS covers something Tessera actually owns. “Encryption is AWS’s job.” “Patching is managed, so we’re fine.” “The region is resilient, so we don’t need backups of our own.” Each of those is a real sentence I have heard, and each is wrong in a way that a misread shared-responsibility line produces. ISO 27001 Annex A.5 covers supplier and cloud-service relationships precisely because this line is where assurance leaks out. Your audit has to draw the line explicitly, on Tessera’s own architecture, and test only the Tessera-owned side.</p>
+<p>The shared-responsibility gap is the assumption that AWS covers something Tessera actually owns. “Encryption is AWS’s job.” “Patching is managed, so we’re fine.” “The region is resilient, so we don’t need backups of our own.” Each is an illustrative assumption to check against the selected service and its responsibilities. ISO 27001 Annex A.5 covers supplier and cloud-service relationships precisely because this line is where assurance leaks out. Your audit has to draw the line explicitly, on Tessera’s own architecture, and test Tessera’s implementation and oversight, including the adequacy and limits of provider assurance.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="Watch out: 'it exists' is not 'it works'">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -524,17 +559,15 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p>Two traps run through every technical audit, and they are the same disease: confusing the surface with the substance.</p>
-<p>The first: <em>a control that exists is not a control that is configured correctly.</em> Encryption is on, but the keys are shared across tenants. MFA is enforced, but the SMS fallback is enabled. Security groups exist, but the database is open to <code>0.0.0.0/0</code>. Each looks compliant on a dashboard. None meets its objective. Always ask what “good” looks like, then test for that.</p>
-<p>The second: <em>a control someone else owns is not a control you can assume.</em> AWS secures the hypervisor. It does not secure your IAM policies, your application code, your key grants, or your patch cadence on self-managed components. The shared-responsibility line is where you stop auditing AWS, which you cannot, and start auditing Tessera, which you can. If you cannot point to who owns a control, you have found a gap, not a comfort.</p>
+<p>The first: <em>a control that exists is not a control that is configured correctly.</em> Encryption is on, but decrypt permissions exceed the stated isolation requirement. MFA is enforced, but the SMS fallback is enabled. Security groups exist, but the database is open to <code>0.0.0.0/0</code>. Each looks compliant on a dashboard. None meets its objective. Always ask what “good” looks like, then test for that.</p>
+<p>The second: <em>a control someone else owns is not a control you can assume.</em> AWS secures the hypervisor. It does not secure your IAM policies, your application code, your key grants, or your patch cadence on self-managed components. Your authority may permit reliance on provider reports rather than direct provider tests. Evaluate that reliance and Tessera’s complementary controls. If you cannot point to who owns a control, you have found a gap, not a comfort.</p>
 </div>
 </div>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: What “good” looks like for tenant isolation</strong></p>
-<p>Take the padlock on the database in Tessera’s diagram and turn it into a picture of good. The control objective for isolating one customer tenant from another reads something like this:</p>
-<blockquote class="blockquote">
-<p><em>A request that returns data belonging to tenant X is only ever honoured for an identity that a current, least-privilege policy has authorised for tenant X, on a decision that is logged, with the data decrypted only under a key whose use is restricted to that tenant’s context. Under any error, compromise, or misconfiguration, the default behaviour is denial.</em></p>
-</blockquote>
-<p>That single sentence is now your test plan. It tells you to examine the authorisation logic for tenant-boundary checks, to confirm IAM policies are scoped per tenant, to verify the KMS key grants do not collapse tenants into one decryptable blob, and to probe the error paths for IDOR. The diagram’s padlock was a picture. This is the same padlock, rewritten as something you can break, and therefore something you can audit.</p>
+<p>Use E11’s ordinary-user threat model. A request by tenant A’s user for tenant B’s record must be denied, and the decision must be traceable in the application and access logs. Run only the authorised, isolated test with synthetic records.</p>
+<p>The three supplied results meet their expected outcomes: own-tenant access returns the expected record; cross-tenant access is denied; unauthenticated access is denied. Corroborating logs agree. Record <strong>P01: concern cleared within the tested boundary</strong>. No failure should be invented merely because the opening diagram looked polished.</p>
+<p>The result does not prove that an application administrator cannot extract data. That requires a separate objective and test, as do batch exports, alternate APIs and privileged service roles.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="🤖 AI Field Note: From a generic list to a testable objective">
 <div class="callout-header d-flex align-content-center">
@@ -546,8 +579,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ask an AI to “list the technical security controls for a multi-tenant SaaS hosted on AWS.” You will get a competent list in seconds: encryption at rest, TLS in transit, MFA, a WAF, logging and monitoring, network segmentation, regular backups. Every item is correct, and the list is useless, because it describes every SaaS on Earth. It is a draft, and a draft of what everyone already knows has no edge.</p>
-<p>Push it. Ask, for each control: <em>what is the objective, in one testable sentence, and how would it fail silently at a fast-moving company where the founders still have god-mode access?</em> Now the AI has to engage with Tessera’s reality, not a textbook. Take encryption. Its first cut was “encrypt data at rest using KMS.” Pressed for the objective and the silent failure, a better answer emerges: the objective is that a stolen snapshot reveals no plaintext to anyone outside the access-decision path; the silent failure is that encryption is on but a single over-broad KMS grant lets one compromised application token decrypt every tenant’s data at once. The first sentence any AI can write. The second is the variation you supplied. That is the drafter-to-evaluator shift, done on one line of output.</p>
+<p>An illustrative draft concludes, “All data is safe because KMS is enabled.” Replace it with two questions: can a party with storage access but no decrypt authority recover plaintext, and can an application role exceed its permitted tenant boundary? Different evidence addresses each. Use E11 only for the request cases it actually tests.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="🔍 Auditing AI: The AI estate is now part of the technical estate">
@@ -560,48 +592,35 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Tessera has shipped AI into its estate in two places. A support assistant reads customer tickets and drafts replies for the helpdesk team. And an AI feature inside the product lets customers summarise and query their own data. These are not experiments on a slide. They are workloads with identities, data access, and failure modes, and they sit squarely inside this chapter.</p>
-<p>Treat them like any other component. The support assistant has a service role: what can it read? If it can see every tenant’s tickets when it only needs the active one, that is a least-privilege failure identical in shape to any other. The product feature sends customer data to a model: what is sent, what is retained, and does the model provider train on it or promise not to? That is a data-minimisation and key-boundary question, and it foreshadows Chapter 9’s privacy work. Both run on a model from a vendor: which model, which version, and what does that vendor’s SOC report actually cover? That is supplier assurance, the A.5 cloud-services territory Chapter 3 flagged.</p>
-<p>The objective for an AI workload has the same shape as for any other: <em>the AI system cannot exfiltrate or act on data it has no business reason to touch, and every action it takes is attributable.</em> Test it the same way: enumerate the role’s permissions, trace what data crosses the model boundary, and check the logs that record model calls. Some of Tessera’s controls are now run <em>by</em> AI, an assistant triaging alerts or flagging anomalies. When you audit those, you are back in territory Chapter 7 takes up in full: can you trust a control whose evidence an AI produced? For now, the discipline is the one this chapter teaches. State what good looks like, then go and try to break it.</p>
+<p>The fixed case supplies evidence about Tessera’s support assistant, which reads customer tickets and drafts replies. A customer-facing summarisation feature would raise similar questions but is not an additional tested system in SDA-2026.1. These are not experiments on a slide. They are workloads with identities, data access, and failure modes, and they sit squarely inside this chapter.</p>
+<p>Treat them like any other component. The support assistant has a service role: what can it read? If it can see every tenant’s tickets when it only needs the active one, that is a least-privilege failure identical in shape to any other. The product feature sends customer data to a model: what is sent, what is retained, and does the model provider train on it or promise not to? That is a data-minimisation and key-boundary question, and it foreshadows Chapter 9’s privacy work. For any such deployment, ask about its vendor: which model, which version, and what does that vendor’s SOC report actually cover? That is supplier assurance, the A.5 cloud-services territory Chapter 3 flagged.</p>
+<p>The objective for an AI workload has the same shape as for any other: <em>the AI system cannot exfiltrate or act on data it has no business reason to touch, and every action it takes is attributable.</em> Test it the same way: enumerate the role’s permissions, trace what data crosses the model boundary, and check the logs that record model calls. Some organisations also use AI to triage alerts or flag anomalies. When you audit those, you are back in territory Chapter 7 takes up in full: can you trust a control whose evidence an AI produced? For now, the discipline is the one this chapter teaches. State what good looks like, then go and try to break it.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Week 5)">
+<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Engagement milestone 5)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Week 5)
+<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Engagement milestone 5)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For each domain below, lock in one technical control objective for Tessera, phrased as a testable “good looks like” statement, plus the single piece of evidence that would prove or disprove it.</p>
-<ul>
-<li><strong>Access control</strong>: least privilege is in force for every human and service identity, with a documented leaver window, and privileged access is granted just-in-time and logged.</li>
-<li><strong>Network security</strong>: segmentation contains blast radius, and every security-group or firewall rule is justified and reviewable.</li>
-<li><strong>Cryptography and key management</strong>: ciphertext is useless to an attacker who steals storage, because keys are isolated, rotated, and bound by grants that respect tenant boundaries.</li>
-<li><strong>Multi-tenant isolation</strong>: under no condition, including error paths, can one tenant read another’s data.</li>
-<li><strong>Shared-responsibility boundary</strong>: the line between AWS-owned and Tessera-owned controls is drawn on Tessera’s own architecture, and only Tessera-owned controls appear in your test plan.</li>
-</ul>
-<p>This is the chapter where your Evidence Locker stops being narrative and starts being a test programme. Each objective is a row you will later mark green or red against evidence.</p>
+<p><strong>Time: 20 minutes. No AI required.</strong> Reproduce E11’s three-row expected/observed result table and state a bounded conclusion. Then propose one additional test for a privileged application role, naming the required authority and safe environment. Add a cryptography objective that distinguishes storage-only theft from abuse of decrypt permission.</p>
 </div>
 </div>
 </section>
 <section id="the-question-answered" class="level2" data-number="5.7">
 <h2 data-number="5.7" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">5.7</span> The question, answered</h2>
-<p>What should be in place, and what does good look like? In place: a layered set of technical controls across identity, network, cryptography, and the multi-tenant boundary, owned by Tessera on the correct side of the shared-responsibility line. Good looks like a set of <em>objectives</em> behind those controls, each phrased so it can be tested, each with a silent failure you can describe, each backed by evidence you can demand. The diagram Tessera’s head of engineering handed you was a claim. You now hold the method that turns it into an audit.</p>
-<p>There is a catch, and it is the catch that closes the first act of this book. Technical controls are the part of the estate that is easiest to enumerate and easiest to test, and they are still only half the story. A perfectly configured IAM system is worthless if the person holding the admin token was never trained, or never had their access removed when they left, or sits inside an organisation whose security policy is a document nobody reads. Next, we turn from the machine to everything around it: the people, the physical world, and the management system that is supposed to hold it together. <em>Assess? Physical, people, and ISMS controls.</em></p>
+<p>Technical assurance starts with a defined objective, a threat model and evidence of the tested decisions. E11 clears a specific concern without establishing universal isolation. The next chapter places those technical objectives within people, physical and management-system controls.</p>
 
 
 </section>
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot embed for this book.
-  The book-publisher creates a chatbot grounded in the book's content and
-  fills in the embed id / base API URL here. Until then this is a deliberate
-  no-op so the `include-after-body` hook in _quarto.yml stays wired.
--->
+<script data-embed-id="d9721604-3074-4caf-8b0c-51c962499531" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

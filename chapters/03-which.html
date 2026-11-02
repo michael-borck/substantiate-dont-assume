@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -287,6 +291,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction: The Audit Mindset</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -398,6 +408,30 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../appendices/b-case-pack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Fixed case pack: SDA-2026.1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/c-answer-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Answer checks and assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/d-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Source guide and edition boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/e-interview-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -425,10 +459,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#nist-csf-2.0-the-functions-lens" id="toc-nist-csf-2.0-the-functions-lens" class="nav-link" data-scroll-target="#nist-csf-2.0-the-functions-lens"><span class="header-section-number">3.3</span> NIST CSF 2.0: the functions lens</a></li>
   <li><a href="#the-asd-essential-eight-the-baseline" id="toc-the-asd-essential-eight-the-baseline" class="nav-link" data-scroll-target="#the-asd-essential-eight-the-baseline"><span class="header-section-number">3.4</span> The ASD Essential Eight: the baseline</a></li>
   <li><a href="#pick-one-yardstick-cross-check-the-rest" id="toc-pick-one-yardstick-cross-check-the-rest" class="nav-link" data-scroll-target="#pick-one-yardstick-cross-check-the-rest"><span class="header-section-number">3.5</span> Pick one yardstick, cross-check the rest</a></li>
-  <li><a href="#mapping-and-reconciling" id="toc-mapping-and-reconciling" class="nav-link" data-scroll-target="#mapping-and-reconciling"><span class="header-section-number">3.6</span> Mapping and reconciling</a></li>
-  <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">3.7</span> The question, answered</a></li>
+  <li><a href="#applicability-before-the-test-plan" id="toc-applicability-before-the-test-plan" class="nav-link" data-scroll-target="#applicability-before-the-test-plan"><span class="header-section-number">3.6</span> Applicability before the test plan</a></li>
+  <li><a href="#supplier-assurance-before-exclusions" id="toc-supplier-assurance-before-exclusions" class="nav-link" data-scroll-target="#supplier-assurance-before-exclusions"><span class="header-section-number">3.7</span> Supplier assurance before exclusions</a></li>
+  <li><a href="#mapping-and-reconciling" id="toc-mapping-and-reconciling" class="nav-link" data-scroll-target="#mapping-and-reconciling"><span class="header-section-number">3.8</span> Mapping and reconciling</a></li>
+  <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">3.9</span> The question, answered</a></li>
+  <li><a href="#take-it-to-the-ai" id="toc-take-it-to-the-ai" class="nav-link" data-scroll-target="#take-it-to-the-ai"><span class="header-section-number">3.10</span> Take it to the AI</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="/llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/substantiate-dont-assume"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -458,13 +495,13 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: “Why can’t we certify against everything?”</strong></p>
-<p>The board meeting runs long. Tessera’s CTO has the slide up: ISO/IEC 27001, NIST CSF, the ASD Essential Eight, SOC 2, PCI DSS, a privacy overlay. “We’re a SaaS company serving enterprise and government customers,” she says. “Surely more badges is more trustworthy. Why not certify against all of them?” It is a reasonable question from a reasonable person, and it is exactly the wrong instinct. Your answer is not “pick one.” It is “pick the right one, and use the rest as cross-checks.” The whole meeting turns on why that distinction matters, and it sets the criteria every later chapter in this engagement will be measured against.</p>
+<p>The board meeting runs long. Tessera’s CTO has the slide up: ISO/IEC 27001, NIST CSF, the ASD Essential Eight, SOC 2, PCI DSS, a privacy overlay. “We’re a SaaS company serving enterprise and government customers,” she says. “Surely more badges is more trustworthy. Why not certify against all of them?” It is a reasonable question from a reasonable person, and it is exactly the wrong instinct. Your answer separates the requested certification from other binding obligations and optional cross-checks. The whole meeting turns on why that distinction matters, and it sets the criteria every later chapter in this engagement will be measured against.</p>
 </div>
 <section id="frameworks-are-tools-not-trophies" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="frameworks-are-tools-not-trophies"><span class="header-section-number">3.1</span> Frameworks are tools, not trophies</h2>
-<p>Before you choose, get clear on what these things actually are. A framework is a structured set of expectations: what good looks like, organised so an organisation can find its gaps and an auditor can test against them. They differ in scope, in origin, and, crucially, in what you can <em>do</em> with the result.</p>
-<p>Some frameworks are <strong>certifiable</strong>. ISO/IEC 27001 is the canonical example: an accredited body audits you against it and issues a certificate the market recognises. Certifiable frameworks are scarce and valuable precisely because the opinion behind them is independent and repeatable. Anyone can claim compliance; only a certified body can back the claim.</p>
-<p>Others are <strong>assessment or maturity frameworks</strong>. NIST CSF and the ASD Essential Eight live here. You can score yourself against them, an assessor can rate your maturity, and the result is genuinely useful. But there is no certificate to hang on the wall. They describe posture, not proof.</p>
+<p>Before you choose, get clear on what these things actually are. A framework is a structured set of expectations: what good looks like, organised so an organisation can find its gaps and an auditor can test against them. They differ in scope, in origin, and in what you can <em>do</em> with the result.</p>
+<p>Some frameworks are <strong>certifiable</strong>. ISO/IEC 27001 is the canonical example: an accredited body audits you against it and issues a certificate the market recognises. Certifiable frameworks are scarce and valuable precisely because the opinion behind them is independent and repeatable. An accredited certification body can issue accredited certification within its scope. Other assurance engagements have different mandates and reporting rules.</p>
+<p>Others are <strong>assessment or maturity frameworks</strong>. NIST CSF and the ASD Essential Eight live here. You can score yourself against them, an assessor can rate your maturity, and the result is genuinely useful. These are not ISO-style certification schemes. An assessment against their outcomes can still be evidence-based; its report should state scope, method and limitations.</p>
 <p>This distinction is the source of the board’s confusion, and it is worth naming out loud in the room. “More badges” only counts if the badges are the kind procurement teams and regulators actually ask for. For Tessera, chasing ISO/IEC 27001 is not a stylistic choice; it is the answer to a specific business question, and the other frameworks answer different questions. Your job in that meeting is to choose the framework that answers the question you are actually being asked, then explain why the rest come along for a different reason.</p>
 </section>
 <section id="isoiec-270012022-the-certifiable-yardstick" class="level2" data-number="3.2">
@@ -484,45 +521,42 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="3.3" class="anchored" data-anchor-id="nist-csf-2.0-the-functions-lens"><span class="header-section-number">3.3</span> NIST CSF 2.0: the functions lens</h2>
 <p>The NIST Cybersecurity Framework takes a different cut through the same problem. Where ISO 27001 organises by <em>who does it</em>, CSF organises by <em>what you are trying to achieve</em>, expressed as six functions:</p>
 <p><strong>Govern, Identify, Protect, Detect, Respond, Recover.</strong></p>
-<p>The newest of these, <strong>Govern</strong>, is the headline change in CSF 2.0 (released in 2024), and it is the one that matters most to an auditor. The older version treated governance as something that lived outside the framework. Version 2.0 puts it squarely inside, recognising that the technical functions fail when nobody owns the decisions. Governance is where accountability, risk appetite, policy, and oversight live, and pulling it out of the wings and onto the stage is the single most consequential revision in the update.</p>
+<p>The newest of these, <strong>Govern</strong>, is the headline change in CSF 2.0 (released in 2024), and it is the one that matters most to an auditor. CSF 1.1 already included governance under Identify. Version 2.0 elevates it to its own function, as <a href="https://www.nist.gov/cyberframework/faqs">NIST’s change summary</a> explains. Governance is where accountability, risk appetite, policy, and oversight live, and pulling it out of the wings and onto the stage is the single most consequential revision in the update.</p>
 <p>CSF is not certifiable, and that is a feature rather than a limitation. It is a <em>communication and orientation</em> framework. You use it to explain posture to a board, to map what you have, to spot whether your coverage is lopsided (heavy on Protect, thin on Detect, say). For an auditor it is an excellent cross-check because it asks a question ISO 27001’s themes do not: <em>do you cover the full lifecycle, from understanding what you have through to recovering when it breaks?</em></p>
-<p>One warning that catches people out: CSF is not a control catalogue. It is functions, then categories, then subcategories that <em>reference</em> other standards. It points at controls rather than containing them. That is why it pairs so well with ISO 27001, and why using it <em>instead of</em> a control standard leaves you with posture and no proof. Posture tells a story; an audit needs evidence. CSF supplies the story; 27001 is where the evidence is tested.</p>
+<p>One warning that catches people out: CSF is not a control catalogue. It is functions, then categories, then subcategories that <em>reference</em> other standards. It points at controls rather than containing them. Its outcomes need translation into criteria and evidence requests appropriate to the engagement. Evidence can support a CSF assessment as well as an ISO assessment; neither framework supplies proof by itself.</p>
 </section>
 <section id="the-asd-essential-eight-the-baseline" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="the-asd-essential-eight-the-baseline"><span class="header-section-number">3.4</span> The ASD Essential Eight: the baseline</h2>
 <p>The Essential Eight is the most specifically Australian artefact in the set, and for a Perth company chasing government work, that specificity is its value. Published by the Australian Signals Directorate, it is a <strong>baseline</strong>: eight mitigation strategies the ASD judges most effective at stopping common attacks.</p>
-<p>The eight are deliberately concrete and unglamorous: application control, patching applications, configuring Microsoft Office macros, user application hardening, restricting administrative privileges, patching operating systems, multi-factor authentication, and regular backups. Each is scored across <strong>maturity levels 0 to 3</strong>, from “not implemented” through to “fully managed and tested.” A government customer asking for your Essential Eight maturity is not asking for a certificate; they are asking a pointed question about how well you do the unglamorous basics.</p>
+<p>The eight are deliberately concrete and unglamorous: application control, patching applications, configuring Microsoft Office macros, user application hardening, restricting administrative privileges, patching operating systems, multi-factor authentication, and regular backups. Each is scored across <strong>maturity levels 0 to 3</strong>, whose requirements address increasing adversary capability and techniques. They are not generic labels for documentation or management maturity; consult the <a href="https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model">ASD maturity model</a> for the strategy-specific requirements. A government customer asking for your Essential Eight maturity is not asking for a certificate; they are asking a pointed question about how well you do the unglamorous basics.</p>
 <p>Two things to keep straight. First, the Essential Eight is a <em>baseline</em>, not a complete framework. It will tell you whether your patching and admin-privilege hygiene is sound; it will not tell you whether your supplier risk management is adequate or your incident-response plan works. Treat it as the floor, not the ceiling. Second, it was designed around Microsoft-centric estates, which fits most organisations but not all. For Tessera, built on AWS with a mix of tooling, some strategies map cleanly and some need interpretation. That interpretation is exactly the kind of judgement the standard cannot supply and the auditor must.</p>
-<p>I will admit a personal bias here, because it shapes how I use these frameworks. The Essential Eight is the one I reach for first when I want to know whether an organisation can be <em>hacked tomorrow</em>. The others tell me whether it is well-governed; the Essential Eight tells me whether the doors are locked. Both questions matter, but on the day of an incident, only one of them was the difference.</p>
+<p>A strong Essential Eight result does not establish immunity from compromise. Its coverage is bounded; supplier governance, service architecture and additional obligations need their own assessment.</p>
 </section>
 <section id="pick-one-yardstick-cross-check-the-rest" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="pick-one-yardstick-cross-check-the-rest"><span class="header-section-number">3.5</span> Pick one yardstick, cross-check the rest</h2>
-<p>Now the actual decision, and the one the board meeting is really about. You do not certify against multiple frameworks because certification is expensive, the audits overlap, and “we are certified against everything” is not a signal of trust but a signal that nobody chose. The mature move is to pick <strong>one framework as the yardstick</strong>: the thing you measure, certify, and score against. Then use the others as <strong>cross-checks</strong>: lenses that expose gaps the yardstick hides.</p>
-<p>For Tessera the choice is almost made for you. The business goal is a certificate that enterprise and government customers will accept. That is ISO/IEC 27001:2022. So 27001 becomes the yardstick. NIST CSF 2.0 becomes the cross-check that asks whether the controls add up to a full Govern-to-Recover lifecycle. The Essential Eight becomes the cross-check that asks whether the baseline technical hygiene actually holds. Three frameworks, one opinion, each doing a job the others cannot.</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="Watch out: the collect-them-all fallacy">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Watch out: the collect-them-all fallacy
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The temptation, especially under a board that has read the marketing, is to chase every badge. “We’ll do ISO 27001, SOC 2, PCI, the lot.” Each certification is a real engagement with real cost, and the marginal badge is worth less than the marginal effort. Worse, organisations that spread themselves across many frameworks rarely do any one well: they collect mappings instead of building controls. The discipline is to choose the yardstick that answers the business question, certify against it, and let the rest inform rather than multiply the work. A company that certifies against one standard thoroughly beats a company that maps against five superficially, every time.</p>
-</div>
-</div>
+<p>Use a principal standard to organise this engagement, while recording every other binding criterion. Tessera wants ISO/IEC 27001 certification, so that is the principal standard. CSF and the Essential Eight are supplementary lenses unless a contract or other obligation makes particular outcomes mandatory. A payment obligation or privacy duty cannot be dismissed because it sits outside the preferred framework.</p>
+<p>Multiple assurance programmes may be justified by different customers. <strong>SOC 2</strong> is an attestation report on controls relevant to selected Trust Services Criteria, not an ISO certificate. A Type II report addresses a period; a report’s scope, exceptions and user responsibilities matter to reliance. <a href="https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2">AICPA’s SOC 2 overview</a> describes its purpose.</p>
 </section>
-<section id="mapping-and-reconciling" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="mapping-and-reconciling"><span class="header-section-number">3.6</span> Mapping and reconciling</h2>
+<section id="applicability-before-the-test-plan" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="applicability-before-the-test-plan"><span class="header-section-number">3.6</span> Applicability before the test plan</h2>
+<p>The <strong>Statement of Applicability (SoA)</strong> records necessary controls, why they are included, implementation status and justified Annex A exclusions. Risk treatment can require controls beyond Annex A. The management-system requirements remain part of the audit; “not applicable” is not a way to remove an inconvenient requirement.</p>
+<p>Read E03’s teaching extract. “Implemented” with no evidence reference is a management claim to test. A.5.18 concerns access rights; A.6.5 concerns responsibilities continuing after employment. A numbered control reference alone does not establish a precise operational deadline. Here the two-hour and 24-hour criteria come from the fictional policies.</p>
+<p>This edition uses ISO/IEC 27001:2022 with <a href="https://www.iso.org/standard/88435.html">Amd 1:2024</a>, the climate-action amendment. Record consideration of climate-related relevance to organisational context and interested-party requirements; do not silently omit the amendment. Use authorised copies for exact normative wording. The <a href="../appendices/d-sources.html">source guide</a> identifies editions and the limits of these teaching paraphrases.</p>
+</section>
+<section id="supplier-assurance-before-exclusions" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="supplier-assurance-before-exclusions"><span class="header-section-number">3.7</span> Supplier assurance before exclusions</h2>
+<p>E09’s fictional SOC 2 summary covers a payment API through December 2025. It has an exception and complementary user controls, with no supplied 2026 bridge evidence. Read the subject, service, period, report type, exceptions and customer responsibilities before deciding what reliance is justified.</p>
+<p>Do not exclude supplier oversight merely because a processor performs the transactions. You may lack authority to test the provider directly, yet still need to test Tessera’s selection, contracts, monitoring and complementary controls. An unavailable report or missing period belongs in the evidence-gap register. Chapter 4 carries that limitation into scope and procedures.</p>
+</section>
+<section id="mapping-and-reconciling" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="mapping-and-reconciling"><span class="header-section-number">3.8</span> Mapping and reconciling</h2>
 <p>Once you have a yardstick, you map. The point of a cross-mapping is not to prove the frameworks are equivalent; they are not. It is to confirm you have no blind spots, and to translate evidence so a control tested once can satisfy multiple audiences. A government customer wants to see Essential Eight maturity; a board wants CSF posture; your certification auditor wants 27001 evidence. One well-built mapping lets all three read the same controls in their own language.</p>
 <p>The mapping is <strong>many-to-many</strong>, and saying so plainly saves you from the most common mapping error. One ISO 27001 control, access reviews, touches Protect and Detect in CSF and several Essential Eight strategies (admin privileges, MFA, application control). One Essential Eight strategy, patching, maps to a technological control <em>and</em> to organizational policy. A neat one-to-one table is a lie. An honest many-to-many table is a working paper you can defend.</p>
-<p>And here is the auditor’s scepticism applied to the frameworks themselves: a mapping is an <em>assertion</em> about correspondence, and assertions get tested. When someone hands you a cross-mapping, your job is to spot the row that claims two controls are equivalent when they are merely adjacent. “Both talk about logging” is not “both require the same evidence.” Frameworks overlap; they do not coincide. The discipline of mapping is the discipline of saying exactly how much two controls actually share, and no more.</p>
-<p>Now the worked artefact, and the place where AI earns and then loses your trust.</p>
+<p>Apply the same scepticism to the frameworks themselves: a mapping is an <em>assertion</em> about correspondence, and assertions get tested. When someone hands you a cross-mapping, your job is to spot the row that claims two controls are equivalent when they are merely adjacent. “Both talk about logging” is not “both require the same evidence.” Frameworks overlap; they do not coincide. The discipline of mapping is the discipline of saying exactly how much two controls actually share, and no more.</p>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: Choosing the yardstick, and the starter map</strong></p>
 <p>You take the board through the decision on one slide. <strong>Yardstick:</strong> ISO/IEC 27001:2022, because certification is the business goal and 27001 is the certifiable answer. <strong>Cross-check 1:</strong> NIST CSF 2.0, to confirm the controls span Govern through Recover. <strong>Cross-check 2:</strong> the ASD Essential Eight, because government customers expect the baseline and Tessera wants the work. The board signs off, not because more is better but because each framework now has a defined job.</p>
-<p>You start the cross-mapping as a working paper, not a deliverable, and you keep it honestly many-to-many. A representative slice:</p>
+<p>You start the cross-mapping as a working paper, not a deliverable, and you keep it honestly many-to-many. A representative category-level slice, not a claim of full outcome equivalence. PR.PS is Platform Security; PR.IR is Technology Infrastructure Resilience. Verify subcategories and required evidence in the <a href="https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf">CSF 2.0 Core</a>:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -544,18 +578,18 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>A.8.7 Protection against malware</td>
-<td>PR.IR; DE.CM</td>
+<td>PR.PS; DE.CM</td>
 <td>Application control; user application hardening</td>
 </tr>
 <tr class="odd">
 <td>A.8.13 Information backup</td>
-<td>RC.RP</td>
+<td>PR.DS; RC.RP (recovery use)</td>
 <td>Regular backups</td>
 </tr>
 <tr class="even">
 <td>A.8.19 Installation of software on operational systems</td>
-<td>PR.IR (Platform security)</td>
-<td>Patch applications; patch operating systems</td>
+<td>PR.PS (Platform Security)</td>
+<td>Application control (partial overlap)</td>
 </tr>
 <tr class="odd">
 <td>A.5.7 Threat intelligence</td>
@@ -576,9 +610,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is a task AI is genuinely good at drafting and genuinely dangerous at finishing. Ask an AI to “produce a cross-mapping of ISO/IEC 27001:2022 Annex A to NIST CSF 2.0 and the ASD Essential Eight,” and it returns a clean, plausible table in seconds. Most of it is right. That is the trap.</p>
-<p>Two confabulations to hunt for. First, <strong>stale control numbers.</strong> Models trained on older corpora quietly cite 2013 Annex A numbers, A.9.x for access control and A.12.x for operations, as if they were current 2022 controls. They are not; the 2022 renumbering retired them. Every control number must be checked against the actual 2022 Annex A before the table leaves your desk. Second, <strong>invented entries.</strong> In one run the AI helpfully added a row for “Configuration baselining” under the Essential Eight column. The Essential Eight has exactly eight strategies, and that is not one of them. The model pattern-matched “configuration management” to something that <em>should</em> exist and then asserted it did.</p>
-<p>Your correction is the work: count the Essential Eight strategies (you will find eight, never nine), verify each 27001 number against the current standard, and re-classify the many-to-many relationships the AI flattened into tidy one-to-one rows. The AI gave you a draft that saved an hour. The hour you spent correcting it is where the defensible opinion was built. Drafter to evaluator, exactly as the Introduction described.</p>
+<p>An illustrative draft maps “A.8.19 → PR.IR (Platform Security) → patching” as an exact equivalence. Check it in stages. Platform Security is PR.PS. Software-installation restrictions and patch management overlap, but are not the same requirement. An installation allow-list test does not establish timely patching. Correct the category, state partial overlap and specify each separate test.</p>
+<p>Do not upload a licensed standard to a model without permission. Public control titles and original teaching criteria are enough for this exercise.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="🔍 Auditing AI: Which controls does an AI deployment fall under?">
@@ -592,40 +625,45 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p>The frameworks were written before generative AI sat inside the estate, so no control is labelled “AI.” That does not mean AI is uncovered. Treat an AI deployment as what it is: a cloud-delivered, data-hungry, rapidly-changing software system, and the 2022 controls land on it hard.</p>
-<p>The 2022 edition is unusually well-timed here, because several of its <em>new</em> controls are the very ones an AI deployment makes load-bearing. <strong>A.5.23 Information security for use of cloud services</strong> applies directly, since most enterprise AI is consumed through a cloud API and Tessera’s data leaves its boundary to reach the model. <strong>A.5.7 Threat intelligence</strong> matters more, not less: model-abuse techniques, prompt-injection trends, and data exfiltration via tool calls are exactly the threat intel a current ISMS needs. <strong>A.8.11 Data masking</strong> applies to the training and prompt data that may carry personal information. <strong>A.8.25 Secure development life cycle</strong> (and its partner A.8.28 Secure coding) applies to the pipelines that build, fine-tune, and deploy models. And <strong>A.5.30 ICT readiness for business continuity</strong> applies the moment a business process depends on an AI service that can degrade silently.</p>
+<p>Relevant 2022 controls include both newly introduced controls and controls carried forward or reorganised from the prior edition. <strong>A.5.23 Information security for use of cloud services</strong> applies directly, since most enterprise AI is consumed through a cloud API and Tessera’s data leaves its boundary to reach the model. <strong>A.5.7 Threat intelligence</strong> matters more, not less: model-abuse techniques, prompt-injection trends, and data exfiltration via tool calls are exactly the threat intel a current ISMS needs. <strong>A.8.11 Data masking</strong> applies to the training and prompt data that may carry personal information. <strong>A.8.25 Secure development life cycle</strong> (and its partner A.8.28 Secure coding) applies to the pipelines that build, fine-tune, and deploy models. And <strong>A.5.30 ICT readiness for business continuity</strong> applies the moment a business process depends on an AI service that can degrade silently.</p>
 <p>The audit move is to take each AI system in scope, walk it through these controls, and ask the standard question: <em>what evidence proves this control is present and working for this system?</em> An AI deployment does not earn an exception. It earns a closer look.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Week 3)">
+<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Engagement milestone 3)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Week 3)
+<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Engagement milestone 3)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Add your framework-selection working paper to the locker. Record three things: the <strong>yardstick</strong> and why it was chosen (ISO/IEC 27001:2022, because certification is Tessera’s business goal); the <strong>cross-checks</strong> and the question each one answers (CSF 2.0 for lifecycle coverage; the Essential Eight for baseline hygiene); and a <strong>starter cross-mapping table</strong> with at least a dozen controls mapped honestly many-to-many, with gaps explicitly noted rather than papered over. This is the standard against which every later control test in this audit will be judged. Get the yardstick wrong and the whole engagement measures the wrong thing.</p>
+<p><strong>Time: 25 minutes. No AI required.</strong> Build a criteria sheet from E01, E03 and E09. Record the principal standard, the two policy deadlines, the supplier-report scope and missing period, and three necessary control areas from the SoA extract. For each, name evidence you would need. Classify the two-hour/24-hour conflict as unresolved, not an invitation to choose the easier test.</p>
 </div>
 </div>
 </section>
-<section id="the-question-answered" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">3.7</span> The question, answered</h2>
-<p>Which yardstick? The one that answers the business question you are actually being asked. For Tessera that is ISO/IEC 27001:2022, chosen not because it is the only framework but because certification is the goal and 27001 is the certifiable answer. NIST CSF 2.0 and the Essential Eight come alongside it as cross-checks, each exposing what the yardstick alone would hide: one the full Govern-to-Recover lifecycle, the other the technical baseline your government customers expect.</p>
-<p>And “why not all of them?” Because collecting frameworks is not the same as building controls. The mature organisation picks one yardstick, certifies against it thoroughly, and lets the others inform the work without multiplying it. The discipline of choosing, and then of mapping honestly, is itself an audit skill: it is professional scepticism applied to the standards before you ever apply them to Tessera.</p>
-<p>You now have your criteria. The next question is the one that turns criteria into a plan: <em>what exactly are we auditing, on what terms, and how?</em> That is scope, and it is where the engagement stops being a reading exercise and becomes a method.</p>
+<section id="the-question-answered" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">3.9</span> The question, answered</h2>
+<p>Framework choice establishes what the engagement will assess. Applicability and a criteria register make that choice testable. Keep contractual and legal obligations visible even when a single standard organises the report. Next, turn the criteria into a bounded programme.</p>
+</section>
+<section id="take-it-to-the-ai" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="take-it-to-the-ai"><span class="header-section-number">3.10</span> Take it to the AI</h2>
+<p>This optional exercise follows the paper task. Use only E03’s original teaching criteria and the illustrative mapping above.</p>
+<blockquote class="blockquote">
+<p><strong>Role:</strong> Review a trainee’s criteria mapping.</p>
+<p><strong>Task:</strong> Identify unsupported equivalence claims. Do not invent standard wording or unseen evidence.</p>
+<p><strong>Context:</strong> The proposed mapping treats installation restrictions as proof of timely patching. Platform Security is PR.PS; PR.IR is Technology Infrastructure Resilience. The book’s case has not supplied a patch test.</p>
+<p><strong>Format:</strong> For each claim, give the supporting supplied fact, the missing test and a bounded correction.</p>
+</blockquote>
+<p>Check the answer against the source and your criteria sheet. Keep a correct answer if supported; disagreement is not a required performance.</p>
 
 
 </section>
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot embed for this book.
-  The book-publisher creates a chatbot grounded in the book's content and
-  fills in the embed id / base API URL here. Until then this is a deliberate
-  no-op so the `include-after-body` hook in _quarto.yml stays wired.
--->
+<script data-embed-id="d9721604-3074-4caf-8b0c-51c962499531" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

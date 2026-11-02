@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -287,6 +291,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction: The Audit Mindset</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -398,6 +408,30 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../appendices/b-case-pack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Fixed case pack: SDA-2026.1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/c-answer-checks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Answer checks and assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/d-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Source guide and edition boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/e-interview-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Interview guide and optional live practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -429,7 +463,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#from-documents-to-a-preliminary-opinion" id="toc-from-documents-to-a-preliminary-opinion" class="nav-link" data-scroll-target="#from-documents-to-a-preliminary-opinion"><span class="header-section-number">6.7</span> From documents to a preliminary opinion</a></li>
   <li><a href="#the-question-answered" id="toc-the-question-answered" class="nav-link" data-scroll-target="#the-question-answered"><span class="header-section-number">6.8</span> The question, answered</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/substantiate-dont-assume.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/substantiate-dont-assume.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="/llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://tessera.locoensayo.org"><i class="bi bi-globe2"></i>Tessera companion site</a></li><li><a href="https://github.com/michael-borck/substantiate-dont-assume"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/substantiate-dont-assume"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://michael-borck.github.io/conversation-not-delegation/"><i class="bi bi-chat-left-text"></i>Companion: Conversation, Not Delegation</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -459,41 +493,40 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: Act I closes</strong></p>
-<p>Six weeks in, and the document library is exhausted. You have read Tessera’s ISMS manual, the information security policy and every standard beneath it, the risk register, the Statement of Applicability, the asset register, the access-control standard, the offboarding checklist, and the supplier list with each master agreement attached. You have interviewed no one, logged into no system, stood in no office. The honest opinion forming in your working papers is the most uncomfortable kind an auditor writes: <em>looks promising on paper, but…</em> and the ellipsis is doing real work, because the discipline of this chapter is naming exactly what that limited access could not show.</p>
+<p>Act I has examined the mandate and selected design records, especially E01–E03. The policies name responsibilities and expected performance. They also contain a two-hour/24-hour conflict and unsubstantiated “implemented” statuses. You can identify those design issues now; historical operating records are released in Act II for this staged exercise. Real audits need not defer interviews or operating evidence for six weeks.</p>
 </div>
 <section id="what-act-i-let-you-do" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="what-act-i-let-you-do"><span class="header-section-number">6.1</span> What Act I let you do</h2>
 <p>Chapter 5 taught you the technological control objectives: access, network, cryptography, the AWS shared-responsibility split. Those sit in Theme A.8, the thirty-four technological controls. This chapter assesses the other three families the 2022 standard clusters controls into, plus the management system that holds them together.</p>
 <p>The <strong>people</strong> controls (Theme A.6, eight controls) govern the human side: who you hire, what you make them agree to, how you train them, and what happens when they leave. The <strong>physical</strong> controls (Theme A.7, fourteen controls) govern offices, devices, and the environment they sit in. The <strong>organizational</strong> controls (Theme A.5, thirty-seven controls) are the largest family, and they sweep up everything that is neither purely human nor purely physical: policies, asset management, supplier relationships, classification, and the cloud services Tessera runs on.</p>
 <p>Around all ninety-three controls sits the ISMS itself, the management system defined in Clauses 4 through 10 of ISO/IEC 27001: context, leadership, planning, support, operation, performance evaluation, and improvement. The controls are the body. The ISMS is the nervous system that makes them move.</p>
-<p>Here is the catch, and it is the whole point of this chapter. Act I gave you documents, not systems. A desk audit can establish that a control is <em>designed</em>. It cannot establish that a control is <em>operating</em>. The gap between those two words is where every mistake in this chapter hides.</p>
+<p>A review restricted to policies establishes aspects of design. Remote inspection of reliable operating records can support an operating-effectiveness conclusion. State the limits of the supplied evidence and the claim it can support.</p>
 </section>
 <section id="physical-and-environmental-security" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="physical-and-environmental-security"><span class="header-section-number">6.2</span> Physical and environmental security</h2>
 <p>Tessera runs on AWS, which buys them a tidy advantage: the physical security of the data centre is largely AWS’s problem, attested through AWS’s own certifications and the shared-responsibility split you learned in Chapter 5. Tessera does not secure the racks their instances live on. That does not leave them with nothing to secure.</p>
-<p>They have a Perth office. They have staff laptops and phones that leave the building every evening. They may have a small co-location rack for low-latency work, or a development box under someone’s desk that nobody documented. Physical controls (A.7.1 through A.7.14) ask the unglamorous questions that decide whether any of that matters: is the perimeter secured, is access controlled and logged, are visitors managed, is the server cupboard locked, is equipment protected against fire and flood and the cleaner who unplugs the router to plug in a vacuum cleaner.</p>
+<p>They have a Perth office and staff laptops and phones that leave the building every evening. They may also have a small co-location rack for low-latency work, or a development box under someone’s desk that nobody documented. Physical controls (A.7.1 through A.7.14) ask the unglamorous questions that decide whether any of that matters: is the perimeter secured, is access controlled and logged, are visitors managed, is the server cupboard locked, is equipment protected against fire and flood and the cleaner who unplugs the router to plug in a vacuum cleaner.</p>
 <p>The desk read gives you Tessera’s physical security policy, the badge-access procedure, the visitor-management process, the clear-desk and clear-screen standard, and the equipment-disposal procedure. Read together they describe an office that sounds disciplined. Badge access is “enforced 24/7.” Visitors “must sign in and be escorted.” Clear desk is “mandatory.” Media disposal “follows a certified destruction process.”</p>
-<p>Notice the verbs. <em>Enforced, must, mandatory, follows.</em> Those are promises, and a promise is an assertion. From a desk you cannot confirm the badge reader at the side entrance actually denies a revoked card, that the visitor log carries a real signature for yesterday, that the fire-suppression system was serviced when the maintenance record claims, or that the back door near the loading bay is not propped open with a recycling bin every afternoon so the smokers can get back in. You have read what should happen. You have not seen what does.</p>
+<p>Notice the verbs. <em>Enforced, must, mandatory, follows.</em> Those are promises, and a promise is an assertion. From those policies alone you cannot confirm the badge reader at the side entrance actually denies a revoked card, that the visitor log carries a real signature for yesterday, that the fire-suppression system was serviced when the maintenance record claims, or that the back door near the loading bay is not propped open with a recycling bin every afternoon so the smokers can get back in. You have read what should happen. You have not seen what does.</p>
 </section>
 <section id="hr-security-the-employment-lifecycle" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="hr-security-the-employment-lifecycle"><span class="header-section-number">6.3</span> HR security: the employment lifecycle</h2>
 <p>People controls are where organisations hurt themselves most predictably, because people are a lifecycle, not a state. A.6 makes that explicit. There is a moment a person joins, a long stretch in the middle where their role and access drift, and a moment they leave. Each transition is a control point, and the controls (A.6.1 screening, A.6.2 terms and conditions, A.6.3 awareness and training, A.6.5 responsibilities after termination or change, A.6.6 confidentiality agreements, and the rest) cluster around the joins.</p>
-<p><strong>Onboarding</strong> is the first gate. Screening before employment, terms signed before access is granted, confidentiality agreements in place before the new starter sees customer data, and security awareness training before they can do damage. The control objective is simple: nobody gets the keys before they have been checked and have agreed to the rules.</p>
-<p><strong>Role change</strong> is the silent one. A support engineer becomes an SRE and picks up production access. A developer moves into a team that handles payment data. Each move should trigger an access review, because the permissions that were correct last quarter may now be excessive. Organisations hate doing this, because it is invisible work with no deadline, and so it is exactly the control that quietly stops happening.</p>
-<p><strong>Offboarding</strong> is the one that ends up in breach reports. When someone leaves, the clock starts on every minute their access stays alive after their last day. Return of assets, revocation of logical and physical access, handover of responsibilities, a final reminder of confidentiality: the offboarding checklist (A.6.5, with A.5.11 on return of assets) is short, well-understood, and routinely incomplete.</p>
-<p>The desk read gives you Tessera’s offboarding procedure, and it is a good one. Sixteen steps, an owner named against each, a sign-off line for the manager. It is the kind of document that makes you feel reassured, which is precisely when you should lean into the discipline of this chapter. A checklist that exists is not a checklist that runs. You can read every step. You cannot, from a desk, confirm that the last three leavers were walked through it, that their access was revoked inside the policy window, or that anyone signed the sign-off line at all. That confirmation is Act II work, and pretending otherwise is the mistake this chapter exists to prevent.</p>
+<p><strong>Onboarding</strong> is the first gate. Screen candidates before employment, have terms signed before you grant access, put confidentiality agreements in place before the new starter sees customer data, and deliver security awareness training before they can do damage. The control objective is simple: nobody gets the keys before they have been checked and have agreed to the rules.</p>
+<p><strong>Role change</strong> is the silent one. A support engineer becomes an SRE and picks up production access. A developer moves into a team that handles payment data. Each move should trigger an access review, because the permissions that were correct last quarter may now be excessive. The work is invisible and has no deadline, and so it is exactly the control that quietly stops happening.</p>
+<p><strong>Offboarding</strong> is the one that ends up in breach reports. When someone leaves, the clock starts on every minute their access stays alive after their last day. Return of assets, revocation of logical and physical access, handover of responsibilities, a final reminder of confidentiality: the offboarding checklist (A.5.18 for access rights, A.6.5 for continuing responsibilities, and A.5.11 for return of assets) is short, well-understood, and routinely incomplete.</p>
+<p>E03 supplies the revocation deadlines and E05 later supplies checklist-design facts. Do not infer complete credential coverage from the existence of a sign-off field. Request termination, ownership and disable records, and reconcile them. Those records can be inspected remotely; physical attendance is not required for the arithmetic.</p>
 </section>
 <section id="asset-management" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="asset-management"><span class="header-section-number">6.4</span> Asset management</h2>
 <p>You cannot protect what you have not inventoried. Asset management is the unsexy foundation under most other controls, and in the 2022 standard it lives largely in the organizational family: the inventory of information and associated assets (A.5.9), acceptable use (A.5.10), return of assets (A.5.11), classification (A.5.12), and labelling (A.5.13).</p>
 <p>The desk read gives you Tessera’s asset register and their classification scheme. The register should list the systems, the data stores, the devices, and the information that flows between them, each with an owner. The classification scheme should tell you which of that information is public, internal, confidential, or restricted, and what handling each tier demands.</p>
-<p>Here is the asset-management reality the desk cannot show. A register is only ever as good as its last update, and registers rot fast in a company growing the way Tessera is. A laptop issued to a contractor and never returned. A database spun up for a feature, abandoned, and forgotten. A customer dataset that nobody ever classified, because the classification scheme arrived six months after the data did. The document tells you the scheme exists and the register is “maintained.” It cannot tell you whether either is complete, because completeness is a property of the world, not of the document.</p>
+<p>An asset register can miss an unreturned laptop, an abandoned database or unclassified customer records. These are examples to investigate, not additional findings in the fixed case. The register alone cannot establish completeness. Compare it with reliable discovery, procurement and disposal records, recording any blind spots.</p>
 </section>
 <section id="suppliers-and-the-cloud-tessera-sits-on" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="suppliers-and-the-cloud-tessera-sits-on"><span class="header-section-number">6.5</span> Suppliers and the cloud Tessera sits on</h2>
-<p>No modern SaaS company is an island. Tessera sits on AWS, processes payments through a third party, ships with a logistics API, runs analytics on a managed platform, and increasingly bolts an AI service into the product to summarise customer reports. Each of those is a supplier relationship, and the organizational family treats them seriously: information security in supplier relationships (A.5.19), security within supplier agreements (A.5.20), the ICT supply chain (A.5.21), monitoring and reviewing supplier services (A.5.22), and the specific case of cloud services (A.5.23).</p>
-<p>The desk read gives you the supplier list, the master service agreements, and the data processing agreements. AWS appears with its SOC 2 and ISO certifications attached. The payment processor’s agreement is on file. The AI vendor’s terms are there too.</p>
-<p>Read those documents as an auditor and you will notice what they are, and are not. A supplier agreement is a statement of <em>obligation</em>: what the supplier has promised to do. It is not a statement of <em>performance</em>: what the supplier actually does. Due diligence documented in a file is not due diligence performed. A SOC 2 report from a vendor is that vendor’s auditor’s opinion, at a date, over a window. It is evidence about the vendor, not evidence about how Tessera uses the vendor. The gap between a signed agreement and an operating control is the same gap as everywhere else in this chapter, just one contract further away.</p>
+<p>Tessera relies on cloud services, a payment processor and a hosted support model. Supplier oversight is part of its ISMS. A service agreement establishes obligations; appropriate independent assurance and Tessera’s own monitoring can support conclusions about performance.</p>
+<p>Chapter 3 introduced the reliance worksheet. E09’s payment-report period ends before the assessment cutoff and includes an exception. E07’s AI-service bundle lacks executed processing terms. Do not assume all agreements are present merely because the supplier list exists.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="🔍 Auditing AI: The supplier you cannot inspect">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -504,16 +537,15 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Tessera’s product now calls an AI service to summarise customer data. From your desk you can read the vendor’s data processing agreement, their security page, and their terms of service. What you cannot read, from documents alone, is what the model actually does with the prompts Tessera sends it. Are customer inputs logged? Used to train the next version? Retained for thirty days or thirty years? Forwarded to a sub-processor in a jurisdiction with different privacy law?</p>
-<p>The agreement will say one thing. The system may do another, and the system is the thing that matters. Verifying it is Act II work: you will need the vendor’s actual data-handling configuration, the contract’s processing specifics, and Tessera’s own logs of what leaves the boundary. For now, note it as a named gap. An AI supplier is a supplier like any other, which is to say: asserted in a document, substantiated nowhere yet.</p>
+<p>For the support assistant, record the absent terms, uncertain regions and unverifiable training-setting screenshot. Request deployment-specific configuration and relevant vendor assurance. A public security page cannot establish actual handling of this account’s data. Equally, unavailable evidence does not prove a vendor misused it. Carry the assurance gap into the privacy assessment.</p>
 </div>
 </div>
 </section>
 <section id="the-isms-itself-governance-on-paper" class="level2" data-number="6.6">
 <h2 data-number="6.6" class="anchored" data-anchor-id="the-isms-itself-governance-on-paper"><span class="header-section-number">6.6</span> The ISMS itself: governance on paper</h2>
 <p>Everything above is a set of controls. The ISMS is the thing that is supposed to make them work as a system. ISO/IEC 27001 devotes Clauses 4 through 10 to it: the organisation defines its context (Clause 4), leadership commits (Clause 5), it plans the risk treatment that selects controls (Clause 6), it supports the system with resources, competence, awareness, communication, and documented information (Clause 7), it operates it (Clause 8), evaluates its performance (Clause 9), and improves it (Clause 10).</p>
-<p>The artefact that ties the controls to the system is the <strong>Statement of Applicability</strong> (SoA), required by Clause 6.1.3. The SoA lists the controls Tessera has chosen, the justification for each inclusion and exclusion, and, crucially, whether each control is implemented. It is the index of the whole control set, and at the end of Act I it is the single document you have spent the most time with.</p>
-<p>Here is where the discipline of this chapter has to bite hardest, because the ISMS document set is the most convincing thing you will read in this engagement. It is well-written. It is internally consistent. The policies cross-reference each other correctly. The SoA’s status column reads “implemented” down the line. And every one of those qualities is a reason to be more careful, not less.</p>
+<p>The artefact that ties the controls to the system is the <strong>Statement of Applicability</strong> (SoA), required by Clause 6.1.3. The SoA lists the controls Tessera has chosen, the justification for each inclusion and exclusion, and whether each control is implemented. It is the index of the whole control set, and at the end of Act I it is the single document you have spent the most time with.</p>
+<p>E03’s SoA marks selected controls implemented without evidence references. Treat that status as an assertion needing support. The deadline conflict is already visible without operational access. Good formatting neither proves nor disproves control quality.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="Watch out: the document confidence trap">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -524,17 +556,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The most dangerous artefact in a desk audit is a complete, well-written ISMS. It creates an illusion: that because the documentation is coherent, the practice is sound. It is the same illusion a polished security webpage creates, and it fails the same way. A policy on the intranet is an assertion. A SoA status of “implemented” is an assertion. An offboarding procedure that reads perfectly is an assertion. None of them is evidence until you have seen the control operate.</p>
-<p>The trap is not that the documents lie. Tessera’s may be entirely sincere. The trap is that design quality and operational quality are different properties, and a desk audit can only ever measure the first. Confidence formed from documents alone is confidence in the wrong thing.</p>
+<p>Ask what the particular document establishes. A policy can establish a requirement. A signed historical review can support operation for its population and date, subject to reliability checks. Neither supports an unrestricted conclusion about the whole ISMS. Record evidence type, scope and limits instead of declaring all documents either proof or worthless.</p>
 </div>
 </div>
-<p>I have a small confession, the kind that took a few engagements to learn. The first time I read a genuinely good ISMS, I relaxed. The prose was clear, the scope was honest, the controls mapped cleanly, and it felt like assurance. The fieldwork that followed turned up an offboarding process that had not run correctly in a year and an asset register that missed a quarter of the estate. The documents had been excellent, and they had been wrong about the one thing that mattered. A desk audit earns you the right to a suspicion. It does not earn you the right to a conclusion.</p>
 </section>
 <section id="from-documents-to-a-preliminary-opinion" class="level2" data-number="6.7">
 <h2 data-number="6.7" class="anchored" data-anchor-id="from-documents-to-a-preliminary-opinion"><span class="header-section-number">6.7</span> From documents to a preliminary opinion</h2>
-<p>So what, honestly, can you say at the end of Act I? More than nothing, and less than you might want to.</p>
-<p>You can say what the documents substantiate: that Tessera has <em>designed</em> a control set mapped to ISO/IEC 27001:2022 across all four themes; that the policies exist and are coherent; that the risk register and SoA are present and internally consistent; that the supplier agreements are on file; that the offboarding procedure, the access standard, and the classification scheme all read as fit for purpose. That is a real finding. Design maturity matters, and an organisation that cannot produce these documents is not ready, full stop.</p>
-<p>You cannot say what the documents do not substantiate, and the discipline of this chapter is to say so out loud. You have not confirmed that a single control is <em>operating</em>. You have not watched the badge reader deny anyone, seen a leaver’s access revoked, reconciled the asset register against the live estate, or verified that the supplier due diligence on file was ever performed. The preliminary opinion is calibrated suspicion, not proof, and its value rests entirely on how clearly it names the gap between the two.</p>
+<p>A preliminary assessment should separate supported design observations, known design defects and operating questions that remain unanswered.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="🤖 AI Field Note: Summarising the policy set">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -545,51 +573,39 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is a task an AI does fluently, and it is worth seeing both why that helps and why it stops where it does. Hand an AI Tessera’s document library and ask it to produce a readiness summary: which control families are documented, where the SoA claims implementation, where the gaps in coverage are. It will return a clean, well-structured brief in minutes. The summary of what the documents <em>say</em> will be accurate and genuinely useful, and it will save you hours.</p>
-<p>Then ask it the question that matters: “Which of these controls are actually operating?” It cannot answer. It has read the same documents you have, and documents do not contain operating evidence. Press it, and it will do what large language models do under pressure: it will start to infer, to extrapolate from how thorough the offboarding procedure looks, to slide from “the procedure exists” into “the procedure is followed.” That slide is the exact error this chapter is about, and watching a confident machine make it is the clearest demonstration I know of why the evaluator matters more than the drafter.</p>
-<p>The AI’s limit is the point. It summarises design beautifully. It cannot substantiate operation at all. Use it for the first. Do not let it pretend to the second.</p>
+<p>An illustrative summary of E03 says, “Offboarding operates within 24 hours because P-IT requires it.” The premise establishes a deadline, not compliance with it. It also overlooks P-HR’s two-hour rule. Correct the summary to name both criteria and request operating records. A model supplied with reliable logs could assist their analysis, but still needs verification.</p>
 </div>
 </div>
 <div class="tessera-case">
 <p><strong>🗂️ Tessera Case: Tessera’s preliminary readiness opinion</strong></p>
-<p>Here is the opinion Act I earns you, written for Tessera’s board.</p>
-<p><em>On the basis of a desk review of the documentation provided, Tessera has established an information security management system whose design is substantially aligned with ISO/IEC 27001:2022. The control set is documented across all four themes, the Statement of Applicability is present and internally consistent, and the supporting policies and procedures read as fit for purpose.</em></p>
-<p><em>This is a preliminary opinion formed from documents alone. It does not constitute assurance that controls are operating effectively. The following remain unverified and are the evidence gaps Act II must close: confirmation that HR offboarding and access-revocation controls operate for every leaver; reconciliation of the asset register against the live estate; verification that supplier due diligence and cloud-service monitoring are performed, not merely documented; and operational testing of the physical, access, and ISMS controls. The offboarding checklist, in particular, exists, but its execution cannot be substantiated from documents.</em></p>
-<p><em>Conclusion: promising on paper; not yet proven in practice. Full-access fieldwork recommended.</em></p>
-<p>That last line is the most important sentence in Act I. It is also the only honest one.</p>
+<p><em>The selected design records identify an ISMS scope and control responsibilities. They do not establish whole-ISMS readiness. E03 contains conflicting revocation deadlines and unsupported implementation statuses. Operational evidence for revocation, scheduled reviews and recovery remains to be tested. Supplier reliance and the support assistant’s processing terms are unresolved.</em></p>
+<p><em>We recommend completing the test programme and resolving the criteria conflict before making a Stage 2 recommendation. We have not assessed every requirement needed for Stage 1 or certification. This is a preliminary, limited-evidence readiness assessment.</em></p>
+<p>That opinion identifies what the next phase must answer without assuming it will upgrade the result.</p>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Week 6)">
+<div class="callout callout-style-default callout-tip callout-titled" title="🗄️ Evidence Locker: lock this in (Engagement milestone 6)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Week 6)
+<span class="screen-reader-only">Tip</span>🗄️ Evidence Locker: lock this in (Engagement milestone 6)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is the Act I culmination, and it feeds Assessment 2 directly. Lock your <strong>preliminary readiness opinion</strong> into the Evidence Locker: a one-paragraph opinion on what the documents substantiate (design maturity), followed by a named list of the evidence gaps that limited access could not close. Separate, explicitly, what you <em>found</em> from what you <em>suspect</em>. Mark each gap with the control it would test and the access you would need to substantiate it.</p>
-<p>This is not a draft to throw away in Act II. It is the agenda for Act II. Every gap you name here becomes a test you run once full access arrives, and the defensible opinion you ultimately stand behind is this opinion plus the evidence that closes those gaps, or fails to. Substantiate what you can. Name what you cannot. That discipline is the whole job.</p>
+<p><strong>Time: 20 minutes. No AI required.</strong> Write your Act I assessment using E01–E03. For each claim, mark “supported design observation”, “design issue” or “operating evidence needed”. Include the conflicting deadlines and identify the next records to request. Avoid asserting whole-ISMS alignment from this selected extract.</p>
 </div>
 </div>
 </section>
 <section id="the-question-answered" class="level2" data-number="6.8">
 <h2 data-number="6.8" class="anchored" data-anchor-id="the-question-answered"><span class="header-section-number">6.8</span> The question, answered</h2>
-<p>How much can you honestly say about a company you have only ever read about? Enough to form a preliminary opinion, never enough to call it proof. You can establish that Tessera has <em>designed</em> a control set aligned with the standard, across people, physical, organizational, and the ISMS that binds them. You cannot, from documents alone, establish that any of it <em>operates</em>. The preliminary readiness opinion is the disciplined art of saying both, clearly, in the same breath.</p>
-<p>That closes Act I. Six weeks of engagement, built on limited access, have produced what limited access can produce: suspicion, calibrated and named, with every evidence gap written down. You have engaged the case. You have not yet proved it.</p>
-<p>Act II opens the door. Full access arrives: the interviews, the live configurations, the logs, the incident records, the systems you have so far only read about. The polished policy finally meets its operational reality, and the suspicion you have earned here either hardens into evidence or dissolves. There is only one way to find out which.</p>
-<p>Next week the question changes tense, from <em>what does it look like on paper?</em> to <em>can you prove it works?</em> The question is <strong>Prove?</strong></p>
+<p>Act I’s outcome is a mandate, a criteria map and a test programme, with a bounded preliminary assessment. Act II adds the operating records needed to test selected claims. It may confirm a control, expose a failure or leave a question unresolved.</p>
 
 
 </section>
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot embed for this book.
-  The book-publisher creates a chatbot grounded in the book's content and
-  fills in the embed id / base API URL here. Until then this is a deliberate
-  no-op so the `include-after-body` hook in _quarto.yml stays wired.
--->
+<script data-embed-id="d9721604-3074-4caf-8b0c-51c962499531" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
