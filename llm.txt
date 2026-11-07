@@ -17,6 +17,8 @@ Visit a company's security page and you will find confident assertions: certific
 
 This book follows Tessera, a fictional Perth software company seeking ISO/IEC 27001 certification. Its CTO expects a straightforward sign-off. You have been asked for a readiness assessment. Neither the CTO's confidence nor your suspicion settles the result.
 
+That is how trust in AI is earned: not by faith, but by evidence.
+
 ## What information security auditing actually is
 
 Information security auditing systematically evaluates evidence against agreed criteria. Those criteria may include a management-system standard, applicable law, contractual promises and the organisation's own policies. Authorised penetration testing and continuous monitoring can contribute evidence; they serve different purposes from an audit.

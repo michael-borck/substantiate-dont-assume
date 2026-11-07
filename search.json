@@ -14,7 +14,7 @@
     "href": "index.html#the-polished-policy-and-the-unpatched-server",
     "title": "Substantiate, Don’t Assume",
     "section": "The polished policy and the unpatched server",
-    "text": "The polished policy and the unpatched server\nVisit a company’s security page and you will find confident assertions: certification, encryption, careful handling of customer data. Those claims might be well supported. An auditor’s task is to establish what they mean, what they cover, and what evidence supports them.\nThis book follows Tessera, a fictional Perth software company seeking ISO/IEC 27001 certification. Its CTO expects a straightforward sign-off. You have been asked for a readiness assessment. Neither the CTO’s confidence nor your suspicion settles the result.",
+    "text": "The polished policy and the unpatched server\nVisit a company’s security page and you will find confident assertions: certification, encryption, careful handling of customer data. Those claims might be well supported. An auditor’s task is to establish what they mean, what they cover, and what evidence supports them.\nThis book follows Tessera, a fictional Perth software company seeking ISO/IEC 27001 certification. Its CTO expects a straightforward sign-off. You have been asked for a readiness assessment. Neither the CTO’s confidence nor your suspicion settles the result.\nThat is how trust in AI is earned: not by faith, but by evidence.",
     "crumbs": [
       "Introduction: The Audit Mindset"
     ]
