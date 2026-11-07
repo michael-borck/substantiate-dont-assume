@@ -5,10 +5,10 @@
 <polyline points="302.00,167.00 397.00,167.00 397.00,232.00 302.00,232.00 302.00,167.00" fill="none" stroke="#202926" stroke-width="3.5999999999999996" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="322.00,189.00 378.00,189.00" fill="none" stroke="#202926" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="322.00,203.00 364.00,203.00" fill="none" stroke="#202926" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="350.00,234.00 350.00,255.00 214.00,255.00 214.00,278.00" fill="none" stroke="#4E5E8A" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="208.25,267.47 214.00,278.00 219.75,267.47" fill="none" stroke="#4E5E8A" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="350.00,255.00 468.00,255.00 468.00,278.00" fill="none" stroke="#4E5E8A" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="462.25,267.47 468.00,278.00 473.75,267.47" fill="none" stroke="#4E5E8A" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="350.00,234.00 350.00,255.00 214.00,255.00 214.00,278.00" fill="none" stroke="#E8734A" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="208.25,267.47 214.00,278.00 219.75,267.47" fill="none" stroke="#E8734A" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="350.00,255.00 468.00,255.00 468.00,278.00" fill="none" stroke="#E8734A" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="462.25,267.47 468.00,278.00 473.75,267.47" fill="none" stroke="#E8734A" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="178.00,282.00 250.00,282.00 250.00,359.00 178.00,359.00 178.00,282.00" fill="none" stroke="#202926" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="191.00,301.00 232.00,301.00" fill="none" stroke="#202926" stroke-width="2.16" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="191.00,314.00 220.00,314.00" fill="none" stroke="#202926" stroke-width="2.16" stroke-linecap="round" stroke-linejoin="round"/>
@@ -21,7 +21,7 @@
 <polyline points="442.00,301.00 483.00,301.00" fill="none" stroke="#202926" stroke-width="2.16" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="442.00,314.00 471.00,314.00" fill="none" stroke="#202926" stroke-width="2.16" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="442.00,327.00 483.00,327.00" fill="none" stroke="#202926" stroke-width="2.16" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="360.00,282.00 360.00,265.00" fill="none" stroke="#4E5E8A" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="360.00,282.00 360.00,265.00" fill="none" stroke="#E8734A" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="161,474 812,474 828,490 147,490" fill="#E5E3DA"/>
 <polyline points="161.00,474.00 812.00,474.00 828.00,490.00 147.00,490.00 161.00,474.00" fill="none" stroke="#202926" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="177.00,492.00 167.00,602.00" fill="none" stroke="#202926" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -50,16 +50,16 @@
 <polyline points="652.00,365.00 690.00,359.00 728.00,457.00 661.00,466.00 637.00,406.00 652.00,365.00" fill="none" stroke="#202926" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="651.00,382.00 610.00,404.00 553.00,394.00" fill="none" stroke="#202926" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="659.00,398.00 617.00,419.00 563.00,408.00" fill="none" stroke="#202926" stroke-width="3.5999999999999996" stroke-linecap="round" stroke-linejoin="round"/>
-<ellipse cx="498.0" cy="378.0" rx="41.0" ry="41.0" fill="none" stroke="#4E5E8A" stroke-width="6.0"/>
-<ellipse cx="498.0" cy="378.0" rx="35.0" ry="35.0" fill="none" stroke="#4E5E8A" stroke-width="1.7999999999999998"/>
-<polyline points="534.00,403.00 565.00,424.00" fill="none" stroke="#4E5E8A" stroke-width="10.799999999999999" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="498.0" cy="378.0" rx="41.0" ry="41.0" fill="none" stroke="#E8734A" stroke-width="6.0"/>
+<ellipse cx="498.0" cy="378.0" rx="35.0" ry="35.0" fill="none" stroke="#E8734A" stroke-width="1.7999999999999998"/>
+<polyline points="534.00,403.00 565.00,424.00" fill="none" stroke="#E8734A" stroke-width="10.799999999999999" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="549.00,397.00 558.00,404.00 553.00,414.00" fill="none" stroke="#202926" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="480.00,365.00 514.00,360.00" fill="none" stroke="#202926" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="478.00,379.00 518.00,373.00" fill="none" stroke="#202926" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="486.00,392.00 510.00,388.00" fill="none" stroke="#202926" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="691.00,387.00 735.00,434.00 604.00,458.00" fill="none" stroke="#202926" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="605.00,458.00 590.00,457.00" fill="none" stroke="#202926" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="598.00,444.00 588.00,464.00" fill="none" stroke="#4E5E8A" stroke-width="3.5999999999999996" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="598.00,444.00 588.00,464.00" fill="none" stroke="#E8734A" stroke-width="3.5999999999999996" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="742.00,388.00 759.00,390.00 765.00,505.00 696.00,507.00" fill="none" stroke="#202926" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="762.00,507.00 778.00,600.00" fill="none" stroke="#202926" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="707.00,507.00 694.00,600.00" fill="none" stroke="#202926" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
